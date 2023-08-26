@@ -1,8 +1,8 @@
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
 import raw from './Translation/en.json';
-import Sessions from '../Sessions';
-import { SESSION_STORAGE_KEY as LanguageKey } from '../Language';
+import Sessions from '../Sessions/session';
+import { SESSION_STORAGE_KEY as LanguageKey } from '../Language/languageConfig';
 
 const userLanguage = Sessions.get(LanguageKey)?.Language ?? 'en';
 

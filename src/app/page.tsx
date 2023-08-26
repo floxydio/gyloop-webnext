@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Language from './components/header/language'
+import Language from '../Components/header/language'
 
 export default function Home() {
   return (
