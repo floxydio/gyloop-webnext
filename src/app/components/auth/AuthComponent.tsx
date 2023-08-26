@@ -1,41 +1,76 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import "../../../style/style.css"
+import "../../../style/style.min.css"
+import "../../../style/icon.css"
+import React, { useState } from "react"
+import { useForm, Resolver } from 'react-hook-form';
+import Link from "next/link";
+
 interface PropsSend {
     TypeHeader: number
 }
 
-export default function Auth({ props }: { props: PropsSend }) {
+type FormValues = {
+    email: string;
+    password: string;
+};
+
+const resolver: Resolver<FormValues> = async (values) => {
+    return {
+        values: values.email ? values : {},
+        errors: !values.password
+            ? {
+                email: {
+                    type: 'required',
+                    message: 'This is required.',
+                },
+                password: {
+                    type: 'required',
+                    message: 'This is required'
+                }
+            }
+            : {},
+    };
+};
+export default function AuthComponent({ props }: { props: PropsSend }) {
+    const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({ resolver });
+    const onSubmit = handleSubmit((data) => console.log(data));
+
+    const [showPassword, setShowPassword] = useState(false)
+
+    function triggerPassword() {
+        setShowPassword(!showPassword)
+    }
+
+
     return (
         <>
-
+            {/* 0 -> Login Demo, 1 -> Login */}
             {props.TypeHeader === 0 ? <div className="login d-flex align-items-center justify-content-center">
-
                 <div className="row align-items-center w-100">
                     <div className="col-12 col-xl-6">
                         <div className="wrapper">
                             <a href="index.html">
-                                <img className="logo-gyloop" src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" />
+                                <img className="logo-gyloop demo" src="/img/logo-gyloop-demo.png" alt="Logo Gyloop Demo" />
                             </a>
 
                             <div className="container">
 
                                 <div className="card border-0">
                                     <div className="card-body">
-                                        <form className="gyloop-form">
+                                        <form className="gyloop-form" onSubmit={onSubmit}>
                                             <div className="form-group mb-n2">
                                                 <label className="input-label-control">Email</label>
 
-                                                <input type="email" className="form-control" value="john.doe@markbrother.com" />
+                                                <input type="email" className="form-control" {...register("email")} />
 
-                                                <small className="label-error">Error Message</small>
+                                                <small className="label-error">{errors.email?.message}</small>
                                             </div>
 
                                             <div className="form-group mb-0">
                                                 <label className="input-label-control">Password</label>
 
                                                 <div className="input-group">
-                                                    <input type="password" className="form-control border-right-0"
-                                                        value="1234567890" />
+                                                    <input type="password" className="form-control border-right-0" {...register("password")} />
                                                     <div className="input-group-append">
                                                         <button type="button" className="btn btn-outline-light border-left-0"
                                                         >
@@ -44,7 +79,7 @@ export default function Auth({ props }: { props: PropsSend }) {
                                                     </div>
                                                 </div>
 
-                                                <small className="label-error">Error Message</small>
+                                                <small className="label-error">{errors.password?.message}</small>
                                             </div>
 
                                             <button type="submit" className="btn btn-primary gyloop-btn btn-block">Submit</button>
@@ -57,24 +92,28 @@ export default function Auth({ props }: { props: PropsSend }) {
                                             <hr />
 
                                             <a href="reset-password-wizard.html" className="gyloop-link">Forgot Your Password?</a>
-
                                         </form>
 
                                     </div>
+                                </div>
+
+                                <div className="register-demo gyloop-link text-center mt-2">
+                                    Do not have a demo user? <Link href="/SubscribeDemo" className="text-blue ml-1">Register
+                                        Here</Link>
                                 </div>
 
                             </div>
                         </div>
                     </div>
 
-                    <div className="col-xl-6 d-none d-xl-block side-info px-xl-0">
+                    <div className="col-xl-6 d-none d-xl-block side-info demo px-xl-0">
                         <div className="wrapper2 d-flex align-items-center h-100">
 
                             <div className="container">
                                 <div className="row">
 
                                     <div className="col-xl-6 text-center">
-                                        <img className="img-badge" src="/img/icon_bagde_professional_white.png" alt="Icon Demo" />
+                                        <img className="img-badge" src="img/icon_bagde_professional_white.png" alt="Icon Demo" />
 
                                         <h2 className="title">Register for free trial</h2>
                                         <div className="text">
@@ -91,7 +130,7 @@ export default function Auth({ props }: { props: PropsSend }) {
                                     </div>
 
                                     <div className="col-xl-6 text-center">
-                                        <img className="img-badge" src="/img/icon_bagde_volunteer_white.png" alt="Icon Volunteer" />
+                                        <img className="img-badge" src="img/icon_bagde_volunteer_white.png" alt="Icon Volunteer" />
 
                                         <h2 className="title">Volunteer Program</h2>
                                         <div className="text">
@@ -119,37 +158,35 @@ export default function Auth({ props }: { props: PropsSend }) {
                     <div className="col-12 col-xl-6">
                         <div className="wrapper">
                             <a href="index.html">
-                                <img className="logo-gyloop" src="/img/logo-gyloop-demo.png" alt="Logo Gyloop" />
+                                <img className="logo-gyloop" src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" />
                             </a>
 
                             <div className="container">
-
                                 <div className="card border-0">
                                     <div className="card-body">
-                                        <form className="gyloop-form">
+                                        <form className="gyloop-form" onSubmit={onSubmit}>
                                             <div className="form-group mb-n2">
                                                 <label className="input-label-control">Email</label>
 
-                                                <input type="email" className="form-control" value="john.doe@markbrother.com" />
+                                                <input type="email" className="form-control"  {...register("email")} />
 
-                                                <small className="label-error">Error Message</small>
+                                                <small className="label-error">{errors.email?.message}</small>
                                             </div>
 
                                             <div className="form-group mb-0">
                                                 <label className="input-label-control">Password</label>
 
                                                 <div className="input-group">
-                                                    <input type="password" className="form-control border-right-0"
-                                                        value="1234567890" />
+                                                    <input type={showPassword === true ? "text" : "password"} className="form-control border-right-0"  {...register("password")} />
                                                     <div className="input-group-append">
                                                         <button type="button" className="btn btn-outline-light border-left-0"
                                                         >
-                                                            <i className="far fa-eye text-muted"></i>
+                                                            <i className="far fa-eye text-muted" onClick={() => triggerPassword()} ></i>
                                                         </button>
                                                     </div>
                                                 </div>
 
-                                                <small className="label-error">Error Message</small>
+                                                <small className="label-error">{errors.password?.message}</small>
                                             </div>
 
                                             <button type="submit" className="btn btn-primary gyloop-btn btn-block">Submit</button>
@@ -219,6 +256,27 @@ export default function Auth({ props }: { props: PropsSend }) {
                 </div>
 
             </div>}
+
+            <footer className="footer-copy footer-login">
+                <div className="row align-items-end">
+
+                    <div className="col-12 col-xl-6">
+                        <p className="text-center">
+                            &copy; 2023 Gyloop. All rights reserved.
+                        </p>
+                    </div>
+
+                    <div className="col-xl-6 d-none d-xl-block text-center">
+                        <a href="index.html">
+                            <img className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo Gyloop" />
+                        </a>
+
+                        <h5 className="title">MAKE BUSINESS CONNECTED</h5>
+                        <p className="text">Working together at the same platform is better.</p>
+                    </div>
+
+                </div>
+            </footer>
 
         </>
     )

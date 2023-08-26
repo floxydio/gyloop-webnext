@@ -1,54 +1,49 @@
 @charset "UTF-8";
-/* @font-face {
+@font-face {
   font-family: "Compact-Ultralight";
-  src: url("../../public/imgfonts/SFCompactDisplay-Ultralight.woff");
+  src: url("../../public/font/SFCompactDisplay-Ultralight.woff");
 }
 @font-face {
   font-family: "Compact-Thin";
-  src: url("../../public/imgfonts/SFCompactDisplay-Thin.woff");
+  src: url("../../public/font/SFCompactDisplay-Thin.woff");
 }
 @font-face {
   font-family: "Compact-Light";
-  src: url("../../public/imgfonts/SFCompactDisplay-Light.woff");
+  src: url("../../public/font/SFCompactDisplay-Light.woff");
 }
 @font-face {
   font-family: "Compact-Regular";
-  src: url("../../public/imgfonts/SFCompactDisplay-Regular.woff");
+  src: url("../../public/font/SFCompactDisplay-Regular.woff");
 }
 @font-face {
   font-family: "Compact-Medium";
-  src: url("../../public/imgfonts/SFCompactDisplay-Medium.woff");
+  src: url("../../public/font/SFCompactDisplay-Medium.woff");
 }
 @font-face {
   font-family: "Compact-Semibold";
-  src: url("../../public/imgfonts/SFCompactDisplay-Semibold.woff");
+  src: url("../../public/font/SFCompactDisplay-Semibold.woff");
 }
 @font-face {
   font-family: "Compact-Bold";
-  src: url("../../public/imgfonts/SFCompactDisplay-Bold.woff");
+  src: url("../../public/font/SFCompactDisplay-Bold.woff");
 }
 @font-face {
   font-family: "Compact-Heavy";
-  src: url("../../public/imgfonts/SFCompactDisplay-Heavy.woff");
+  src: url("../../public/font/SFCompactDisplay-Heavy.woff");
 }
 @font-face {
   font-family: "Compact-Black";
-  src: url("../../public/imgfonts/SFCompactDisplay-Black.woff");
+  src: url("../../public/font/SFCompactDisplay-Black.woff");
 }
 @font-face {
   font-family: "Pro-Regular";
-  src: url("../../public/imgfonts/SFProText-Regular.woff");
+  src: url("../../public/font/SFProText-Regular.woff");
 }
 @font-face {
   font-family: "GoodTimes-Regular";
-  src: url("../../public/imgfonts/GoodTimesRg-Regular.woff");
-} */
-/*!
- * Bootstrap v4.5.3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+  src: url("../../public/font/GoodTimesRg-Regular.woff");
+}
+
 :root {
   --blue: #12AAF2;
   --indigo: #6610f2;
