@@ -1,22 +1,39 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useEffect } from 'react';
+import '../../../style/style.css';
+import React from 'react';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faLinkedin,
+  faInstagram,
+  faYoutube,
+  faFacebookSquare,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+
+library.add(faLinkedin, faInstagram, faYoutube, faFacebookSquare, faTwitter);
 
 export default function Footer() {
-  function setCookie(name: string, value: string, days: number) {
+  const [cookieSetting, setCookieSetting] = React.useState(null);
+
+  function setCookie(name: string, value: string | boolean, days: number) {
     let expires = '';
     if (days) {
       let date = new Date();
       date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
       expires = '; expires=' + date.toUTCString();
     }
-
     document.cookie = name + '=' + (value || '') + expires + '; path=/';
   }
 
-  useEffect(() => {
-    setCookie('myCookie', 'cookieValue', 7); // Example usage
-  }, []);
-
+  function accept_cookie(e: React.FormEvent<HTMLButtonElement>) {
+    setCookie('accept_cookie_date', true, 30);
+    const popupCookieElement = document.querySelector('.popup-cookie');
+    if (popupCookieElement) {
+      popupCookieElement.classList.add('d-none');
+    }
+  }
   return (
     <>
       <div className="nav-overlay d-none"></div>
@@ -28,35 +45,39 @@ export default function Footer() {
               <div className="footer-col order-1 order-xl-0">
                 <div className="mb-3">
                   <a href="index.html">
-                    <img src="assets/logo-white-lg" />
+                    <img
+                      className="logo-web-lg"
+                      src="/img/logo-gyloop-white.png"
+                      alt="LOGO gyloop"
+                    />
                   </a>
                 </div>
 
                 <ul className="footer-social-links list-unstyled d-flex mb-3">
                   <li>
-                    <a href="https://linkedin.com/" target="_blank">
-                      <i className="fab fa-linkedin"></i>
-                    </a>
+                    <Link href="https://linkedin.com/" target="_blank">
+                      <FontAwesomeIcon icon={['fab', 'linkedin']} />
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://youtube.com/" target="_blank">
-                      <i className="fab fa-youtube"></i>
-                    </a>
+                    <Link href="https://youtube.com/" target="_blank">
+                      <FontAwesomeIcon icon={['fab', 'youtube']} />
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://facebook.com/" target="_blank">
-                      <i className="fab fa-facebook-square"></i>
-                    </a>
+                    <Link href="https://facebook.com/" target="_blank">
+                      <FontAwesomeIcon icon={['fab', 'facebook-square']} />
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://twitter.com/" target="_blank">
-                      <i className="fab fa-twitter"></i>
-                    </a>
+                    <Link href="https://twitter.com/" target="_blank">
+                      <FontAwesomeIcon icon={['fab', 'twitter']} />
+                    </Link>
                   </li>
                   <li>
-                    <a href="https://instagram.com/" target="_blank">
-                      <i className="fab fa-instagram"></i>
-                    </a>
+                    <Link href="https://instagram.com/" target="_blank">
+                      <FontAwesomeIcon icon={['fab', 'instagram']} />
+                    </Link>
                   </li>
                 </ul>
 
@@ -239,21 +260,21 @@ export default function Footer() {
               </div>
 
               <div className="footer-col footer-bottom-links">
-                <a className="text-white" href="privacy-policy.html">
+                <Link className="text-white" href="/PrivacyPolicy">
                   Privacy Policy
-                </a>
+                </Link>
                 <span className="divider"></span>
-                <a className="text-white" href="term-of-services.html">
+                <Link className="text-white" href="/TermsOfServices">
                   Terms of Services
-                </a>
+                </Link>
                 <span className="divider"></span>
-                <a className="text-white" href="cookie-preferences.html">
+                <Link className="text-white" href="/CookiePreferences">
                   Cookie Preferences
-                </a>
+                </Link>
                 <span className="divider"></span>
-                <a className="text-white" href="contact-us.html">
+                <Link className="text-white" href="/ContactUs">
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -290,7 +311,7 @@ export default function Footer() {
                         <button
                           className="btn btn-primary gyloop-btn mr-3"
                           type="button"
-                          //   onClick="accept_cookie()"
+                          onClick={(e) => accept_cookie(e)}
                         >
                           <i className="far fa-check mr-1"></i>
                           OK
@@ -317,7 +338,7 @@ export default function Footer() {
                   <button
                     className="btn btn-primary gyloop-btn ml-3"
                     type="button"
-                    // onClick="accept_cookie()"
+                    onClick={(e) => accept_cookie(e)}
                   >
                     <i className="far fa-check mr-1"></i>
                     OK
