@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import "../../../style/style.min.css"
-import "../../../style/icon.css"
+import "@/style/style.min.css"
+import "@/style/icon.css"
 import { useForm, Resolver } from 'react-hook-form';
 
 type FormValues = {
