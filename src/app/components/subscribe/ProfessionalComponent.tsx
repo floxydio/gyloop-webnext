@@ -19,15 +19,15 @@ type FormValues = {
 
 const resolver: Resolver<FormValues> = async (values) => {
   return {
-    values: values,
-    errors: !values.subscriptionAgreement
-      ? {
-        subscriptionAgreement: {
-          type: 'required',
-          message: 'This field is required.',
-        }
-      }
-      : {},
+      values: values,
+      errors: !values.subscriptionAgreement
+          ? {
+              subscriptionAgreement: {
+                  type: 'required',
+                  message: 'This field is required.',
+              }
+          }
+          : {},
   };
 };
 
@@ -94,7 +94,7 @@ export default function ProfessionalComponent() {
 
 
                         <input type="text" className="form-control input-label"
-                          {...register("companyName")} />
+                           {...register("companyName")} />
                         <small className="label-error">{errors.companyName?.message}</small>
                       </div>
 
@@ -152,7 +152,7 @@ export default function ProfessionalComponent() {
                         <label className="label">Email</label>
 
                         <input type="email" className="form-control input-label"
-                          {...register("email")} />
+                           {...register("email")} />
                         <small className="label-error">{errors.email?.message}</small>
                       </div>
 
@@ -213,9 +213,7 @@ export default function ProfessionalComponent() {
                       className="subscribe-functional-head-badge img-fluid text-white" />
                     <p className="subscribe-demo-user-title">PROFESSIONAL</p>
                     <div className="subscribe-demo-user-subtitle">
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                      </p>
+                      {/* <sergey-import src="lorem/1" /> */}
                     </div>
                   </div>
                   <div className="col-xl-3">
