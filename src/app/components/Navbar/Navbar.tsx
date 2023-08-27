@@ -1,27 +1,41 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../style/style.css';
-import React from 'react';
+import '../../../style/icon.css';
+import '../../../style/style.min.css';
+import React, { useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
+  const [openingSearchBar, setOpeningSearchBar] = React.useState(false);
+  const router = useRouter();
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const [openingSearchBar, setOpeningSearchBar] = React.useState(false)
+  useEffect(() => {
+    if (openingSearchBar) {
+      inputRef.current?.focus();
+      const timeout = setTimeout(() => {
+        setOpeningSearchBar(false);
+      }, 500);
 
-  function handleOpenSearchBar(){
-    const searchOffElements = document.querySelectorAll('.nav-search-off')
-    const searchOnElements = document.querySelectorAll('.nav-search-on')
-  }
+      return () => clearTimeout(timeout);
+    }
+  }, [openingSearchBar]);
 
+  const handleSearchBarOpen = () => {
+    // router.push()
+    setOpeningSearchBar(true);
+  };
+
+  const handleSearchBarClose = () => {
+    setOpeningSearchBar(false);
+  };
 
   return (
     <>
       <nav className="navbar navbar-expand-xl navbar-dark bg-transparent">
         <div className="container align-items-center">
           <a className="navbar-brand d-flex mr-5" href="index.html">
-            <img
-              className="logo-web-lg"
-              src="/img/logo-gyloop-white.png"
-              alt="LOGO gyloop"
-            />
+            <img className="logo-web-lg" src="/img/logo-gyloop-white.png" />
           </a>
           <button
             className="navbar-toggler"
@@ -32,7 +46,7 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="fa-stack" style={{verticalAlign: 'top'}}>
+            <span className="fa-stack" style={{ verticalAlign: 'top' }}>
               <i className="far fa-circle fa-stack-2x"></i>
               <i className="fas fa-bars fa-stack-1x"></i>
               <i className="fas fa-arrow-right fa-stack-1x"></i>
@@ -169,7 +183,11 @@ export default function Navbar() {
                 </div>
               </li>
             </ul>
-            <ul className="nav-search-off navbar-nav">
+            <ul
+              className={`nav-search-off ${
+                openingSearchBar ? 'd-none' : ''
+              }navbar-nav`}
+            >
               <li className="nav-item nav-item-lang position-relative">
                 <a
                   className="nav-link mr-0"
@@ -199,11 +217,15 @@ export default function Navbar() {
                   </button>
                 </div>
               </li>
-              <li className="nav-item nav-search-off">
+              <li
+                className={`nav-item nav-search-off ${
+                  openingSearchBar ? 'd-none' : ''
+                }`}
+              >
                 <a
                   className="nav-link mr-0"
                   href="javascript:void(0)"
-                  // onClick="open_search_bar()"
+                  onClick={handleSearchBarOpen}
                 >
                   <i className="fas fa-search"></i>
                   <span className="d-xl-none ml-2">Search</span>
@@ -237,7 +259,7 @@ export default function Navbar() {
                     <button
                       type="button"
                       className="btn btn-primary border-left-0"
-                      // onClick="close_search_bar()"
+                      onClick={handleSearchBarClose}
                     >
                       <i className="far fa-times"></i>
                     </button>
