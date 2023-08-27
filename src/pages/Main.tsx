@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Footer from '../app/components/Footer/Footer';
 import { useEffect } from 'react';
-import Header from '@/app/components/Header/Header';
 import MainComponent from '@/app/components/Main/MainComponent';
+import Header from '@/app/components/Header/header';
 
 export default function Main() {
 
