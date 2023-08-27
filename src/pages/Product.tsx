@@ -1,6 +1,6 @@
 import Footer from "@/app/components/Footer/Footer";
 import HeaderProduct from "@/app/components/Header/HeaderProduct";
-import Header from "@/app/components/Header/header";
+import Header from "@/app/components/Header/Header";
 import ProductSlider from "@/app/components/SliderNavbar/ProductSlider";
 import Head from "next/head";
 

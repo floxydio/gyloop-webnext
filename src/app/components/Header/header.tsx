@@ -1,7 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@/style/style.css';
+import '@/style/style.min.css';
+import '@/style/icon.css';
+import Link from 'next/link';
+import "popper.js"
+import {useState } from 'react';
 
 export default function Header() {
+  const [currentDropdown, setCurrentDropdown] = useState(0);
+
+
+  
   return (
     <>
       <nav className="navbar navbar-expand-xl navbar-dark bg-transparent">
@@ -31,16 +38,16 @@ export default function Header() {
 
           <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="nav-search-off navbar-nav mr-auto">
-              <li className="nav-item dropdown">
-                <a
+              <li className={`nav-item dropdown ${currentDropdown === 1 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(1)} onMouseLeave={() => setCurrentDropdown(0)}>
+                <Link
                   className="nav-link"
-                  href="product.html"
-                  aria-expanded="false"
+                  href="/Product"
+                  aria-expanded={currentDropdown === 1 ?  'true' : 'false'}
                 >
                   Products
                   <i className="fas fa-angle-down icon-rotates"></i>
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                </Link>
+                <div className={`dropdown-menu ${currentDropdown === 1 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
                   <a className="dropdown-item" href="business.html">
                     <img
                       src="img/logo-business-transparent-black.png"
@@ -75,16 +82,16 @@ export default function Header() {
                   </a>
                 </div>
               </li>
-              <li className="nav-item dropdown">
+              <li className={`nav-item dropdown ${currentDropdown === 2 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(2)} onMouseLeave={() => setCurrentDropdown(0)}>
                 <a
                   className="nav-link"
                   href="solution.html"
-                  aria-expanded="false"
+                  aria-expanded={currentDropdown === 2 ?  'true' : 'false'}
                 >
                   Solutions
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div className={`dropdown-menu ${currentDropdown === 2 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
                   <a className="dropdown-item" href="sales-automation.html">
                     <span>Sales Automation</span>
                   </a>
@@ -117,16 +124,16 @@ export default function Header() {
                   </a>
                 </div>
               </li>
-              <li className="nav-item dropdown">
+              <li className={`nav-item dropdown ${currentDropdown === 3 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(3)} onMouseLeave={() => setCurrentDropdown(0)}>
                 <a
                   className="nav-link"
                   href="resource.html"
-                  aria-expanded="false"
+                  aria-expanded={currentDropdown === 3 ?  'true' : 'false'}
                 >
                   Resources
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div className={`dropdown-menu ${currentDropdown === 3 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
                   <a className="dropdown-item" href="library.html">
                     <span>Library</span>
                   </a>
@@ -138,12 +145,12 @@ export default function Header() {
                   </a>
                 </div>
               </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link" href="about.html" aria-expanded="false">
+              <li className={`nav-item dropdown ${currentDropdown === 4 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(4)} onMouseLeave={() => setCurrentDropdown(0)}>
+                <a className="nav-link" href="about.html" aria-expanded={currentDropdown === 4 ?  'true' : 'false'}>
                   About Us
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div className={`dropdown-menu ${currentDropdown === 4 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
                   <a className="dropdown-item" href="leadership.html">
                     <span>Gyloop Leadership</span>
                   </a>
@@ -193,7 +200,7 @@ export default function Header() {
                 <a
                   className="nav-link mr-0"
                   href="javascript:void(0)"
-                  // onClick="open_search_bar()"
+                  // onClick={() => openingSearchBar()}
                 >
                   <i className="fas fa-search"></i>
                   <span className="d-xl-none ml-2">Search</span>
@@ -227,7 +234,7 @@ export default function Header() {
                     <button
                       type="button"
                       className="btn btn-primary border-left-0"
-                      // onClick="close_search_bar()"
+                      // onClick={() => closeSearchBar()}
                     >
                       <i className="far fa-times"></i>
                     </button>
@@ -248,6 +255,56 @@ export default function Header() {
           </div>
         </div>
       </nav>
+
+      <header className="header-bg-cover billing-automation-header d-flex align-items-end about-header home-header">
+        <div className="container">
+
+            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <h1 className="title">A New Era of Business Apps</h1>
+                        <p className="subtitle">
+                            With Gyloop business platform, you will find the best way how to connect your main business
+                            yo the wide range business networks, automate your sales and procurement transaction, easier
+                            to monitor your supply chain, and improve new business opportunity.
+                        </p>
+
+                    </div>
+                    <div className="carousel-item">
+                        <h1 className="title">A New Era of Business Apps</h1>
+                        <p className="subtitle">
+                            With Gyloop business platform, you will find the best way how to connect your main business
+                            yo the wide range business networks, automate your sales and procurement transaction, easier
+                            to monitor your supply chain, and improve new business opportunity.
+                        </p>
+
+                    </div>
+                    <div className="carousel-item">
+                        <h1 className="title">A New Era of Business Apps</h1>
+                        <p className="subtitle">
+                            With Gyloop business platform, you will find the best way how to connect your main business
+                            yo the wide range business networks, automate your sales and procurement transaction, easier
+                            to monitor your supply chain, and improve new business opportunity.
+                        </p>
+
+                    </div>
+                </div>
+                <ol className="carousel-indicators bullets">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+            </div>
+
+
+            <div className="solution-header-button d-flex justify-content-center">
+                <a href="subscribe-professional.html?trial=1" className="btn gyloop-btn btn-warning text-white">
+                    Get Start for Free
+                </a>
+            </div>
+        </div>
+
+    </header>
     </>
   );
 }

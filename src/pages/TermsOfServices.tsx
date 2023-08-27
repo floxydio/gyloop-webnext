@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/style.css';
+import '@/style/style.min.css';
 import Footer from '../app/components/Footer/Footer';
 
 export default function TermsOfServices() {

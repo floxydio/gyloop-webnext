@@ -1,5 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@/style/style.css';
+import '@/style/style.min.css';
 import Head from 'next/head';
 import Footer from '../app/components/Footer/Footer';
 
