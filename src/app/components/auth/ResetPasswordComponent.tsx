@@ -10,8 +10,6 @@ export default function ResetPasswordComponent() {
     const [step, setStep] = useState(0)
     const [enableVerify, setEnableVerify] = useState(false)
 
-
-
     return (
         <>
 

@@ -46,12 +46,12 @@ export default function FunctionalComponent() {
                                 <div className="card border-0">
                                     <div className="card-body">
 
-                                     <img src="/img/icon_bagde_functional.png" className="subscribe-functional-badge img-fluid float-right"/>
+                                        <img src="/img/icon_bagde_functional.png" className="subscribe-functional-badge img-fluid float-right" />
 
-                                     <a href="index.html">
-                                    <img className="logo-gyloop card-title ml-0"
-                                        src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" />
-                                </a>
+                                        <a href="index.html">
+                                            <img className="logo-gyloop card-title ml-0"
+                                                src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" />
+                                        </a>
 
 
 
@@ -87,7 +87,7 @@ export default function FunctionalComponent() {
 
 
                                                 <input type="text" className="form-control input-label"
-                                                    {...register("companyName")}/>
+                                                    {...register("companyName")} />
                                                 <small className="label-error">{errors.companyName?.message}</small>
                                             </div>
 
@@ -190,36 +190,36 @@ export default function FunctionalComponent() {
                     </div>
 
                     <div className="col-xl-6 d-none d-xl-block side-info subscribe-demo-user subscribe-functional-bg px-xl-0">
-                <div className="wrapper2 d-flex align-items-end h-100">
+                        <div className="wrapper2 d-flex align-items-end h-100">
 
-                    <div className="subscribe-demo-user-subheader px-5 py-3 text-white">
-                        <div className="row">
-                            <div className="col-xl-9">
-                                <img src="/img/icon_bagde_functional_white.png" className="subscribe-functional-head-badge img-fluid text-white" />
-                                <p className="subscribe-demo-user-title">FUNCTIONAL</p>
-                                <div className="subscribe-demo-user-subtitle">
-                                Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                                            
+                            <div className="subscribe-demo-user-subheader px-5 py-3 text-white">
+                                <div className="row">
+                                    <div className="col-xl-9">
+                                        <img src="/img/icon_bagde_functional_white.png" className="subscribe-functional-head-badge img-fluid text-white" />
+                                        <p className="subscribe-demo-user-title">FUNCTIONAL</p>
+                                        <div className="subscribe-demo-user-subtitle">
+                                            Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+
+                                        </div>
+                                    </div>
+                                    <div className="col-xl-3">
+                                        <div className="subscribe-demo-user-text">
+                                            <p className="text-blue">FOCUS</p>
+                                            <p>MAKE</p>
+                                            <p>BUSINESS</p>
+                                            <p>CONNECTED</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="col-xl-3">
-                                <div className="subscribe-demo-user-text">
-                                    <p className="text-blue">FOCUS</p>
-                                    <p>MAKE</p>
-                                    <p>BUSINESS</p>
-                                    <p>CONNECTED</p>
-                                </div>
+
+                                <footer>
+                                    <p className="text-center text-white mb-0">
+                                        &copy; 2023 Gyloop. All rights reserved.
+                                    </p>
+                                </footer>
                             </div>
                         </div>
-
-                        <footer>
-                            <p className="text-center text-white mb-0">
-                                &copy; 2023 Gyloop. All rights reserved.
-                            </p>
-                        </footer>
                     </div>
-                </div>
-            </div>
                 </div>
             </div>
 
