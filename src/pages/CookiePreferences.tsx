@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/style.css';
+import '@/style/style.css';
 import Head from 'next/head';
 import Footer from '../app/components/Footer/Footer';
 
@@ -79,7 +79,7 @@ export default function CookiePreferences() {
           sizes="96x96"
         />
       </Head>
-      <body>
+      <>
         <div className="bg-light">
           <div className="container subheader subheader-container">
             <h1 className="title">Cookie Preferences</h1>
@@ -403,7 +403,7 @@ export default function CookiePreferences() {
           </div>
         </div>
         <Footer />
-      </body>
+      </>
     </>
   );
 }

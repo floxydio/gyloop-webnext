@@ -1,11 +1,12 @@
-import Image from 'next/image'
-import Language from '../Components/header/language'
+
+import Main from "./components/Main/Main";
 
 export default function Home() {
   return (
     // <Language />
     <>
-      <p>AAAAAAAAAAAAAAAA</p>
+     
+      <Main />
     </>
-      )
+  )
 }

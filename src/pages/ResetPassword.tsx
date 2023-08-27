@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import ResetPasswordComponent from '../app/components/auth/ResetPasswordComponent'
+import ResetPasswordComponent from '../app/components/Auth/ResetPasswordComponent'
 
 export default function ResetPassword() {
   return (

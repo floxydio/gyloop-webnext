@@ -49,9 +49,9 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                 <div className="row align-items-center w-100">
                     <div className="col-12 col-xl-6">
                         <div className="wrapper">
-                            <a href="index.html">
+                            <Link href="/">
                                 <img className="logo-gyloop demo" src="/img/logo-gyloop-demo.png" alt="Logo Gyloop Demo" />
-                            </a>
+                            </Link>
 
                             <div className="container">
 
@@ -91,7 +91,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
                                             <hr />
 
-                                            <a href="reset-password-wizard.html" className="gyloop-link">Forgot Your Password?</a>
+                                            <Link href="/ResetPassword" className="gyloop-link">Forgot Your Password?</Link>
                                         </form>
 
                                     </div>
@@ -157,9 +157,9 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                 <div className="row align-items-center w-100">
                     <div className="col-12 col-xl-6">
                         <div className="wrapper">
-                            <a href="index.html">
+                            <Link href="/">
                                 <img className="logo-gyloop" src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" />
-                            </a>
+                            </Link>
 
                             <div className="container">
                                 <div className="card border-0">
@@ -198,7 +198,8 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
                                             <hr />
 
-                                            <a href="reset-password-wizard.html" className="gyloop-link">Forgot Your Password?</a>
+                                            <Link href="/ResetPassword" className="gyloop-link">Forgot Your Password?</Link>
+
 
                                         </form>
 
@@ -267,9 +268,9 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                     </div>
 
                     <div className="col-xl-6 d-none d-xl-block text-center">
-                        <a href="index.html">
+                        <Link href="/">
                             <img className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo Gyloop" />
-                        </a>
+                        </Link>
 
                         <h5 className="title">MAKE BUSINESS CONNECTED</h5>
                         <p className="text">Working together at the same platform is better.</p>

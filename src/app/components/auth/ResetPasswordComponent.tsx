@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "@/style/style.min.css"
 import "@/style/icon.css"
-import SuccessReseticon from './SuccessReseticon'
 import Link from 'next/link'
+import SuccessReseticon from './SuccessReseticon'
 
 
 export default function ResetPasswordComponent() {
@@ -16,9 +16,9 @@ export default function ResetPasswordComponent() {
             <nav className="navbar navbar-expand-xl navbar-dark bg-primary">
                 <div className="container align-items-center">
 
-                    <a className="navbar-brand d-flex mr-5" href="index.html">
+                    <Link className="navbar-brand d-flex mr-5" href="/">
                         <img className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo GYLOOP" />
-                    </a>
+                    </Link>
                 </div>
             </nav>
 

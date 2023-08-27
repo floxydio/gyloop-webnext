@@ -1,18 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/style/style.css';
+import Link from 'next/link';
 
-export default function Header() {
+export default function HeaderProduct() {
   return (
     <>
       <nav className="navbar navbar-expand-xl navbar-dark bg-transparent">
         <div className="container align-items-center">
-          <a className="navbar-brand d-flex mr-5" href="index.html">
+          <Link className="navbar-brand d-flex mr-5" href="/">
             <img
               className="logo-web-lg"
               src="/img/logo-gyloop-white.png"
               alt="LOGO gyloop"
             />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -32,18 +33,18 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="nav-search-off navbar-nav mr-auto">
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link"
-                  href="product.html"
+                  href="/Product"
                   aria-expanded="false"
                 >
                   Products
                   <i className="fas fa-angle-down icon-rotates"></i>
-                </a>
+                </Link>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a className="dropdown-item" href="business.html">
                     <img
-                      src="img/logo-business-transparent-black.png"
+                      src="/img/logo-business-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -242,12 +243,13 @@ export default function Header() {
               <i className="fas fa-phone fa-flip-horizontal d-xl-none mr-2"></i>
               Contact Us
             </a>
-            <a className="btn btn-primary btn-login ml-xl-4" href="login.html">
+            <Link className="btn btn-primary btn-login ml-xl-4" href="/Login">
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
+  
     </>
   );
 }

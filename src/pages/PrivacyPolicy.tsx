@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
       </Head>
-      <body>
+      <>
         <div>
           <title>Privacy Statement for Gyloop</title>
         </div>
@@ -331,7 +331,7 @@ export default function PrivacyPolicy() {
             </div>
           </div>
         </div>
-      </body>
+      </>
     </>
   );
 }

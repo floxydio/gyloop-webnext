@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/style/style.css';
-import React from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -15,7 +15,7 @@ import {
 library.add(faLinkedin, faInstagram, faYoutube, faFacebookSquare, faTwitter);
 
 export default function Footer() {
-  const [cookieSetting, setCookieSetting] = React.useState(null);
+  const [cookieSetting, setCookieSetting] = useState();
 
   function setCookie(name: string, value: string | boolean, days: number) {
     let expires = '';
@@ -44,13 +44,13 @@ export default function Footer() {
             <div className="d-flex footer-top">
               <div className="footer-col order-1 order-xl-0">
                 <div className="mb-3">
-                  <a href="index.html">
+                  <Link href="/">
                     <img
                       className="logo-web-lg"
                       src="/img/logo-gyloop-white.png"
                       alt="LOGO gyloop"
                     />
-                  </a>
+                  </Link>
                 </div>
 
                 <ul className="footer-social-links list-unstyled d-flex mb-3">
@@ -110,7 +110,7 @@ export default function Footer() {
                     >
                       <ul className="list-unstyled footer-links">
                         <li>
-                          <a href="product.html">Gyloop Overview</a>
+                          <Link href="/Product">Gyloop Overview</Link>
                         </li>
                         <li>
                           <a href="solution.html">Explore Solutions</a>
@@ -196,7 +196,7 @@ export default function Footer() {
 
                     <ul className="list-unstyled footer-links">
                       <li>
-                        <a href="product.html">Gyloop Overview</a>
+                        <Link href="/Product">Gyloop Overview</Link>
                       </li>
                       <li>
                         <a href="solution.html">Explore Solutions</a>

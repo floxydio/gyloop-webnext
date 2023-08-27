@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "@/style/style.min.css"
 import "@/style/icon.css"
 import { useForm, Resolver } from 'react-hook-form';
+import Link from "next/link";
 
 type FormValues = {
     firstName: string;
@@ -52,10 +53,10 @@ export default function VerifiedComponent() {
 
                                         <img src="/img/icon_bagde_verified.png" className="subscribe-functional-badge img-fluid float-right" />
 
-                                        <a href="index.html">
+                                        <Link href="/">
                                             <img className="logo-gyloop card-title ml-0 mb-xl-3"
                                                 src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" />
-                                        </a>
+                                        </Link>
 
 
 

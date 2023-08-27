@@ -59,7 +59,7 @@ export default function TermsOfServices() {
         {/* <!-- Orientation  --> */}
         <meta name="screen-orientation" content="portrait" />
       </Head>
-      <body>
+      <>
         <div className="bg-light">
           <div className="container subheader subheader-container">
             <h1 className="title">Term of Services</h1>
@@ -383,7 +383,7 @@ export default function TermsOfServices() {
           </div>
         </div>
         <Footer />
-      </body>
+      </>
     </>
   );
 }
