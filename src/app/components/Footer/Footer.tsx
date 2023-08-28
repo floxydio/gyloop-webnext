@@ -178,10 +178,10 @@ export default function Footer() {
                           <a href="404-page-not-found.html">Marketplace</a>
                         </li>
                         <li>
-                          <a href="campaign.html">Campaigns</a>
+                          <Link href="/Campaign">Campaign</Link>
                         </li>
                         <li>
-                          <a href="news-and-event.html">News and Events</a>
+                          <Link href="/NewsEvent">News and Events</Link>
                         </li>
                       </ul>
                     </div>
@@ -238,10 +238,10 @@ export default function Footer() {
                         <a href="404-page-not-found.html">Marketplace</a>
                       </li>
                       <li>
-                        <a href="campaign.html">Campaigns</a>
+                        <Link href="/Campaign">Campaign</Link>
                       </li>
                       <li>
-                        <a href="news-and-event.html">News and Events</a>
+                        <Link href="/NewsEvent">News and Events</Link>
                       </li>
                     </ul>
                   </div>

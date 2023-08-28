@@ -154,15 +154,15 @@ export default function HeaderNoMenu() {
                   <Link className="dropdown-item" href="/Leadership">
                     <span>Gyloop Leadership</span>
                   </Link>
-                  <a className="dropdown-item" href="news-and-event.html">
+                  <Link className="dropdown-item" href="/NewsEvent">
                     <span>News and Events</span>
-                  </a>
-                  <a className="dropdown-item" href="campaign.html">
+                  </Link>
+                  <Link className="dropdown-item" href="/Campaign">
                     <span>Gyloop Campaign</span>
-                  </a>
-                  <a className="dropdown-item" href="culture.html">
+                  </Link>
+                  <Link className="dropdown-item" href="/Culture">
                     <span>Gyloop Culture</span>
-                  </a>
+                  </Link>
                 </div>
               </li>
             </ul>
@@ -249,9 +249,9 @@ export default function HeaderNoMenu() {
               <i className="fas fa-phone fa-flip-horizontal d-xl-none mr-2"></i>
               Contact Us
             </a>
-            <a className="btn btn-primary btn-login ml-xl-4" href="login.html">
+            <Link className="btn btn-primary btn-login ml-xl-4" href="/Login">
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
