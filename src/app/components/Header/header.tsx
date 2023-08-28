@@ -151,9 +151,9 @@ export default function Header() {
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
                 <div className={`dropdown-menu ${currentDropdown === 4 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="leadership.html">
+                  <Link className="dropdown-item" href="/Leadership">
                     <span>Gyloop Leadership</span>
-                  </a>
+                  </Link>
                   <a className="dropdown-item" href="news-and-event.html">
                     <span>News and Events</span>
                   </a>

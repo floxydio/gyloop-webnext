@@ -1,6 +1,6 @@
 
 import Head from "next/head"
-import Auth from "../app/components/Auth/AuthComponent"
+import Auth from "../../app/components/Auth/AuthComponent"
 export default function Login() {
   return (
     <>
