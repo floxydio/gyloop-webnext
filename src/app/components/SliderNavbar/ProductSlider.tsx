@@ -42,7 +42,6 @@ export default function ProductSlider() {
             </div>
         </div>
     </header>
-
     </>
     
     )

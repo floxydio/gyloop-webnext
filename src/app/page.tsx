@@ -2,6 +2,8 @@
 import Main from "./components/Main/MainComponent";
 
 export default function Home() {
+
+
   return (
     // <Language />
     <>
@@ -10,3 +12,7 @@ export default function Home() {
     </>
   )
 }
+function useEffect(arg0: () => void, arg1: never[]) {
+  throw new Error("Function not implemented.");
+}
+

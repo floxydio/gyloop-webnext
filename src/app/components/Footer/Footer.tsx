@@ -172,7 +172,7 @@ export default function Footer() {
                     >
                       <ul className="list-unstyled footer-links">
                         <li>
-                          <a href="networks.html">Networks</a>
+                          <Link href="/Product/Network">Networks</Link>
                         </li>
                         <li>
                           <a href="404-page-not-found.html">Marketplace</a>

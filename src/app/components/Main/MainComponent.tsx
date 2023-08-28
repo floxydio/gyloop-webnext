@@ -51,7 +51,7 @@ export default function MainComponent() {
                                 Connect you with other entities in wide range networks, and generate your business
                                 opportunities
                             </div>
-                            <a href="networks.html" className="gyloop-link">Learn More <i className="fas fa-angle-right"></i></a>
+                            <Link href="/Product/Network" className="gyloop-link">Learn More <i className="fas fa-angle-right"></i></Link>
                         </div>
                     </div>
                 </div>

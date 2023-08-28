@@ -48,14 +48,14 @@ export default function Header() {
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </Link>
                 <div className={`dropdown-menu ${currentDropdown === 1 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="business.html">
+                  <Link className="dropdown-item" href="/Product/Business">
                     <img
                       src="img/logo-business-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
                     <span>Business</span>
-                  </a>
+                  </Link>
                   <a className="dropdown-item" href="networks.html">
                     <img
                       src="img/logo-networks-transparent-black.png"

@@ -46,33 +46,33 @@ export default function HeaderNoMenuTransparent() {
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </Link>
                 <div className={`dropdown-menu ${currentDropdown === 1 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="business.html">
+                  <Link className="dropdown-item" href="/Product/Business">
                     <img
-                      src="img/logo-business-transparent-black.png"
+                      src="/img/logo-business-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
                     <span>Business</span>
-                  </a>
-                  <a className="dropdown-item" href="networks.html">
+                  </Link>
+                  <Link className="dropdown-item" href="/Product/Network">
                     <img
-                      src="img/logo-networks-transparent-black.png"
+                      src="/img/logo-networks-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
                     <span>Networks</span>
-                  </a>
-                  <a className="dropdown-item" href="connector.html">
+                  </Link>
+                  <Link className="dropdown-item" href="/Product/Connector">
                     <img
-                      src="img/logo-connector-transparent-black.png"
+                      src="/img/logo-connector-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
                     <span>Connector</span>
-                  </a>
+                  </Link>
                   <a className="dropdown-item" href="provider.html">
                     <img
-                      src="img/logo-provider-transparent-black.png"
+                      src="/img/logo-provider-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -179,7 +179,7 @@ export default function HeaderNoMenuTransparent() {
                   <button className="dropdown-item active" type="button">
                     <img
                       className="icon-lang"
-                      src="img/icon-lang-en.png"
+                      src="/img/icon-lang-en.png"
                       alt="English"
                     />
                     English
@@ -187,7 +187,7 @@ export default function HeaderNoMenuTransparent() {
                   <button className="dropdown-item" type="button">
                     <img
                       className="icon-lang"
-                      src="img/icon-lang-id.png"
+                      src="/img/icon-lang-id.png"
                       alt="English"
                     />
                     Bahasa

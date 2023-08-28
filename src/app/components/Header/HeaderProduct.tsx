@@ -41,14 +41,14 @@ export default function HeaderProduct() {
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </Link>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="business.html">
+                  <Link className="dropdown-item" href="/Product/Business">
                     <img
                       src="/img/logo-business-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
                     <span>Business</span>
-                  </a>
+                  </Link>
                   <a className="dropdown-item" href="networks.html">
                     <img
                       src="img/logo-networks-transparent-black.png"
@@ -57,14 +57,14 @@ export default function HeaderProduct() {
                     />
                     <span>Networks</span>
                   </a>
-                  <a className="dropdown-item" href="connector.html">
+                  <Link className="dropdown-item" href="/Product/Connector">
                     <img
                       src="img/logo-connector-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
                     <span>Connector</span>
-                  </a>
+                  </Link>
                   <a className="dropdown-item" href="provider.html">
                     <img
                       src="img/logo-provider-transparent-black.png"
