@@ -23,7 +23,7 @@ export default function MainComponent() {
                 <div className="col-12 col-md-4">
                     <div className="card bg-transparent rounded-0 border-0">
                         <div className="card-body">
-                            <img src="img/icon_home_customer_relationship.png" className="features-image"/>
+                            <img src="/img/icon_home_customer_relationship.png" className="features-image"/>
                             <div className="card-title">
                                 Customer Relationship
                             </div>
@@ -43,7 +43,7 @@ export default function MainComponent() {
                 <div className="col-12 col-md-4">
                     <div className="card bg-transparent rounded-0 border-0">
                         <div className="card-body">
-                            <img src="img/icon_home_business_network.png" className="features-image"/>
+                            <img src="/img/icon_home_business_network.png" className="features-image"/>
                             <div className="card-title">
                                 Business Network
                             </div>
@@ -63,7 +63,7 @@ export default function MainComponent() {
                 <div className="col-12 col-md-4">
                     <div className="card bg-transparent rounded-0 border-0">
                         <div className="card-body">
-                            <img src="img/icon_home_supplier_relationship.png" className="features-image"/>
+                            <img src="/img/icon_home_supplier_relationship.png" className="features-image"/>
                             <div className="card-title">
                                 Supplier Relationship
                             </div>
@@ -170,15 +170,15 @@ export default function MainComponent() {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         {/* <sergey-import src="assets/video-placeholder" /> */}
-                        <img className="img-fluid" src="img/video_player_placeholder.gif" alt="Video Placeholder"></img>
+                        <img className="img-fluid" src="/img/video_player_placeholder.gif" alt="Video Placeholder"></img>
                     </div>
                     <div className="carousel-item">
                         {/* <sergey-import src="assets/video-placeholder" /> */}
-                        <img className="img-fluid" src="img/video_player_placeholder.gif" alt="Video Placeholder"></img>
+                        <img className="img-fluid" src="/img/video_player_placeholder.gif" alt="Video Placeholder"></img>
                     </div>
                     <div className="carousel-item">
                         {/* <sergey-import src="assets/video-placeholder" /> */}
-                        <img className="img-fluid" src="img/video_player_placeholder.gif" alt="Video Placeholder"></img>
+                        <img className="img-fluid" src="/img/video_player_placeholder.gif" alt="Video Placeholder"></img>
                     </div>
                 </div>
             </div>
@@ -202,7 +202,7 @@ export default function MainComponent() {
 
     <div className="business-feature home-future">
         <div className="container">
-            <img src="img/icon_home_future.png" className="features-image" />
+            <img src="/img/icon_home_future.png" className="features-image" />
 
             <div className="row">
                 <div className="col-12 col-md-6 pr-md-0">

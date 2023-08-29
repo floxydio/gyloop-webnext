@@ -51,7 +51,7 @@ export default function DemoComponent() {
 
                                         <Link href="/">
                                             <img className="logo-gyloop subscribe-card-title card-title ml-0"
-                                                src="img/logo-gyloop-demo.png" alt="Logo Gyloop Demo" />
+                                                src="/img/logo-gyloop-demo.png" alt="Logo Gyloop Demo" />
                                         </Link>
 
 

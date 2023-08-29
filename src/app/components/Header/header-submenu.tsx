@@ -76,7 +76,7 @@ export default function HeaderSubmenuComponent({
                 >
                   <a className="dropdown-item" href="business.html">
                     <img
-                      src="img/logo-business-transparent-black.png"
+                      src="/img/logo-business-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -84,7 +84,7 @@ export default function HeaderSubmenuComponent({
                   </a>
                   <a className="dropdown-item" href="networks.html">
                     <img
-                      src="img/logo-networks-transparent-black.png"
+                      src="/img/logo-networks-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -92,7 +92,7 @@ export default function HeaderSubmenuComponent({
                   </a>
                   <a className="dropdown-item" href="connector.html">
                     <img
-                      src="img/logo-connector-transparent-black.png"
+                      src="/img/logo-connector-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -100,7 +100,7 @@ export default function HeaderSubmenuComponent({
                   </a>
                   <a className="dropdown-item" href="provider.html">
                     <img
-                      src="img/logo-provider-transparent-black.png"
+                      src="/img/logo-provider-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -200,21 +200,21 @@ export default function HeaderSubmenuComponent({
                 onMouseEnter={() => setCurrentDropdown(4)}
                 onMouseLeave={() => setCurrentDropdown(0)}
               >
-                <a
+                <Link
                   className="nav-link"
-                  href="about.html"
+                  href="/About"
                   aria-expanded={currentDropdown === 4 ? 'true' : 'false'}
                 >
                   About Us
                   <i className="fas fa-angle-down icon-rotates"></i>
-                </a>
+                </Link>
                 <div
                   className={`dropdown-menu ${
                     currentDropdown === 4 ? 'show' : ''
                   }`}
                   aria-labelledby="navbarDropdown"
                 >
-                  <Link className="dropdown-item" href="/Leadership">
+                  <Link className="dropdown-item" href="/About/Leadership">
                     <span>Gyloop Leadership</span>
                   </Link>
                   <a className="dropdown-item" href="news-and-event.html">
@@ -244,7 +244,7 @@ export default function HeaderSubmenuComponent({
                   <button className="dropdown-item active" type="button">
                     <img
                       className="icon-lang"
-                      src="img/icon-lang-en.png"
+                      src="/img/icon-lang-en.png"
                       alt="English"
                     />
                     English
@@ -252,7 +252,7 @@ export default function HeaderSubmenuComponent({
                   <button className="dropdown-item" type="button">
                     <img
                       className="icon-lang"
-                      src="img/icon-lang-id.png"
+                      src="/img/icon-lang-id.png"
                       alt="English"
                     />
                     Bahasa

@@ -7,7 +7,7 @@ export default function LeadershipCard() {
             <div className="card">
                 <div className="card-body p-3 p-xl-4">
 
-                    <img src="img/placeholder-square.png" className="img-fluid" alt="..." />
+                    <img src="/img/placeholder-square.png" className="img-fluid" alt="..." />
 
                     <h5 className="card-title">John Doe</h5>
 

@@ -51,7 +51,7 @@ export default function HeaderProduct() {
                   </Link>
                   <a className="dropdown-item" href="networks.html">
                     <img
-                      src="img/logo-networks-transparent-black.png"
+                      src="/img/logo-networks-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -59,20 +59,20 @@ export default function HeaderProduct() {
                   </a>
                   <Link className="dropdown-item" href="/Product/Connector">
                     <img
-                      src="img/logo-connector-transparent-black.png"
+                      src="/img/logo-connector-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
                     <span>Connector</span>
                   </Link>
-                  <a className="dropdown-item" href="provider.html">
+                  <Link className="dropdown-item" href="/Product/Provider">
                     <img
-                      src="img/logo-provider-transparent-black.png"
+                      src="/img/logo-provider-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
                     <span>Provider</span>
-                  </a>
+                  </Link>
                 </div>
               </li>
               <li className="nav-item dropdown">
@@ -144,16 +144,16 @@ export default function HeaderProduct() {
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <Link className="dropdown-item" href="/Leadership">
+                  <Link className="dropdown-item" href="/About/Leadership">
                     <span>Gyloop Leadership</span>
                   </Link>
-                  <Link className="dropdown-item" href="/NewsEvent">
+                  <Link className="dropdown-item" href="/About/NewsEvent">
                     <span>News and Events</span>
                   </Link>
-                  <Link className="dropdown-item" href="/Campaign">
+                  <Link className="dropdown-item" href="/About/Campaign">
                     <span>Gyloop Campaign</span>
                   </Link>
-                  <Link className="dropdown-item" href="/Culture">
+                  <Link className="dropdown-item" href="/About/Culture">
                     <span>Gyloop Culture</span>
                   </Link>
                 </div>
@@ -174,7 +174,7 @@ export default function HeaderProduct() {
                   <button className="dropdown-item active" type="button">
                     <img
                       className="icon-lang"
-                      src="img/icon-lang-en.png"
+                      src="/img/icon-lang-en.png"
                       alt="English"
                     />
                     English
@@ -182,7 +182,7 @@ export default function HeaderProduct() {
                   <button className="dropdown-item" type="button">
                     <img
                       className="icon-lang"
-                      src="img/icon-lang-id.png"
+                      src="/img/icon-lang-id.png"
                       alt="English"
                     />
                     Bahasa

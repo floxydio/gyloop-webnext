@@ -70,14 +70,14 @@ export default function HeaderNoMenuTransparent() {
                     />
                     <span>Connector</span>
                   </Link>
-                  <a className="dropdown-item" href="provider.html">
+                  <Link className="dropdown-item" href="/Product/Provider">
                     <img
                       src="/img/logo-provider-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
                     <span>Provider</span>
-                  </a>
+                  </Link>
                 </div>
               </li>
               <li className={`nav-item dropdown ${currentDropdown === 2 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(2)} onMouseLeave={() => setCurrentDropdown(0)}>
@@ -144,21 +144,21 @@ export default function HeaderNoMenuTransparent() {
                 </div>
               </li>
               <li className={`nav-item dropdown ${currentDropdown === 4 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(4)} onMouseLeave={() => setCurrentDropdown(0)}>
-                <a className="nav-link" href="about.html" aria-expanded={currentDropdown === 4 ?  'true' : 'false'}>
+                <Link className="nav-link" href="/About" aria-expanded={currentDropdown === 4 ?  'true' : 'false'}>
                   About Us
                   <i className="fas fa-angle-down icon-rotates"></i>
-                </a>
+                </Link>
                 <div className={`dropdown-menu ${currentDropdown === 4 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
-                  <Link className="dropdown-item" href="/Leadership">
+                  <Link className="dropdown-item" href="/About/Leadership">
                     <span>Gyloop Leadership</span>
                   </Link>
-                  <Link className="dropdown-item" href="/NewsEvent">
+                  <Link className="dropdown-item" href="/About/NewsEvent">
                     <span>News and Events</span>
                   </Link>
-                  <Link className="dropdown-item" href="/Campaign">
+                  <Link className="dropdown-item" href="/About/Campaign">
                     <span>Gyloop Campaign</span>
                   </Link>
-                  <Link className="dropdown-item" href="/Culture">
+                  <Link className="dropdown-item" href="/About/Culture">
                     <span>Gyloop Culture</span>
                   </Link>
                 </div>

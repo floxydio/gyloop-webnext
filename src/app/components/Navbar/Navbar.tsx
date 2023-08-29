@@ -66,7 +66,7 @@ export default function Navbar() {
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a className="dropdown-item" href="business.html">
                     <img
-                      src="img/logo-business-transparent-black.png"
+                      src="/img/logo-business-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -74,7 +74,7 @@ export default function Navbar() {
                   </a>
                   <a className="dropdown-item" href="networks.html">
                     <img
-                      src="img/logo-networks-transparent-black.png"
+                      src="/img/logo-networks-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -82,7 +82,7 @@ export default function Navbar() {
                   </a>
                   <a className="dropdown-item" href="connector.html">
                     <img
-                      src="img/logo-connector-transparent-black.png"
+                      src="/img/logo-connector-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -90,7 +90,7 @@ export default function Navbar() {
                   </a>
                   <a className="dropdown-item" href="provider.html">
                     <img
-                      src="img/logo-provider-transparent-black.png"
+                      src="/img/logo-provider-transparent-black.png"
                       alt=""
                       className="d-none d-xl-inline"
                     />
@@ -201,7 +201,7 @@ export default function Navbar() {
                   <button className="dropdown-item active" type="button">
                     <img
                       className="icon-lang"
-                      src="img/icon-lang-en.png"
+                      src="/img/icon-lang-en.png"
                       alt="English"
                     />
                     English
@@ -209,7 +209,7 @@ export default function Navbar() {
                   <button className="dropdown-item" type="button">
                     <img
                       className="icon-lang"
-                      src="img/icon-lang-id.png"
+                      src="/img/icon-lang-id.png"
                       alt="English"
                     />
                     Bahasa

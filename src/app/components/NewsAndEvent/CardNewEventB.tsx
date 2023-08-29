@@ -6,7 +6,7 @@ export default function CardNewEventB() {
     <>
     
     <div className="card">
-    <img className="card-img-top" src="img/image_placeholder.png" alt="Image Placeholder"/>
+    <img className="card-img-top" src="/img/image_placeholder.png" alt="Image Placeholder"/>
 
     <div className="card-body">
         <a href="news-and-event-detail.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
@@ -26,7 +26,7 @@ export default function CardNewEventB() {
 </div>
 
 <div className="card">
-    <img className="card-img-top" src="img/image_placeholder.png" alt="Image Placeholder"/>
+    <img className="card-img-top" src="/img/image_placeholder.png" alt="Image Placeholder"/>
 
     <div className="card-body">
         <a href="news-and-event-detail.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
@@ -46,7 +46,7 @@ export default function CardNewEventB() {
 </div>
 
 <div className="card">
-    <img className="card-img-top" src="img/image_placeholder.png" alt="Image Placeholder"/>
+    <img className="card-img-top" src="/img/image_placeholder.png" alt="Image Placeholder"/>
 
     <div className="card-body">
         <a href="news-and-event-detail.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
@@ -66,7 +66,7 @@ export default function CardNewEventB() {
 </div>
 
 <div className="card">
-    <img className="card-img-top" src="img/image_placeholder.png" alt="Image Placeholder"/>
+    <img className="card-img-top" src="/img/image_placeholder.png" alt="Image Placeholder"/>
 
     <div className="card-body">
         <a href="news-and-event-detail.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
@@ -86,7 +86,7 @@ export default function CardNewEventB() {
 </div>
 
 <div className="card">
-    <img className="card-img-top" src="img/image_placeholder.png" alt="Image Placeholder"/>
+    <img className="card-img-top" src="/img/image_placeholder.png" alt="Image Placeholder"/>
 
     <div className="card-body">
         <a href="news-and-event-detail.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
@@ -106,7 +106,7 @@ export default function CardNewEventB() {
 </div>
 
 <div className="card">
-    <img className="card-img-top" src="img/image_placeholder.png" alt="Image Placeholder"/>
+    <img className="card-img-top" src="/img/image_placeholder.png" alt="Image Placeholder"/>
 
     <div className="card-body">
         <a href="news-and-event-detail.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
