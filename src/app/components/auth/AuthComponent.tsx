@@ -4,7 +4,7 @@ import "@/style/icon.css"
 import React, { useState } from "react"
 import { useForm, Resolver } from 'react-hook-form';
 import Link from "next/link";
-
+import Image from "next/image"
 interface PropsSend {
     TypeHeader: number
 }
@@ -50,7 +50,14 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                     <div className="col-12 col-xl-6">
                         <div className="wrapper">
                             <Link href="/">
-                                <img className="logo-gyloop demo" src="/img/logo-gyloop-demo.png" alt="Logo Gyloop Demo" />
+                                {/* <img className="logo-gyloop demo" src="/img/logo-gyloop-demo.png" alt="Logo Gyloop Demo" /> */}
+                                <Image
+                                    src="/img/logo-gyloop-demo.png"
+                                    alt="Logo Gyloop Demo"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    className="logo-gyloop demo" />
                             </Link>
 
                             <div className="container">
@@ -113,7 +120,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                 <div className="row">
 
                                     <div className="col-xl-6 text-center">
-                                        <img className="img-badge" src="img/icon_bagde_professional_white.png" alt="Icon Demo" />
+                                        <Image className="img-badge" src="/img/icon_bagde_professional_white.png" alt="Icon Demo" width={0} height={0} sizes="100" />
 
                                         <h2 className="title">Register for free trial</h2>
                                         <div className="text">
@@ -130,7 +137,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                     </div>
 
                                     <div className="col-xl-6 text-center">
-                                        <img className="img-badge" src="img/icon_bagde_volunteer_white.png" alt="Icon Volunteer" />
+                                        <Image className="img-badge" src="/img/icon_bagde_volunteer_white.png" alt="Icon Volunteer" width={0} height={0} sizes="100" />
 
                                         <h2 className="title">Volunteer Program</h2>
                                         <div className="text">
@@ -158,7 +165,10 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                     <div className="col-12 col-xl-6">
                         <div className="wrapper">
                             <Link href="/">
-                                <img className="logo-gyloop" src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" />
+                                <Image className="logo-gyloop" src="/img/logo-gyloop-dark.png" alt="Logo Gyloop"   width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                     />
                             </Link>
 
                             <div className="container">
@@ -217,7 +227,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                 <div className="row">
 
                                     <div className="col-xl-6 text-center">
-                                        <img className="img-badge" src="/img/icon_bagde_professional_white.png" alt="Icon Demo" />
+                                        <Image className="img-badge" src="/img/icon_bagde_professional_white.png" alt="Icon Demo"  width={0} height={0} sizes="100" />
 
                                         <h2 className="title">Register for free trial</h2>
                                         <div className="text">
@@ -234,7 +244,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                     </div>
 
                                     <div className="col-xl-6 text-center">
-                                        <img className="img-badge" src="/img/icon_bagde_volunteer_white.png" alt="Icon Volunteer" />
+                                        <Image  width={0} height={0} sizes="100" className="img-badge" src="/img/icon_bagde_volunteer_white.png" alt="Icon Volunteer" />
 
                                         <h2 className="title">Volunteer Program</h2>
                                         <div className="text">
@@ -269,7 +279,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
                     <div className="col-xl-6 d-none d-xl-block text-center">
                         <Link href="/">
-                            <img className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo Gyloop" />
+                            <Image  width={0} height={0} sizes="100" className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo Gyloop" />
                         </Link>
 
                         <h5 className="title">MAKE BUSINESS CONNECTED</h5>
@@ -281,4 +291,4 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
         </>
     )
-}
+}   

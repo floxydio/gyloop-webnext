@@ -4,7 +4,7 @@ import "@/style/style.min.css"
 import "@/style/icon.css"
 import Link from 'next/link'
 import SuccessReseticon from './SuccessReseticon'
-
+import Image from "next/image"
 
 export default function ResetPasswordComponent() {
     const [step, setStep] = useState(0)
@@ -17,7 +17,7 @@ export default function ResetPasswordComponent() {
                 <div className="container align-items-center">
 
                     <Link className="navbar-brand d-flex mr-5" href="/">
-                        <img className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo GYLOOP" />
+                        <Image className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo GYLOOP"  width={0} height={0} sizes="100" />
                     </Link>
                 </div>
             </nav>
