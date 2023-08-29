@@ -1,3 +1,4 @@
+import Footer from '@/app/components/Footer/Footer'
 import HeaderNoMenu from '@/app/components/Header/HeaderNoMenu'
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent'
 import NewsAndEvent from '@/app/components/NewsAndEvent/NewsAndEvent'
@@ -18,6 +19,7 @@ export default function index() {
       </Head>
       <HeaderNoMenuTransparent />
       <NewsAndEvent />
+      <Footer/>
     </>
   )
 }
