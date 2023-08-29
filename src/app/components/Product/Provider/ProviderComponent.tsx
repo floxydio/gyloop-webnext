@@ -143,7 +143,7 @@ export default function ProviderComponent() {
                                 </div>
 
                                 {[...Array(6)].map((x, i) => {
-                                    return <ProductManagement />
+                                    return <ProductManagement key={x} />
                                 })}
                                 <BusinessFooter />
                             </div>
@@ -200,7 +200,7 @@ export default function ProviderComponent() {
                                 </div>
 
                                 {[...Array(6)].map((x, i) => {
-                                    return <ProductManagement />
+                                    return <ProductManagement key={x} />
                                 })}
                                 <BusinessFooter />
                             </div>
@@ -257,7 +257,7 @@ export default function ProviderComponent() {
                                 </div>
 
                                 {[...Array(6)].map((x, i) => {
-                                    return <ProductManagement />
+                                    return <ProductManagement key={x} />
                                 })}
                                 <BusinessFooter />
                             </div>

@@ -157,9 +157,9 @@ export default function Header() {
                   <Link className="dropdown-item" href="/About/NewsEvent">
                     <span>News and Events</span>
                   </Link>
-                  <a className="dropdown-item" href="/About/Campaign">
+                  <Link className="dropdown-item" href="/About/Campaign">
                     <span>Gyloop Campaign</span>
-                  </a>
+                  </Link>
                   <Link className="dropdown-item" href="/About/Culture">
                     <span>Gyloop Culture</span>
                   </Link>

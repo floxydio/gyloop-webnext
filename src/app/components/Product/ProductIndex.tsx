@@ -308,16 +308,16 @@ export default function ProductIndex() {
                     </p>
 
                     <div className="card-text">
-                        Gyloop Provider is an Apps for giving you opportunity to collaborate your business service to
+                        {`Gyloop Provider is an Apps for giving you opportunity to collaborate your business service to
                         our Gyloop services, you can contribute to your service to our existing business model, creating
                         new own market with Gyloop's infrastructure, or fit out specific features or menus by released
-                        apps on Gyloop marketplace.
+                        apps on Gyloop marketplace.`}
                     </div>
                     <div className="card-text">
-                        Gyloop Provider is an Apps for giving you opportunity to collaborate your business service to
+                        {`Gyloop Provider is an Apps for giving you opportunity to collaborate your business service to
                         our Gyloop services, you can contribute to your service to our existing business model, creating
                         new own market with Gyloop's infrastructure, or fit out specific features or menus by released
-                        apps on Gyloop marketplace.
+                        apps on Gyloop marketplace.`}
                     </div>
 
                     <div className="row">

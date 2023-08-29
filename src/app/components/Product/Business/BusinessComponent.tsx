@@ -210,7 +210,7 @@ export default function BusinessComponent() {
                                 </div>
 
                                 {[...Array(6)].map((x, i) => {
-                                    return <ProductManagement />
+                                    return <ProductManagement key={x} />
                                 })}
 
                                 <BusinessFooter />
@@ -268,7 +268,7 @@ export default function BusinessComponent() {
                                 </div>
 
                                 {[...Array(6)].map((x, i) => {
-                                    return <ProductManagement />
+                                    return <ProductManagement key={x} />
                                 })}
                                 <BusinessFooter />
                             </div>
@@ -326,7 +326,7 @@ export default function BusinessComponent() {
 
 
                                 {[...Array(6)].map((x, i) => {
-                                    return <ProductManagement />
+                                    return <ProductManagement key={x} />
                                 })}
                                 <BusinessFooter />
                             </div>

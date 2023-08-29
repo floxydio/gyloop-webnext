@@ -14,7 +14,7 @@ export default function ContactUs() {
 
                 <title>Gyloop - Contact Us</title>
             </Head>
-            <ContactUsComponent />
+            <ContactUsComponent />  
 
         </>
     )

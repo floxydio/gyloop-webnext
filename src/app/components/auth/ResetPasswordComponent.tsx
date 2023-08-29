@@ -193,7 +193,7 @@ export default function ResetPasswordComponent() {
                             </div>
 
                             <p className="card-text text-center mt-3 mt-md-5 mt-xl-4">
-                                Didn't receive OTP?
+                                {`Didn't receive OTP?`}
                                 <strong className="ml-2">04:39</strong>
 
                                 <a href="javascript:void(0)" className="text-muted ml-4">
