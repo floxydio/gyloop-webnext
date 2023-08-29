@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 export default function HeaderConnector() {
   return (
@@ -6,10 +7,10 @@ export default function HeaderConnector() {
     <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header connector-header">
         <div className="container d-flex justify-content-md-end">
           <div className="content px-md-0">
-            <img
+            <Image
               className="logo"
               src="/img/logo-connector-transparent.png"
-              alt="Logo Gyloop Connector"
+              alt="Logo Gyloop Connector" width={0} height={0} sizes='100'
             />
             <h1 className="title">Gyloop Connector</h1>
             <p className="subtitle">

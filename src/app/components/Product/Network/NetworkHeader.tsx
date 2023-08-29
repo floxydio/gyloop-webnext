@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 export default function NetworkHeader() {
@@ -6,7 +7,7 @@ export default function NetworkHeader() {
     <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header networks-header">
         <div className="container d-flex justify-content-md-end">
             <div className="content px-md-0">
-                <img className="logo" src="/img/logo-networks-transparent.png" alt="Logo Gyloop networks"/>
+                <Image className="logo" src="/img/logo-networks-transparent.png" alt="Logo Gyloop networks" width={0} height={0} sizes='100'/>
                 <h1 className="title">Gyloop Networks</h1>
                 <p className="subtitle">
                     <span className="d-md-none d-xl-inline">

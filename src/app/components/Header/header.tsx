@@ -1,23 +1,25 @@
 import '@/style/style.min.css';
 import '@/style/icon.css';
 import Link from 'next/link';
-import "popper.js"
-import {useState } from 'react';
+import 'popper.js';
+import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [currentDropdown, setCurrentDropdown] = useState(0);
 
-
-  
   return (
     <>
       <nav className="navbar navbar-expand-xl navbar-dark bg-transparent">
         <div className="container align-items-center">
           <a className="navbar-brand d-flex mr-5" href="index.html">
-            <img
+            <Image
               className="logo-web-lg"
               src="/img/logo-gyloop-white.png"
               alt="LOGO gyloop"
+              width={0}
+              height={0}
+              sizes="100"
             />
           </a>
           <button
@@ -29,7 +31,7 @@ export default function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="fa-stack" style={{verticalAlign: 'top'}}>
+            <span className="fa-stack" style={{ verticalAlign: 'top' }}>
               <i className="far fa-circle fa-stack-2x"></i>
               <i className="fas fa-bars fa-stack-1x"></i>
               <i className="fas fa-arrow-right fa-stack-1x"></i>
@@ -38,60 +40,94 @@ export default function Header() {
 
           <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="nav-search-off navbar-nav mr-auto">
-              <li className={`nav-item dropdown ${currentDropdown === 1 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(1)} onMouseLeave={() => setCurrentDropdown(0)}>
+              <li
+                className={`nav-item dropdown ${
+                  currentDropdown === 1 ? 'show' : ''
+                }`}
+                onMouseEnter={() => setCurrentDropdown(1)}
+                onMouseLeave={() => setCurrentDropdown(0)}
+              >
                 <Link
                   className="nav-link"
                   href="/Product"
-                  aria-expanded={currentDropdown === 1 ?  'true' : 'false'}
+                  aria-expanded={currentDropdown === 1 ? 'true' : 'false'}
                 >
                   Products
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </Link>
-                <div className={`dropdown-menu ${currentDropdown === 1 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
+                <div
+                  className={`dropdown-menu ${
+                    currentDropdown === 1 ? 'show' : ''
+                  }`}
+                  aria-labelledby="navbarDropdown"
+                >
                   <Link className="dropdown-item" href="/Product/Business">
-                    <img
+                    <Image
                       src="/img/logo-business-transparent-black.png"
-                      alt=""
+                      alt="gyloop-business-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Business</span>
                   </Link>
                   <a className="dropdown-item" href="networks.html">
-                    <img
+                    <Image
                       src="/img/logo-networks-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-networks-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Networks</span>
                   </a>
                   <a className="dropdown-item" href="connector.html">
-                    <img
+                    <Image
                       src="/img/logo-connector-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-connector-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Connector</span>
                   </a>
                   <a className="dropdown-item" href="provider.html">
-                    <img
+                    <Image
                       src="/img/logo-provider-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-provider-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Provider</span>
                   </a>
                 </div>
               </li>
-              <li className={`nav-item dropdown ${currentDropdown === 2 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(2)} onMouseLeave={() => setCurrentDropdown(0)}>
+              <li
+                className={`nav-item dropdown ${
+                  currentDropdown === 2 ? 'show' : ''
+                }`}
+                onMouseEnter={() => setCurrentDropdown(2)}
+                onMouseLeave={() => setCurrentDropdown(0)}
+              >
                 <a
                   className="nav-link"
                   href="solution.html"
-                  aria-expanded={currentDropdown === 2 ?  'true' : 'false'}
+                  aria-expanded={currentDropdown === 2 ? 'true' : 'false'}
                 >
                   Solutions
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
-                <div className={`dropdown-menu ${currentDropdown === 2 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
+                <div
+                  className={`dropdown-menu ${
+                    currentDropdown === 2 ? 'show' : ''
+                  }`}
+                  aria-labelledby="navbarDropdown"
+                >
                   <a className="dropdown-item" href="sales-automation.html">
                     <span>Sales Automation</span>
                   </a>
@@ -124,16 +160,27 @@ export default function Header() {
                   </a>
                 </div>
               </li>
-              <li className={`nav-item dropdown ${currentDropdown === 3 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(3)} onMouseLeave={() => setCurrentDropdown(0)}>
+              <li
+                className={`nav-item dropdown ${
+                  currentDropdown === 3 ? 'show' : ''
+                }`}
+                onMouseEnter={() => setCurrentDropdown(3)}
+                onMouseLeave={() => setCurrentDropdown(0)}
+              >
                 <a
                   className="nav-link"
                   href="resource.html"
-                  aria-expanded={currentDropdown === 3 ?  'true' : 'false'}
+                  aria-expanded={currentDropdown === 3 ? 'true' : 'false'}
                 >
                   Resources
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
-                <div className={`dropdown-menu ${currentDropdown === 3 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
+                <div
+                  className={`dropdown-menu ${
+                    currentDropdown === 3 ? 'show' : ''
+                  }`}
+                  aria-labelledby="navbarDropdown"
+                >
                   <a className="dropdown-item" href="library.html">
                     <span>Library</span>
                   </a>
@@ -145,12 +192,27 @@ export default function Header() {
                   </a>
                 </div>
               </li>
-              <li className={`nav-item dropdown ${currentDropdown === 4 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(4)} onMouseLeave={() => setCurrentDropdown(0)}>
-                <a className="nav-link" href="about.html" aria-expanded={currentDropdown === 4 ?  'true' : 'false'}>
+              <li
+                className={`nav-item dropdown ${
+                  currentDropdown === 4 ? 'show' : ''
+                }`}
+                onMouseEnter={() => setCurrentDropdown(4)}
+                onMouseLeave={() => setCurrentDropdown(0)}
+              >
+                <a
+                  className="nav-link"
+                  href="about.html"
+                  aria-expanded={currentDropdown === 4 ? 'true' : 'false'}
+                >
                   About Us
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
-                <div className={`dropdown-menu ${currentDropdown === 4 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
+                <div
+                  className={`dropdown-menu ${
+                    currentDropdown === 4 ? 'show' : ''
+                  }`}
+                  aria-labelledby="navbarDropdown"
+                >
                   <Link className="dropdown-item" href="/About/Leadership">
                     <span>Gyloop Leadership</span>
                   </Link>
@@ -179,18 +241,24 @@ export default function Header() {
                 </a>
                 <div className="dropdown-menu dropdown-lang dropdown-menu-right">
                   <button className="dropdown-item active" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-en.png"
                       alt="English"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     English
                   </button>
                   <button className="dropdown-item" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-id.png"
-                      alt="English"
+                      alt="Indonesia"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     Bahasa
                   </button>
@@ -258,53 +326,70 @@ export default function Header() {
 
       <header className="header-bg-cover billing-automation-header d-flex align-items-end about-header home-header">
         <div className="container">
-
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <h1 className="title">A New Era of Business Apps</h1>
-                        <p className="subtitle">
-                            With Gyloop business platform, you will find the best way how to connect your main business
-                            yo the wide range business networks, automate your sales and procurement transaction, easier
-                            to monitor your supply chain, and improve new business opportunity.
-                        </p>
-
-                    </div>
-                    <div className="carousel-item">
-                        <h1 className="title">A New Era of Business Apps</h1>
-                        <p className="subtitle">
-                            With Gyloop business platform, you will find the best way how to connect your main business
-                            yo the wide range business networks, automate your sales and procurement transaction, easier
-                            to monitor your supply chain, and improve new business opportunity.
-                        </p>
-
-                    </div>
-                    <div className="carousel-item">
-                        <h1 className="title">A New Era of Business Apps</h1>
-                        <p className="subtitle">
-                            With Gyloop business platform, you will find the best way how to connect your main business
-                            yo the wide range business networks, automate your sales and procurement transaction, easier
-                            to monitor your supply chain, and improve new business opportunity.
-                        </p>
-
-                    </div>
-                </div>
-                <ol className="carousel-indicators bullets">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
+          <div
+            id="carouselExampleIndicators"
+            className="carousel slide"
+            data-ride="carousel"
+          >
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <h1 className="title">A New Era of Business Apps</h1>
+                <p className="subtitle">
+                  With Gyloop business platform, you will find the best way how
+                  to connect your main business yo the wide range business
+                  networks, automate your sales and procurement transaction,
+                  easier to monitor your supply chain, and improve new business
+                  opportunity.
+                </p>
+              </div>
+              <div className="carousel-item">
+                <h1 className="title">A New Era of Business Apps</h1>
+                <p className="subtitle">
+                  With Gyloop business platform, you will find the best way how
+                  to connect your main business yo the wide range business
+                  networks, automate your sales and procurement transaction,
+                  easier to monitor your supply chain, and improve new business
+                  opportunity.
+                </p>
+              </div>
+              <div className="carousel-item">
+                <h1 className="title">A New Era of Business Apps</h1>
+                <p className="subtitle">
+                  With Gyloop business platform, you will find the best way how
+                  to connect your main business yo the wide range business
+                  networks, automate your sales and procurement transaction,
+                  easier to monitor your supply chain, and improve new business
+                  opportunity.
+                </p>
+              </div>
             </div>
+            <ol className="carousel-indicators bullets">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                className="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
+          </div>
 
-
-            <div className="solution-header-button d-flex justify-content-center">
-                <a href="subscribe-professional.html?trial=1" className="btn gyloop-btn btn-warning text-white">
-                    Get Start for Free
-                </a>
-            </div>
+          <div className="solution-header-button d-flex justify-content-center">
+            <a
+              href="subscribe-professional.html?trial=1"
+              className="btn gyloop-btn btn-warning text-white"
+            >
+              Get Start for Free
+            </a>
+          </div>
         </div>
-
-    </header>
+      </header>
     </>
   );
 }

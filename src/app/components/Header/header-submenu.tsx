@@ -3,6 +3,7 @@ import '@/style/icon.css';
 import Link from 'next/link';
 import 'popper.js';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface PropsSend {
   icon?: string | null;
@@ -29,10 +30,13 @@ export default function HeaderSubmenuComponent({
       <nav className="navbar navbar-expand-xl navbar-dark bg-transparent">
         <div className="container align-items-center">
           <a className="navbar-brand d-flex mr-5" href="index.html">
-            <img
+            <Image
               className="logo-web-lg"
               src="/img/logo-gyloop-white.png"
               alt="LOGO gyloop"
+              width={0}
+              height={0}
+              sizes="100"
             />
           </a>
           <button
@@ -75,34 +79,46 @@ export default function HeaderSubmenuComponent({
                   aria-labelledby="navbarDropdown"
                 >
                   <a className="dropdown-item" href="business.html">
-                    <img
+                    <Image
                       src="/img/logo-business-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-business-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Business</span>
                   </a>
                   <a className="dropdown-item" href="networks.html">
-                    <img
+                    <Image
                       src="/img/logo-networks-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-networks-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Networks</span>
                   </a>
                   <a className="dropdown-item" href="connector.html">
-                    <img
+                    <Image
                       src="/img/logo-connector-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-network-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Connector</span>
                   </a>
                   <a className="dropdown-item" href="provider.html">
-                    <img
+                    <Image
                       src="/img/logo-provider-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-provider-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Provider</span>
                   </a>
@@ -242,18 +258,24 @@ export default function HeaderSubmenuComponent({
                 </a>
                 <div className="dropdown-menu dropdown-lang dropdown-menu-right">
                   <button className="dropdown-item active" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-en.png"
                       alt="English"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     English
                   </button>
                   <button className="dropdown-item" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-id.png"
-                      alt="English"
+                      alt="Indonesia"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     Bahasa
                   </button>
@@ -318,7 +340,6 @@ export default function HeaderSubmenuComponent({
           </div>
         </div>
       </nav>
-     
     </>
   );
 }

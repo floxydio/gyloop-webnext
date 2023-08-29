@@ -8,7 +8,7 @@ export default function ProviderHeader() {
     <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header provider-header">
         <div className="container d-flex justify-content-md-end">
             <div className="content px-md-0">
-                <img className="logo" src="/img/logo-provider-transparent.png" alt="Logo Gyloop Provider" />
+                <img className="logo" src="/img/logo-provider-transparent.png" alt="Logo Gyloop Provider"  width={0} height={0} sizes='100'/>
                 <h1 className="title">Gyloop Provider</h1>
                 <p className="subtitle">
                     <span className="d-md-none d-xl-inline">

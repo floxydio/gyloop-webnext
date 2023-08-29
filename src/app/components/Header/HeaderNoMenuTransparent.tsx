@@ -1,8 +1,9 @@
 import '@/style/style.min.css';
 import '@/style/icon.css';
 import Link from 'next/link';
-import "popper.js"
-import {useState } from 'react';
+import 'popper.js';
+import { useState } from 'react';
+import Image from 'next/image';
 
 export default function HeaderNoMenuTransparent() {
   const [currentDropdown, setCurrentDropdown] = useState(0);
@@ -12,10 +13,13 @@ export default function HeaderNoMenuTransparent() {
       <nav className="navbar navbar-expand-xl navbar-dark bg-transparent">
         <div className="container align-items-center">
           <Link className="navbar-brand d-flex mr-5" href="/Main">
-            <img
+            <Image
               className="logo-web-lg"
               src="/img/logo-gyloop-white.png"
               alt="LOGO gyloop"
+              width={0}
+              height={0}
+              sizes="100"
             />
           </Link>
           <button
@@ -27,7 +31,7 @@ export default function HeaderNoMenuTransparent() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="fa-stack" style={{verticalAlign: 'top'}}>
+            <span className="fa-stack" style={{ verticalAlign: 'top' }}>
               <i className="far fa-circle fa-stack-2x"></i>
               <i className="fas fa-bars fa-stack-1x"></i>
               <i className="fas fa-arrow-right fa-stack-1x"></i>
@@ -36,60 +40,94 @@ export default function HeaderNoMenuTransparent() {
 
           <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="nav-search-off navbar-nav mr-auto">
-              <li className={`nav-item dropdown ${currentDropdown === 1 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(1)} onMouseLeave={() => setCurrentDropdown(0)}>
+              <li
+                className={`nav-item dropdown ${
+                  currentDropdown === 1 ? 'show' : ''
+                }`}
+                onMouseEnter={() => setCurrentDropdown(1)}
+                onMouseLeave={() => setCurrentDropdown(0)}
+              >
                 <Link
                   className="nav-link"
                   href="/Product"
-                  aria-expanded={currentDropdown === 1 ?  'true' : 'false'}
+                  aria-expanded={currentDropdown === 1 ? 'true' : 'false'}
                 >
                   Products
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </Link>
-                <div className={`dropdown-menu ${currentDropdown === 1 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
+                <div
+                  className={`dropdown-menu ${
+                    currentDropdown === 1 ? 'show' : ''
+                  }`}
+                  aria-labelledby="navbarDropdown"
+                >
                   <Link className="dropdown-item" href="/Product/Business">
-                    <img
+                    <Image
                       src="/img/logo-business-transparent-black.png"
-                      alt=""
+                      alt="gyloop-business-transparent-"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Business</span>
                   </Link>
                   <Link className="dropdown-item" href="/Product/Network">
-                    <img
+                    <Image
                       src="/img/logo-networks-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-network-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Networks</span>
                   </Link>
                   <Link className="dropdown-item" href="/Product/Connector">
-                    <img
+                    <Image
                       src="/img/logo-connector-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-connector-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Connector</span>
                   </Link>
                   <Link className="dropdown-item" href="/Product/Provider">
-                    <img
+                    <Image
                       src="/img/logo-provider-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-provider-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Provider</span>
                   </Link>
                 </div>
               </li>
-              <li className={`nav-item dropdown ${currentDropdown === 2 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(2)} onMouseLeave={() => setCurrentDropdown(0)}>
+              <li
+                className={`nav-item dropdown ${
+                  currentDropdown === 2 ? 'show' : ''
+                }`}
+                onMouseEnter={() => setCurrentDropdown(2)}
+                onMouseLeave={() => setCurrentDropdown(0)}
+              >
                 <a
                   className="nav-link"
                   href="solution.html"
-                  aria-expanded={currentDropdown === 2 ?  'true' : 'false'}
+                  aria-expanded={currentDropdown === 2 ? 'true' : 'false'}
                 >
                   Solutions
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
-                <div className={`dropdown-menu ${currentDropdown === 2 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
+                <div
+                  className={`dropdown-menu ${
+                    currentDropdown === 2 ? 'show' : ''
+                  }`}
+                  aria-labelledby="navbarDropdown"
+                >
                   <a className="dropdown-item" href="sales-automation.html">
                     <span>Sales Automation</span>
                   </a>
@@ -122,16 +160,27 @@ export default function HeaderNoMenuTransparent() {
                   </a>
                 </div>
               </li>
-              <li className={`nav-item dropdown ${currentDropdown === 3 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(3)} onMouseLeave={() => setCurrentDropdown(0)}>
+              <li
+                className={`nav-item dropdown ${
+                  currentDropdown === 3 ? 'show' : ''
+                }`}
+                onMouseEnter={() => setCurrentDropdown(3)}
+                onMouseLeave={() => setCurrentDropdown(0)}
+              >
                 <a
                   className="nav-link"
                   href="resource.html"
-                  aria-expanded={currentDropdown === 3 ?  'true' : 'false'}
+                  aria-expanded={currentDropdown === 3 ? 'true' : 'false'}
                 >
                   Resources
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
-                <div className={`dropdown-menu ${currentDropdown === 3 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
+                <div
+                  className={`dropdown-menu ${
+                    currentDropdown === 3 ? 'show' : ''
+                  }`}
+                  aria-labelledby="navbarDropdown"
+                >
                   <a className="dropdown-item" href="library.html">
                     <span>Library</span>
                   </a>
@@ -143,12 +192,27 @@ export default function HeaderNoMenuTransparent() {
                   </a>
                 </div>
               </li>
-              <li className={`nav-item dropdown ${currentDropdown === 4 ? 'show' : ''}`} onMouseEnter={() => setCurrentDropdown(4)} onMouseLeave={() => setCurrentDropdown(0)}>
-                <Link className="nav-link" href="/About" aria-expanded={currentDropdown === 4 ?  'true' : 'false'}>
+              <li
+                className={`nav-item dropdown ${
+                  currentDropdown === 4 ? 'show' : ''
+                }`}
+                onMouseEnter={() => setCurrentDropdown(4)}
+                onMouseLeave={() => setCurrentDropdown(0)}
+              >
+                <Link
+                  className="nav-link"
+                  href="/About"
+                  aria-expanded={currentDropdown === 4 ? 'true' : 'false'}
+                >
                   About Us
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </Link>
-                <div className={`dropdown-menu ${currentDropdown === 4 ? 'show' : ''}`} aria-labelledby="navbarDropdown">
+                <div
+                  className={`dropdown-menu ${
+                    currentDropdown === 4 ? 'show' : ''
+                  }`}
+                  aria-labelledby="navbarDropdown"
+                >
                   <Link className="dropdown-item" href="/About/Leadership">
                     <span>Gyloop Leadership</span>
                   </Link>
@@ -177,18 +241,24 @@ export default function HeaderNoMenuTransparent() {
                 </a>
                 <div className="dropdown-menu dropdown-lang dropdown-menu-right">
                   <button className="dropdown-item active" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-en.png"
                       alt="English"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     English
                   </button>
                   <button className="dropdown-item" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-id.png"
-                      alt="English"
+                      alt="Indonesia"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     Bahasa
                   </button>
@@ -253,7 +323,6 @@ export default function HeaderNoMenuTransparent() {
           </div>
         </div>
       </nav>
-
     </>
   );
 }

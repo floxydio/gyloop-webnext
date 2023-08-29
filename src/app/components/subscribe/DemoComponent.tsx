@@ -3,6 +3,7 @@ import "@/style/style.min.css"
 import "@/style/icon.css"
 import { useForm, Resolver } from 'react-hook-form';
 import Link from "next/link";
+import Image from "next/image";
 
 type FormValues = {
     firstName: string;
@@ -50,8 +51,8 @@ export default function DemoComponent() {
                                         <i className="fas fa-rocket-launch float-right"></i>
 
                                         <Link href="/">
-                                            <img className="logo-gyloop subscribe-card-title card-title ml-0"
-                                                src="/img/logo-gyloop-demo.png" alt="Logo Gyloop Demo" />
+                                            <Image className="logo-gyloop subscribe-card-title card-title ml-0"
+                                                src="/img/logo-gyloop-demo.png" alt="Logo Gyloop Demo" width={0} height={0} sizes='100'/>
                                         </Link>
 
 

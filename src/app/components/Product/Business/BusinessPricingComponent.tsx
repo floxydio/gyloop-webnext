@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import TableChildrenMD from "./TableChildren/md";
 import TableChildrenSM from "./TableChildren/sm";
+import Image from "next/image";
 export default function BusinessPricingComponent() {
 
 
@@ -24,7 +25,7 @@ export default function BusinessPricingComponent() {
                             <div className="row">
                                 <div className="col-7 col-md-12">
                                     <h5 className="card-title">
-                                        <img className="logo-price" src="/img/icon_bagde_verified.png" alt="" />
+                                        <Image className="logo-price" src="/img/icon_bagde_verified.png" alt="image-icon-badge-verified" width={0} height={0} sizes='100' />
                                         <span>
                                             Verified
                                         </span>
@@ -78,8 +79,8 @@ export default function BusinessPricingComponent() {
                         <div className="card-body">
                             <div className="row">
                                 <div className="col-7 col-md-12">
-                                    <h5 className="card-title">
-                                        <img className="logo-price" src="/img/icon_bagde_volunteer.png" alt=""/>
+                                    <h5 className="card-title"> 
+                                        <Image className="logo-price" src="/img/icon_bagde_volunteer.png" alt="image-icon-badge-volunteer" width={0} height={0} sizes='100'/>
                                         <span>
                                             Volunteer
                                         </span>
@@ -133,7 +134,7 @@ export default function BusinessPricingComponent() {
                             <div className="row">
                                 <div className="col-7 col-md-12">
                                     <h5 className="card-title">
-                                        <img className="logo-price" src="/img/icon_bagde_functional.png" alt=""/>
+                                        <Image className="logo-price" src="/img/icon_bagde_functional.png" alt="gyloop-icon-badge-functional" width={0} height={0} sizes='100'/>
                                         <span>
                                             Functional
                                         </span>
@@ -187,10 +188,10 @@ export default function BusinessPricingComponent() {
                         <div className="card-body">
                             <div className="row">
                                 <div className="col-7 col-md-12">
-                                    <img src="/img/mark_popular_2.png" className="ribbon-popular d-none d-md-block"/>
+                                    <Image src="/img/mark_popular_2.png" className="ribbon-popular d-none d-md-block" alt="gyloop-mark-popular" width={0} height={0} sizes='100'/>
 
                                     <h5 className="card-title">
-                                        <img className="logo-price" src="/img/icon_bagde_professional.png" alt=""/>
+                                        <Image className="logo-price" src="/img/icon_bagde_professional.png" alt="gyloop-logo-price" width={0} height={0} sizes='100'/>
                                         <span>
                                             Professional
                                         </span>
@@ -203,7 +204,7 @@ export default function BusinessPricingComponent() {
                                 <div className="col-5 col-md-12 business-links-toggle">
                                     <div className="d-flex justify-content-between">
                                         <div className="price-container">
-                                            <img src="/img/mark_popular_2.png" className="ribbon-popular d-md-none"/>
+                                            <Image src="/img/mark_popular_2.png" className="ribbon-popular d-md-none" alt="gyloop-mark-popular-2" width={0} height={0} sizes='100'/>
 
                                             <h3 className="price">
                                                 <sup>&dollar;</sup>

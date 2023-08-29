@@ -3,6 +3,7 @@ import "@/style/style.min.css"
 import "@/style/icon.css"
 import { useForm, Resolver } from 'react-hook-form';
 import Link from "next/link";
+import Image from "next/image";
 
 type FormValues = {
     firstName: string;
@@ -51,11 +52,11 @@ export default function VerifiedComponent() {
                                 <div className="card border-0">
                                     <div className="card-body">
 
-                                        <img src="/img/icon_bagde_verified.png" className="subscribe-functional-badge img-fluid float-right" />
+                                        <Image src="/img/icon_bagde_verified.png" className="subscribe-functional-badge img-fluid float-right" width={0} height={0} sizes='100' alt="gyloop-icon-badge-verified"/>
 
                                         <Link href="/">
-                                            <img className="logo-gyloop card-title ml-0 mb-xl-3"
-                                                src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" />
+                                            <Image className="logo-gyloop card-title ml-0 mb-xl-3"
+                                                src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" width={0} height={0} sizes='100'/>
                                         </Link>
 
 
@@ -232,7 +233,7 @@ export default function VerifiedComponent() {
                             <div className="subscribe-demo-user-subheader px-5 py-3 text-white">
                                 <div className="row">
                                     <div className="col-xl-9">
-                                        <img src="/img/icon_bagde_verified_white.png" className="subscribe-functional-head-badge img-fluid text-white" />
+                                        <Image src="/img/icon_bagde_verified_white.png" className="subscribe-functional-head-badge img-fluid text-white" alt="gyloop-icon-badge-verified"/>
                                         <p className="subscribe-demo-user-title">VERIFIED</p>
                                         <div className="subscribe-demo-user-subtitle">
                                             <p>

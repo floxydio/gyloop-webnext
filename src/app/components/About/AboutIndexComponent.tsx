@@ -1,5 +1,6 @@
 import '@/style/style.min.css';
 import '@/style/icon.css';
+import Image from 'next/image';
 export default function AboutIndexComponent() {
     return (
         <>
@@ -134,7 +135,7 @@ export default function AboutIndexComponent() {
                     <div className="card border-0 rounded-0">
                         <div className="row">
                             <div className="col-12 col-md-6 pr-md-0">
-                                <img src="/img/background_about_thumb_1.png" className="features-image img-fluid" />
+                                <Image src="/img/background_about_thumb_1.png" className="features-image img-fluid" alt='gyloop-background-card' width={0} height={0} sizes='100'/>
                             </div>
 
                             <div className="col-12 col-md-6 pl-md-0">
@@ -210,7 +211,7 @@ export default function AboutIndexComponent() {
                             </div>
 
                             <div className="col-12 col-md-6 pl-md-0">
-                                <img src="/img/background_about_thumb_2.png" className="features-image img-fluid" />
+                                <Image src="/img/background_about_thumb_2.png" className="features-image img-fluid" alt='gyloop-background-column' width={0} height={0} sizes='100'/>
                             </div>
                         </div>
                     </div>
@@ -218,7 +219,7 @@ export default function AboutIndexComponent() {
                     <div className="card border-0 rounded-0">
                         <div className="row">
                             <div className="col-12 col-md-6 pr-md-0">
-                                <img src="/img/background_about_thumb_3.png" className="features-image img-fluid" />
+                                <Image src="/img/background_about_thumb_3.png" className="features-image img-fluid" alt='gyloop-background-card' width={0} height={0} sizes='100'/>
                             </div>
 
                             <div className="col-12 col-md-6 pl-md-0">
@@ -272,7 +273,7 @@ export default function AboutIndexComponent() {
                     <div className="row">
                         <div className="col-12 col-md-4 px-md-1 px-xl-3">
                             <div className="card border-0 rounded-0">
-                                <img src="/img/background_about_solution_1.png" className="features-image img-fluid" />
+                                <Image src="/img/background_about_solution_1.png" className="features-image img-fluid" alt='gyloop-background-about-solution' width={0} height={0} sizes='100'/>
 
                                 <div className="card-body">
                                     <div className="card-title">
@@ -303,7 +304,7 @@ export default function AboutIndexComponent() {
 
                         <div className="col-12 col-md-4 px-md-1 px-xl-3">
                             <div className="card border-0 rounded-0">
-                                <img src="/img/background_about_solution_2.png" className="features-image img-fluid" />
+                                <Image src="/img/background_about_solution_2.png" className="features-image img-fluid" alt='gyloop-background-about-solution-2' width={0} height={0} sizes='100'/>
 
                                 <div className="card-body">
                                     <div className="card-title">
@@ -334,7 +335,7 @@ export default function AboutIndexComponent() {
 
                         <div className="col-12 col-md-4 px-md-1 px-xl-3">
                             <div className="card border-0 rounded-0">
-                                <img src="/img/background_about_solution_3.png" className="features-image img-fluid" />
+                                <Image src="/img/background_about_solution_3.png" className="features-image img-fluid" alt='gyloop-background-about-solution-3' width={0} height={0} sizes='100'/>
 
                                 <div className="card-body">
                                     <div className="card-title">

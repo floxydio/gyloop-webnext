@@ -3,6 +3,7 @@ import '@/style/icon.css';
 import '@/style/style.min.css';
 import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [openingSearchBar, setOpeningSearchBar] = React.useState(false);
@@ -34,7 +35,14 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-xl navbar-dark bg-transparent">
         <div className="container align-items-center">
           <a className="navbar-brand d-flex mr-5" href="index.html">
-            <img className="logo-web-lg" src="/img/logo-gyloop-white.png" />
+            <Image
+              className="logo-web-lg"
+              src="/img/logo-gyloop-white.png"
+              alt="gyloop-logo-white"
+              width={0}
+              height={0}
+              sizes="100"
+            />
           </a>
           <button
             className="navbar-toggler"
@@ -65,34 +73,46 @@ export default function Navbar() {
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a className="dropdown-item" href="business.html">
-                    <img
+                    <Image
                       src="/img/logo-business-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-business-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Business</span>
                   </a>
                   <a className="dropdown-item" href="networks.html">
-                    <img
+                    <Image
                       src="/img/logo-networks-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-network-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Networks</span>
                   </a>
                   <a className="dropdown-item" href="connector.html">
-                    <img
+                    <Image
                       src="/img/logo-connector-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-connector-transparent"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Connector</span>
                   </a>
                   <a className="dropdown-item" href="provider.html">
-                    <img
+                    <Image
                       src="/img/logo-provider-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-provider-transparent"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Provider</span>
                   </a>
@@ -199,18 +219,24 @@ export default function Navbar() {
                 </a>
                 <div className="dropdown-menu dropdown-lang dropdown-menu-right">
                   <button className="dropdown-item active" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-en.png"
                       alt="English"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     English
                   </button>
                   <button className="dropdown-item" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-id.png"
-                      alt="English"
+                      alt="Indonesia"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     Bahasa
                   </button>

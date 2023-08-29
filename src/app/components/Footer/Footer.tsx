@@ -1,5 +1,5 @@
 import '@/style/style.min.css';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -10,6 +10,7 @@ import {
   faFacebookSquare,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
 
 library.add(faLinkedin, faInstagram, faYoutube, faFacebookSquare, faTwitter);
 
@@ -44,10 +45,13 @@ export default function Footer() {
               <div className="footer-col order-1 order-xl-0">
                 <div className="mb-3">
                   <Link href="/">
-                    <img
+                    <Image
                       className="logo-web-lg"
                       src="/img/logo-gyloop-white.png"
-                      alt="LOGO gyloop"
+                      alt="gyloop-logo-white"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                   </Link>
                 </div>

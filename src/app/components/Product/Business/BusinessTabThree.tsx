@@ -1,5 +1,6 @@
 import '@/style/style.min.css';
 import '@/style/icon.css';
+import Image from 'next/image';
 export default function BusinessTabThree() {
     return (
         <>
@@ -27,7 +28,7 @@ export default function BusinessTabThree() {
 
             <div className="value-box">
                 <h4 className="title d-flex align-items-center">
-                    <img src="/img/icon_idea.png" alt="" />
+                    <Image src="/img/icon_idea.png" alt="gyloop-icon-idea" width={0} height={0} sizes='100'/>
                     <span>Value Proposition</span>
                 </h4>
 

@@ -1,6 +1,7 @@
 import '@/style/style.min.css';
 import '@/style/icon.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 export default function CampaignComponent() {
@@ -119,7 +120,7 @@ export default function CampaignComponent() {
                     <div className="card border-0 rounded-0">
                         <div className="row">
                             <div className="col-12 col-md-6 pr-md-0">
-                                <img src="/img/illustrative_campaign_1.png" className="features-image img-fluid" />
+                                <Image src="/img/illustrative_campaign_1.png" className="features-image img-fluid" alt='gyloop-illustrative-campaign-1' width={0} height={0} sizes='100' />
                             </div>
 
                             <div className="col-12 col-md-6 pl-md-0">
@@ -195,7 +196,7 @@ export default function CampaignComponent() {
                             </div>
 
                             <div className="col-12 col-md-6 pl-md-0">
-                                <img src="/img/illustrative_campaign_2.png" className="features-image img-fluid" />
+                                <Image src="/img/illustrative_campaign_2.png" className="features-image img-fluid" alt='gyloop-illustrative-campaign-2' width={0} height={0} sizes='100'/>
                             </div>
                         </div>
                     </div>
@@ -203,7 +204,7 @@ export default function CampaignComponent() {
                     <div className="card border-0 rounded-0">
                         <div className="row">
                             <div className="col-12 col-md-6 pr-md-0">
-                                <img src="/img/illustrative_campaign_3.png" className="features-image img-fluid" />
+                                <Image src="/img/illustrative_campaign_3.png" className="features-image img-fluid" alt='gyloop-illustrative-campaign-3' width={0} height={0} sizes='100'/>
                             </div>
 
                             <div className="col-12 col-md-6 pl-md-0">

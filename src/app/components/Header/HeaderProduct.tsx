@@ -1,4 +1,5 @@
 import '@/style/style.min.css';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function HeaderProduct() {
@@ -7,10 +8,13 @@ export default function HeaderProduct() {
       <nav className="navbar navbar-expand-xl navbar-dark bg-transparent">
         <div className="container align-items-center">
           <Link className="navbar-brand d-flex mr-5" href="/">
-            <img
+            <Image
               className="logo-web-lg"
               src="/img/logo-gyloop-white.png"
               alt="LOGO gyloop"
+              width={0}
+              height={0}
+              sizes="100"
             />
           </Link>
           <button
@@ -22,7 +26,7 @@ export default function HeaderProduct() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="fa-stack" style={{verticalAlign: 'top'}}>
+            <span className="fa-stack" style={{ verticalAlign: 'top' }}>
               <i className="far fa-circle fa-stack-2x"></i>
               <i className="fas fa-bars fa-stack-1x"></i>
               <i className="fas fa-arrow-right fa-stack-1x"></i>
@@ -42,34 +46,46 @@ export default function HeaderProduct() {
                 </Link>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <Link className="dropdown-item" href="/Product/Business">
-                    <img
+                    <Image
                       src="/img/logo-business-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-business-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Business</span>
                   </Link>
                   <a className="dropdown-item" href="networks.html">
-                    <img
+                    <Image
                       src="/img/logo-networks-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-network-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Networks</span>
                   </a>
                   <Link className="dropdown-item" href="/Product/Connector">
-                    <img
+                    <Image
                       src="/img/logo-connector-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-connector-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Connector</span>
                   </Link>
                   <Link className="dropdown-item" href="/Product/Provider">
-                    <img
+                    <Image
                       src="/img/logo-provider-transparent-black.png"
-                      alt=""
+                      alt="gyloop-logo-provider-transparent-black"
                       className="d-none d-xl-inline"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     <span>Provider</span>
                   </Link>
@@ -172,18 +188,24 @@ export default function HeaderProduct() {
                 </a>
                 <div className="dropdown-menu dropdown-lang dropdown-menu-right">
                   <button className="dropdown-item active" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-en.png"
                       alt="English"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     English
                   </button>
                   <button className="dropdown-item" type="button">
-                    <img
+                    <Image
                       className="icon-lang"
                       src="/img/icon-lang-id.png"
-                      alt="English"
+                      alt="Indonesia"
+                      width={0}
+                      height={0}
+                      sizes="100"
                     />
                     Bahasa
                   </button>
@@ -248,7 +270,6 @@ export default function HeaderProduct() {
           </div>
         </div>
       </nav>
-  
     </>
   );
 }
