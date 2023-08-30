@@ -1,6 +1,6 @@
 
+import AuthComponent from "@/app/components/Auth/AuthComponent"
 import Head from "next/head"
-import Auth from "@/app/components/auth/AuthComponent"
 export default function Login() {
   return (
     <>
@@ -13,7 +13,8 @@ export default function Login() {
 
         <title>Gyloop - Login</title>
       </Head>
-      <Auth props={{ TypeHeader: 1 }} />
+      <AuthComponent props={{ TypeHeader: 0 }} />
+
     </>
   )
 }

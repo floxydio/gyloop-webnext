@@ -1,6 +1,6 @@
 import Head from 'next/head';
 // import FunctionalComponent from "../app/components/Subscribe/FunctionalComponent";
-import ProfessionalComponent from '../app/components/subscribe/ProfessionalComponent';
+import ProfessionalComponent from '../app/components/Subscribe/ProfessionalComponent';
 
 export default function SubscribeFunctional() {
   return (

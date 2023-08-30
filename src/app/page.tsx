@@ -4,6 +4,8 @@ import Main from "./components/Main/MainComponent";
 import MainComponent from "./components/Main/MainComponent";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/header";
+import HeaderNoMenuTransparent from "./components/Header/HeaderNoMenuTransparent";
+import MainHeader from "./components/Main/MainHeader";
 
 export default function Home() {
 
@@ -24,7 +26,8 @@ export default function Home() {
         <title>Gyloop | Make Business Connected</title>
       </Head>
 
-      <Header />
+      <HeaderNoMenuTransparent />
+      <MainHeader/>
       <MainComponent />
       <Footer />
     </>
