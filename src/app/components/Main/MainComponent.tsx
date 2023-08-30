@@ -4,8 +4,14 @@ import '@/style/icon.css';
 import Link from 'next/link';
 import 'popper.js';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 export default function MainComponent() {
+
+  useEffect(() => {
+    require('bootstrap/dist/js/bootstrap.bundle');
+  }, []);
+
   return (
     <>
       <div className="home-subheader-1 text-center">

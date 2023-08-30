@@ -1,6 +1,15 @@
-
+import { useEffect } from "react";
+import '@/style/style.min.css';
+import '@/style/icon.css';
 
 export default function MainHeader() {
+
+  useEffect(() => {
+    require('bootstrap/dist/js/bootstrap.bundle');
+  }, []);
+
+
+
   return (
     <>
     
