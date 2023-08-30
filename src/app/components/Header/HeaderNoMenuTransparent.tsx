@@ -291,6 +291,28 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                     />
                     Bahasa
                   </button>
+                  <button className="dropdown-item" type="button">
+                    <Image
+                      className="icon-lang"
+                      src="/img/icon-lang-ger.png"
+                      alt="Germany"
+                      width={0}
+                      height={0}
+                      sizes="100"
+                    />
+                    Germany
+                  </button>
+                  <button className="dropdown-item" type="button">
+                    <Image
+                      className="icon-lang"
+                      src="/img/icon-lang-fr.png"
+                      alt="France"
+                      width={0}
+                      height={0}
+                      sizes="100"
+                    />
+                    France
+                  </button>
                 </div>
               </li>
               <li className="nav-item nav-search-off">
