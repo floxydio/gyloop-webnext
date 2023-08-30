@@ -16,7 +16,7 @@ export default function About() {
 
                 <title>Gyloop - About</title>
             </Head>
-    <HeaderNoMenuTransparent/>
+    <HeaderNoMenuTransparent type={0}/>
     <AboutIndexComponent />
     <Footer/>
     
