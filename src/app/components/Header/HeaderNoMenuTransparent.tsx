@@ -128,22 +128,37 @@ export default function HeaderNoMenuTransparent() {
                   }`}
                   aria-labelledby="navbarDropdown"
                 >
-                  <Link className="dropdown-item" href="/Solutions/SalesAutomation">
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/SalesAutomation"
+                  >
                     <span>Sales Automation</span>
                   </Link>
-                  <a className="dropdown-item" href="catalog-management.html">
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/CatalogManagement"
+                  >
                     <span>Catalog Management</span>
-                  </a>
-                  <Link className="dropdown-item" href="/Solutions/SourcingManagement">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/SourcingManagement"
+                  >
                     <span>Sourcing Management</span>
                   </Link>
-                  <a className="dropdown-item" href="e-procurement.html">
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/EProcurement"
+                  >
                     <span>E-Procurement</span>
-                  </a>
+                  </Link>
                   <a className="dropdown-item" href="customer-portal.html">
                     <span>Customer Portal</span>
                   </a>
-                  <Link className="dropdown-item" href="/Solutions/VendorPortal">
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/VendorPortal"
+                  >
                     <span>Vendor Portal</span>
                   </Link>
                   <a className="dropdown-item" href="billing-automation.html">
@@ -310,10 +325,7 @@ export default function HeaderNoMenuTransparent() {
                 </div>
               </div>
             </form>
-            <Link
-              className="gyloop-link text-nowrap ml-xl-3"
-              href="/ContactUs"
-            >
+            <Link className="gyloop-link text-nowrap ml-xl-3" href="/ContactUs">
               <i className="fas fa-phone fa-flip-horizontal d-xl-none mr-2"></i>
               Contact Us
             </Link>

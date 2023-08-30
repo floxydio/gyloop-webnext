@@ -1,7 +1,9 @@
-import DemoComponent from '@/app/components/Subscribe/DemoComponent';
+import Footer from '@/app/components/Footer/Footer';
+import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
+import EProcurementComponent from '@/app/components/Solution/EProcurement/Procurement';
 import Head from 'next/head';
 
-export default function SubscribeDemo() {
+export default function EProcurement() {
   return (
     <>
       <Head>
@@ -13,9 +15,13 @@ export default function SubscribeDemo() {
         />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
-        <title>Gyloop - Subscribe Demo User</title>
+
+        <title>Gyloop - E-Procurement</title>
       </Head>
-      <DemoComponent />
+
+      <HeaderNoMenuTransparent />
+      <EProcurementComponent />
+      <Footer />
     </>
   );
 }
