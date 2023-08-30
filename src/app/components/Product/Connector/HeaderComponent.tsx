@@ -40,7 +40,7 @@ export default function HeaderConnector() {
 
               <i className="fas fa-users text-white mr-1"></i>
               <a
-                href="javascript:void(0)"
+                href="preventDefault()"
                 className="gyloop-link"
                 // onClick="show_tab('#business-collapse-1')"
               >
@@ -58,7 +58,7 @@ export default function HeaderConnector() {
 
               <i className="fas fa-id-card text-white mr-1"></i>
               <a
-                href="javascript:void(0)"
+                href="preventDefault()"
                 className="gyloop-link"
                 // onClick="show_tab('#business-collapse-2')"
               >

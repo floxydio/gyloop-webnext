@@ -210,7 +210,7 @@ export default function Navbar() {
               <li className="nav-item nav-item-lang position-relative">
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                   data-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -249,7 +249,7 @@ export default function Navbar() {
               >
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                   onClick={handleSearchBarOpen}
                 >
                   <i className="fas fa-search"></i>

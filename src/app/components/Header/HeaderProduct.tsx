@@ -179,7 +179,7 @@ export default function HeaderProduct() {
               <li className="nav-item nav-item-lang position-relative">
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                   data-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -214,7 +214,7 @@ export default function HeaderProduct() {
               <li className="nav-item nav-search-off">
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                   // onClick="open_search_bar()"
                 >
                   <i className="fas fa-search"></i>

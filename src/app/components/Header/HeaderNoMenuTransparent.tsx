@@ -261,7 +261,7 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
               <li className="nav-item nav-item-lang position-relative">
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                   data-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -318,7 +318,7 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
               <li className="nav-item nav-search-off">
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                 // onClick={() => openingSearchBar()}
                 >
                   <i className="fas fa-search"></i>
@@ -340,7 +340,6 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                     id="q"
                     className="form-control border-right-0"
                     placeholder="Search for anything"
-                    value="Search for anything"
                     required
                   />
                   <div className="input-group-append">
@@ -584,7 +583,7 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
               <li className="nav-item nav-item-lang position-relative">
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                   data-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -619,7 +618,7 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
               <li className="nav-item nav-search-off">
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                 // onClick={() => openingSearchBar()}
                 >
                   <i className="fas fa-search"></i>
@@ -641,7 +640,6 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                     id="q"
                     className="form-control border-right-0"
                     placeholder="Search for anything"
-                    value="Search for anything"
                     required
                   />
                   <div className="input-group-append">

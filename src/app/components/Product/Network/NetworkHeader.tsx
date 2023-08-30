@@ -39,7 +39,7 @@ export default function NetworkHeader() {
                     </div>
 
                     <i className="fas fa-users text-white mr-1"></i>
-                    <a href="javascript:void(0)" className="gyloop-link" >
+                    <a href="preventDefault()" className="gyloop-link" >
                         Explore more
                         <i className="far fa-chevron-circle-right"></i>
                     </a>
@@ -58,7 +58,7 @@ export default function NetworkHeader() {
                     </div>
 
                     <i className="fas fa-id-card text-white mr-1"></i>
-                    <a href="javascript:void(0)" className="gyloop-link" >
+                    <a href="preventDefault()" className="gyloop-link" >
                         Explore more
                         <i className="far fa-chevron-circle-right"></i>
                     </a>

@@ -4,13 +4,18 @@ import '@/style/icon.css';
 import Link from 'next/link';
 import 'popper.js';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Carousel from "react-bootstrap/Carousel"
 
 export default function MainComponent() {
-
+  const [index,setIndex] = useState(0)
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
   }, []);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
   return (
     <>
@@ -190,7 +195,7 @@ export default function MainComponent() {
         <div className="container">
           <h2 className="title">Powerful and Super Easy to Use</h2>
 
-          <div
+          {/* <div
             id="carouselExampleIndicators"
             className="carousel slide"
             data-ride="carousel"
@@ -212,7 +217,6 @@ export default function MainComponent() {
             </ol>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                {/* <sergey-import src="assets/video-placeholder" /> */}
                 <Image
                   className="img-fluid"
                   src="/img/video_player_placeholder.gif"
@@ -225,7 +229,6 @@ export default function MainComponent() {
                 />
               </div>
               <div className="carousel-item">
-                {/* <sergey-import src="assets/video-placeholder" /> */}
                 <Image
                   className="img-fluid"
                   src="/img/video_player_placeholder.gif"
@@ -238,7 +241,6 @@ export default function MainComponent() {
                 />
               </div>
               <div className="carousel-item">
-                {/* <sergey-import src="assets/video-placeholder" /> */}
                 <Image
                   className="img-fluid"
                   src="/img/video_player_placeholder.gif"
@@ -249,7 +251,69 @@ export default function MainComponent() {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
+           <ol className="carousel-indicators bullets">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                onClick={() => setIndex(0)}
+                className={index === 0 ? "active" : ""}
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+                onClick={() => setIndex(1)}
+
+                className={index === 1 ? "active" : ""}
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+                onClick={() => setIndex(2)}
+
+                className={index === 2 ? "active" : ""}
+              ></li>
+            </ol>
+          <Carousel className='slide' controls={false}  indicators={false} activeIndex={index} onSelect={handleSelect}>
+            <Carousel.Item>
+            <Image
+                  className="img-fluid"
+                  src="/img/video_player_placeholder.gif"
+                  alt="Video Placeholder-1"
+                  width={0}
+                  height={0}
+                  sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
+                />
+            </Carousel.Item>
+            <Carousel.Item>
+            <Image
+                  className="img-fluid"
+                  src="/img/video_player_placeholder.gif"
+                  alt="Video Placeholder-1"
+                  width={0}
+                  height={0}
+                  sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
+                />
+            </Carousel.Item>
+            <Carousel.Item>
+            <Image
+                  className="img-fluid"
+                  src="/img/video_player_placeholder.gif"
+                  alt="Video Placeholder-1"
+                  width={0}
+                  height={0}
+                  sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
+                />
+            </Carousel.Item>
+          </Carousel>
+
+
         </div>
       </div>
 

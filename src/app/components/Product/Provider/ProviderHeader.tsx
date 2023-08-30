@@ -40,7 +40,7 @@ export default function ProviderHeader() {
                     </div>
 
                     <i className="fas fa-heart text-white mr-1"></i>
-                    <a href="javascript:void(0)" className="gyloop-link">
+                    <a href="preventDefault()" className="gyloop-link">
                         Explore more
                         <i className="far fa-chevron-circle-right"></i>
                     </a>
@@ -59,7 +59,7 @@ export default function ProviderHeader() {
                     </div>
 
                     <i className="fas fa-shopping-cart text-white mr-1"></i>
-                    <a href="javascript:void(0)" className="gyloop-link">
+                    <a href="preventDefault()" className="gyloop-link">
                         Explore more
                         <i className="far fa-chevron-circle-right"></i>
                     </a>
@@ -78,7 +78,7 @@ export default function ProviderHeader() {
                     </div>
 
                     <i className="fas fa-warehouse text-white mr-1"></i>
-                    <a href="javascript:void(0)" className="gyloop-link">
+                    <a href="preventDefault()" className="gyloop-link">
                         Explore more
                         <i className="far fa-chevron-circle-right"></i>
                     </a>

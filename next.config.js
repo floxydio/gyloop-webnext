@@ -9,7 +9,16 @@ const nextConfig = {
         reactRemoveProperties: true,
     },
     swcMinify: true,
-    
+    redirects: async () => {
+        return [
+            {
+                source: "/",
+                destination: "/main",
+                permanent: true,
+            },
+        ]
+    }
+
 
 
 }

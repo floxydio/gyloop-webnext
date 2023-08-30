@@ -249,7 +249,7 @@ export default function HeaderSubmenuComponent({
               <li className="nav-item nav-item-lang position-relative">
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                   data-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -284,7 +284,7 @@ export default function HeaderSubmenuComponent({
               <li className="nav-item nav-search-off">
                 <a
                   className="nav-link mr-0"
-                  href="javascript:void(0)"
+                  href="preventDefault()"
                   // onClick={() => openingSearchBar()}
                 >
                   <i className="fas fa-search"></i>

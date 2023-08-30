@@ -85,7 +85,7 @@ export default function ResetPasswordComponent() {
                                 </div>
 
 
-                                <a href="javascript:void(0)" className="next-step text-blue" onClick={() => setStep(1)}>
+                                <a href="preventDefault()" className="next-step text-blue" onClick={() => setStep(1)}>
                                     Continue
                                     <i className="fas fa-angle-right"></i>
                                 </a>
@@ -196,19 +196,19 @@ export default function ResetPasswordComponent() {
                                 {`Didn't receive OTP?`}
                                 <strong className="ml-2">04:39</strong>
 
-                                <a href="javascript:void(0)" className="text-muted ml-4">
+                                <a href="preventDefault()" className="text-muted ml-4">
                                     Resend Code
                                     <i className="fas fa-angle-right"></i>
                                 </a>
                             </p>
 
 
-                            <a href="javascript:void(0)" className="prev-step text-blue" onClick={() => setStep(0)}>
+                            <a href="preventDefault()" className="prev-step text-blue" onClick={() => setStep(0)}>
                                 <i className="fas fa-angle-left"></i>
                                 Back
                             </a>
 
-                            <a href="javascript:void(0)" className={`next-step ${enableVerify === false ? 'disabled' : ''}`} onClick={() => {
+                            <a href="preventDefault()" className={`next-step ${enableVerify === false ? 'disabled' : ''}`} onClick={() => {
                                 if (enableVerify === true) {
                                     setStep(2)
                                 }
@@ -290,12 +290,12 @@ export default function ResetPasswordComponent() {
                             </p>
 
 
-                            <a href="javascript:void(0)" className="prev-step text-blue" onClick={() => setStep(2)} >
+                            <a href="preventDefault()" className="prev-step text-blue" onClick={() => setStep(2)} >
                                 <i className="fas fa-angle-left"></i>
                                 Back
                             </a>
 
-                            <a href="javascript:void(0)" className="next-step text-blue" onClick={() => setStep(3)}>
+                            <a href="preventDefault()" className="next-step text-blue" onClick={() => setStep(3)}>
                                 Continue
                                 <i className="fas fa-angle-right"></i>
                             </a>
@@ -423,11 +423,11 @@ export default function ResetPasswordComponent() {
 
 
 
-                            <a href="javascript:void(0)" className="prev-step text-blue" onClick={() => setStep(2)}>
+                            <a href="preventDefault()" className="prev-step text-blue" onClick={() => setStep(2)}>
                                 <i className="fas fa-angle-left"></i>
                                 Back
                             </a>
-                            <a href="javascript:void(0)" className="next-step disabled" onClick={() => setStep(4)}>
+                            <a href="preventDefault()" className="next-step disabled" onClick={() => setStep(4)}>
                                 Continue
                                 <i className="fas fa-angle-right"></i>
                             </a>
