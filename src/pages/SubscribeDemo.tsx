@@ -1,5 +1,6 @@
+import DemoComponent from '@/app/components/Subscribe/DemoComponent';
 import Head from 'next/head';
-import DemoComponent from '@/app/components/subscribe/DemoComponent';
+// import DemoComponent from '@/app/components/Subscribe/DemoComponent';
 
 export default function SubscribeDemo() {
   return (

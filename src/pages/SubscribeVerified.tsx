@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import VerifiedComponent from '../app/components/subscribe/VerifiedComponent';
+import VerifiedComponent from '../app/components/Subscribe/VerifiedComponent';
 
 export default function SubscribeVerified() {
   return (

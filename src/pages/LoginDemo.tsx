@@ -1,6 +1,6 @@
 
+import AuthComponent from "@/app/components/Auth/AuthComponent"
 import Head from "next/head"
-import Auth from "@/app/components/auth/AuthComponent"
 export default function LoginDemo() {
     return (
         <>
@@ -14,7 +14,7 @@ export default function LoginDemo() {
 
             </Head>
             <div>
-                <Auth props={{ TypeHeader: 0 }} />
+                <AuthComponent props={{ TypeHeader: 0 }} />
             </div>
         </>
     )
