@@ -158,7 +158,7 @@ export default function HeaderNoMenuTransparent() {
                   >
                     <span>Customer Portal</span>
                   </Link>
-                  <Link
+                  {/* <Link
                     className="dropdown-item"
                     href="/Solutions/VendorPortal"
                   >
@@ -187,7 +187,7 @@ export default function HeaderNoMenuTransparent() {
                     href="/Solutions/ServiceProvider"
                   >
                     <span>Service Provider</span>
-                  </Link>
+                  </Link> */}
                 </div>
               </li>
               <li
