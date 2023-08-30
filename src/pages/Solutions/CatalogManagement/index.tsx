@@ -19,7 +19,7 @@ export default function CatalogManagement() {
         <title>Gyloop - Catalog Management</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <ManagementComponent />
       <Footer />
     </>

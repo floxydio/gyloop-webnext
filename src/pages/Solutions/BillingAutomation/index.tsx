@@ -19,7 +19,7 @@ export default function BillingAutomation() {
         <title>Gyloop - Billing Automation</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <BillingAutomationComponent />
       <Footer />
     </>

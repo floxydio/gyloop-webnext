@@ -2,17 +2,23 @@ import '@/style/style.min.css';
 import '@/style/icon.css';
 import Link from 'next/link';
 import 'popper.js';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function HeaderNoMenu() {
   const [currentDropdown, setCurrentDropdown] = useState(0);
 
+  
+  useEffect(() => {
+    require('bootstrap/dist/js/bootstrap.bundle');
+  }, []);
+
+
   return (
     <>
       <nav className="navbar navbar-expand-xl navbar-dark bg-primary">
         <div className="container align-items-center">
-          <Link className="navbar-brand d-flex mr-5" href="/Main">
+          <Link className="navbar-brand d-flex mr-5" href="/">
             <Image
               className="logo-web-lg"
               src="/img/logo-gyloop-white.png"

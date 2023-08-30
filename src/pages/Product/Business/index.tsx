@@ -25,7 +25,7 @@ export default function Businnes() {
             </Head>
 
 
-            <HeaderNoMenuTransparent />
+            <HeaderNoMenuTransparent type = {0} />
             <HeaderBusiness />
             <BusinessComponent />
             <Footer />

@@ -15,7 +15,7 @@ export default function Campaign() {
 
                 <title>Gyloop - Campaign Program</title>
             </Head>
-            <HeaderNoMenuTransparent />
+            <HeaderNoMenuTransparent type = {0} />
             <CampaignComponent />
             <Footer />
         </>

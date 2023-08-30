@@ -19,7 +19,7 @@ export default function SalesAutomation() {
         <title>Gyloop - Sales Automation</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <AutomationComponent />
       <Footer />
     </>

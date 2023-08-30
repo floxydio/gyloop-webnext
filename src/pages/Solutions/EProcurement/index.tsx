@@ -19,7 +19,7 @@ export default function EProcurement() {
         <title>Gyloop - E-Procurement</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <EProcurementComponent />
       <Footer />
     </>

@@ -18,7 +18,7 @@ export default function Leadership() {
             </Head>
 
 
-            <HeaderNoMenu />
+            <HeaderNoMenu  />
             <LeadershipTitle title="Leadership" />
             <LeadershipComponent />
             <Footer />  

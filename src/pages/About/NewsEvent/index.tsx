@@ -17,7 +17,7 @@ export default function index() {
 
         <title>Gyloop - News And Event</title>
       </Head>
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <NewsAndEvent />
       <Footer/>
     </>

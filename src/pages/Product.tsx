@@ -17,7 +17,7 @@ export default function Product() {
                 <title>Gyloop - Product Overview</title>
             </Head>
 
-            <HeaderNoMenuTransparent />
+            <HeaderNoMenuTransparent type = {0} />
             <ProductSlider />
             <ProductIndex />
             <Footer />

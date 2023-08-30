@@ -19,7 +19,7 @@ export default function ProviderIndex() {
 
                 <title>Gyloop - Provider</title>
             </Head>
-            <HeaderNoMenuTransparent />
+            <HeaderNoMenuTransparent type = {0} />
             <ProviderHeader />
             <ProviderComponent />
             <Footer />

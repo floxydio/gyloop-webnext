@@ -19,7 +19,7 @@ export default function VendorPortal() {
         <title>Gyloop - Vendor Portal</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <VendorPortalComponent />
       <Footer />
     </>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import '@/style/style.min.css';
 import '@/style/icon.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 export default function MainHeader() {
 
   useEffect(() => {

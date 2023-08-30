@@ -1,5 +1,6 @@
 import Footer from "@/app/components/Footer/Footer";
 import HeaderNoMenu from "@/app/components/Header/HeaderNoMenu";
+import HeaderNoMenuTransparent from "@/app/components/Header/HeaderNoMenuTransparent";
 import LeadershipTitle from "@/app/components/Leadership/LeadershipTitle";
 import NewsEventDetailComponent from "@/app/components/NewsAndEvent/NewsEventDetail";
 import Head from "next/head";
@@ -18,7 +19,7 @@ export default function NewsAndEventDetail() {
             </Head>
 
 
-            <HeaderNoMenu />
+            <HeaderNoMenuTransparent type = {1} />
             <LeadershipTitle title="News" />
             <NewsEventDetailComponent />
             <Footer />

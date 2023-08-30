@@ -1,5 +1,6 @@
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenu from '@/app/components/Header/HeaderNoMenu';
+import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import LeadershipTitle from '@/app/components/Leadership/LeadershipTitle';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -9,7 +10,7 @@ export default function CampaignDetail() {
 
   return (
     <>
-      <HeaderNoMenu />
+      <HeaderNoMenuTransparent type = {1} />
       <LeadershipTitle title="Campaign Program" />
       <div className="leadership-detail campaign-detail">
         <div className="container">

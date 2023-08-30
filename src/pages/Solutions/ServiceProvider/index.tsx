@@ -19,7 +19,7 @@ export default function ServiceProvider() {
         <title>Gyloop - Service Provider</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <ServiceProviderComponent />
       <Footer />
     </>

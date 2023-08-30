@@ -19,7 +19,7 @@ export default function BusinessNetworking() {
         <title>Gyloop - Business Networking</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <BusinessNetworkingComponent />
       <Footer />
     </>

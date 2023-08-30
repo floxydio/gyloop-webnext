@@ -18,7 +18,7 @@ export default function InvoiceAutomation() {
       <title>Gyloop - Invoice Automation</title>
     </Head>
 
-    <HeaderNoMenuTransparent />
+    <HeaderNoMenuTransparent type = {0} />
     <InvoiceAutomationComponent />
     <Footer />
   </>

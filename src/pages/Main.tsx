@@ -26,7 +26,7 @@ export default function Main() {
         <title>Gyloop | Make Business Connected</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type={0}  />
       <MainHeader/>
       <MainComponent />
       <Footer />

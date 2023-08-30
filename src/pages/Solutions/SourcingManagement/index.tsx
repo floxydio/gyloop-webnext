@@ -19,7 +19,7 @@ export default function SourcingManagement() {
                 <title>Gyloop - Sourcing Management</title>
             </Head>
 
-            <HeaderNoMenuTransparent />
+            <HeaderNoMenuTransparent type = {0} />
             <SourcingComponent />
             <Footer />
     

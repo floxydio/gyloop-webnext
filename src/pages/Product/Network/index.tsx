@@ -21,7 +21,7 @@ export default function NetworkIndex() {
         <title>Gyloop - Network</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <NetworkHeader />
       <NetworkComponent />
 

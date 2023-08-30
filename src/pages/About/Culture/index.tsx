@@ -17,7 +17,7 @@ export default function index() {
                 <title>Gyloop - Culture</title>
             </Head>
 
-            <HeaderNoMenuTransparent />
+            <HeaderNoMenuTransparent type = {0} />
             <CultureComponent />
             <Footer />
         </>

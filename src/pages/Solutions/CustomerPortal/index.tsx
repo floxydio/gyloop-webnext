@@ -19,7 +19,7 @@ export default function CustomerPortal() {
         <title>Gyloop - Customer Portal</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <CustomerPortalComponent />
       <Footer />
     </>

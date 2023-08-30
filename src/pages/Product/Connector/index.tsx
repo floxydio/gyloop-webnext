@@ -29,7 +29,7 @@ export default function Connector() {
         <title>Gyloop - Connector</title>
       </Head>
 
-      <HeaderNoMenuTransparent />
+      <HeaderNoMenuTransparent type = {0} />
       <HeaderConnector />
       <ConnectorComponent />
 

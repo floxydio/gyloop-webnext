@@ -15,7 +15,7 @@ export default function Solution() {
 
                 <title>Gyloop - Solution</title>
             </Head>
-            <HeaderNoMenuTransparent />
+            <HeaderNoMenuTransparent type = {0} />
             <SolutionIndexComponent />
             <Footer />
 
