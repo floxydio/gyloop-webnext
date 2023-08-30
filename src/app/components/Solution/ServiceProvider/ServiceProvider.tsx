@@ -1,13 +1,11 @@
 import Image from 'next/image';
-import BillingAutomationContent from '../SalesAutomation/BillingAutomationContent';
-import Link from 'next/link';
 
-export default function CustomerPortalComponent() {
+export default function ServiceProviderComponent() {
   return (
     <>
-      <header className="header-bg-cover billing-automation-header d-flex align-items-end customer-portal-header">
+      <header className="header-bg-cover billing-automation-header d-flex align-items-end service-provider-header">
         <div className="container">
-          <h1 className="title">Customer Portal</h1>
+          <h1 className="title">Service Provider</h1>
           <p className="subtitle">
             <span className="d-md-none d-xl-inline">
               From the outside, many tech start-ups look like they only focus on
@@ -23,6 +21,7 @@ export default function CustomerPortalComponent() {
           </h5>
         </div>
       </header>
+
       <div className="billing-automation-swiper">
         <div className="container">
           <h2 className="title">Automate your sales processing</h2>
@@ -86,7 +85,7 @@ export default function CustomerPortalComponent() {
         </div>
       </div>
 
-      <div className="subheader-bg-cover billing-automation-subheader customer-portal-subheader">
+      <div className="subheader-bg-cover billing-automation-subheader service-provider-subheader">
         <div className="container">
           <div className="content">
             <div className="d-md-none">
@@ -111,31 +110,6 @@ export default function CustomerPortalComponent() {
             <p className="subtitle-small">
               You, Customer, and Supplier are working together now
             </p>
-          </div>
-        </div>
-      </div>
-
-      <BillingAutomationContent />
-
-      <div className="footer-bg-cover billing-automation-footer">
-        <div className="container">
-          <div className="content">
-            <h3 className="title">Do you have a question?</h3>
-            <p className="subtitle">
-              Ask more about people, culture, or development program
-            </p>
-
-            <div className="d-flex justify-content-center justify-content-md-start">
-              <a
-                href="libr/ary.html"
-                className="btn btn-primary gyloop-btn mr-2 mr-xl-4"
-              >
-                Documentation
-              </a>
-              <Link href="/ContactUs" className="btn btn-primary gyloop-btn">
-                Contact Us
-              </Link>
-            </div>
           </div>
         </div>
       </div>

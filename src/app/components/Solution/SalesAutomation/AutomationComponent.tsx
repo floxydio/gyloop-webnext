@@ -1,4 +1,3 @@
-
 import Image from 'next/image'
 import BillingAutomationContent from './BillingAutomationContent'
 import Link from 'next/link'

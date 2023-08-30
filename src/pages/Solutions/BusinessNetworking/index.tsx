@@ -1,9 +1,9 @@
-import Footer from '@/app/components/Footer/Footer';
-import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
-import VendorPortalComponent from '@/app/components/Solution/VendorPortal/VendorPortalComponent';
-import Head from 'next/head';
+import Footer from "@/app/components/Footer/Footer";
+import HeaderNoMenuTransparent from "@/app/components/Header/HeaderNoMenuTransparent";
+import BusinessNetworkingComponent from "@/app/components/Solution/BusinessNetworking/BusinessNetworking";
+import Head from "next/head";
 
-export default function VendorPortal() {
+export default function BusinessNetworking() {
   return (
     <>
       <Head>
@@ -16,11 +16,11 @@ export default function VendorPortal() {
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
 
-        <title>Gyloop - Vendor Portal</title>
+        <title>Gyloop - Business Networking</title>
       </Head>
 
       <HeaderNoMenuTransparent />
-      <VendorPortalComponent />
+      <BusinessNetworkingComponent />
       <Footer />
     </>
   );

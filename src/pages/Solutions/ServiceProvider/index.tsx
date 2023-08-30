@@ -1,9 +1,9 @@
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
-import VendorPortalComponent from '@/app/components/Solution/VendorPortal/VendorPortalComponent';
+import ServiceProviderComponent from '@/app/components/Solution/ServiceProvider/ServiceProvider';
 import Head from 'next/head';
 
-export default function VendorPortal() {
+export default function ServiceProvider() {
   return (
     <>
       <Head>
@@ -16,11 +16,11 @@ export default function VendorPortal() {
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
 
-        <title>Gyloop - Vendor Portal</title>
+        <title>Gyloop - Service Provider</title>
       </Head>
 
       <HeaderNoMenuTransparent />
-      <VendorPortalComponent />
+      <ServiceProviderComponent />
       <Footer />
     </>
   );

@@ -2,12 +2,12 @@ import Image from 'next/image';
 import BillingAutomationContent from '../SalesAutomation/BillingAutomationContent';
 import Link from 'next/link';
 
-export default function CustomerPortalComponent() {
+export default function InvoiceAutomationComponent() {
   return (
     <>
-      <header className="header-bg-cover billing-automation-header d-flex align-items-end customer-portal-header">
+      <header className="header-bg-cover billing-automation-header d-flex align-items-end invoice-automation-header">
         <div className="container">
-          <h1 className="title">Customer Portal</h1>
+          <h1 className="title">Invoice Automation</h1>
           <p className="subtitle">
             <span className="d-md-none d-xl-inline">
               From the outside, many tech start-ups look like they only focus on
@@ -85,8 +85,7 @@ export default function CustomerPortalComponent() {
           </div>
         </div>
       </div>
-
-      <div className="subheader-bg-cover billing-automation-subheader customer-portal-subheader">
+      <div className="subheader-bg-cover billing-automation-subheader invoice-automation-subheader">
         <div className="container">
           <div className="content">
             <div className="d-md-none">

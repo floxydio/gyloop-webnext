@@ -152,27 +152,42 @@ export default function HeaderNoMenuTransparent() {
                   >
                     <span>E-Procurement</span>
                   </Link>
-                  <a className="dropdown-item" href="customer-portal.html">
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/CustomerPortal"
+                  >
                     <span>Customer Portal</span>
-                  </a>
+                  </Link>
                   <Link
                     className="dropdown-item"
                     href="/Solutions/VendorPortal"
                   >
                     <span>Vendor Portal</span>
                   </Link>
-                  <a className="dropdown-item" href="billing-automation.html">
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/BillingAutomation"
+                  >
                     <span>Billing Automation</span>
-                  </a>
-                  <a className="dropdown-item" href="invoice-automation.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/InvoiceAutomation"
+                  >
                     <span>Invoice Automation</span>
-                  </a>
-                  <a className="dropdown-item" href="business-networking.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/BusinessNetworking"
+                  >
                     <span>Business Networking</span>
-                  </a>
-                  <a className="dropdown-item" href="service-provider.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/ServiceProvider"
+                  >
                     <span>Service Provider</span>
-                  </a>
+                  </Link>
                 </div>
               </li>
               <li
