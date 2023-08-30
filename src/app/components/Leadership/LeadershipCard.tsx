@@ -13,13 +13,14 @@ export default function LeadershipCard() {
             width={0}
             height={0}
             sizes="100"
+            style={{ width: '100%', height: 'auto' }}
           />
 
           <h5 className="card-title">John Doe</h5>
 
           <p className="card-text ">Chief Executive Officer</p>
 
-          <Link href="/Leadership/detail/2" className="card-link text-blue">
+          <Link href="/About/Leadership/detail/2" className="card-link text-blue">
             Read more
             <i className="fas fa-angle-right"></i>
           </Link>

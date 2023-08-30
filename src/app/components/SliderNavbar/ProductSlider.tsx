@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "@/style/style.min.css"
 import "@/style/icon.css"
+import Link from "next/link"
 
 export default function ProductSlider() {
   return (
@@ -34,9 +35,9 @@ export default function ProductSlider() {
                     </div>
 
                     <div className="solution-header-button d-flex justify-content-center justify-content-md-start">
-                        <a href="subscribe-professional.html?trial=1" className="btn gyloop-btn btn-warning">
+                        <Link href="/SubscribeProfessional" className="btn gyloop-btn btn-warning">
                             Get Start for Free
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

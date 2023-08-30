@@ -1,9 +1,9 @@
 "use client"
 import Head from "next/head";
 import Main from "./components/Main/MainComponent";
-import Header from "./components/Header/Header";
 import MainComponent from "./components/Main/MainComponent";
 import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/header";
 
 export default function Home() {
 

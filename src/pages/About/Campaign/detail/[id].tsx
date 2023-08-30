@@ -2,8 +2,11 @@ import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenu from '@/app/components/Header/HeaderNoMenu';
 import LeadershipTitle from '@/app/components/Leadership/LeadershipTitle';
 import Image from 'next/image';
-
+import { useRouter } from 'next/router';
 export default function CampaignDetail() {
+  const route = useRouter();
+
+
   return (
     <>
       <HeaderNoMenu />

@@ -108,6 +108,8 @@ export default function BusinessComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
               <div className="carousel-item">
@@ -118,6 +120,8 @@ export default function BusinessComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
               <div className="carousel-item">
@@ -128,6 +132,8 @@ export default function BusinessComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
             </div>
@@ -239,6 +245,8 @@ export default function BusinessComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -249,6 +257,8 @@ export default function BusinessComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -259,6 +269,8 @@ export default function BusinessComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>
@@ -336,6 +348,8 @@ export default function BusinessComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -346,6 +360,8 @@ export default function BusinessComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -356,6 +372,8 @@ export default function BusinessComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>
@@ -432,6 +450,8 @@ export default function BusinessComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -442,6 +462,8 @@ export default function BusinessComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -452,6 +474,8 @@ export default function BusinessComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>

@@ -3,6 +3,8 @@ import Footer from '../app/components/Footer/Footer';
 import { useEffect } from 'react';
 import MainComponent from '@/app/components/Main/MainComponent';
 import Header from '@/app/components/Header/header';
+import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
+import MainHeader from '@/app/components/Main/MainHeader';
 
 export default function Main() {
   useEffect(() => {
@@ -24,7 +26,8 @@ export default function Main() {
         <title>Gyloop | Make Business Connected</title>
       </Head>
 
-      <Header />
+      <HeaderNoMenuTransparent />
+      <MainHeader/>
       <MainComponent />
       <Footer />
     </>

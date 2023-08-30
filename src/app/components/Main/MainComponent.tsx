@@ -12,9 +12,9 @@ export default function MainComponent() {
         <div className="container">
           <p className="title">Make Business Connected</p>
           <p className="subtitle">in Single Platform</p>
-          <a href="product.html" className="gyloop-link">
+          <Link href="/Product" className="gyloop-link">
             Learn More <i className="fas fa-angle-right"></i>
-          </a>
+          </Link>
 
           <div className="row position-relative">
             <div className="col-8 offset-2 d-none d-md-block position-absolute hr-bc-container">
@@ -37,9 +37,9 @@ export default function MainComponent() {
                     Manage your product catalog, pricing, pipeline, and customer
                     order document and its integration
                   </div>
-                  <a href="business.html?t=crm" className="gyloop-link">
+                  <Link href="/Product/Business?t=crm" className="gyloop-link">
                     Learn More <i className="fas fa-angle-right"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -91,9 +91,9 @@ export default function MainComponent() {
                     Manage your end-to-end sourcing activities and make easier
                     your e-procurement processing
                   </div>
-                  <a href="business.html?t=srm" className="gyloop-link">
+                  <Link href="/Product/Business?t=srm" className="gyloop-link">
                     Learn More <i className="fas fa-angle-right"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -117,10 +117,10 @@ export default function MainComponent() {
               documents.
             </p>
 
-            <a href="solution.html" className="gyloop-link d-block">
+            <Link href="/Solutions" className="gyloop-link d-block">
               Learn More
               <i className="fas fa-angle-right"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -145,10 +145,10 @@ export default function MainComponent() {
               Agreement (SLA) of both parties for better services.
             </p>
 
-            <a href="solution.html" className="gyloop-link d-block">
+            <Link href="/Solutions" className="gyloop-link d-block">
               Learn More
               <i className="fas fa-angle-right"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -172,10 +172,10 @@ export default function MainComponent() {
               business application to robust your business processes.
             </p>
 
-            <a href="solution.html" className="gyloop-link d-block">
+            <Link href="/Solutions" className="gyloop-link d-block">
               Learn More
               <i className="fas fa-angle-right"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -214,6 +214,8 @@ export default function MainComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
               <div className="carousel-item">
@@ -225,6 +227,8 @@ export default function MainComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
               <div className="carousel-item">
@@ -246,10 +250,10 @@ export default function MainComponent() {
       <div className="business-cta">
         <div className="container">
           <h3 className="title">Start your planning, and feel the change</h3>
-          <a href="product.html" className="gyloop-link">
+          <Link href="/Product" className="gyloop-link">
             <i className="far fa-chevron-circle-right"></i>
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -285,10 +289,10 @@ export default function MainComponent() {
             </div>
           </div>
 
-          <a href="solution.html" className="gyloop-link d-block">
+          <Link href="/Product" className="gyloop-link d-block">
             Learn More
             <i className="fas fa-angle-right"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </>

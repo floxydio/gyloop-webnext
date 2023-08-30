@@ -86,10 +86,47 @@ export default function NewsEventDetailComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+                  style={{ width: '100%', height: 'auto' }}
                 />
 
                 <div className="card-body">
                   <div className="card-text">
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
                     {/* <sergey-import src="lorem/5" />
                                 <sergey-import src="lorem/5" />
                                 <sergey-import src="lorem/2" /> */}
@@ -111,6 +148,7 @@ export default function NewsEventDetailComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+                  style={{ width: '100%', height: 'auto' }}
                 />
 
                 <div className="card-body">
@@ -140,6 +178,7 @@ export default function NewsEventDetailComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+                  style={{ width: '100%', height: 'auto' }}
                 />
 
                 <div className="card-body">
@@ -169,6 +208,7 @@ export default function NewsEventDetailComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+                  style={{ width: '100%', height: 'auto' }}
                 />
 
                 <div className="card-body">
@@ -177,7 +217,9 @@ export default function NewsEventDetailComponent() {
                   </h5>
 
                   <div className="card-text d-none d-xl-block">
-                    {/* <sergey-import src="lorem/1" /> */}
+                    <p>
+                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
+                    </p>
                   </div>
 
                   <a
@@ -198,6 +240,7 @@ export default function NewsEventDetailComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+                  style={{ width: '100%', height: 'auto' }}
                 />
 
                 <div className="card-body">

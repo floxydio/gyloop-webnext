@@ -120,7 +120,7 @@ export default function CampaignComponent() {
                     <div className="card border-0 rounded-0">
                         <div className="row">
                             <div className="col-12 col-md-6 pr-md-0">
-                                <Image src="/img/illustrative_campaign_1.png" className="features-image img-fluid" alt='gyloop-illustrative-campaign-1' width={0} height={0} sizes='100' />
+                                <Image src="/img/illustrative_campaign_1.png" className="features-image img-fluid" alt='gyloop-illustrative-campaign-1' width={0} height={0} sizes='100' style={{ width: '100%', height: 'auto' }} />
                             </div>
 
                             <div className="col-12 col-md-6 pl-md-0">
@@ -196,7 +196,7 @@ export default function CampaignComponent() {
                             </div>
 
                             <div className="col-12 col-md-6 pl-md-0">
-                                <Image src="/img/illustrative_campaign_2.png" className="features-image img-fluid" alt='gyloop-illustrative-campaign-2' width={0} height={0} sizes='100'/>
+                                <Image src="/img/illustrative_campaign_2.png" className="features-image img-fluid" alt='gyloop-illustrative-campaign-2' width={0} height={0} sizes='100' style={{ width: '100%', height: 'auto' }}/>
                             </div>
                         </div>
                     </div>
@@ -204,7 +204,7 @@ export default function CampaignComponent() {
                     <div className="card border-0 rounded-0">
                         <div className="row">
                             <div className="col-12 col-md-6 pr-md-0">
-                                <Image src="/img/illustrative_campaign_3.png" className="features-image img-fluid" alt='gyloop-illustrative-campaign-3' width={0} height={0} sizes='100'/>
+                                <Image src="/img/illustrative_campaign_3.png" className="features-image img-fluid" alt='gyloop-illustrative-campaign-3' width={0} height={0} sizes='100' style={{ width: '100%', height: 'auto' }}/>
                             </div>
 
                             <div className="col-12 col-md-6 pl-md-0">

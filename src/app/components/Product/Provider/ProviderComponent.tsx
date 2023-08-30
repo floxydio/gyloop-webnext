@@ -7,6 +7,7 @@ import '@/style/style.min.css';
 import '@/style/icon.css';
 import { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 export default function ProviderComponent() {
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
@@ -179,31 +180,37 @@ export default function ProviderComponent() {
                         <div className="carousel-item active">
                           <Image
                             className="img-fluid"
-                            src="//img/video_player_placeholder.gif"
+                            src="/img/video_player_placeholder.gif"
                             alt="Video Placeholder"
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
                           <Image
                             className="img-fluid"
-                            src="//img/video_player_placeholder.gif"
+                            src="/img/video_player_placeholder.gif"
                             alt="Video Placeholder"
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
                           <Image
                             className="img-fluid"
-                            src="//img/video_player_placeholder.gif"
+                            src="/img/video_player_placeholder.gif"
                             alt="Video Placeholder"
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>
@@ -275,31 +282,37 @@ export default function ProviderComponent() {
                         <div className="carousel-item active">
                           <Image
                             className="img-fluid"
-                            src="//img/video_player_placeholder.gif"
+                            src="/img/video_player_placeholder.gif"
                             alt="Video Placeholder"
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
                           <Image
                             className="img-fluid"
-                            src="//img/video_player_placeholder.gif"
+                            src="/img/video_player_placeholder.gif"
                             alt="Video Placeholder"
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
                           <Image
                             className="img-fluid"
-                            src="//img/video_player_placeholder.gif"
+                            src="/img/video_player_placeholder.gif"
                             alt="Video Placeholder"
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>
@@ -371,31 +384,37 @@ export default function ProviderComponent() {
                         <div className="carousel-item active">
                           <Image
                             className="img-fluid"
-                            src="//img/video_player_placeholder.gif"
+                            src="/img/video_player_placeholder.gif"
                             alt="Video Placeholder"
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
                           <Image
                             className="img-fluid"
-                            src="//img/video_player_placeholder.gif"
+                            src="/img/video_player_placeholder.gif"
                             alt="Video Placeholder"
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
                           <Image
                             className="img-fluid"
-                            src="//img/video_player_placeholder.gif"
+                            src="/img/video_player_placeholder.gif"
                             alt="Video Placeholder"
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>
@@ -601,7 +620,7 @@ export default function ProviderComponent() {
                         <Image
                           className="logo-price"
                           src="/img/icon_bagde_professional.png"
-                          alt="gyloop-icon-badge-professional"width={0} height={0} sizes='100'
+                          alt="gyloop-icon-badge-professional" width={0} height={0} sizes='100'
                         />
                         <span>Enterprise</span>
                       </h5>
@@ -625,12 +644,12 @@ export default function ProviderComponent() {
                   </div>
                 </div>
                 <div className="card-footer">
-                  <a
-                    href="subscribe-professional.html"
+                  <Link
+                    href="/SubscribeProfessional"
                     className="btn btn-primary btn-block gyloop-btn"
                   >
                     Register Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -694,13 +713,13 @@ export default function ProviderComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -750,13 +769,13 @@ export default function ProviderComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -806,13 +825,13 @@ export default function ProviderComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -862,13 +881,13 @@ export default function ProviderComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -918,13 +937,13 @@ export default function ProviderComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -974,13 +993,13 @@ export default function ProviderComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

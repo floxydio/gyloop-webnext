@@ -6,6 +6,7 @@ import '@/style/style.min.css';
 import '@/style/icon.css';
 import { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 export default function ConnectorComponent() {
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
@@ -46,6 +47,8 @@ export default function ConnectorComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
               <div className="carousel-item">
@@ -56,6 +59,8 @@ export default function ConnectorComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
               <div className="carousel-item">
@@ -66,6 +71,8 @@ export default function ConnectorComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
             </div>
@@ -174,6 +181,8 @@ export default function ConnectorComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -184,6 +193,8 @@ export default function ConnectorComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -194,6 +205,8 @@ export default function ConnectorComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>
@@ -270,6 +283,8 @@ export default function ConnectorComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -280,6 +295,8 @@ export default function ConnectorComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -290,6 +307,8 @@ export default function ConnectorComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>
@@ -525,12 +544,12 @@ export default function ConnectorComponent() {
                   </div>
                 </div>
                 <div className="card-footer">
-                  <a
-                    href="subscribe-professional.html"
+                  <Link
+                    href="/SubscribeProfessional"
                     className="btn btn-primary btn-block gyloop-btn"
                   >
                     Register Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -594,13 +613,13 @@ export default function ConnectorComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -650,13 +669,13 @@ export default function ConnectorComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -706,13 +725,13 @@ export default function ConnectorComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -762,13 +781,13 @@ export default function ConnectorComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -818,13 +837,13 @@ export default function ConnectorComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -874,13 +893,13 @@ export default function ConnectorComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

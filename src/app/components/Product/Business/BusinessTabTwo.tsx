@@ -28,7 +28,7 @@ export default function BusinessTabTwo() {
 
             <div className="value-box">
                 <h4 className="title d-flex align-items-center">
-                    <Image src="/img/icon_idea.png" alt="gyloop-icon-idea" />
+                    <Image src="/img/icon_idea.png" alt="gyloop-icon-idea" width={0} height={0} sizes='100' />
                     <span>Value Proposition</span>
                 </h4>
 

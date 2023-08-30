@@ -12,6 +12,7 @@ export default function CardNewEvent() {
           width={0}
           height={0}
           sizes="100"
+          style={{ width: '100%', height: 'auto' }}
         />
 
         <div className="card-body">
@@ -117,6 +118,9 @@ export default function CardNewEvent() {
           className="card-img-top"
           src="/img/image_placeholder.png"
           alt="Image Placeholder"
+          width={0}
+          height={0}
+          sizes="100"
         />
 
         <div className="card-body">
@@ -137,7 +141,7 @@ export default function CardNewEvent() {
             you and your customers regardless of whatever backend system behind.
           </p>
           <div className="card-link">
-            <Link href="/NewsEvent/detail/1" className="gyloop-link">
+            <Link href="/About/NewsEvent/detail/1" className="gyloop-link">
               Read More
               <i className="far fa-angle-right"></i>
             </Link>

@@ -3,6 +3,7 @@ import BusinessFooter from '../Business/BusinessFooter';
 import BusinessTab from '../Business/BusinessTab';
 import BusinessTabTwo from '../Business/BusinessTabTwo';
 import ProductManagement from '../Business/ProductManagement';
+import Link from 'next/link';
 
 export default function NetworkComponent() {
   return (
@@ -168,6 +169,8 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -178,6 +181,8 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -188,6 +193,8 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>
@@ -264,6 +271,8 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -274,6 +283,8 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                         <div className="carousel-item">
@@ -284,6 +295,8 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
+
+                            style={{ width: '100%', height: 'auto' }}
                           />
                         </div>
                       </div>
@@ -355,17 +368,17 @@ export default function NetworkComponent() {
                           <Image
                             className="logo-price mr-0"
                             src="/img/icon_bagde_volunteer.png"
-                            alt="gyloop-icon-badge-volunterr"width={0} height={0} sizes='100'
+                            alt="gyloop-icon-badge-volunterr" width={0} height={0} sizes='100'
                           />
                           <Image
                             className="logo-price mr-0"
                             src="/img/icon_bagde_functional.png"
-                            alt="gyloop-icon-badge-functional"width={0} height={0} sizes='100'
+                            alt="gyloop-icon-badge-functional" width={0} height={0} sizes='100'
                           />
                           <Image
                             className="logo-price"
                             src="/img/icon_bagde_professional.png"
-                            alt="gyloop-icon-badge-professional"width={0} height={0} sizes='100'
+                            alt="gyloop-icon-badge-professional" width={0} height={0} sizes='100'
                           />
                         </div>
                         <span>Business</span>
@@ -498,13 +511,13 @@ export default function NetworkComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -554,13 +567,13 @@ export default function NetworkComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -610,13 +623,13 @@ export default function NetworkComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -666,13 +679,13 @@ export default function NetworkComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -722,13 +735,13 @@ export default function NetworkComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -778,13 +791,13 @@ export default function NetworkComponent() {
                   Learn More User Comparison
                   <i className="fas fa-angle-right"></i>
                 </a>
-                <a
-                  href="subscribe-professional.html"
+                <Link
+                  href="/SubscribeProfessional"
                   className="gyloop-link d-block"
                 >
                   Upgrade User
                   <i className="fas fa-angle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

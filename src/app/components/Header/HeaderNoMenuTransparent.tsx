@@ -128,24 +128,24 @@ export default function HeaderNoMenuTransparent() {
                   }`}
                   aria-labelledby="navbarDropdown"
                 >
-                  <a className="dropdown-item" href="sales-automation.html">
+                  <Link className="dropdown-item" href="/Solutions/SalesAutomation">
                     <span>Sales Automation</span>
-                  </a>
+                  </Link>
                   <a className="dropdown-item" href="catalog-management.html">
                     <span>Catalog Management</span>
                   </a>
-                  <a className="dropdown-item" href="sourcing-management.html">
+                  <Link className="dropdown-item" href="/Solutions/SourcingManagement">
                     <span>Sourcing Management</span>
-                  </a>
+                  </Link>
                   <a className="dropdown-item" href="e-procurement.html">
                     <span>E-Procurement</span>
                   </a>
                   <a className="dropdown-item" href="customer-portal.html">
                     <span>Customer Portal</span>
                   </a>
-                  <a className="dropdown-item" href="vendor-portal.html">
+                  <Link className="dropdown-item" href="/Solutions/VendorPortal">
                     <span>Vendor Portal</span>
-                  </a>
+                  </Link>
                   <a className="dropdown-item" href="billing-automation.html">
                     <span>Billing Automation</span>
                   </a>
@@ -310,16 +310,16 @@ export default function HeaderNoMenuTransparent() {
                 </div>
               </div>
             </form>
-            <a
+            <Link
               className="gyloop-link text-nowrap ml-xl-3"
-              href="contact-us.html"
+              href="/ContactUs"
             >
               <i className="fas fa-phone fa-flip-horizontal d-xl-none mr-2"></i>
               Contact Us
-            </a>
-            <a className="btn btn-primary btn-login ml-xl-4" href="login.html">
+            </Link>
+            <Link className="btn btn-primary btn-login ml-xl-4" href="/Login">
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
