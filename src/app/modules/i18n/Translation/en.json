@@ -1,0 +1,12 @@
+{
+    "en": {
+        "test": {
+            "title": "Hello World"
+        },
+        "app_header_language": {
+            "English": "English",
+            "Indonesia": "Indonesia",
+            "Japan": "Japan"
+        }
+    }
+}
