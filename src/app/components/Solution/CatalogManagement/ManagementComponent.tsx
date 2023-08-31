@@ -1,8 +1,15 @@
 import Image from 'next/image';
 import BillingAutomationContent from '../SalesAutomation/BillingAutomationContent';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { Carousel } from 'react-bootstrap';
 
 export default function ManagementComponent() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
     <>
       <header className="header-bg-cover billing-automation-header d-flex align-items-end catalog-management-header">
@@ -36,49 +43,63 @@ export default function ManagementComponent() {
               <li
                 data-target="#carouselExampleIndicators"
                 data-slide-to="0"
-                className="active"
+                onClick={() => setIndex(0)}
+                className={index === 0 ? 'active' : ''}
               ></li>
               <li
                 data-target="#carouselExampleIndicators"
                 data-slide-to="1"
+                onClick={() => setIndex(1)}
+                className={index === 1 ? 'active' : ''}
               ></li>
               <li
                 data-target="#carouselExampleIndicators"
                 data-slide-to="2"
+                onClick={() => setIndex(2)}
+                className={index === 2 ? 'active' : ''}
               ></li>
             </ol>
-            <div className="carousel-inner">
-              <div className="carousel-item active">
+            <Carousel
+              className="slide"
+              controls={false}
+              indicators={false}
+              activeIndex={index}
+              onSelect={handleSelect}
+            >
+              <Carousel.Item>
                 <Image
+                  className="img-fluid"
                   src="/img/video_player_placeholder.gif"
-                  alt="Video Placeholders"
+                  alt="Video Placeholder"
                   width={0}
                   height={0}
                   sizes="100"
                   style={{ width: '100%', height: 'auto' }}
                 />
-              </div>
-              <div className="carousel-item">
+              </Carousel.Item>
+              <Carousel.Item>
                 <Image
+                  className="img-fluid"
                   src="/img/video_player_placeholder.gif"
-                  alt="Video Placeholders"
+                  alt="Video Placeholder"
                   width={0}
                   height={0}
                   sizes="100"
                   style={{ width: '100%', height: 'auto' }}
                 />
-              </div>
-              <div className="carousel-item">
+              </Carousel.Item>
+              <Carousel.Item>
                 <Image
+                  className="img-fluid"
                   src="/img/video_player_placeholder.gif"
-                  alt="Video Placeholders"
+                  alt="Video Placeholder"
                   width={0}
                   height={0}
                   sizes="100"
                   style={{ width: '100%', height: 'auto' }}
                 />
-              </div>
-            </div>
+              </Carousel.Item>
+            </Carousel>
           </div>
         </div>
       </div>

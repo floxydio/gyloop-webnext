@@ -4,8 +4,15 @@ import BusinessTab from '../Business/BusinessTab';
 import BusinessTabTwo from '../Business/BusinessTabTwo';
 import ProductManagement from '../Business/ProductManagement';
 import Link from 'next/link';
+import { useState } from 'react';
+import { Carousel } from 'react-bootstrap';
 
 export default function NetworkComponent() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
     <>
       <div className="billing-automation-swiper business">
@@ -21,19 +28,30 @@ export default function NetworkComponent() {
               <li
                 data-target="#carouselExampleIndicators"
                 data-slide-to="0"
-                className="active"
+                onClick={() => setIndex(0)}
+                className={index === 0 ? 'active' : ''}
               ></li>
               <li
                 data-target="#carouselExampleIndicators"
                 data-slide-to="1"
+                onClick={() => setIndex(1)}
+                className={index === 1 ? 'active' : ''}
               ></li>
               <li
                 data-target="#carouselExampleIndicators"
                 data-slide-to="2"
+                onClick={() => setIndex(2)}
+                className={index === 2 ? 'active' : ''}
               ></li>
             </ol>
-            <div className="carousel-inner">
-              <div className="carousel-item active">
+            <Carousel
+              className="slide"
+              controls={false}
+              indicators={false}
+              activeIndex={index}
+              onSelect={handleSelect}
+            >
+              <Carousel.Item>
                 <Image
                   className="img-fluid"
                   src="/img/video_player_placeholder.gif"
@@ -41,9 +59,10 @@ export default function NetworkComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+                  style={{ width: '100%', height: 'auto' }}
                 />
-              </div>
-              <div className="carousel-item">
+              </Carousel.Item>
+              <Carousel.Item>
                 <Image
                   className="img-fluid"
                   src="/img/video_player_placeholder.gif"
@@ -51,9 +70,10 @@ export default function NetworkComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+                  style={{ width: '100%', height: 'auto' }}
                 />
-              </div>
-              <div className="carousel-item">
+              </Carousel.Item>
+              <Carousel.Item>
                 <Image
                   className="img-fluid"
                   src="/img/video_player_placeholder.gif"
@@ -61,9 +81,10 @@ export default function NetworkComponent() {
                   width={0}
                   height={0}
                   sizes="100"
+                  style={{ width: '100%', height: 'auto' }}
                 />
-              </div>
-            </div>
+              </Carousel.Item>
+            </Carousel>
           </div>
         </div>
       </div>
@@ -149,19 +170,30 @@ export default function NetworkComponent() {
                         <li
                           data-target="#carouselExampleIndicators"
                           data-slide-to="0"
-                          className="active"
+                          onClick={() => setIndex(0)}
+                          className={index === 0 ? 'active' : ''}
                         ></li>
                         <li
                           data-target="#carouselExampleIndicators"
                           data-slide-to="1"
+                          onClick={() => setIndex(1)}
+                          className={index === 1 ? 'active' : ''}
                         ></li>
                         <li
                           data-target="#carouselExampleIndicators"
                           data-slide-to="2"
+                          onClick={() => setIndex(2)}
+                          className={index === 2 ? 'active' : ''}
                         ></li>
                       </ol>
-                      <div className="carousel-inner">
-                        <div className="carousel-item active">
+                      <Carousel
+                        className="slide"
+                        controls={false}
+                        indicators={false}
+                        activeIndex={index}
+                        onSelect={handleSelect}
+                      >
+                        <Carousel.Item>
                           <Image
                             className="img-fluid"
                             src="/img/video_player_placeholder.gif"
@@ -169,11 +201,10 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
-
                             style={{ width: '100%', height: 'auto' }}
                           />
-                        </div>
-                        <div className="carousel-item">
+                        </Carousel.Item>
+                        <Carousel.Item>
                           <Image
                             className="img-fluid"
                             src="/img/video_player_placeholder.gif"
@@ -181,11 +212,10 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
-
                             style={{ width: '100%', height: 'auto' }}
                           />
-                        </div>
-                        <div className="carousel-item">
+                        </Carousel.Item>
+                        <Carousel.Item>
                           <Image
                             className="img-fluid"
                             src="/img/video_player_placeholder.gif"
@@ -193,11 +223,10 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
-
                             style={{ width: '100%', height: 'auto' }}
                           />
-                        </div>
-                      </div>
+                        </Carousel.Item>
+                      </Carousel>
                     </div>
                   </div>
                 </div>
@@ -251,19 +280,30 @@ export default function NetworkComponent() {
                         <li
                           data-target="#carouselExampleIndicators"
                           data-slide-to="0"
-                          className="active"
+                          onClick={() => setIndex(0)}
+                          className={index === 0 ? 'active' : ''}
                         ></li>
                         <li
                           data-target="#carouselExampleIndicators"
                           data-slide-to="1"
+                          onClick={() => setIndex(1)}
+                          className={index === 1 ? 'active' : ''}
                         ></li>
                         <li
                           data-target="#carouselExampleIndicators"
                           data-slide-to="2"
+                          onClick={() => setIndex(2)}
+                          className={index === 2 ? 'active' : ''}
                         ></li>
                       </ol>
-                      <div className="carousel-inner">
-                        <div className="carousel-item active">
+                      <Carousel
+                        className="slide"
+                        controls={false}
+                        indicators={false}
+                        activeIndex={index}
+                        onSelect={handleSelect}
+                      >
+                        <Carousel.Item>
                           <Image
                             className="img-fluid"
                             src="/img/video_player_placeholder.gif"
@@ -271,11 +311,10 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
-
                             style={{ width: '100%', height: 'auto' }}
                           />
-                        </div>
-                        <div className="carousel-item">
+                        </Carousel.Item>
+                        <Carousel.Item>
                           <Image
                             className="img-fluid"
                             src="/img/video_player_placeholder.gif"
@@ -283,11 +322,10 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
-
                             style={{ width: '100%', height: 'auto' }}
                           />
-                        </div>
-                        <div className="carousel-item">
+                        </Carousel.Item>
+                        <Carousel.Item>
                           <Image
                             className="img-fluid"
                             src="/img/video_player_placeholder.gif"
@@ -295,11 +333,10 @@ export default function NetworkComponent() {
                             width={0}
                             height={0}
                             sizes="100"
-
                             style={{ width: '100%', height: 'auto' }}
                           />
-                        </div>
-                      </div>
+                        </Carousel.Item>
+                      </Carousel>
                     </div>
                   </div>
                 </div>
@@ -368,17 +405,26 @@ export default function NetworkComponent() {
                           <Image
                             className="logo-price mr-0"
                             src="/img/icon_bagde_volunteer.png"
-                            alt="gyloop-icon-badge-volunterr" width={0} height={0} sizes='100'
+                            alt="gyloop-icon-badge-volunterr"
+                            width={0}
+                            height={0}
+                            sizes="100"
                           />
                           <Image
                             className="logo-price mr-0"
                             src="/img/icon_bagde_functional.png"
-                            alt="gyloop-icon-badge-functional" width={0} height={0} sizes='100'
+                            alt="gyloop-icon-badge-functional"
+                            width={0}
+                            height={0}
+                            sizes="100"
                           />
                           <Image
                             className="logo-price"
                             src="/img/icon_bagde_professional.png"
-                            alt="gyloop-icon-badge-professional" width={0} height={0} sizes='100'
+                            alt="gyloop-icon-badge-professional"
+                            width={0}
+                            height={0}
+                            sizes="100"
                           />
                         </div>
                         <span>Business</span>
