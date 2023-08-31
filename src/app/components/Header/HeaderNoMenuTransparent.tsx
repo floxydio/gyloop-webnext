@@ -161,7 +161,7 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                   >
                     <span>Customer Portal</span>
                   </Link>
-                  {/* <Link
+                  <Link
                     className="dropdown-item"
                     href="/Solutions/VendorPortal"
                   >
@@ -190,7 +190,7 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                     href="/Solutions/ServiceProvider"
                   >
                     <span>Service Provider</span>
-                  </Link> */}
+                  </Link>
                 </div>
               </li>
               <li
