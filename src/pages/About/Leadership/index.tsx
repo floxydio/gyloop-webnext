@@ -1,5 +1,6 @@
 import Footer from "@/app/components/Footer/Footer";
 import HeaderNoMenu from "@/app/components/Header/HeaderNoMenu";
+import HeaderNoMenuTransparent from "@/app/components/Header/HeaderNoMenuTransparent";
 import LeadershipComponent from "@/app/components/Leadership/LeadershipComponent";
 import LeadershipTitle from "@/app/components/Leadership/LeadershipTitle";
 import Head from "next/head";
@@ -18,7 +19,7 @@ export default function Leadership() {
             </Head>
 
 
-            <HeaderNoMenu  />
+            <HeaderNoMenuTransparent type = {1} />
             <LeadershipTitle title="Leadership" />
             <LeadershipComponent />
             <Footer />  

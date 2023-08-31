@@ -107,7 +107,7 @@ export default function CampaignComponent() {
                             more business opportunities</p>
 
                         <div className="d-flex justify-content-center justify-content-md-start">
-                            <a href="subscribe-professional.html?trial=1" className="btn btn-warning gyloop-btn text-white">Get Start for Free</a>
+                            <Link href="/SubscribeProfessional?trial=1" className="btn btn-warning gyloop-btn text-white">Get Start for Free</Link>
                         </div>
 
                     </div>
@@ -258,8 +258,8 @@ export default function CampaignComponent() {
                         </p>
 
                         <div className="d-flex justify-content-center justify-content-md-start">
-                            <a href="subscribe-volunteer.html" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Join Campaign</a>
-                            <a href="contact-us.html" className="btn btn-primary gyloop-btn ">Contact Us</a>
+                            <Link href="/SubscribeVolunteer" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Join Campaign</Link>
+                            <Link href="/ContactUs" className="btn btn-primary gyloop-btn ">Contact Us</Link>
                         </div>
 
                     </div>

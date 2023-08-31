@@ -241,12 +241,12 @@ export default function FunctionalComponent() {
                           htmlFor="customCheck1"
                         >
                           I agree to the
-                          <a
-                            href="subscription-agreement.html"
+                          <Link
+                            href="/SubscriptionAgreement"
                             className="text-blue ml-1"
                           >
                             Subscription Agreement
-                          </a>
+                          </Link>
                         </label>
                       </div>
 

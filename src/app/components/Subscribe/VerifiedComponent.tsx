@@ -206,8 +206,8 @@ export default function VerifiedComponent() {
 
                                             <div className="custom-control custom-checkbox mt-3 mt-md-4 mt-xl-2">
                                                 <input type="checkbox" className="custom-control-input" id="customCheck1" required {...register("subscriptionAgreement")} />
-                                                <label className="custom-control-label" htmlFor="customCheck1">I agree to the<a href="subscription-agreement.html"
-                                                    className="text-blue ml-1">Subscription Agreement</a></label>
+                                                <label className="custom-control-label" htmlFor="customCheck1">I agree to the<Link href="/SubscriptionAgreement"
+                                                    className="text-blue ml-1">Subscription Agreement</Link></label>
                                             </div>
 
                                             <button type="submit" className="btn btn-primary gyloop-btn btn-block">Register</button>

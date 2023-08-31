@@ -437,12 +437,12 @@ export default function ConnectorComponent() {
                   </div>
                 </div>
                 <div className="card-footer">
-                  <a
-                    href="subscribe-verified.html"
+                  <Link
+                    href="/SubscribeVerified"
                     className="btn btn-primary btn-block gyloop-btn"
                   >
                     Register Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -483,12 +483,12 @@ export default function ConnectorComponent() {
                   </div>
                 </div>
                 <div className="card-footer">
-                  <a
-                    href="subscribe-volunteer.html"
+                  <Link
+                    href="/SubscribeVolunteer"
                     className="btn btn-primary btn-block gyloop-btn"
                   >
                     Register Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -962,9 +962,9 @@ export default function ConnectorComponent() {
               >
                 System Demo
               </a>
-              <a href="contact-us.html" className="btn btn-primary gyloop-btn">
+              <Link href="/ContactUs" className="btn btn-primary gyloop-btn">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

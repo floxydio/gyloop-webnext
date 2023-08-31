@@ -557,12 +557,12 @@ export default function ProviderComponent() {
                   </div>
                 </div>
                 <div className="card-footer">
-                  <a
-                    href="subscribe-verified.html"
+                  <Link
+                    href="/SubscribeVerified"
                     className="btn btn-primary btn-block gyloop-btn"
                   >
                     Register Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -1082,9 +1082,9 @@ export default function ProviderComponent() {
               >
                 System Demo
               </a>
-              <a href="contact-us.html" className="btn btn-primary gyloop-btn">
+              <Link href="/ContactUs" className="btn btn-primary gyloop-btn">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

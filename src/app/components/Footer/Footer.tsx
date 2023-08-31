@@ -116,7 +116,7 @@ export default function Footer() {
                           <Link href="/Product">Gyloop Overview</Link>
                         </li>
                         <li>
-                          <a href="solution.html">Explore Solutions</a>
+                          <Link href="/Solutions">Explore Solutions</Link>
                         </li>
                         <li>
                           <a href="library.html">Business Use Cases</a>
@@ -202,15 +202,15 @@ export default function Footer() {
                         <Link href="/Product">Gyloop Overview</Link>
                       </li>
                       <li>
-                        <a href="solution.html">Explore Solutions</a>
+                        <Link href="/Solutions">Explore Solutions</Link>
                       </li>
                       <li>
                         <a href="library.html">Business Use Cases</a>
                       </li>
                       <li>
-                        <a href="business.html?s=business-pricing">
+                        <Link href="/Product/Business?s=business-pricing">
                           Product Pricing
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -259,7 +259,7 @@ export default function Footer() {
           <div className="container">
             <div className="d-flex align-items-center footer-bottom">
               <div className="footer-col text-white">
-                &copy; 2020 Gyloop. All rights reserved.
+                &copy; 2023 Gyloop. All rights reserved.
               </div>
 
               <div className="footer-col footer-bottom-links">

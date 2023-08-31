@@ -1,6 +1,7 @@
 import '@/style/style.min.css';
 import '@/style/icon.css';
 import Image from 'next/image';
+import Link from 'next/link';
 export default function AboutIndexComponent() {
     return (
         <>
@@ -33,9 +34,9 @@ export default function AboutIndexComponent() {
                             </div>
 
                             <div className="solution-header-button d-flex justify-content-center justify-content-md-start">
-                                <a href="subscribe-professional.html?trial=1" className="btn gyloop-btn btn-warning text-white">
+                                <Link href="/SubscribeProfessional?trial=1" className="btn gyloop-btn btn-warning text-white">
                                     Get Start for Free
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -122,7 +123,7 @@ export default function AboutIndexComponent() {
                             more business opportunities</p>
 
                         <div className="d-flex justify-content-center justify-content-md-start">
-                            <a href="subscribe-professional.html?trial=1" className="btn btn-warning gyloop-btn text-white">Get Start for Free</a>
+                            <Link href="/SubscribeProfessional?trial=1" className="btn btn-warning gyloop-btn text-white">Get Start for Free</Link>
                         </div>
 
                     </div>
@@ -382,7 +383,7 @@ export default function AboutIndexComponent() {
 
                         <div className="d-flex justify-content-center justify-content-md-start text-white">
                             <a href="library.html" className="btn btn-warning gyloop-btn text-white mr-2 mr-xl-4">Documentation</a>
-                            <a href="contact-us.html" className="btn btn-warning gyloop-btn text-white">Contact Us</a>
+                            <Link href="/ContactUs" className="btn btn-warning gyloop-btn text-white">Contact Us</Link>
                         </div>
 
                     </div>

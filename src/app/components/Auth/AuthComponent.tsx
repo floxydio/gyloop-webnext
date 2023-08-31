@@ -130,9 +130,9 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                         </div>
 
                                         <div className="btn-container d-flex justify-content-center">
-                                            <a href="subscribe-professional.html?trial=1" className="btn btn-primary gyloop-btn">
+                                            <Link href="/SubscribeProfessional?trial=1" className="btn btn-primary gyloop-btn">
                                                 Try for free
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
 
@@ -147,9 +147,9 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                         </div>
 
                                         <div className="btn-container d-flex justify-content-center">
-                                            <a href="subscribe-volunteer.html" className="btn btn-primary gyloop-btn">
+                                            <Link href="/SubscribeVolunteer" className="btn btn-primary gyloop-btn">
                                                 Join Program
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
 
@@ -237,9 +237,9 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                         </div>
 
                                         <div className="btn-container d-flex justify-content-center">
-                                            <a href="subscribe-professional.html?trial=1" className="btn btn-primary gyloop-btn">
+                                            <Link href="/SubscribeProfessional?trial=1" className="btn btn-primary gyloop-btn">
                                                 Try for free
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
 
@@ -254,9 +254,9 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                         </div>
 
                                         <div className="btn-container d-flex justify-content-center">
-                                            <a href="subscribe-volunteer.html" className="btn btn-primary gyloop-btn">
+                                            <Link href="/SubscribeVolunteer" className="btn btn-primary gyloop-btn">
                                                 Join Program
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
 

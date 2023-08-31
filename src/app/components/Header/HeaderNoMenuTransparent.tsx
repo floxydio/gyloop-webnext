@@ -118,14 +118,14 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                 onMouseEnter={() => setCurrentDropdown(2)}
                 onMouseLeave={() => setCurrentDropdown(0)}
               >
-                <a
+                <Link
                   className="nav-link"
-                  href="solution.html"
+                  href="/Solutions"
                   aria-expanded={currentDropdown === 2 ? 'true' : 'false'}
                 >
                   Solutions
                   <i className="fas fa-angle-down icon-rotates"></i>
-                </a>
+                </Link>
                 <div
                   className={`dropdown-menu ${currentDropdown === 2 ? 'show' : ''
                     }`}
@@ -398,7 +398,7 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
           </button>
 
           <div className="collapse navbar-collapse" id="navbarColor02">
-            <ul className="nav-search-off navbar-nav mr-auto">
+          <ul className="nav-search-off navbar-nav mr-auto">
               <li
                 className={`nav-item dropdown ${currentDropdown === 1 ? 'show' : ''
                   }`}
@@ -418,29 +418,29 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                     }`}
                   aria-labelledby="navbarDropdown"
                 >
-                  <a className="dropdown-item" href="business.html">
+                  <Link className="dropdown-item" href="/Product/Business">
                     <Image
                       src="/img/logo-business-transparent-black.png"
-                      alt="gyloop-logo-business-transparent-black"
+                      alt="gyloop-business-transparent-"
                       className="d-none d-xl-inline"
                       width={0}
                       height={0}
                       sizes="100"
                     />
                     <span>Business</span>
-                  </a>
-                  <a className="dropdown-item" href="networks.html">
+                  </Link>
+                  <Link className="dropdown-item" href="/Product/Network">
                     <Image
                       src="/img/logo-networks-transparent-black.png"
-                      alt="gyloop-logo-networks-transparent-black"
+                      alt="gyloop-logo-network-transparent-black"
                       className="d-none d-xl-inline"
                       width={0}
                       height={0}
                       sizes="100"
                     />
                     <span>Networks</span>
-                  </a>
-                  <a className="dropdown-item" href="connector.html">
+                  </Link>
+                  <Link className="dropdown-item" href="/Product/Connector">
                     <Image
                       src="/img/logo-connector-transparent-black.png"
                       alt="gyloop-logo-connector-transparent-black"
@@ -450,8 +450,8 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                       sizes="100"
                     />
                     <span>Connector</span>
-                  </a>
-                  <a className="dropdown-item" href="provider.html">
+                  </Link>
+                  <Link className="dropdown-item" href="/Product/Provider">
                     <Image
                       src="/img/logo-provider-transparent-black.png"
                       alt="gyloop-logo-provider-transparent-black"
@@ -461,7 +461,7 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                       sizes="100"
                     />
                     <span>Provider</span>
-                  </a>
+                  </Link>
                 </div>
               </li>
               <li
@@ -470,49 +470,79 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                 onMouseEnter={() => setCurrentDropdown(2)}
                 onMouseLeave={() => setCurrentDropdown(0)}
               >
-                <a
+                <Link
                   className="nav-link"
-                  href="solution.html"
+                  href="/Solutions"
                   aria-expanded={currentDropdown === 2 ? 'true' : 'false'}
                 >
                   Solutions
                   <i className="fas fa-angle-down icon-rotates"></i>
-                </a>
+                </Link>
                 <div
                   className={`dropdown-menu ${currentDropdown === 2 ? 'show' : ''
                     }`}
                   aria-labelledby="navbarDropdown"
                 >
-                  <a className="dropdown-item" href="sales-automation.html">
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/SalesAutomation"
+                  >
                     <span>Sales Automation</span>
-                  </a>
-                  <a className="dropdown-item" href="catalog-management.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/CatalogManagement"
+                  >
                     <span>Catalog Management</span>
-                  </a>
-                  <a className="dropdown-item" href="sourcing-management.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/SourcingManagement"
+                  >
                     <span>Sourcing Management</span>
-                  </a>
-                  <a className="dropdown-item" href="e-procurement.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/EProcurement"
+                  >
                     <span>E-Procurement</span>
-                  </a>
-                  <a className="dropdown-item" href="customer-portal.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/CustomerPortal"
+                  >
                     <span>Customer Portal</span>
-                  </a>
-                  <a className="dropdown-item" href="vendor-portal.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/VendorPortal"
+                  >
                     <span>Vendor Portal</span>
-                  </a>
-                  <a className="dropdown-item" href="billing-automation.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/BillingAutomation"
+                  >
                     <span>Billing Automation</span>
-                  </a>
-                  <a className="dropdown-item" href="invoice-automation.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/InvoiceAutomation"
+                  >
                     <span>Invoice Automation</span>
-                  </a>
-                  <a className="dropdown-item" href="business-networking.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/BusinessNetworking"
+                  >
                     <span>Business Networking</span>
-                  </a>
-                  <a className="dropdown-item" href="service-provider.html">
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    href="/Solutions/ServiceProvider"
+                  >
                     <span>Service Provider</span>
-                  </a>
+                  </Link>
                 </div>
               </li>
               <li
@@ -660,13 +690,13 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                 </div>
               </div>
             </form>
-            <a
+            <Link
               className="gyloop-link text-nowrap ml-xl-3"
-              href="contact-us.html"
+              href="/ContactUs"
             >
               <i className="fas fa-phone fa-flip-horizontal d-xl-none mr-2"></i>
               Contact Us
-            </a>
+            </Link>
             <Link className="btn btn-primary btn-login ml-xl-4" href="/Login">
               Login
             </Link>

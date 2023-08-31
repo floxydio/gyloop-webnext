@@ -32,9 +32,9 @@ export default function SolutionIndexComponent() {
                             </div>
 
                             <div className="solution-header-button d-flex justify-content-center justify-content-md-start">
-                                <a href="subscribe-professional.html?trial=1" className="btn gyloop-btn btn-warning text-white">
+                                <Link href="/SubscribeProfessional?trial=1" className="btn gyloop-btn btn-warning text-white">
                                     Get Start for Free
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@ export default function SolutionIndexComponent() {
                         </p>
 
                         <div className="d-flex justify-content-center justify-content-md-start">
-                            <a href="subscribe-professional.html?trial=1" className="btn btn-warning gyloop-btn text-white">Get Start for Free</a>
+                            <Link href="/SubscribeProfessional?trial=1" className="btn btn-warning gyloop-btn text-white">Get Start for Free</Link>
                         </div>
 
                     </div>

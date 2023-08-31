@@ -28,10 +28,10 @@ export default function ProductIndex() {
                                 CRM and SRM Apps
                             </h3>
 
-                            <a href="business.html">
-                                <Image src="/img/logo-business.png" className="img-logo" width={0} height={0} sizes='100' alt='gyloop-logo-business'/>
+                            <Link href="/Product/Business">
+                                <Image style={{ width: '100%', height: 'auto' }} src="/img/logo-business.png" className="img-logo" width={0} height={0} sizes='100' alt='gyloop-logo-business'/>
                                 <h5 className="link-title">BUSINESS</h5>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ export default function ProductIndex() {
                             </h3>
 
                             <Link href="/Product/Network">
-                                <Image src="/img/logo-networks.png" className="img-logo" alt='gyloop-logo-network' width={0} height={0} sizes='100'/>
+                                <Image style={{ width: '100%', height: 'auto' }} src="/img/logo-networks.png" className="img-logo" alt='gyloop-logo-network' width={0} height={0} sizes='100'/>
                                 <h5 className="link-title">NETWORKS</h5>
                             </Link>
                         </div>
@@ -59,7 +59,7 @@ export default function ProductIndex() {
                             </h3>
 
                             <Link href="/Product/Connector">
-                                <Image src="/img/logo-connector.png" className="img-logo" width={0} height={0} sizes='100' alt='gyloop-logo-connector'/>
+                                <Image style={{ width: '100%', height: 'auto' }} src="/img/logo-connector.png" className="img-logo" width={0} height={0} sizes='100' alt='gyloop-logo-connector'/>
                                 <h5 className="link-title">CONNECTOR</h5>
                             </Link>
                         </div>
@@ -73,10 +73,10 @@ export default function ProductIndex() {
                                 Specific Services
                             </h3>
 
-                            <a href="provider.html">
-                                <Image src="/img/logo-provider.png" className="img-logo" width={0} height={0} sizes='100' alt='gyloop-logo-provider'/>
+                            <Link href="/Product/Provider">
+                                <Image style={{ width: '100%', height: 'auto' }} src="/img/logo-provider.png" className="img-logo" width={0} height={0} sizes='100' alt='gyloop-logo-provider'/>
                                 <h5 className="link-title">PROVIDER</h5>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ export default function ProductIndex() {
             <div className="card border-0 rounded-0 bg-light">
                 <div className="card-body">
                     <p className="card-title d-flex align-items-center">
-                        <Image src="/img/logo-business-transparent-black.png" alt="gyloop-logo-business-transparent" className="logo-title" width={0} height={0} sizes='100'/>
+                        <Image  src="/img/logo-business-transparent-black.png" alt="gyloop-logo-business-transparent" className="logo-title" width={0} height={0} sizes='100'/>
                         <span>
                             Gyloop Business
                         </span>
@@ -136,7 +136,7 @@ export default function ProductIndex() {
                     <div className="row">
 
                         <div className="col-12 col-md-6 order-md-1">
-                            <Image src="/img/illustrative-laptop2.png" className="card-image img-fluid" width={0} height={0} sizes='100' alt='gyloop-logo-illustrative'/>
+                            <Image style={{ width: '100%', height: 'auto' }} src="/img/illustrative-laptop2.png" className="card-image img-fluid" width={0} height={0} sizes='100' alt='gyloop-logo-illustrative'/>
                         </div>
 
                         <div className="col-12 col-md-6 order-md-0">
@@ -167,7 +167,7 @@ export default function ProductIndex() {
                             </ul>
 
                             <div className="d-flex align-items-center justify-content-center justify-content-md-start justify-content-xl-center pl-md-3 pl-xl-0">
-                                <a href="business.html" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Explore More</a>
+                                <Link href="/Product/Business" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Explore More</Link>
                                 <a href="live-demo.html?s=gyloop-business" className="btn btn-primary gyloop-btn">Live Demo</a>
                             </div>
                         </div>
@@ -201,7 +201,7 @@ export default function ProductIndex() {
                     <div className="row">
 
                         <div className="col-12 col-md-6">
-                            <Image src="/img/illustrative-laptop2.png" className="card-image img-fluid" alt='gyloop-logo-illustrartive' width={0} height={0} sizes='100'/>
+                            <Image style={{ width: '100%', height: 'auto' }} src="/img/illustrative-laptop2.png" className="card-image img-fluid" alt='gyloop-logo-illustrartive' width={0} height={0} sizes='100'/>
                         </div>
 
                         <div className="col-12 col-md-6">
@@ -232,7 +232,7 @@ export default function ProductIndex() {
                             </ul>
 
                             <div className="d-flex align-items-center justify-content-center justify-content-md-start justify-content-xl-center pl-md-3 pl-xl-0">
-                                <a href="networks.html" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Explore More</a>
+                                <Link href="/Product/Network" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Explore More</Link>
                                 <a href="live-demo.html?s=gyloop-networks" className="btn btn-primary gyloop-btn">Live Demo</a>
                             </div>
                         </div>
@@ -244,7 +244,7 @@ export default function ProductIndex() {
             <div className="card border-0 rounded-0 bg-light">
                 <div className="card-body">
                     <p className="card-title d-flex align-items-center">
-                        <Image src="/img/logo-connector-transparent-black.png" alt="gyloop-logo-connector" className="logo-title" width={0} height={0} sizes='100'/>
+                        <Image  src="/img/logo-connector-transparent-black.png" alt="gyloop-logo-connector" className="logo-title" width={0} height={0} sizes='100'/>
                         <span>
                             Gyloop Connectors
                         </span>
@@ -264,7 +264,7 @@ export default function ProductIndex() {
                     <div className="row">
 
                         <div className="col-12 col-md-6 order-md-1">
-                            <Image src="/img/illustrative-laptop2.png" className="card-image img-fluid" width={0} height={0} sizes='100' alt='gyloop-logo-illustrative'/>
+                            <Image style={{ width: '100%', height: 'auto' }} src="/img/illustrative-laptop2.png" className="card-image img-fluid" width={0} height={0} sizes='100' alt='gyloop-logo-illustrative'/>
                         </div>
 
                         <div className="col-12 col-md-6 order-md-0">
@@ -290,7 +290,7 @@ export default function ProductIndex() {
                             </ul>
 
                             <div className="d-flex align-items-center justify-content-center justify-content-md-start justify-content-xl-center pl-md-3 pl-xl-0">
-                                <a href="connector.html" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Explore More</a>
+                                <Link href="/Product/Connector" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Explore More</Link>
                                 <a href="live-demo.html" className="btn btn-primary gyloop-btn">Live Demo</a>
                             </div>
                         </div>
@@ -324,7 +324,7 @@ export default function ProductIndex() {
                     <div className="row">
 
                         <div className="col-12 col-md-6">
-                            <Image src="/img/illustrative-laptop2.png" className="card-image img-fluid" width={0} height={0} sizes='100' alt='gyloop-logo-illustrative'/>
+                            <Image style={{ width: '100%', height: 'auto' }} src="/img/illustrative-laptop2.png" className="card-image img-fluid" width={0} height={0} sizes='100' alt='gyloop-logo-illustrative'/>
                         </div>
 
                         <div className="col-12 col-md-6">
@@ -354,7 +354,7 @@ export default function ProductIndex() {
                             </ul>
 
                             <div className="d-flex align-items-center justify-content-center justify-content-md-start justify-content-xl-center pl-md-3 pl-xl-0">
-                                <a href="provider.html" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Explore More</a>
+                                <Link href="/Product/Provider" className="btn btn-primary gyloop-btn mr-2 mr-xl-4">Explore More</Link>
                                 <a href="live-demo.html?s=gyloop-provider" className="btn btn-primary gyloop-btn">Live Demo</a>
                             </div>
                         </div>
@@ -381,7 +381,7 @@ export default function ProductIndex() {
 
                 <div className="d-flex justify-content-center justify-content-md-start text-white">
                     <a href="library.html" className="btn btn-warning gyloop-btn mr-2 mr-xl-4">Documentation</a>
-                    <a href="contact-us.html" className="btn btn-warning gyloop-btn">Contact Us</a>
+                    <Link href="/ContactUs" className="btn btn-warning gyloop-btn">Contact Us</Link>
                 </div>
 
             </div>

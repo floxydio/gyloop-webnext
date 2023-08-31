@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CultureComponent() {
   return (
@@ -292,9 +293,9 @@ export default function CultureComponent() {
               >
                 Career
               </a>
-              <a href="contact-us.html" className="btn btn-primary gyloop-btn ">
+              <Link href="/ContactUs" className="btn btn-primary gyloop-btn ">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

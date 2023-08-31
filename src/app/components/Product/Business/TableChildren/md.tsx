@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function TableChildrenMD() {
@@ -1236,24 +1237,24 @@ export default function TableChildrenMD() {
                         &nbsp;
                     </td>
                     <td>
-                        <a href="subscribe-verified.html" className="btn btn-primary btn-block gyloop-btn">
+                        <Link href="/SubscribeVerified" className="btn btn-primary btn-block gyloop-btn">
                             Register Now
-                        </a>
+                        </Link>
                     </td>
                     <td>
-                        <a href="subscribe-volunteer.html" className="btn btn-primary btn-block gyloop-btn">
+                        <Link href="/SubscribeVolunteer" className="btn btn-primary btn-block gyloop-btn">
                             Register Now
-                        </a>
+                        </Link>
                     </td>
                     <td>
-                        <a href="subscribe-functional.html" className="btn btn-primary btn-block gyloop-btn">
+                        <Link href="/SubscribeFunctional" className="btn btn-primary btn-block gyloop-btn">
                             Register Now
-                        </a>
+                        </Link>
                     </td>
                     <td>
-                        <a href="subscribe-professional.html?trial=1" className="btn btn-primary btn-block gyloop-btn">
+                        <Link href="/SubscribeProfessional" className="btn btn-primary btn-block gyloop-btn">
                             Try for Free
-                        </a>
+                        </Link>
                     </td>
                 </tr>
             </tbody>

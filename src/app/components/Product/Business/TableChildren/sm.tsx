@@ -1,4 +1,4 @@
-import React from 'react'
+import Link from 'next/link'
 
 export default function TableChildrenSM() {
     return (
@@ -647,7 +647,7 @@ export default function TableChildrenSM() {
                             </tr>
                         </tbody>
                     </table>
-                    <a href="subscribe-verified.html" className="btn btn-primary btn-block gyloop-btn mt-n1 mb-3">Register Now</a>
+                    <Link href="/SubscribeVerified" className="btn btn-primary btn-block gyloop-btn mt-n1 mb-3">Register Now</Link>
                 </div>
             </div>
 

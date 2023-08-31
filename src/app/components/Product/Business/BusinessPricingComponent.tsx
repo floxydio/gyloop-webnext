@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import TableChildrenMD from "./TableChildren/md";
 import TableChildrenSM from "./TableChildren/sm";
 import Image from "next/image";
+import Link from "next/link";
 export default function BusinessPricingComponent() {
 
 
@@ -59,9 +60,9 @@ export default function BusinessPricingComponent() {
                         </div>
 
                         <div className="card-footer d-none d-md-block">
-                            <a href="subscribe-verified.html" className="btn btn-primary btn-block gyloop-btn">
+                            <Link href="/SubscribeVerified" className="btn btn-primary btn-block gyloop-btn">
                                 Register Now
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -113,9 +114,9 @@ export default function BusinessPricingComponent() {
                         </div>
 
                         <div className="card-footer d-none d-md-block">
-                            <a href="subscribe-volunteer.html" className="btn btn-primary btn-block gyloop-btn">
+                            <Link href="/SubscribeVolunteer" className="btn btn-primary btn-block gyloop-btn">
                                 Register Now
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -168,9 +169,9 @@ export default function BusinessPricingComponent() {
                         </div>
 
                         <div className="card-footer d-none d-md-block">
-                            <a href="subscribe-functional.html" className="btn btn-primary btn-block gyloop-btn">
+                            <Link href="/SubscribeFunctional" className="btn btn-primary btn-block gyloop-btn">
                                 Register Now
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -227,9 +228,9 @@ export default function BusinessPricingComponent() {
                         </div>
 
                         <div className="card-footer d-none d-md-block">
-                            <a href="subscribe-professional.html?trial=1" className="btn btn-primary btn-block gyloop-btn">
+                            <Link href="/SubscribeProfessional?trial=1" className="btn btn-primary btn-block gyloop-btn">
                                 Try for Free
-                            </a>
+                            </Link>
                         </div>
                     </div>
 

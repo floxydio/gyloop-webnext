@@ -1,72 +1,10 @@
-import Head from 'next/head';
-import '@/style/style.min.css';
-import Footer from '../app/components/Footer/Footer';
-import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 
-export default function TermsOfServices() {
+export default function PrivacyComponent() {
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-        />
-        <meta name="description" content="Description" />
-        <meta name="keywords" content="Keywords" />
-        <title>Gyloop - Term of Services</title>
-
-        {/* <!-- Android  --> */}
-        <meta name="theme-color" content="#12AAF2" />
-        <meta name="mobile-web-app-capable" content="yes" />
-
-        {/* <!-- iOS --> */}
-        <meta name="apple-mobile-web-app-title" content="Application Title" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-        {/* <!-- Windows  --> */}
-        <meta name="msapplication-navbutton-color" content="#12AAF2" />
-        <meta name="msapplication-TileColor" content="#12AAF2" />
-        <meta
-          name="msapplication-TileImage"
-          content="icons/ms-icon-144x144.png"
-        />
-        <meta name="msapplication-config" content="icons/browserconfig.xml" />
-
-        {/* <!-- Pinned Sites  --> */}
-        <meta name="application-name" content="Application Name" />
-        <meta name="msapplication-tooltip" content="Tooltip Text" />
-        <meta name="msapplication-starturl" content="/" />
-
-        {/* <!-- Tap highlighting  --> */}
-        <meta name="msapplication-tap-highlight" content="no" />
-
-        {/* <!-- UC Mobile Browser  --> */}
-        <meta name="full-screen" content="yes" />
-        <meta name="browsermode" content="application" />
-
-        {/* <!-- Disable night mode for this page  --> */}
-        <meta name="nightmode" content="disable" />
-
-        {/* <!-- Layout mode --> */}
-        <meta name="layoutmode" content="fitscreen/standard" />
-
-        {/* <!-- imagemode - show image even in text only mode  --> */}
-        <meta name="imagemode" content="force" />
-
-        {/* <!-- Orientation  --> */}
-        <meta name="screen-orientation" content="portrait" />
-      </Head>
-      <>
-      <HeaderNoMenuTransparent type={1} />
-        <div className="bg-light">
-          <div className="container subheader subheader-container">
-            <h1 className="title">Term of Services</h1>
-          </div>
+      <div>
+          <title>Privacy Statement for Gyloop</title>
         </div>
-
         <div className="mb-5">
           <div className="container privacy-container py-3 pb-md-2 py-xl-4">
             <p className="privacy-update-info">
@@ -383,8 +321,7 @@ export default function TermsOfServices() {
             </div>
           </div>
         </div>
-        <Footer />
-      </>
+    
     </>
-  );
+  )
 }

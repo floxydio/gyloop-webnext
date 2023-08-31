@@ -379,10 +379,10 @@ export default function NetworkComponent() {
               business application to robust your business processes.
             </p>
 
-            <a href="solution.html" className="gyloop-link d-block">
+            <Link href="/Solutions" className="gyloop-link d-block">
               Learn More
               <i className="fas fa-angle-right"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -447,12 +447,12 @@ export default function NetworkComponent() {
                   </div>
                 </div>
                 <div className="card-footer">
-                  <a
-                    href="subscribe-verified.html"
+                  <Link
+                    href="/SubscribeVerified"
                     className="btn btn-primary btn-block gyloop-btn"
                   >
                     Register Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -488,12 +488,12 @@ export default function NetworkComponent() {
                   </div>
                 </div>
                 <div className="card-footer">
-                  <a
-                    href="subscribe-professional.html"
+                  <Link
+                    href="/SubscribeProfessional"
                     className="btn btn-primary btn-block gyloop-btn"
                   >
                     Register Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -875,9 +875,9 @@ export default function NetworkComponent() {
               >
                 System Demo
               </a>
-              <a href="contact-us.html" className="btn btn-primary gyloop-btn">
+              <Link href="/ContactUs" className="btn btn-primary gyloop-btn">
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>
