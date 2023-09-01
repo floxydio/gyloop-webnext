@@ -212,15 +212,15 @@ export default function HeaderNoMenuTransparent({ type }: { type: number } = { t
                     }`}
                   aria-labelledby="navbarDropdown"
                 >
-                  <a className="dropdown-item" href="library.html">
+                  <Link className="dropdown-item" href="/Resources/Library">
                     <span>Library</span>
-                  </a>
-                  <a className="dropdown-item" href="live-demo.html">
+                  </Link>
+                  <Link className="dropdown-item" href="/Resources/LiveDemo">
                     <span>System Demo</span>
-                  </a>
-                  <a className="dropdown-item" href="blogs.html">
+                  </Link>
+                  <Link className="dropdown-item" href="/Resources/Blogs">
                     <span>Blogs</span>
-                  </a>
+                  </Link>
                 </div>
               </li>
               <li
