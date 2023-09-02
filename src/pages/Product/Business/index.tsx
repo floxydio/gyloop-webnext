@@ -73,3 +73,11 @@ export default function Businnes() {
         </>
     );
 }
+
+export async function getStaticProps(context) {
+    return {
+      props: {
+        messages: (await import(`@/translate/${context.locale}.json`)).default
+      }
+    };
+  }

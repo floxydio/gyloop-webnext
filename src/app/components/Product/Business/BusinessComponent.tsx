@@ -10,10 +10,13 @@ import BusinessPricingComponent from './BusinessPricingComponent';
 import 'popper.js';
 import Image from 'next/image';
 import Carousel from 'react-bootstrap/Carousel';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function BusinessComponent() {
   const [index, setIndex] = useState(0);
-  
+  const t = useTranslations('ProductBusinessHeader');
+
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
   }, []);
@@ -28,17 +31,13 @@ export default function BusinessComponent() {
         <div className="container">
           <div className="card rounded-0 bg-transparent">
             <div className="card-body">
-              <div className="card-title">
-                Customer Relationship Management (CRM)
-              </div>
+              <div className="card-title">{t('firstTitleFeature')}</div>
 
-              <div className="card-subtitle">
-                Engage your customer and trace the orders
-              </div>
+              <div className="card-subtitle">{t('firstSubtitleFeature')}</div>
 
               <i className="fas fa-heart text-white mr-1"></i>
               <a href="javascript:void()" className="gyloop-link">
-                Explore more
+                {t('button')}
                 <i className="far fa-chevron-circle-right"></i>
               </a>
             </div>
@@ -47,16 +46,16 @@ export default function BusinessComponent() {
           <div className="card rounded-0 bg-transparent">
             <div className="card-body">
               <div className="card-title">
-                Supplier Relationship Management (SRM)
+                {t('secondTitleFeature')}
               </div>
 
               <div className="card-subtitle">
-                Leverage your sourcing &amp; e-procurement
+                {t('secondSubtitleFeature')}
               </div>
 
               <i className="fas fa-shopping-cart text-white mr-1"></i>
               <a href="javascript:void()" className="gyloop-link">
-                Explore more
+                {t('button')}
                 <i className="far fa-chevron-circle-right"></i>
               </a>
             </div>
@@ -65,16 +64,16 @@ export default function BusinessComponent() {
           <div className="card rounded-0 bg-transparent">
             <div className="card-body">
               <div className="card-title">
-                Inventory &amp; Warehouse Management (IWM)
+                {t('thirdTitleFeature')}
               </div>
 
               <div className="card-subtitle">
-                Extend to manage your storable products
+                {t('thirdSubtitleFeature')}
               </div>
 
               <i className="fas fa-warehouse text-white mr-1"></i>
               <a href="javascript:void()" className="gyloop-link">
-                Explore more
+                {t('button')}
                 <i className="far fa-chevron-circle-right"></i>
               </a>
             </div>
@@ -82,6 +81,12 @@ export default function BusinessComponent() {
         </div>
       </div>
 
+      <Link locale="id" href="/id/Product/Business">
+        Switch to Indonesia
+      </Link>
+      <Link locale="en" href="/en/Product/Business">
+        Switch to English
+      </Link>
       <div className="billing-automation-swiper business">
         <div className="container">
           <h2 className="title">How Gyloop Works</h2>

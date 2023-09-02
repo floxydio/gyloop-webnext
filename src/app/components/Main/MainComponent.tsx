@@ -5,17 +5,15 @@ import Link from 'next/link';
 import 'popper.js';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import Carousel from "react-bootstrap/Carousel"
-import {useTranslations} from 'next-intl';
+import Carousel from 'react-bootstrap/Carousel';
+import { useTranslations } from 'next-intl';
 // import t from "@/translate"
 
-
 export default function MainComponent() {
-  const [index,setIndex] = useState(0)
-  const t = useTranslations('Index');
+  const [index, setIndex] = useState(0);
+  const t = useTranslations('MainComponent');
 
-
-  console.log(t)
+  console.log(t);
 
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
@@ -29,12 +27,11 @@ export default function MainComponent() {
     <>
       <div className="home-subheader-1 text-center">
         <div className="container">
-          <p className="title">Make Business Connected</p>
-          <p className="subtitle">in Single Platform</p>
+          <p className="title">{t('headerTitleFeature')}</p>
+          <p className="subtitle">{t('headerSubtitleFeature')}</p>
           <Link href="/Product" className="gyloop-link">
-            Learn More <i className="fas fa-angle-right"></i>
+            {t('button')} <i className="fas fa-angle-right"></i>
           </Link>
-          <h2>{t("title")}</h2>
           <div className="row position-relative">
             <div className="col-8 offset-2 d-none d-md-block position-absolute hr-bc-container">
               <hr />
@@ -51,19 +48,20 @@ export default function MainComponent() {
                     height={0}
                     sizes="100"
                   />
-                  <div className="card-title">Customer Relationship</div>
-                  <div className="card-text">
-                    Manage your product catalog, pricing, pipeline, and customer
-                    order document and its integration
-                  </div>
+                  <div className="card-title">{t('firstTitleFeature')}</div>
+                  <div className="card-text">{t('firstSubtitleFeature')}</div>
                   <Link href="/Product/Business?t=crm" className="gyloop-link">
-                    Learn More <i className="fas fa-angle-right"></i>
+                    {t('button')} <i className="fas fa-angle-right"></i>
                   </Link>
                 </div>
               </div>
             </div>
-            <Link locale="id" href="/id/Main">Switch to Indonesia</Link>
-            <Link locale="en" href="/en/Main">Switch to English</Link>
+            <Link locale="id" href="/id/Main">
+              Switch to Indonesia
+            </Link>
+            <Link locale="en" href="/en/Main">
+              Switch to English
+            </Link>
 
             <div className="col-12 d-md-none">
               <hr className="hr-small bg-blue" />
@@ -80,13 +78,10 @@ export default function MainComponent() {
                     height={0}
                     sizes="100"
                   />
-                  <div className="card-title">Business Network</div>
-                  <div className="card-text">
-                    Connect you with other entities in wide range networks, and
-                    generate your business opportunities
-                  </div>
+                  <div className="card-title">{t('secondTitleFeature')}</div>
+                  <div className="card-text">{t('secondSubtitleFeature')}</div>
                   <Link href="/Product/Network" className="gyloop-link">
-                    Learn More <i className="fas fa-angle-right"></i>
+                    {t('button')} <i className="fas fa-angle-right"></i>
                   </Link>
                 </div>
               </div>
@@ -107,13 +102,10 @@ export default function MainComponent() {
                     height={0}
                     sizes="100"
                   />
-                  <div className="card-title">Supplier Relationship</div>
-                  <div className="card-text">
-                    Manage your end-to-end sourcing activities and make easier
-                    your e-procurement processing
-                  </div>
+                  <div className="card-title">{t('thirdTitleFeature')}</div>
+                  <div className="card-text">{t('thirdSubtitleFeature')}</div>
                   <Link href="/Product/Business?t=srm" className="gyloop-link">
-                    Learn More <i className="fas fa-angle-right"></i>
+                    {t('button')} <i className="fas fa-angle-right"></i>
                   </Link>
                 </div>
               </div>
@@ -138,7 +130,7 @@ export default function MainComponent() {
               documents.
             </p>
             <Link href="/Solutions" className="gyloop-link d-block">
-              Learn More
+              {t('button')}
               <i className="fas fa-angle-right"></i>
             </Link>
           </div>
@@ -166,7 +158,7 @@ export default function MainComponent() {
             </p>
 
             <Link href="/Solutions" className="gyloop-link d-block">
-              Learn More
+              {t('button')}
               <i className="fas fa-angle-right"></i>
             </Link>
           </div>
@@ -193,7 +185,7 @@ export default function MainComponent() {
             </p>
 
             <Link href="/Solutions" className="gyloop-link d-block">
-              Learn More
+              {t('button')}
               <i className="fas fa-angle-right"></i>
             </Link>
           </div>
@@ -261,68 +253,67 @@ export default function MainComponent() {
               </div>
             </div>
           </div> */}
-           <ol className="carousel-indicators bullets">
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                onClick={() => setIndex(0)}
-                className={index === 0 ? "active" : ""}
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="1"
-                onClick={() => setIndex(1)}
-
-                className={index === 1 ? "active" : ""}
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="2"
-                onClick={() => setIndex(2)}
-
-                className={index === 2 ? "active" : ""}
-              ></li>
-            </ol>
-          <Carousel className='slide' controls={false}  indicators={false} activeIndex={index} onSelect={handleSelect}>
+          <ol className="carousel-indicators bullets">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              onClick={() => setIndex(0)}
+              className={index === 0 ? 'active' : ''}
+            ></li>
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="1"
+              onClick={() => setIndex(1)}
+              className={index === 1 ? 'active' : ''}
+            ></li>
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="2"
+              onClick={() => setIndex(2)}
+              className={index === 2 ? 'active' : ''}
+            ></li>
+          </ol>
+          <Carousel
+            className="slide"
+            controls={false}
+            indicators={false}
+            activeIndex={index}
+            onSelect={handleSelect}
+          >
             <Carousel.Item>
-            <Image
-                  className="img-fluid"
-                  src="/img/video_player_placeholder.gif"
-                  alt="Video Placeholder-1"
-                  width={0}
-                  height={0}
-                  sizes="100"
-
-                  style={{ width: '100%', height: 'auto' }}
-                />
+              <Image
+                className="img-fluid"
+                src="/img/video_player_placeholder.gif"
+                alt="Video Placeholder-1"
+                width={0}
+                height={0}
+                sizes="100"
+                style={{ width: '100%', height: 'auto' }}
+              />
             </Carousel.Item>
             <Carousel.Item>
-            <Image
-                  className="img-fluid"
-                  src="/img/video_player_placeholder.gif"
-                  alt="Video Placeholder-1"
-                  width={0}
-                  height={0}
-                  sizes="100"
-
-                  style={{ width: '100%', height: 'auto' }}
-                />
+              <Image
+                className="img-fluid"
+                src="/img/video_player_placeholder.gif"
+                alt="Video Placeholder-1"
+                width={0}
+                height={0}
+                sizes="100"
+                style={{ width: '100%', height: 'auto' }}
+              />
             </Carousel.Item>
             <Carousel.Item>
-            <Image
-                  className="img-fluid"
-                  src="/img/video_player_placeholder.gif"
-                  alt="Video Placeholder-1"
-                  width={0}
-                  height={0}
-                  sizes="100"
-
-                  style={{ width: '100%', height: 'auto' }}
-                />
+              <Image
+                className="img-fluid"
+                src="/img/video_player_placeholder.gif"
+                alt="Video Placeholder-1"
+                width={0}
+                height={0}
+                sizes="100"
+                style={{ width: '100%', height: 'auto' }}
+              />
             </Carousel.Item>
           </Carousel>
-
-
         </div>
       </div>
 
@@ -369,7 +360,7 @@ export default function MainComponent() {
           </div>
 
           <Link href="/Product" className="gyloop-link d-block">
-            Learn More
+            {t('button')}
             <i className="fas fa-angle-right"></i>
           </Link>
         </div>

@@ -1,23 +1,16 @@
 import '@/style/style.min.css';
 import '@/style/icon.css';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 export default function BusinessTab() {
+  const t = useTranslations('ProductBusinessTabComponent');
   return (
     <>
       <h5 className="link-title">BUSINESS</h5>
 
-      <h3 className="title">Customer Relationship Management (CRM)</h3>
+      <h3 className="title">{t('firstTitle')}</h3>
 
-      <p>
-        The Gyloop CRM provides an unique platform to organize all business
-        interaction to your customer with very closer relationship. This
-        platform allow you to manage your business transaction and invite your
-        customer to track and monitor the latest update status of their order or
-        deliveries. They can also subscribe your product catalog for elaborate
-        their sourcing or self-service procurement. These platform bring better
-        business integration and simplicity between you and your customers
-        regardless of whatever backend system behind.
-      </p>
+      <p>{t('descriptionFeature')}</p>
       <p>
         The Gyloop CRM provides an unique platform to organize all business
         interaction to your customer with very closer relationship. This
@@ -41,13 +34,7 @@ export default function BusinessTab() {
           <span>Value Proposition</span>
         </h4>
 
-        <p>
-          The main difference of Gyloop CRM is how this platform make you
-          connected to your customer, and get connected to prospective customer
-          by Gyloop Network to generate your qualified leads. And make your
-          product easily reacognizable to the targeted market, real time update
-          notification to your customers.
-        </p>
+        <p>{t('valueProposition')}</p>
       </div>
 
       <p>

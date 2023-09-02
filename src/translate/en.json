@@ -1,5 +1,51 @@
 {
-    "Index" : {
-        "title" : "Test By Dio"
+    "MainHeader": {
+        "title": "A New Era of Business Apps",
+        "subtitle": "With Gyloop business platform, you will find the best way how to connect your main business yo the wide range business networks, automate your sales and procurement transaction, easier to monitor your supply chain, and improve new business opportunity.",
+        "button": "Get Start For Free"
+    },
+    "MainComponent": {
+        "headerTitleFeature": "Make Business Connected",
+        "headerSubtitleFeature": "in Single Platform",
+        "buttonFeature": "Learn More",
+        "firstTitleFeature": "Customer Relationship",
+        "firstSubtitleFeature": "Manage your product catalog, pricing, pipeline, and customer order document and its integration",
+        "secondTitleFeature": "Business Network",
+        "secondSubtitleFeature": "Connect you with other entities in wide range networks, and generate your business opportunities",
+        "thirdTitleFeature": "Supplier Relationship",
+        "thirdSubtitleFeature": "Manage your end-to-end sourcing activities and make easier your e-procurement processing",
+        "button": "Learn More"
+    },
+    "ProductBusinessHeader": {
+        "title": "Gyloop Business",
+        "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+        "secondSubtitle": "Working together at the same platform is better",
+        "firstTitleFeature": "Customer Relationship Management (CRM)",
+        "firstSubtitleFeature": "Engage your customer and trace the orders",
+        "secondTitleFeature": "Supplier Relationship Management (SRM)",
+        "secondSubtitleFeature": "Leverage your sourcing & e-procurement",
+        "thirdTitleFeature": "Inventory & Warehouse Management (IWM)",
+        "thirdSubtitleFeature": "Extend to manage your storable products",
+        "button": "Learn More"
+    },
+    "ProductBusinessTabComponent": {
+        "firstTitle": "Customer Relationship Management",
+        "secondTitle": "Supplier Relationship Management",
+        "thirdTitle": "Inventory & Warehouse Management",
+        "descriptionFeature": "The Gyloop CRM provides an unique platform to organize all business interaction to your customer with very closer relationship. This platform allow you to manage your business transaction and invite your customer to track and monitor the latest update status of their order or deliveries. They can also subscribe your product catalog for elaborate their sourcing or self-service procurement. These platform bring better business integration and simplicity between you and your customers regardless of whatever backend system behind.",
+        "valueProposition": "The main difference of Gyloop CRM is how this platform make you connected to your customer, and get connected to prospective customer by Gyloop Network to generate your qualified leads. And make your product easily reacognizable to the targeted market, real time update notification to your customers."
+    },
+    "ProductNetworkHeader": {
+        "title": "Gyloop Network",
+        "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+        "secondSubtitle": "Working together at the same platform is better",
+        "firstTitleFeature": "Customer Relationship Management (CRM)",
+        "firstSubtitleFeature": "Engage your customer and trace the orders",
+        "secondTitleFeature": "Supplier Relationship Management (SRM)",
+        "secondSubtitleFeature": "Leverage your sourcing & e-procurement",
+        "thirdTitleFeature": "Inventory & Warehouse Management (IWM)",
+        "thirdSubtitleFeature": "Extend to manage your storable products",
+        "button": "Learn More"
     }
+
 }

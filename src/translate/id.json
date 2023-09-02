@@ -1,5 +1,48 @@
 {
-    "Index" : {
-        "title" : "Test Dari Dio"
-    }
+        "MainHeader": {
+            "title": "Era Baru Aplikasi Bisnis",
+            "subtitle": "Dengan platform bisnis Gyloop, Anda akan menemukan cara terbaik untuk menghubungkan bisnis utama Anda dengan jaringan bisnis yang luas, mengotomatiskan transaksi penjualan dan pengadaan barang, lebih mudah memonitor rantai pasokan, dan meningkatkan peluang bisnis baru.",
+            "button": "Mulai dengan Gratis"
+        },
+        "MainComponent": {
+            "headerTitleFeature": "Menjadikan Bisnis Terhubung",
+            "headerSubtitleFeature": "dalam Satu Platform",
+            "buttonFeature": "Pelajari Lebih Lanjut",
+            "firstTitleFeature": "Hubungan Pelanggan",
+            "firstSubtitleFeature": "Kelola katalog produk, harga, pipeline, dan dokumen pesanan pelanggan serta integrasinya",
+            "secondTitleFeature": "Jaringan Bisnis",
+            "secondSubtitleFeature": "Menghubungkan Anda dengan entitas lain dalam jaringan yang luas, dan menghasilkan peluang bisnis Anda",
+            "thirdTitleFeature": "Hubungan Pemasok",
+            "thirdSubtitleFeature": "Kelola aktivitas pengadaan barang dan jasa Anda secara menyeluruh dan permudah proses e-procurement Anda",
+            "button": "Pelajari Lebih Lanjut"
+        },
+        "ProductBusinessHeader": {
+            "title": "Gyloop Business",
+            "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
+            "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik",
+            "firstTitleFeature": "Manajemen Hubungan Pelanggan",
+            "firstSubtitleFeature": "Libatkan pelanggan Anda dan lacak pesanan",
+            "secondTitleFeature": "Manajemen Hubungan Pemasok",
+            "secondSubtitleFeature": "Manfaatkan sumber dan pengadaan elektronik Anda",
+            "thirdTitleFeature": "Manajemen Inventaris dan Gudang",
+            "thirdSubtitleFeature": "Perluas untuk mengelola produk yang dapat disimpan",
+            "button": "Pelajari Lebih Lanjut"
+        },
+        "ProductBusinessTabComponent": {
+            "firstTitle": "Manajemen Hubungan Pelanggan",
+            "secondTitle": "Manajemen Hubungan Pemasok",
+            "thirdTitle": "Manajemen Inventaris dan Gudang",
+            "descriptionFeature": "Gyloop CRM menyediakan platform yang unik untuk mengatur semua interaksi bisnis dengan pelanggan Anda dengan hubungan yang lebih dekat. Platform ini memungkinkan Anda untuk mengelola transaksi bisnis Anda dan mengundang pelanggan Anda untuk melacak dan memantau status terbaru dari pesanan atau pengiriman mereka. Mereka juga dapat berlangganan katalog produk Anda untuk menguraikan sumber mereka atau pengadaan swalayan. Platform ini menghadirkan integrasi bisnis yang lebih baik dan kesederhanaan antara Anda dan pelanggan Anda terlepas dari sistem backend apa pun yang ada di belakangnya.",
+            "valueProposition": "Perbedaan utama dari Gyloop CRM adalah bagaimana platform ini membuat Anda terhubung dengan pelanggan Anda, dan terhubung dengan calon pelanggan melalui Gyloop Network untuk menghasilkan prospek yang berkualitas. Dan membuat produk Anda mudah dikenali oleh pasar yang ditargetkan, notifikasi update secara real time kepada pelanggan Anda."
+        },
+        "ProductNetworkHeader": {
+            "title": "Gyloop Network",
+            "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
+            "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik",
+            "firstTitleFeature": "Jaringan Business",
+            "firstSubtitleFeature": "Manfaatkan sumber dan pengadaan elektronik Anda",
+            "secondTitleFeature": "Profil Perusahaan",
+            "secondSubtitleFeature": "Manfaatkan sumber dan pengadaan elektronik Anda",
+            "button": "Pelajari Lebih Lanjut"
+        }
 }

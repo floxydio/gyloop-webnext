@@ -1,14 +1,13 @@
-import Footer from "@/app/components/Footer/Footer";
-import HeaderNoMenuTransparent from "@/app/components/Header/HeaderNoMenuTransparent";
-import NetworkComponent from "@/app/components/Product/Network/NetworkComponent";
-import NetworkHeader from "@/app/components/Product/Network/NetworkHeader";
-import Head from "next/head";
+import Footer from '@/app/components/Footer/Footer';
+import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
+import NetworkComponent from '@/app/components/Product/Network/NetworkComponent';
+import NetworkHeader from '@/app/components/Product/Network/NetworkHeader';
+import Head from 'next/head';
 
 export default function NetworkIndex() {
   return (
     <>
-    
-    <Head>
+      <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
@@ -17,8 +16,8 @@ export default function NetworkIndex() {
         />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
-         {/* <!-- Android  --> */}
-         <meta name="theme-color" content="#12AAF2" />
+        {/* <!-- Android  --> */}
+        <meta name="theme-color" content="#12AAF2" />
         <meta name="mobile-web-app-capable" content="yes" />
 
         {/* <!-- iOS --> */}
@@ -62,13 +61,19 @@ export default function NetworkIndex() {
         <title>Gyloop - Network</title>
       </Head>
 
-      <HeaderNoMenuTransparent type = {0} />
+      <HeaderNoMenuTransparent type={0} />
       <NetworkHeader />
       <NetworkComponent />
 
       <Footer />
-    
-    
     </>
-  )
+  );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`@/translate/${context.locale}.json`)).default,
+    },
+  };
 }
