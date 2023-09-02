@@ -8,19 +8,13 @@ const nextConfig = {
     compiler: {
         reactRemoveProperties: true,
     },
+    i18n: {
+        locales: ["en", "id"],
+        defaultLocale: "en",
+        localeDetection: false
+    },
+
     swcMinify: true,
-    redirects: async () => {
-        return [
-            {
-                source: "/",
-                destination: "/Main",
-                permanent: true,
-            },
-        ]
-    }
-
-
-
 }
 
 module.exports = nextConfig

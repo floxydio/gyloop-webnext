@@ -5,9 +5,9 @@ import 'popper.js';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
-import session from '@/app/modules/Sessions/session';
+// import session from '@/app/modules/Sessions/session';
 import { SESSION_STORAGE_KEY as LanguageKey } from '@/app/modules/Language/languageConfig';
-import i18n from '@/app/modules/i18n';
+// import i18n from '@/app/modules/i18n';
 
 export default function HeaderNoMenuTransparent(
   { type }: { type: number } = { type: 0 }
@@ -19,30 +19,25 @@ export default function HeaderNoMenuTransparent(
     require('bootstrap/dist/js/bootstrap.bundle');
   }, []);
 
-  const { t } = useTranslation('header_main_slider');
-  const [anchorE1, setAnchorE1] = useState<HTMLButtonElement | null>(null);
 
-  function openLanguage(e: React.FormEvent<HTMLButtonElement>) {
-    setAnchorE1(e.currentTarget);
-  }
 
-  function changeLanguage() {
-    if (selectedCountry === 2) {
-      i18n.changeLanguage('id');
-      session.set(LanguageKey, { Language: 'id' });
-      closeLanguage();
-    }
-  }
+  // function changeLanguage() {
+  //   if (selectedCountry === 2) {
+  //     i18n.changeLanguage('id');
+  //     session.set(LanguageKey, { Language: 'id' });
+  //     closeLanguage();
+  //   }
+  // }
 
-  function closeLanguage() {
-    setAnchorE1(null);
-  }
+  // function closeLanguage() {
+  //   setAnchorE1(null);
+  // }
 
-  async function changeLanguageToIndonesia() {
-    i18n.changeLanguage('id');
-    session.set(LanguageKey, { Language: 'id' });
-    closeLanguage();
-  }
+  // async function changeLanguageToIndonesia() {
+  //   i18n.changeLanguage('id');
+  //   session.set(LanguageKey, { Language: 'id' });
+  //   closeLanguage();
+  // }
 
   return (
     <>
@@ -300,7 +295,7 @@ export default function HeaderNoMenuTransparent(
                 <li className="nav-item nav-item-lang position-relative">
                   <a
                     className="nav-link mr-0"
-                    href="preventDefault()"
+                    href="javascript:void(0)"
                     data-toggle="dropdown"
                     aria-expanded="false"
                   >

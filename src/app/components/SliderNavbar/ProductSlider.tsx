@@ -2,8 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "@/style/style.min.css"
 import "@/style/icon.css"
 import Link from "next/link"
+import { useTranslations } from "next-intl";
 
 export default function ProductSlider() {
+  const t = useTranslations('Index');
   return (
     <>
 
@@ -18,6 +20,7 @@ export default function ProductSlider() {
                         <p>CONNECTED</p>
                     </div>
                 </div>
+                <p>{t("title")}</p>
 
                 <div className="col-12 col-md-8">
                     <h1 className="title">Product Overview</h1>
@@ -47,3 +50,12 @@ export default function ProductSlider() {
     
     )
 }
+
+export async function getStaticProps(context) {
+    return {
+      props: {
+
+        messages: (await import(`@/translate/${context.locale}.json`)).default
+      }
+    };
+  }

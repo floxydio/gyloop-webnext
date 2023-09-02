@@ -6,9 +6,17 @@ import 'popper.js';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Carousel from "react-bootstrap/Carousel"
+import {useTranslations} from 'next-intl';
+// import t from "@/translate"
+
 
 export default function MainComponent() {
   const [index,setIndex] = useState(0)
+  const t = useTranslations('Index');
+
+
+  console.log(t)
+
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
   }, []);
@@ -26,7 +34,7 @@ export default function MainComponent() {
           <Link href="/Product" className="gyloop-link">
             Learn More <i className="fas fa-angle-right"></i>
           </Link>
-
+          <h2>{t("title")}</h2>
           <div className="row position-relative">
             <div className="col-8 offset-2 d-none d-md-block position-absolute hr-bc-container">
               <hr />
@@ -54,6 +62,8 @@ export default function MainComponent() {
                 </div>
               </div>
             </div>
+            <Link locale="id" href="/id/Main">Switch to Indonesia</Link>
+            <Link locale="en" href="/en/Main">Switch to English</Link>
 
             <div className="col-12 d-md-none">
               <hr className="hr-small bg-blue" />
@@ -127,7 +137,6 @@ export default function MainComponent() {
               pricing, catalog released, and automate the business transaction
               documents.
             </p>
-
             <Link href="/Solutions" className="gyloop-link d-block">
               Learn More
               <i className="fas fa-angle-right"></i>
