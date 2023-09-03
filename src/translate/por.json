@@ -1,0 +1,158 @@
+{
+    "MainHeader": {
+      "title": "Uma Nova Era de Aplicativos de Negócios",
+      "subtitle": "Com a plataforma de negócios Gyloop, você encontrará a melhor maneira de conectar seu principal negócio às amplas redes de negócios, automatizar suas transações de vendas e compras, facilitar o monitoramento de sua cadeia de suprimentos e melhorar as novas oportunidades de negócios.",
+      "button": "Comece Grátis"
+    },
+    "MainComponent": {
+      "headerTitleFeature": "Conecte os Negócios",
+      "headerSubtitleFeature": "em uma Única Plataforma",
+      "buttonFeature": "Saiba Mais",
+      "firstTitleFeature": "Relacionamento com o Cliente",
+      "firstSubtitleFeature": "Gerencie seu catálogo de produtos, preços, pipeline e documentos de pedidos de clientes e sua integração",
+      "secondTitleFeature": "Rede de Negócios",
+      "secondSubtitleFeature": "Conecte-se com outras entidades em uma ampla rede de negócios e gere oportunidades de negócios",
+      "thirdTitleFeature": "Relacionamento com Fornecedores",
+      "thirdSubtitleFeature": "Gerencie suas atividades de sourcing de ponta a ponta e torne mais fácil o processamento de compras eletrônicas",
+      "button": "Saiba Mais"
+    },
+    "ProductBusinessHeader": {
+      "title": "Negócios Gyloop",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor",
+      "firstTitleFeature": "Gestão de Relacionamento com o Cliente (CRM)",
+      "firstSubtitleFeature": "Engaje seu cliente e rastreie os pedidos",
+      "secondTitleFeature": "Gestão de Relacionamento com Fornecedores (SRM)",
+      "secondSubtitleFeature": "Aproveite seu sourcing e e-procurement",
+      "thirdTitleFeature": "Gerenciamento de Estoque e Armazém (IWM)",
+      "thirdSubtitleFeature": "Estenda para gerenciar seus produtos estocáveis",
+      "button": "Saiba Mais"
+    },
+    "ProductBusinessTabComponent": {
+      "firstTitle": "Gestão de Relacionamento com o Cliente",
+      "secondTitle": "Gestão de Relacionamento com Fornecedores",
+      "thirdTitle": "Gerenciamento de Estoque e Armazém",
+      "descriptionFeature": "O CRM Gyloop oferece uma plataforma única para organizar todas as interações comerciais com seu cliente com um relacionamento mais próximo. Esta plataforma permite que você gerencie suas transações comerciais e convide seus clientes a rastrear e monitorar o status mais recente de seus pedidos ou entregas. Eles também podem assinar seu catálogo de produtos para aprimorar seu sourcing ou compras autoatendidas. Essas plataformas proporcionam uma melhor integração e simplicidade nos negócios entre você e seus clientes, independentemente do sistema backend que estiver por trás.",
+      "valueProposition": "A principal diferença do CRM Gyloop é como essa plataforma o conecta ao seu cliente e se conecta a possíveis clientes por meio da Rede Gyloop para gerar seus leads qualificados. E torna seu produto facilmente reconhecível no mercado-alvo, com notificações de atualização em tempo real para seus clientes."
+    },
+    "ProductNetworkHeader": {
+      "title": "Rede Gyloop",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor",
+      "firstTitleFeature": "Gestão de Relacionamento com o Cliente (CRM)",
+      "firstSubtitleFeature": "Engaje seu cliente e rastreie os pedidos",
+      "secondTitleFeature": "Gestão de Relacionamento com Fornecedores (SRM)",
+      "secondSubtitleFeature": "Aproveite seu sourcing e e-procurement",
+      "thirdTitleFeature": "Gerenciamento de Estoque e Armazém (IWM)",
+      "thirdSubtitleFeature": "Estenda para gerenciar seus produtos estocáveis",
+      "button": "Saiba Mais"
+    },
+    "ProductConnectorHeader": {
+      "title": "Conector Gyloop",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor.",
+      "firstTitleFeature": "Networking de Negócios",
+      "firstSubtitleFeature": "Aproveite seu sourcing e e-procurement",
+      "secondTitleFeature": "Perfil da Empresa",
+      "secondSubtitleFeature": "Aproveite seu sourcing e e-procurement",
+      "button": "Saiba Mais"
+    },
+    "ProductConnectorTabComponent": {
+      "firstTitle": "Networking de Negócios",
+      "secondTitle": "Perfil da Empresa",
+      "descriptionFeature": "O CRM Gyloop oferece uma plataforma única para organizar todas as interações comerciais com seu cliente com um relacionamento mais próximo. Esta plataforma permite que você gerencie suas transações comerciais e convide seus clientes a rastrear e monitorar o status mais recente de seus pedidos ou entregas. Eles também podem assinar seu catálogo de produtos para aprimorar seu sourcing ou compras autoatendidas. Essas plataformas proporcionam uma melhor integração e simplicidade nos negócios entre você e seus clientes, independentemente do sistema backend que estiver por trás.",
+      "valueProposition": "A principal diferença do CRM Gyloop é como essa plataforma o conecta ao seu cliente e se conecta a possíveis clientes por meio da Rede Gyloop para gerar seus leads qualificados. E torna seu produto facilmente reconhecível no mercado-alvo, com notificações de atualização em tempo real para seus clientes."
+    },
+    "ProductProviderHeader": {
+      "title": "Provedor Gyloop",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor",
+      "firstTitleFeature": "Gestão de Relacionamento com o Cliente (CRM)",
+      "firstSubtitleFeature": "Engaje seu cliente e rastreie os pedidos",
+      "secondTitleFeature": "Gestão de Relacionamento com Fornecedores (SRM)",
+      "secondSubtitleFeature": "Aproveite seu sourcing & e-procurement",
+      "thirdTitleFeature": "Gerenciamento de Estoque & Armazém (IWM)",
+      "thirdSubtitleFeature": "Estenda para gerenciar seus produtos estocáveis",
+      "button": "Saiba Mais"
+    },
+    "SolutionsSalesAutomationHeader": {
+      "title": "Automação de Vendas",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "SolutionsCatalogManagementHeader": {
+      "title": "Gestão de Catálogo",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "SolutionsSourcingManagementHeader": {
+      "title": "Gestão de Sourcing",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "SolutionsCustomerPortalHeader": {
+      "title": "Portal do Cliente",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "SolutionsEProcurementHeader": {
+      "title": "E-Procurement",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "SolutionsVendorPortalHeader": {
+      "title": "Portal de Fornecedores",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "SolutionsBillingAutomationHeader": {
+      "title": "Automação de Faturamento",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "SolutionsInvoiceAutomationHeader": {
+      "title": "Automação de Faturas",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "SolutionsBusinessNetworkingHeader": {
+      "title": "Networking de Negócios",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "SolutionsServiceProviderHeader": {
+      "title": "Provedor de Serviços",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "ResourcesLibraryHeader": {
+      "title": "Biblioteca",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "ResourcesSystemDemoHeader": {
+      "title": "Demonstração do Sistema",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "ResourcesBlogsHeader": {
+      "title": "Blogs",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "AboutUsNewsEventHeader": {
+      "title": "Notícias e Eventos",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "AboutUsCampaignHeader": {
+      "title": "Programa de Campanha",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    },
+    "AboutUsCultureHeader": {
+      "title": "Cultura Gyloop",
+      "subtitle": "À primeira vista, muitas startups de tecnologia parecem se concentrar apenas em mesas de pingue-pongue, chefs em tempo integral e muitos benefícios. Na realidade, não é o caso.",
+      "secondSubtitle": "Trabalhar juntos na mesma plataforma é melhor"
+    }
+  }

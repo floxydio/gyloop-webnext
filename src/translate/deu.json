@@ -1,0 +1,158 @@
+{
+    "MainHeader": {
+        "title": "Ein neues Zeitalter von Unternehmensanwendungen",
+        "subtitle": "Mit der Gyloop Business-Plattform finden Sie die beste Möglichkeit, Ihr Hauptgeschäft mit einem breiten Netzwerk von Unternehmen zu verbinden, Ihre Verkaufs- und Beschaffungstransaktionen zu automatisieren, Ihre Lieferkette einfacher zu überwachen und neue Geschäftsmöglichkeiten zu verbessern.",
+        "button": "Kostenlos starten"
+    },
+    "MainComponent": {
+        "headerTitleFeature": "Machen Sie Geschäfte vernetzt",
+        "headerSubtitleFeature": "in einer einzigen Plattform",
+        "buttonFeature": "Mehr erfahren",
+        "firstTitleFeature": "Kundenbeziehung",
+        "firstSubtitleFeature": "Verwalten Sie Ihren Produktkatalog, die Preisgestaltung, den Vertriebsweg und die Kundenbestelldokumente sowie deren Integration",
+        "secondTitleFeature": "Geschäftsnetzwerk",
+        "secondSubtitleFeature": "Verbinden Sie sich mit anderen Unternehmen in einem breiten Netzwerk und generieren Sie Geschäftsmöglichkeiten",
+        "thirdTitleFeature": "Lieferantenbeziehung",
+        "thirdSubtitleFeature": "Verwalten Sie Ihre Beschaffungsaktivitäten von Anfang bis Ende und vereinfachen Sie die Verarbeitung Ihrer Einkäufe online",
+        "button": "Mehr erfahren"
+    },
+    "ProductBusinessHeader": {
+        "title": "Gyloop Business",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser",
+        "firstTitleFeature": "Customer Relationship Management (CRM)",
+        "firstSubtitleFeature": "Binden Sie Ihre Kunden ein und verfolgen Sie die Bestellungen",
+        "secondTitleFeature": "Lieferantenbeziehungsmanagement (SRM)",
+        "secondSubtitleFeature": "Nutzen Sie Ihre Beschaffungs- und E-Procurement-Prozesse",
+        "thirdTitleFeature": "Inventar- und Lagerverwaltung (IWM)",
+        "thirdSubtitleFeature": "Erweitern Sie die Verwaltung Ihrer lagerfähigen Produkte",
+        "button": "Mehr erfahren"
+    },
+    "ProductBusinessTabComponent": {
+        "firstTitle": "Customer Relationship Management",
+        "secondTitle": "Lieferantenbeziehungsmanagement",
+        "thirdTitle": "Inventar- und Lagerverwaltung",
+        "descriptionFeature": "Das Gyloop CRM bietet eine einzigartige Plattform, um alle Geschäftsinteraktionen mit Ihren Kunden mit einer sehr engen Beziehung zu organisieren. Diese Plattform ermöglicht es Ihnen, Ihre Geschäftstransaktionen zu verwalten und Ihre Kunden zur Verfolgung und Überwachung des neuesten Status ihrer Bestellungen oder Lieferungen einzuladen. Sie können auch Ihren Produktkatalog abonnieren, um ihre Beschaffung oder Selbstbedienungsbeschaffung auszuarbeiten. Diese Plattformen bringen eine bessere Geschäftsintegration und -einfachheit zwischen Ihnen und Ihren Kunden, unabhängig von dem Backend-System dahinter.",
+        "valueProposition": "Der Hauptunterschied des Gyloop CRM besteht darin, wie diese Plattform Sie mit Ihren Kunden verbindet und mit potenziellen Kunden über das Gyloop-Netzwerk in Verbindung bringt, um qualifizierte Leads zu generieren. Und machen Sie Ihr Produkt leicht erkennbar für den Zielmarkt, Echtzeit-Update-Benachrichtigungen an Ihre Kunden."
+    },
+    "ProductNetworkHeader": {
+        "title": "Gyloop Netzwerk",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser",
+        "firstTitleFeature": "Customer Relationship Management (CRM)",
+        "firstSubtitleFeature": "Binden Sie Ihre Kunden ein und verfolgen Sie die Bestellungen",
+        "secondTitleFeature": "Lieferantenbeziehungsmanagement (SRM)",
+        "secondSubtitleFeature": "Nutzen Sie Ihre Beschaffungs- und E-Procurement-Prozesse",
+        "thirdTitleFeature": "Inventar- und Lagerverwaltung (IWM)",
+        "thirdSubtitleFeature": "Erweitern Sie die Verwaltung Ihrer lagerfähigen Produkte",
+        "button": "Mehr erfahren"
+    },
+    "ProductConnectorHeader": {
+        "title": "Gyloop Connector",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser.",
+        "firstTitleFeature": "Business Networking",
+        "firstSubtitleFeature": "Nutzen Sie Ihre Beschaffungs- und E-Procurement-Prozesse",
+        "secondTitleFeature": "Unternehmensprofil",
+        "secondSubtitleFeature": "Nutzen Sie Ihre Beschaffungs- und E-Procurement-Prozesse",
+        "button": "Mehr erfahren"
+    },
+    "ProductConnectorTabComponent": {
+        "firstTitle": "Business Networking",
+        "secondTitle": "Unternehmensprofil",
+        "descriptionFeature": "Das Gyloop CRM bietet eine einzigartige Plattform, um alle Geschäftsinteraktionen mit Ihren Kunden mit einer sehr engen Beziehung zu organisieren. Diese Plattform ermöglicht es Ihnen, Ihre Geschäftstransaktionen zu verwalten und Ihre Kunden zur Verfolgung und Überwachung des neuesten Status ihrer Bestellungen oder Lieferungen einzuladen. Sie können auch Ihren Produktkatalog abonnieren, um ihre Beschaffung oder Selbstbedienungsbeschaffung auszuarbeiten. Diese Plattformen bringen eine bessere Geschäftsintegration und -einfachheit zwischen Ihnen und Ihren Kunden, unabhängig von dem Backend-System dahinter.",
+        "valueProposition": "Der Hauptunterschied des Gyloop CRM besteht darin, wie diese Plattform Sie mit Ihren Kunden verbindet und mit potenziellen Kunden über das Gyloop-Netzwerk in Verbindung bringt, um qualifizierte Leads zu generieren. Und machen Sie Ihr Produkt leicht erkennbar für den Zielmarkt, Echtzeit-Update-Benachrichtigungen an Ihre Kunden."
+    },
+    "ProductProviderHeader": {
+        "title": "Gyloop Anbieter",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser",
+        "firstTitleFeature": "Customer Relationship Management (CRM)",
+        "firstSubtitleFeature": "Binden Sie Ihre Kunden ein und verfolgen Sie die Bestellungen",
+        "secondTitleFeature": "Lieferantenbeziehungsmanagement (SRM)",
+        "secondSubtitleFeature": "Nutzen Sie Ihre Beschaffungs- und E-Procurement-Prozesse",
+        "thirdTitleFeature": "Inventar- und Lagerverwaltung (IWM)",
+        "thirdSubtitleFeature": "Erweitern Sie die Verwaltung Ihrer lagerfähigen Produkte",
+        "button": "Mehr erfahren"
+    },
+    "SolutionsSalesAutomationHeader": {
+        "title": "Vertriebsautomatisierung",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "SolutionsCatalogManagementHeader": {
+        "title": "Katalogverwaltung",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "SolutionsSourcingManagementHeader": {
+        "title": "Beschaffungsmanagement",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "SolutionsCustomerPortalHeader": {
+        "title": "Kundenportal",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "SolutionsEProcurementHeader": {
+        "title": "E-Procurement",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "SolutionsVendorPortalHeader": {
+        "title": "Lieferantenportal",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "SolutionsBillingAutomationHeader": {
+        "title": "Rechnungsautomatisierung",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "SolutionsInvoiceAutomationHeader": {
+        "title": "Rechnungsautomatisierung",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "SolutionsBusinessNetworkingHeader": {
+        "title": "Geschäftsnetzwerke",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "SolutionsServiceProviderHeader": {
+        "title": "Dienstleister",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "ResourcesLibraryHeader": {
+        "title": "Bibliothek",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "ResourcesSystemDemoHeader": {
+        "title": "Systemdemo",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "ResourcesBlogsHeader": {
+        "title": "Blogs",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "AboutUsNewsEventHeader": {
+        "title": "Nachrichten und Veranstaltungen",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "AboutUsCampaignHeader": {
+        "title": "Kampagnenprogramm",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    },
+    "AboutUsCultureHeader": {
+        "title": "Gyloop Kultur",
+        "subtitle": "Von außen betrachtet, scheinen viele Tech-Start-ups sich nur auf Tischtennistische, Vollzeit-Köche im Büro und viele Vorteile zu konzentrieren. Das ist in Wirklichkeit nicht der Fall.",
+        "secondSubtitle": "Zusammenarbeit auf derselben Plattform ist besser"
+    }
+}

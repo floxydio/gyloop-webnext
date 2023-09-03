@@ -1,0 +1,158 @@
+{
+    "MainHeader": {
+        "title": "Una Nuova Era delle App Aziendali",
+        "subtitle": "Con la piattaforma aziendale Gyloop, troverai il miglior modo per collegare la tua azienda principale alle ampie reti aziendali, automatizzare le transazioni di vendita e approvvigionamento, facilitare il monitoraggio della tua catena di approvvigionamento e migliorare le nuove opportunità di business.",
+        "button": "Inizia Gratis"
+    },
+    "MainComponent": {
+        "headerTitleFeature": "Fai Connessioni Aziendali",
+        "headerSubtitleFeature": "in una Singola Piattaforma",
+        "buttonFeature": "Scopri Di Più",
+        "firstTitleFeature": "Gestione delle Relazioni con i Clienti",
+        "firstSubtitleFeature": "Gestisci il catalogo dei tuoi prodotti, i prezzi, il pipeline e i documenti degli ordini dei clienti e la loro integrazione",
+        "secondTitleFeature": "Rete Aziendale",
+        "secondSubtitleFeature": "Collega la tua azienda ad altre entità in una vasta rete e genera opportunità di business",
+        "thirdTitleFeature": "Gestione delle Relazioni con i Fornitori",
+        "thirdSubtitleFeature": "Gestisci le tue attività di approvvigionamento end-to-end e semplifica l'elaborazione dell'e-procurement",
+        "button": "Scopri Di Più"
+    },
+    "ProductBusinessHeader": {
+        "title": "Gyloop Business",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore",
+        "firstTitleFeature": "Gestione delle Relazioni con i Clienti (CRM)",
+        "firstSubtitleFeature": "Coinvolgi i tuoi clienti e traccia gli ordini",
+        "secondTitleFeature": "Gestione delle Relazioni con i Fornitori (SRM)",
+        "secondSubtitleFeature": "Sfrutta il tuo sourcing e l'e-procurement",
+        "thirdTitleFeature": "Gestione dell'Inventario e del Magazzino (IWM)",
+        "thirdSubtitleFeature": "Estendi la gestione dei tuoi prodotti stoccabili",
+        "button": "Scopri Di Più"
+    },
+    "ProductBusinessTabComponent": {
+        "firstTitle": "Gestione delle Relazioni con i Clienti",
+        "secondTitle": "Gestione delle Relazioni con i Fornitori",
+        "thirdTitle": "Gestione dell'Inventario e del Magazzino",
+        "descriptionFeature": "Il CRM di Gyloop fornisce una piattaforma unica per organizzare tutte le interazioni aziendali con i tuoi clienti con una relazione molto più stretta. Questa piattaforma ti permette di gestire le transazioni aziendali e invitare i tuoi clienti a tracciare e monitorare gli aggiornamenti più recenti dello stato dei loro ordini o delle consegne. Possono anche iscriversi al tuo catalogo prodotti per elaborare i loro acquisti o l'approvvigionamento self-service. Queste piattaforme portano a una migliore integrazione aziendale e semplicità tra te e i tuoi clienti, indipendentemente dal sistema backend che c'è dietro.",
+        "valueProposition": "La principale differenza di Gyloop CRM è come questa piattaforma ti mette in contatto con i tuoi clienti e ti collega a potenziali clienti tramite Gyloop Network per generare lead qualificati. E rende il tuo prodotto facilmente riconoscibile nel mercato di riferimento, con notifiche in tempo reale per i tuoi clienti."
+    },
+    "ProductNetworkHeader": {
+        "title": "Gyloop Network",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore",
+        "firstTitleFeature": "Gestione delle Relazioni con i Clienti (CRM)",
+        "firstSubtitleFeature": "Coinvolgi i tuoi clienti e traccia gli ordini",
+        "secondTitleFeature": "Gestione delle Relazioni con i Fornitori (SRM)",
+        "secondSubtitleFeature": "Sfrutta il tuo sourcing e l'e-procurement",
+        "thirdTitleFeature": "Gestione dell'Inventario e del Magazzino (IWM)",
+        "thirdSubtitleFeature": "Estendi la gestione dei tuoi prodotti stoccabili",
+        "button": "Scopri Di Più"
+    },
+    "ProductConnectorHeader": {
+        "title": "Gyloop Connector",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore",
+        "firstTitleFeature": "Networking Aziendale",
+        "firstSubtitleFeature": "Sfrutta il tuo sourcing e l'e-procurement",
+        "secondTitleFeature": "Profilo Aziendale",
+        "secondSubtitleFeature": "Sfrutta il tuo sourcing e l'e-procurement",
+        "button": "Scopri Di Più"
+    },
+    "ProductConnectorTabComponent": {
+        "firstTitle": "Networking Aziendale",
+        "secondTitle": "Profilo Aziendale",
+        "descriptionFeature": "Il CRM di Gyloop fornisce una piattaforma unica per organizzare tutte le interazioni aziendali con i tuoi clienti con una relazione molto più stretta. Questa piattaforma ti permette di gestire le transazioni aziendali e invitare i tuoi clienti a tracciare e monitorare gli aggiornamenti più recenti dello stato dei loro ordini o delle consegne. Possono anche iscriversi al tuo catalogo prodotti per elaborare i loro acquisti o l'approvvigionamento self-service. Queste piattaforme portano a una migliore integrazione aziendale e semplicità tra te e i tuoi clienti, indipendentemente dal sistema backend che c'è dietro.",
+        "valueProposition": "La principale differenza di Gyloop CRM è come questa piattaforma ti mette in contatto con i tuoi clienti e ti collega a potenziali clienti tramite Gyloop Network per generare lead qualificati. E rende il tuo prodotto facilmente riconoscibile nel mercato di riferimento, con notifiche in tempo reale per i tuoi clienti."
+    },
+    "ProductProviderHeader": {
+        "title": "Gyloop Provider",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore",
+        "firstTitleFeature": "Gestione delle Relazioni con i Clienti (CRM)",
+        "firstSubtitleFeature": "Coinvolgi i tuoi clienti e traccia gli ordini",
+        "secondTitleFeature": "Gestione delle Relazioni con i Fornitori (SRM)",
+        "secondSubtitleFeature": "Sfrutta il tuo sourcing e l'e-procurement",
+        "thirdTitleFeature": "Gestione dell'Inventario e del Magazzino (IWM)",
+        "thirdSubtitleFeature": "Estendi la gestione dei tuoi prodotti stoccabili",
+        "button": "Scopri Di Più"
+    },
+    "SolutionsSalesAutomationHeader": {
+        "title": "Automazione delle Vendite",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "SolutionsCatalogManagementHeader": {
+        "title": "Gestione del Catalogo",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "SolutionsSourcingManagementHeader": {
+        "title": "Gestione del Sourcing",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "SolutionsCustomerPortalHeader": {
+        "title": "Portale del Cliente",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "SolutionsEProcurementHeader": {
+        "title": "E Procurement",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "SolutionsVendorPortalHeader": {
+        "title": "Portale del Fornitore",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "SolutionsBillingAutomationHeader": {
+        "title": "Automazione della Fatturazione",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "SolutionsInvoiceAutomationHeader": {
+        "title": "Automazione delle Fatture",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "SolutionsBusinessNetworkingHeader": {
+        "title": "Networking Aziendale",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "SolutionsServiceProviderHeader": {
+        "title": "Fornitore di Servizi",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "ResourcesLibraryHeader": {
+        "title": "Libreria",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "ResourcesSystemDemoHeader": {
+        "title": "Demo del Sistema",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "ResourcesBlogsHeader": {
+        "title": "Blog",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "AboutUsNewsEventHeader": {
+        "title": "Notizie ed Eventi",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "AboutUsCampaignHeader": {
+        "title": "Programma Campagna",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    },
+    "AboutUsCultureHeader": {
+        "title": "Cultura Gyloop",
+        "subtitle": "Dall'esterno, molte startup tech sembrano concentrarsi solo su tavoli da ping pong, chef a tempo pieno in ufficio e molti benefit. Ma non è il caso in realtà.",
+        "secondSubtitle": "Lavorare insieme sulla stessa piattaforma è migliore"
+    }
+}

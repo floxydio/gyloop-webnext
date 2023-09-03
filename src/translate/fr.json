@@ -1,0 +1,158 @@
+{
+    "MainHeader": {
+        "title": "Une nouvelle ère des applications professionnelles",
+        "subtitle": "Avec la plateforme commerciale Gyloop, vous trouverez la meilleure façon de connecter votre activité principale aux vastes réseaux d'entreprises, d'automatiser vos transactions de vente et d'approvisionnement, de surveiller plus facilement votre chaîne d'approvisionnement et d'améliorer les nouvelles opportunités commerciales.",
+        "button": "Commencez gratuitement"
+    },
+    "MainComponent": {
+        "headerTitleFeature": "Rendre l'entreprise connectée",
+        "headerSubtitleFeature": "sur une seule plateforme",
+        "buttonFeature": "En savoir plus",
+        "firstTitleFeature": "Gestion de la relation client",
+        "firstSubtitleFeature": "Gérez votre catalogue de produits, les tarifs, le pipeline et les documents de commande client ainsi que leur intégration.",
+        "secondTitleFeature": "Réseau d'entreprise",
+        "secondSubtitleFeature": "Connectez-vous avec d'autres entités dans un large réseau d'entreprises et générez des opportunités commerciales.",
+        "thirdTitleFeature": "Gestion des fournisseurs",
+        "thirdSubtitleFeature": "Gérez l'ensemble de vos activités d'approvisionnement et simplifiez le traitement de vos achats en ligne.",
+        "button": "En savoir plus"
+    },
+    "ProductBusinessHeader": {
+        "title": "Gyloop Business",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur",
+        "firstTitleFeature": "Gestion de la relation client (CRM)",
+        "firstSubtitleFeature": "Engagez vos clients et suivez les commandes",
+        "secondTitleFeature": "Gestion de la relation fournisseur (SRM)",
+        "secondSubtitleFeature": "Optimisez vos activités d'approvisionnement et d'achat en ligne",
+        "thirdTitleFeature": "Gestion de l'inventaire et des entrepôts (IWM)",
+        "thirdSubtitleFeature": "Étendez la gestion de vos produits stockables",
+        "button": "En savoir plus"
+    },
+    "ProductBusinessTabComponent": {
+        "firstTitle": "Gestion de la relation client",
+        "secondTitle": "Gestion de la relation fournisseur",
+        "thirdTitle": "Gestion de l'inventaire et des entrepôts",
+        "descriptionFeature": "Le CRM Gyloop offre une plateforme unique pour organiser toutes les interactions commerciales avec vos clients et établir une relation plus étroite. Cette plateforme vous permet de gérer vos transactions commerciales et d'inviter vos clients à suivre et à surveiller les dernières mises à jour de leurs commandes ou livraisons. Ils peuvent également s'abonner à votre catalogue de produits pour affiner leur approvisionnement ou leurs achats en libre-service. Ces plateformes favorisent une meilleure intégration commerciale et une plus grande simplicité entre vous et vos clients, quel que soit le système en arrière-plan.",
+        "valueProposition": "La principale différence du CRM Gyloop réside dans la manière dont cette plateforme vous connecte à vos clients et vous met en relation avec des clients potentiels via le réseau Gyloop pour générer des prospects qualifiés. Elle rend également votre produit facilement reconnaissable sur le marché cible et envoie des notifications en temps réel à vos clients."
+    },
+    "ProductNetworkHeader": {
+        "title": "Réseau Gyloop",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur",
+        "firstTitleFeature": "Gestion de la relation client (CRM)",
+        "firstSubtitleFeature": "Engagez vos clients et suivez les commandes",
+        "secondTitleFeature": "Gestion de la relation fournisseur (SRM)",
+        "secondSubtitleFeature": "Optimisez vos activités d'approvisionnement et d'achat en ligne",
+        "thirdTitleFeature": "Gestion de l'inventaire et des entrepôts (IWM)",
+        "thirdSubtitleFeature": "Étendez la gestion de vos produits stockables",
+        "button": "En savoir plus"
+    },
+    "ProductConnectorHeader": {
+        "title": "Connecteur Gyloop",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur.",
+        "firstTitleFeature": "Réseautage d'entreprise",
+        "firstSubtitleFeature": "Optimisez vos activités d'approvisionnement et d'achat en ligne",
+        "secondTitleFeature": "Profil de l'entreprise",
+        "secondSubtitleFeature": "Optimisez vos activités d'approvisionnement et d'achat en ligne",
+        "button": "En savoir plus"
+    },
+    "ProductConnectorTabComponent": {
+        "firstTitle": "Réseautage d'entreprise",
+        "secondTitle": "Profil de l'entreprise",
+        "descriptionFeature": "Le CRM Gyloop offre une plateforme unique pour organiser toutes les interactions commerciales avec vos clients et établir une relation plus étroite. Cette plateforme vous permet de gérer vos transactions commerciales et d'inviter vos clients à suivre et à surveiller les dernières mises à jour de leurs commandes ou livraisons. Ils peuvent également s'abonner à votre catalogue de produits pour affiner leur approvisionnement ou leurs achats en libre-service. Ces plateformes favorisent une meilleure intégration commerciale et une plus grande simplicité entre vous et vos clients, quel que soit le système en arrière-plan.",
+        "valueProposition": "La principale différence du CRM Gyloop réside dans la manière dont cette plateforme vous connecte à vos clients et vous met en relation avec des clients potentiels via le réseau Gyloop pour générer des prospects qualifiés. Elle rend également votre produit facilement reconnaissable sur le marché cible et envoie des notifications en temps réel à vos clients."
+    },
+    "ProductProviderHeader": {
+        "title": "Fournisseur Gyloop",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur",
+        "firstTitleFeature": "Gestion de la relation client (CRM)",
+        "firstSubtitleFeature": "Engagez vos clients et suivez les commandes",
+        "secondTitleFeature": "Gestion de la relation fournisseur (SRM)",
+        "secondSubtitleFeature": "Optimisez vos activités d'approvisionnement et d'achat en ligne",
+        "thirdTitleFeature": "Gestion de l'inventaire et des entrepôts (IWM)",
+        "thirdSubtitleFeature": "Étendez la gestion de vos produits stockables",
+        "button": "En savoir plus"
+    },
+    "SolutionsSalesAutomationHeader": {
+        "title": "Automatisation des ventes",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "SolutionsCatalogManagementHeader": {
+        "title": "Gestion de catalogue",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "SolutionsSourcingManagementHeader": {
+        "title": "Gestion des achats",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "SolutionsCustomerPortalHeader": {
+        "title": "Portail client",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "SolutionsEProcurementHeader": {
+        "title": "Approvisionnement électronique",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "SolutionsVendorPortalHeader": {
+        "title": "Portail fournisseur",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "SolutionsBillingAutomationHeader": {
+        "title": "Automatisation de la facturation",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "SolutionsInvoiceAutomationHeader": {
+        "title": "Automatisation des factures",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "SolutionsBusinessNetworkingHeader": {
+        "title": "Réseautage d'entreprise",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "SolutionsServiceProviderHeader": {
+        "title": "Fournisseur de services",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "ResourcesLibraryHeader": {
+        "title": "Bibliothèque",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "ResourcesSystemDemoHeader": {
+        "title": "Démonstration du système",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "ResourcesBlogsHeader": {
+        "title": "Blogs",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "AboutUsNewsEventHeader": {
+        "title": "Actualités et événements",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "AboutUsCampaignHeader": {
+        "title": "Programme de campagne",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    },
+    "AboutUsCultureHeader": {
+        "title": "Culture Gyloop",
+        "subtitle": "De l'extérieur, de nombreuses start-ups technologiques semblent se concentrer uniquement sur les tables de ping-pong, les chefs de cuisine à plein temps et de nombreux avantages. Ce n'est pas le cas en réalité.",
+        "secondSubtitle": "Travailler ensemble sur la même plateforme est meilleur"
+    }
+}

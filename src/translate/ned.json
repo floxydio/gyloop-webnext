@@ -1,0 +1,159 @@
+{
+    "MainHeader": {
+        "title": "Een Nieuw Tijdperk van Bedrijfsapps",
+        "subtitle": "Met het Gyloop zakelijk platform vindt u de beste manier om uw hoofdbedrijf te verbinden met een breed scala aan zakelijke netwerken, uw verkoop- en inkooptransacties te automatiseren, uw toeleveringsketen gemakkelijker te monitoren en nieuwe zakelijke kansen te verbeteren.",
+        "button": "Begin Gratis"
+    },
+    "MainComponent": {
+        "headerTitleFeature": "Maak Bedrijven Verbonden",
+        "headerSubtitleFeature": "op één platform",
+        "buttonFeature": "Meer Ontdekken",
+        "firstTitleFeature": "Klantrelatie",
+        "firstSubtitleFeature": "Beheer uw productcatalogus, prijsstelling, pijplijn en klantorderdocument en de integratie ervan",
+        "secondTitleFeature": "Zakelijk Netwerk",
+        "secondSubtitleFeature": "Verbind u met andere entiteiten in een breed scala aan netwerken en genereer zakelijke kansen",
+        "thirdTitleFeature": "Leveranciersrelatie",
+        "thirdSubtitleFeature": "Beheer uw end-to-end inkoopactiviteiten en vereenvoudig uw inkoopprocessen",
+        "button": "Meer Ontdekken"
+    },
+    "ProductBusinessHeader": {
+        "title": "Gyloop Zakelijk",
+        "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+        "secondSubtitle": "Samenwerken op hetzelfde platform is beter",
+        "firstTitleFeature": "Klantrelatiebeheer (CRM)",
+        "firstSubtitleFeature": "Betrek uw klant en traceer de bestellingen",
+        "secondTitleFeature": "Leveranciersrelatiebeheer (SRM)",
+        "secondSubtitleFeature": "Profiteer van uw inkoop en e-procurement",
+        "thirdTitleFeature": "Voorraad- en magazijnbeheer (IWM)",
+        "thirdSubtitleFeature": "Breid uit om uw opgeslagen producten te beheren",
+        "button": "Meer Ontdekken"
+    },
+    "ProductBusinessTabComponent": {
+        "firstTitle": "Klantrelatiebeheer",
+        "secondTitle": "Leveranciersrelatiebeheer",
+        "thirdTitle": "Voorraad- en magazijnbeheer",
+        "descriptionFeature": "De Gyloop CRM biedt een uniek platform om alle zakelijke interacties met uw klant te organiseren met een zeer nauwe relatie. Dit platform stelt u in staat om uw zakelijke transacties te beheren en uw klant uit te nodigen om de laatste status van hun bestellingen of leveringen bij te houden en te controleren. Ze kunnen zich ook abonneren op uw productcatalogus om hun inkoop of zelfbedieningse-procurement uit te breiden. Deze platformen bieden een betere integratie van bedrijven en eenvoud tussen u en uw klanten, ongeacht het backend-systeem dat erachter zit.",
+        "valueProposition": "Het belangrijkste verschil van Gyloop CRM is hoe dit platform u verbindt met uw klant en verbinding maakt met potentiële klanten via het Gyloop Network om gekwalificeerde leads te genereren. En maak uw product gemakkelijk herkenbaar op de doelmarkt, realtime meldingen naar uw klanten."
+    },
+    "ProductNetworkHeader": {
+        "title": "Gyloop Netwerk",
+        "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+        "secondSubtitle": "Samenwerken op hetzelfde platform is beter",
+        "firstTitleFeature": "Klantrelatiebeheer (CRM)",
+        "firstSubtitleFeature": "Betrek uw klant en traceer de bestellingen",
+        "secondTitleFeature": "Leveranciersrelatiebeheer (SRM)",
+        "secondSubtitleFeature": "Profiteer van uw inkoop en e-procurement",
+        "thirdTitleFeature": "Voorraad- en magazijnbeheer (IWM)",
+        "thirdSubtitleFeature": "Breid uit om uw opgeslagen producten te beheren",
+        "button": "Meer Ontdekken"
+    },
+       "ProductConnectorHeader": {
+            "title": "Gyloop Connector",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter.",
+            "firstTitleFeature": "Zakelijk Netwerken",
+            "firstSubtitleFeature": "Profiteer van uw inkoop en e-procurement",
+            "secondTitleFeature": "Bedrijfsprofiel",
+            "secondSubtitleFeature": "Profiteer van uw inkoop en e-procurement",
+            "button": "Meer Ontdekken"
+        },
+        "ProductConnectorTabComponent": {
+            "firstTitle": "Zakelijk Netwerken",
+            "secondTitle": "Bedrijfsprofiel",
+            "descriptionFeature": "De Gyloop CRM biedt een uniek platform om alle zakelijke interacties met uw klant te organiseren met een zeer nauwe relatie. Dit platform stelt u in staat om uw zakelijke transacties te beheren en uw klant uit te nodigen om de laatste status van hun bestellingen of leveringen bij te houden en te controleren. Ze kunnen zich ook abonneren op uw productcatalogus om hun inkoop of zelfbedieningse-procurement uit te breiden. Deze platformen bieden een betere integratie van bedrijven en eenvoud tussen u en uw klanten, ongeacht het backend-systeem dat erachter zit.",
+            "valueProposition": "Het belangrijkste verschil van Gyloop CRM is hoe dit platform u verbindt met uw klant en verbinding maakt met potentiële klanten via het Gyloop Network om gekwalificeerde leads te genereren. En maak uw product gemakkelijk herkenbaar op de doelmarkt, realtime meldingen naar uw klanten."
+        },
+        "ProductProviderHeader": {
+            "title": "Gyloop Provider",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter",
+            "firstTitleFeature": "Klantrelatiebeheer (CRM)",
+            "firstSubtitleFeature": "Betrek uw klant en traceer de bestellingen",
+            "secondTitleFeature": "Leveranciersrelatiebeheer (SRM)",
+            "secondSubtitleFeature": "Profiteer van uw inkoop en e-procurement",
+            "thirdTitleFeature": "Voorraad- en magazijnbeheer (IWM)",
+            "thirdSubtitleFeature": "Breid uit om uw opgeslagen producten te beheren",
+            "button": "Meer Ontdekken"
+        },
+        "SolutionsSalesAutomationHeader": {
+            "title": "Verkoopautomatisering",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "SolutionsCatalogManagementHeader": {
+            "title": "Catalogusbeheer",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "SolutionsSourcingManagementHeader": {
+            "title": "Inkoopbeheer",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "SolutionsCustomerPortalHeader": {
+            "title": "Klantportaal",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "SolutionsEProcurementHeader": {
+            "title": "E-Procurement",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "SolutionsVendorPortalHeader": {
+            "title": "Leveranciersportaal",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "SolutionsBillingAutomationHeader": {
+            "title": "Factureringsautomatisering",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "SolutionsInvoiceAutomationHeader": {
+            "title": "Factuurautomatisering",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "SolutionsBusinessNetworkingHeader": {
+            "title": "Zakelijk Netwerken",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "SolutionsServiceProviderHeader": {
+            "title": "Dienstverlener",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "ResourcesLibraryHeader": {
+            "title": "Bibliotheek",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "ResourcesSystemDemoHeader": {
+            "title": "Systeemdemo",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "ResourcesBlogsHeader": {
+            "title": "Blogs",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "AboutUsNewsEventHeader": {
+            "title": "Nieuws en Evenementen",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "AboutUsCampaignHeader": {
+            "title": "Campagneprogramma",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        },
+        "AboutUsCultureHeader": {
+            "title": "Gyloop Cultuur",
+            "subtitle": "Van buitenaf lijken veel tech-start-ups zich alleen te richten op pingpongtafels, fulltime koks en veel voordelen. In werkelijkheid is dat niet het geval.",
+            "secondSubtitle": "Samenwerken op hetzelfde platform is beter"
+        }
+}
+
