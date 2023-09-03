@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function CardVideoB() {
   return (
@@ -17,7 +18,7 @@ export default function CardVideoB() {
 
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business
@@ -25,10 +26,10 @@ export default function CardVideoB() {
             networks across industry and locations.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -47,7 +48,7 @@ export default function CardVideoB() {
 
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business
@@ -55,10 +56,10 @@ export default function CardVideoB() {
             networks across industry and locations.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -77,7 +78,7 @@ export default function CardVideoB() {
 
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business
@@ -85,10 +86,10 @@ export default function CardVideoB() {
             networks across industry and locations.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -107,7 +108,7 @@ export default function CardVideoB() {
 
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business
@@ -115,10 +116,10 @@ export default function CardVideoB() {
             networks across industry and locations.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -137,7 +138,7 @@ export default function CardVideoB() {
 
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business
@@ -145,10 +146,10 @@ export default function CardVideoB() {
             networks across industry and locations.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -167,7 +168,7 @@ export default function CardVideoB() {
 
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q3 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business
@@ -175,10 +176,10 @@ export default function CardVideoB() {
             networks across industry and locations.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>

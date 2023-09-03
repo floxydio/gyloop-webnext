@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function CardVideo() {
   return (
@@ -16,7 +17,7 @@ export default function CardVideo() {
                 />
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             The Gyloop CRM provides an unique platform to organize all business interaction to your customer with very
@@ -27,10 +28,10 @@ export default function CardVideo() {
             behind.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -48,7 +49,7 @@ export default function CardVideo() {
                 />
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             The Gyloop CRM provides an unique platform to organize all business interaction to your customer with very
@@ -59,10 +60,10 @@ export default function CardVideo() {
             behind.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -80,7 +81,7 @@ export default function CardVideo() {
                 />
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             The Gyloop CRM provides an unique platform to organize all business interaction to your customer with very
@@ -91,10 +92,10 @@ export default function CardVideo() {
             behind.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -112,7 +113,7 @@ export default function CardVideo() {
                 />
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             The Gyloop CRM provides an unique platform to organize all business interaction to your customer with very
@@ -123,10 +124,10 @@ export default function CardVideo() {
             behind.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -144,7 +145,7 @@ export default function CardVideo() {
                 />
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             The Gyloop CRM provides an unique platform to organize all business interaction to your customer with very
@@ -155,10 +156,10 @@ export default function CardVideo() {
             behind.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>
@@ -176,7 +177,7 @@ export default function CardVideo() {
                 />
 
     <div className="card-body">
-        <a href="video.html" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></a>
+        <Link href="/Video" className="gyloop-link"><h3 className="card-title">Gyloop Business New Features Released Q4 2020</h3></Link>
         <span className="card-category text-warning">Category</span>
         <p className="card-text">
             The Gyloop CRM provides an unique platform to organize all business interaction to your customer with very
@@ -187,10 +188,10 @@ export default function CardVideo() {
             behind.
         </p>
         <div className="card-link">
-            <a href="video.html" className="gyloop-link">
+            <Link href="/Video" className="gyloop-link">
                 Read More
                 <i className="far fa-angle-right"></i>
-            </a>
+            </Link>
         </div>
     </div>
 </div>

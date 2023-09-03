@@ -72,9 +72,8 @@ export default function HeaderNoMenuTransparent(
             <div className="collapse navbar-collapse" id="navbarColor02">
               <ul className="nav-search-off navbar-nav mr-auto">
                 <li
-                  className={`nav-item dropdown ${
-                    currentDropdown === 1 ? 'show' : ''
-                  }`}
+                  className={`nav-item dropdown ${currentDropdown === 1 ? 'show' : ''
+                    }`}
                   onMouseEnter={() => setCurrentDropdown(1)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
@@ -87,9 +86,8 @@ export default function HeaderNoMenuTransparent(
                     <i className="fas fa-angle-down icon-rotates"></i>
                   </Link>
                   <div
-                    className={`dropdown-menu ${
-                      currentDropdown === 1 ? 'show' : ''
-                    }`}
+                    className={`dropdown-menu ${currentDropdown === 1 ? 'show' : ''
+                      }`}
                     aria-labelledby="navbarDropdown"
                   >
                     <Link className="dropdown-item" href="/Product/Business">
@@ -139,9 +137,8 @@ export default function HeaderNoMenuTransparent(
                   </div>
                 </li>
                 <li
-                  className={`nav-item dropdown ${
-                    currentDropdown === 2 ? 'show' : ''
-                  }`}
+                  className={`nav-item dropdown ${currentDropdown === 2 ? 'show' : ''
+                    }`}
                   onMouseEnter={() => setCurrentDropdown(2)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
@@ -154,9 +151,8 @@ export default function HeaderNoMenuTransparent(
                     <i className="fas fa-angle-down icon-rotates"></i>
                   </Link>
                   <div
-                    className={`dropdown-menu ${
-                      currentDropdown === 2 ? 'show' : ''
-                    }`}
+                    className={`dropdown-menu ${currentDropdown === 2 ? 'show' : ''
+                      }`}
                     aria-labelledby="navbarDropdown"
                   >
                     <Link
@@ -222,9 +218,8 @@ export default function HeaderNoMenuTransparent(
                   </div>
                 </li>
                 <li
-                  className={`nav-item dropdown ${
-                    currentDropdown === 3 ? 'show' : ''
-                  }`}
+                  className={`nav-item dropdown ${currentDropdown === 3 ? 'show' : ''
+                    }`}
                   onMouseEnter={() => setCurrentDropdown(3)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
@@ -237,26 +232,24 @@ export default function HeaderNoMenuTransparent(
                     <i className="fas fa-angle-down icon-rotates"></i>
                   </a>
                   <div
-                    className={`dropdown-menu ${
-                      currentDropdown === 3 ? 'show' : ''
-                    }`}
+                    className={`dropdown-menu ${currentDropdown === 3 ? 'show' : ''
+                      }`}
                     aria-labelledby="navbarDropdown"
                   >
-                    <a className="dropdown-item" href="library.html">
+                    <Link className="dropdown-item" href="/Resources/Library">
                       <span>Library</span>
-                    </a>
-                    <a className="dropdown-item" href="live-demo.html">
+                    </Link>
+                    <Link className="dropdown-item" href="/Resources/LiveDemo">
                       <span>System Demo</span>
-                    </a>
-                    <a className="dropdown-item" href="blogs.html">
+                    </Link>
+                    <Link className="dropdown-item" href="/Resources/Blogs">
                       <span>Blogs</span>
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li
-                  className={`nav-item dropdown ${
-                    currentDropdown === 4 ? 'show' : ''
-                  }`}
+                  className={`nav-item dropdown ${currentDropdown === 4 ? 'show' : ''
+                    }`}
                   onMouseEnter={() => setCurrentDropdown(4)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
@@ -269,9 +262,8 @@ export default function HeaderNoMenuTransparent(
                     <i className="fas fa-angle-down icon-rotates"></i>
                   </Link>
                   <div
-                    className={`dropdown-menu ${
-                      currentDropdown === 4 ? 'show' : ''
-                    }`}
+                    className={`dropdown-menu ${currentDropdown === 4 ? 'show' : ''
+                      }`}
                     aria-labelledby="navbarDropdown"
                   >
                     <Link className="dropdown-item" href="/About/Leadership">
@@ -406,7 +398,7 @@ export default function HeaderNoMenuTransparent(
                   <a
                     className="nav-link mr-0"
                     href="preventDefault()"
-                    // onClick={() => openingSearchBar()}
+                  // onClick={() => openingSearchBar()}
                   >
                     <i className="fas fa-search"></i>
                     <span className="d-xl-none ml-2">Search</span>
@@ -439,7 +431,7 @@ export default function HeaderNoMenuTransparent(
                       <button
                         type="button"
                         className="btn btn-primary border-left-0"
-                        // onClick={() => closeSearchBar()}
+                      // onClick={() => closeSearchBar()}
                       >
                         <i className="far fa-times"></i>
                       </button>
@@ -492,9 +484,8 @@ export default function HeaderNoMenuTransparent(
             <div className="collapse navbar-collapse" id="navbarColor02">
               <ul className="nav-search-off navbar-nav mr-auto">
                 <li
-                  className={`nav-item dropdown ${
-                    currentDropdown === 1 ? 'show' : ''
-                  }`}
+                  className={`nav-item dropdown ${currentDropdown === 1 ? 'show' : ''
+                    }`}
                   onMouseEnter={() => setCurrentDropdown(1)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
@@ -507,9 +498,8 @@ export default function HeaderNoMenuTransparent(
                     <i className="fas fa-angle-down icon-rotates"></i>
                   </Link>
                   <div
-                    className={`dropdown-menu ${
-                      currentDropdown === 1 ? 'show' : ''
-                    }`}
+                    className={`dropdown-menu ${currentDropdown === 1 ? 'show' : ''
+                      }`}
                     aria-labelledby="navbarDropdown"
                   >
                     <Link className="dropdown-item" href="/Product/Business">
@@ -559,9 +549,8 @@ export default function HeaderNoMenuTransparent(
                   </div>
                 </li>
                 <li
-                  className={`nav-item dropdown ${
-                    currentDropdown === 2 ? 'show' : ''
-                  }`}
+                  className={`nav-item dropdown ${currentDropdown === 2 ? 'show' : ''
+                    }`}
                   onMouseEnter={() => setCurrentDropdown(2)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
@@ -574,9 +563,8 @@ export default function HeaderNoMenuTransparent(
                     <i className="fas fa-angle-down icon-rotates"></i>
                   </Link>
                   <div
-                    className={`dropdown-menu ${
-                      currentDropdown === 2 ? 'show' : ''
-                    }`}
+                    className={`dropdown-menu ${currentDropdown === 2 ? 'show' : ''
+                      }`}
                     aria-labelledby="navbarDropdown"
                   >
                     <Link
@@ -642,9 +630,8 @@ export default function HeaderNoMenuTransparent(
                   </div>
                 </li>
                 <li
-                  className={`nav-item dropdown ${
-                    currentDropdown === 3 ? 'show' : ''
-                  }`}
+                  className={`nav-item dropdown ${currentDropdown === 3 ? 'show' : ''
+                    }`}
                   onMouseEnter={() => setCurrentDropdown(3)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
@@ -657,26 +644,24 @@ export default function HeaderNoMenuTransparent(
                     <i className="fas fa-angle-down icon-rotates"></i>
                   </a>
                   <div
-                    className={`dropdown-menu ${
-                      currentDropdown === 3 ? 'show' : ''
-                    }`}
+                    className={`dropdown-menu ${currentDropdown === 3 ? 'show' : ''
+                      }`}
                     aria-labelledby="navbarDropdown"
                   >
-                    <a className="dropdown-item" href="library.html">
+                    <Link className="dropdown-item" href="/Resources/Library">
                       <span>Library</span>
-                    </a>
-                    <a className="dropdown-item" href="live-demo.html">
+                    </Link>
+                    <Link className="dropdown-item" href="/Resources/LiveDemo">
                       <span>System Demo</span>
-                    </a>
-                    <a className="dropdown-item" href="blogs.html">
+                    </Link>
+                    <Link className="dropdown-item" href="/Resources/Blogs">
                       <span>Blogs</span>
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li
-                  className={`nav-item dropdown ${
-                    currentDropdown === 4 ? 'show' : ''
-                  }`}
+                  className={`nav-item dropdown ${currentDropdown === 4 ? 'show' : ''
+                    }`}
                   onMouseEnter={() => setCurrentDropdown(4)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
@@ -689,9 +674,8 @@ export default function HeaderNoMenuTransparent(
                     <i className="fas fa-angle-down icon-rotates"></i>
                   </Link>
                   <div
-                    className={`dropdown-menu ${
-                      currentDropdown === 4 ? 'show' : ''
-                    }`}
+                    className={`dropdown-menu ${currentDropdown === 4 ? 'show' : ''
+                      }`}
                     aria-labelledby="navbarDropdown"
                   >
                     <Link className="dropdown-item" href="/About/Leadership">
@@ -826,7 +810,7 @@ export default function HeaderNoMenuTransparent(
                   <a
                     className="nav-link mr-0"
                     href="preventDefault()"
-                    // onClick={() => openingSearchBar()}
+                  // onClick={() => openingSearchBar()}
                   >
                     <i className="fas fa-search"></i>
                     <span className="d-xl-none ml-2">Search</span>
@@ -859,7 +843,7 @@ export default function HeaderNoMenuTransparent(
                       <button
                         type="button"
                         className="btn btn-primary border-left-0"
-                        // onClick={() => closeSearchBar()}
+                      // onClick={() => closeSearchBar()}
                       >
                         <i className="far fa-times"></i>
                       </button>
