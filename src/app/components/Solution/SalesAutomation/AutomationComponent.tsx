@@ -3,10 +3,12 @@ import BillingAutomationContent from './BillingAutomationContent';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import { useTranslations } from 'next-intl';
 
 export default function AutomationComponent() {
   const [index, setIndex] = useState(0);
 
+  const t = useTranslations('SolutionsSalesAutomationHeader');
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -16,23 +18,23 @@ export default function AutomationComponent() {
     <>
       <header className="header-bg-cover billing-automation-header d-flex align-items-end sales-automation-header">
         <div className="container">
-          <h1 className="title">Sales Automation</h1>
+          <h1 className="title">{t('title')}</h1>
           <p className="subtitle">
-            <span className="d-md-none d-xl-inline">
-              From the outside, many tech start-ups look like they only focus on
-              ping pong tables, full-time office chefs and a lot of perks. It’s
-              not the case in reality.
-            </span>
+            <span className="d-md-none d-xl-inline">{t('subtitle')}</span>
             <span className="d-none d-md-inline d-xl-none">
-              Br/ing the power of business integration to your business
-              community
+              Bring the power of business integration to your business community
             </span>
           </p>
-          <h5 className="info">
-            Working together at the same platform is better.
-          </h5>
+          <h5 className="info">{t('secondSubtitle')}</h5>
         </div>
       </header>
+
+      <Link locale="id" href="/id/Solutions/SalesAutomation">
+        Switch to Indonesia
+      </Link>
+      <Link locale="en" href="/en/Solutions/SalesAutomation">
+        Switch to English
+      </Link>
 
       <div className="billing-automation-swiper">
         <div className="container">

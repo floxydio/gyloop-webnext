@@ -46,6 +46,84 @@
         "thirdTitleFeature": "Inventory & Warehouse Management (IWM)",
         "thirdSubtitleFeature": "Extend to manage your storable products",
         "button": "Learn More"
-    }
+    },
+       "ProductConnectorHeader": {
+            "title": "Gyloop Connector",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better.",
+            "firstTitleFeature": "Business Networking",
+            "firstSubtitleFeature": "Leverage your sourcing & e-procurement",
+            "secondTitleFeature": "Company Profile",
+            "secondSubtitleFeature": "Leverage your sourcing & e-procurement",
+            "button": "Learn More"
+        },
+        "ProductConnectorTabComponent": {
+            "firstTitle": "Business Networking",
+            "secondTitle": "Company Profile",
+            "descriptionFeature": "The Gyloop CRM provides an unique platform to organize all business interaction to your customer with very closer relationship. This platform allow you to manage your business transaction and invite your customer to track and monitor the latest update status of their order or deliveries. They can also subscribe your product catalog for elaborate their sourcing or self-service procurement. These platform bring better business integration and simplicity between you and your customers regardless of whatever backend system behind.",
+            "valueProposition": "The main difference of Gyloop CRM is how this platform make you connected to your customer, and get connected to prospective customer by Gyloop Network to generate your qualified leads. And make your product easily reacognizable to the targeted market, real time update notification to your customers."
+        },
+        "ProductProviderHeader": {
+            "title": "Gyloop Provider",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better",
+            "firstTitleFeature": "Customer Relationship Management (CRM)",
+            "firstSubtitleFeature": "Engage your customer and trace the orders",
+            "secondTitleFeature": "Supplier Relationship Management (SRM)",
+            "secondSubtitleFeature": "Leverage your sourcing & e-procurement",
+            "thirdTitleFeature": "Inventory & Warehouse Management (IWM)",
+            "thirdSubtitleFeature": "Extend to manage your storable products",
+            "button": "Learn More"
+        },
+        "SolutionSalesAutomationHeader": {
+            "title": "Sales Automation",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "SolutionsCatalogManagementHeader": {
+            "title": "Catalog Management",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "SolutionsSourcingManagementHeader": {
+            "title": "Sourcing Management",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "SolutionsCustomerPortalHeader": {
+            "title": "Customer Portal",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "SolutionsEProcurementHeader": {
+            "title": "E Procurement",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "SolutionsVendorPortalHeader": {
+            "title": "Vendor Portal",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "SolutionsBillingAutomationHeader": {
+            "title": "Billing Automation",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "SolutionsInvoiceAutomationHeader": {
+            "title": "Invoice Automation",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "SolutionsBusinessNetworkingHeader": {
+            "title": "Business Networking",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "SolutionsServiceProviderHeader": {
+            "title": "Service Provider",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        }
 
 }

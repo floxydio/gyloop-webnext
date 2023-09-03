@@ -3,9 +3,12 @@ import BillingAutomationContent from '../SalesAutomation/BillingAutomationConten
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import { useTranslations } from 'next-intl';
 
 export default function EProcurementComponent() {
   const [index, setIndex] = useState(0);
+
+  const t = useTranslations('SolutionsEProcurementHeader')
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -31,6 +34,14 @@ export default function EProcurementComponent() {
           </h5>
         </div>
       </header>
+
+      <Link locale="id" href="/id/Solutions/SalesAutomation">
+        Switch to Indonesia
+      </Link>
+      <Link locale="en" href="/en/Solutions/SalesAutomation">
+        Switch to English
+      </Link>
+      
       <div className="billing-automation-swiper">
         <div className="container">
           <h2 className="title">Automate your sales processing</h2>
