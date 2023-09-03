@@ -15,8 +15,8 @@ export default function BillingAutomation() {
         />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
-         {/* <!-- Android  --> */}
-         <meta name="theme-color" content="#12AAF2" />
+        {/* <!-- Android  --> */}
+        <meta name="theme-color" content="#12AAF2" />
         <meta name="mobile-web-app-capable" content="yes" />
 
         {/* <!-- iOS --> */}
@@ -60,9 +60,17 @@ export default function BillingAutomation() {
         <title>Gyloop - Billing Automation</title>
       </Head>
 
-      <HeaderNoMenuTransparent type = {0} />
+      <HeaderNoMenuTransparent type={0} />
       <BillingAutomationComponent />
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`@/translate/${context.locale}.json`)).default,
+    },
+  };
 }

@@ -5,7 +5,6 @@ import Link from "next/link"
 import { useTranslations } from "next-intl";
 
 export default function ProductSlider() {
-  const t = useTranslations('Index');
   return (
     <>
 
@@ -20,7 +19,6 @@ export default function ProductSlider() {
                         <p>CONNECTED</p>
                     </div>
                 </div>
-                <p>{t("title")}</p>
 
                 <div className="col-12 col-md-8">
                     <h1 className="title">Product Overview</h1>

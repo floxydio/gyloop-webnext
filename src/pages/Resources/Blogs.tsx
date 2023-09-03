@@ -1,13 +1,13 @@
-import Footer from '@/app/components/Footer/Footer'
-import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent'
-import BlogComponent from '@/app/components/Resources/Blog/BlogComponent'
-import Head from 'next/head'
-import React from 'react'
+import Footer from '@/app/components/Footer/Footer';
+import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
+import BlogComponent from '@/app/components/Resources/Blog/BlogComponent';
+import Head from 'next/head';
+import React from 'react';
 
 export default function Blogs() {
   return (
     <>
-         <Head>
+      <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
@@ -16,8 +16,8 @@ export default function Blogs() {
         />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
-         {/* <!-- Android  --> */}
-         <meta name="theme-color" content="#12AAF2" />
+        {/* <!-- Android  --> */}
+        <meta name="theme-color" content="#12AAF2" />
         <meta name="mobile-web-app-capable" content="yes" />
 
         {/* <!-- iOS --> */}
@@ -63,7 +63,14 @@ export default function Blogs() {
       <HeaderNoMenuTransparent type={0} />
       <BlogComponent />
       <Footer />
-    
     </>
-  )
+  );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`@/translate/${context.locale}.json`)).default,
+    },
+  };
 }

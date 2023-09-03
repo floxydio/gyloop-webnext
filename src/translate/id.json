@@ -101,7 +101,7 @@
             "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
             "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik"
         },
-        "SolutionCustomerPortalHeader": {
+        "SolutionsCustomerPortalHeader": {
             "title": "Portal Pelanggan",
             "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
             "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik"
@@ -128,6 +128,36 @@
         },
         "SolutionsServiceProviderHeader": {
             "title": "Penyedia Layanan",
+            "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
+            "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik"
+        },
+        "ResourcesLibraryHeader": {
+            "title": "Perpustakaan",
+            "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
+            "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik"
+        },
+        "ResourcesSystemDemoHeader": {
+            "title": "Demo Sistem",
+            "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
+            "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik"
+        },
+        "ResourcesBlogsHeader": {
+            "title": "Blog",
+            "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
+            "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik"
+        },
+        "AboutUsNewsEventHeader": {
+            "title": "Berita dan Acara",
+            "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
+            "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik"
+        },
+        "AboutUsCampaignHeader": {
+            "title": "Program Kampanye",
+            "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
+            "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik"
+        },
+        "AboutUsCultureHeader": {
+            "title": "Budaya Gyloop",
             "subtitle": "Dari luar, banyak perusahaan rintisan teknologi yang terlihat hanya fokus pada meja pingpong, koki kantor penuh waktu, dan banyak fasilitas. Kenyataannya tidak seperti itu",
             "secondSubtitle": "Bekerja bersama di platform yang sama lebih baik"
         }

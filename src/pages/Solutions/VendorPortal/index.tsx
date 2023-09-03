@@ -19,9 +19,16 @@ export default function VendorPortal() {
         <title>Gyloop - Vendor Portal</title>
       </Head>
 
-      <HeaderNoMenuTransparent type = {0} />
+      <HeaderNoMenuTransparent type={0} />
       <VendorPortalComponent />
       <Footer />
     </>
   );
+}
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`@/translate/${context.locale}.json`)).default,
+    },
+  };
 }

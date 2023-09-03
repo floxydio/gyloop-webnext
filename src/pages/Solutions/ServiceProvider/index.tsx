@@ -19,9 +19,16 @@ export default function ServiceProvider() {
         <title>Gyloop - Service Provider</title>
       </Head>
 
-      <HeaderNoMenuTransparent type = {0} />
+      <HeaderNoMenuTransparent type={0} />
       <ServiceProviderComponent />
       <Footer />
     </>
   );
+}
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`@/translate/${context.locale}.json`)).default,
+    },
+  };
 }

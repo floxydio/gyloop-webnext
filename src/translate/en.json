@@ -75,7 +75,7 @@
             "thirdSubtitleFeature": "Extend to manage your storable products",
             "button": "Learn More"
         },
-        "SolutionSalesAutomationHeader": {
+        "SolutionsSalesAutomationHeader": {
             "title": "Sales Automation",
             "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
             "secondSubtitle": "Working together at the same platform is better"
@@ -122,6 +122,36 @@
         },
         "SolutionsServiceProviderHeader": {
             "title": "Service Provider",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "ResourcesLibraryHeader": {
+            "title": "Library",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "ResourcesSystemDemoHeader": {
+            "title": "System Demo",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "ResourcesBlogsHeader": {
+            "title": "Blogs",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "AboutUsNewsEventHeader": {
+            "title": "News and Event",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "AboutUsCampaignHeader": {
+            "title": "Campaign Program",
+            "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
+            "secondSubtitle": "Working together at the same platform is better"
+        },
+        "AboutUsCultureHeader": {
+            "title": "Gyloop Culture",
             "subtitle": "From the outside, many tech start-ups look like they only focus on ping pong tables, full-time office chefs and a lot of perks. It’s not the case in reality.",
             "secondSubtitle": "Working together at the same platform is better"
         }

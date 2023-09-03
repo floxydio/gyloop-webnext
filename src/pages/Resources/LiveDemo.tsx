@@ -1,13 +1,12 @@
-import Footer from "@/app/components/Footer/Footer";
-import HeaderNoMenuTransparent from "@/app/components/Header/HeaderNoMenuTransparent";
-import SystemDemoComponent from "@/app/components/Resources/SystemDemo/SystemDemoComponent";
-import Head from "next/head"
+import Footer from '@/app/components/Footer/Footer';
+import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
+import SystemDemoComponent from '@/app/components/Resources/SystemDemo/SystemDemoComponent';
+import Head from 'next/head';
 
 export default function LiveDemo() {
   return (
     <>
-    
-    <Head>
+      <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
@@ -16,8 +15,8 @@ export default function LiveDemo() {
         />
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
-         {/* <!-- Android  --> */}
-         <meta name="theme-color" content="#12AAF2" />
+        {/* <!-- Android  --> */}
+        <meta name="theme-color" content="#12AAF2" />
         <meta name="mobile-web-app-capable" content="yes" />
 
         {/* <!-- iOS --> */}
@@ -61,10 +60,17 @@ export default function LiveDemo() {
         <title>Gyloop - System Demo</title>
       </Head>
 
-      <HeaderNoMenuTransparent type = {0} />
+      <HeaderNoMenuTransparent type={0} />
       <SystemDemoComponent />
       <Footer />
-    
     </>
-  )
+  );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      messages: (await import(`@/translate/${context.locale}.json`)).default,
+    },
+  };
 }

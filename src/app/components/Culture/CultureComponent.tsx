@@ -1,27 +1,31 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function CultureComponent() {
+  const t = useTranslations('AboutUsCultureHeader');
+
   return (
     <>
       <header className="header-bg-cover billing-automation-header d-flex align-items-end culture-header">
         <div className="container">
-          <h1 className="title">Gyloop Culture</h1>
+          <h1 className="title">{t('title')}</h1>
           <p className="subtitle">
-            <span className="d-md-none d-xl-inline">
-              From the outside, many tech start-ups look like they only focus on
-              ping pong tables, full-time office chefs and a lot of perks. It’s
-              not the case in reality.
-            </span>
+            <span className="d-md-none d-xl-inline">{t('subtitle')}</span>
             <span className="d-none d-md-inline d-xl-none">
               Bring the power of business integration to your business community
             </span>
           </p>
-          <h5 className="info">
-            Working together at the same platform is better.
-          </h5>
+          <h5 className="info">{t('secondSubtitle')}</h5>
         </div>
       </header>
+
+      <Link locale="id" href="/id/About/Culture">
+        Switch to Indonesia
+      </Link>
+      <Link locale="en" href="/en/About/Culture">
+        Switch to English
+      </Link>
 
       <div className="about">
         <div className="container">
