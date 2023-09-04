@@ -20,7 +20,6 @@ export default function CultureComponent() {
         </div>
       </header>
 
-      <
 
       <div className="about">
         <div className="container">
