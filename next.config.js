@@ -9,7 +9,7 @@ const nextConfig = {
         reactRemoveProperties: true,
     },
     i18n: {
-        locales: ["en", "id"],
+        locales: ["en", "id", "deu", "esp", "fr", "ita", "ned", "por"],
         defaultLocale: "en",
         localeDetection: false
     },

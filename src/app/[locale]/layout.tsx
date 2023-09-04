@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 const inter = Inter({ subsets: ['latin'] });
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'id' }];
+  return [{ locale: 'en' }, { locale: 'id' }, { locale: 'deu' }, { locale: 'esp' }, { locale: 'fr' }, { locale: 'ita' }, { locale: 'ned' }, { locale: 'por' }];
 }
 
 export const metadata: Metadata = {
