@@ -293,10 +293,10 @@ export default function HeaderNoMenuTransparent(
                     <span className="d-xl-none ml-2">Language</span>
                   </a>
                   <div className="dropdown-menu dropdown-lang dropdown-menu-right">
-                    <button
+                  <Link
                       className="dropdown-item active"
                       type="button"
-                      onClick={() => setSelectedCountry(1)}
+                      href={`/en/Main`}
                     >
                       <Image
                         className="icon-lang"
@@ -307,11 +307,11 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       English
-                    </button>
-                    <button
+                    </Link>
+                    <Link
                       className="dropdown-item"
                       type="button"
-                      onClick={() => setSelectedCountry(2)}
+                      href={`/id/Main`}
                     >
                       <Image
                         className="icon-lang"
@@ -322,11 +322,11 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       Bahasa Indonesia
-                    </button>
-                    <button
+                    </Link>
+                    <Link
                       className="dropdown-item"
                       type="button"
-                      onClick={() => setSelectedCountry(3)}
+                      href={`/de/Main`}
                     >
                       <Image
                         className="icon-lang"
@@ -337,11 +337,11 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       Deutsch
-                    </button>
-                    <button
+                    </Link>
+                    <Link
                       className="dropdown-item"
                       type="button"
-                      onClick={() => setSelectedCountry(4)}
+                      href={`/fr/Main`}
                     >
                       <Image
                         className="icon-lang"
@@ -352,7 +352,7 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       Français
-                    </button>
+                    </Link>
                     <button
                       className="dropdown-item"
                       type="button"
@@ -368,10 +368,10 @@ export default function HeaderNoMenuTransparent(
                       />
                       Portugués
                     </button>
-                    <button
+                    <Link
                       className="dropdown-item"
                       type="button"
-                      onClick={() => setSelectedCountry(6)}
+                      href={`/es/Main`}
                     >
                       <Image
                         className="icon-lang"
@@ -381,8 +381,8 @@ export default function HeaderNoMenuTransparent(
                         height="100"
                       />
                       Español
-                    </button>
-                    <button className="dropdown-item" type="button">
+                    </Link>
+                    <Link className="dropdown-item" type="button" href={`/ned/Main`}>
                       <Image
                         className="icon-lang"
                         src="/img/icon-lang-ned.png"
@@ -391,7 +391,7 @@ export default function HeaderNoMenuTransparent(
                         height="100"
                       />
                       Nederlands
-                    </button>
+                    </Link>
                   </div>
                 </li>
                 <li className="nav-item nav-search-off">
@@ -705,10 +705,10 @@ export default function HeaderNoMenuTransparent(
                     <span className="d-xl-none ml-2">Language</span>
                   </a>
                   <div className="dropdown-menu dropdown-lang dropdown-menu-right">
-                    <button
+                    <Link
                       className="dropdown-item active"
                       type="button"
-                      onClick={() => setSelectedCountry(1)}
+                      href={`/en/`}
                     >
                       <Image
                         className="icon-lang"
@@ -719,7 +719,7 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       English
-                    </button>
+                    </Link>
                     <button
                       className="dropdown-item"
                       type="button"

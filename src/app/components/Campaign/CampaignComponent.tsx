@@ -21,12 +21,7 @@ export default function CampaignComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/About/Campaign">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/About/Campaign">
-        Switch to English
-      </Link>
+    
 
       <div className="about">
         <div className="container">

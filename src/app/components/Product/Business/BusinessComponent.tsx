@@ -81,12 +81,7 @@ export default function BusinessComponent() {
         </div>
       </div>
 
-      <Link locale="id" href="/id/Product/Business">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Product/Business">
-        Switch to English
-      </Link>
+    
       <div className="billing-automation-swiper business">
         <div className="container">
           <h2 className="title">How Gyloop Works</h2>

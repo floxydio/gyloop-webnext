@@ -20,12 +20,7 @@ export default function BlogComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Resources/Blogs">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Resources/Blogs">
-        Switch to English
-      </Link>
+      
 
       <div className="blogs">
         <div className="search-form">

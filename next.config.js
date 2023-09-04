@@ -13,8 +13,16 @@ const nextConfig = {
         defaultLocale: "en",
         localeDetection: false
     },
-
     swcMinify: true,
+    redirects: async () => {
+        return [
+            {
+                source: "/",
+                destination: "/Main",
+                permanent: true,
+            },
+        ]
+    }
 }
 
 module.exports = nextConfig

@@ -21,12 +21,7 @@ export default function ConnectorComponent() {
 
   return (
     <>
-      <Link locale="id" href="/id/Product/Connector">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Product/Connector">
-        Switch to English
-      </Link>
+    
       <div className="billing-automation-swiper business">
         <div className="container">
           <h2 className="title mb-0">How Gyloop Works</h2>

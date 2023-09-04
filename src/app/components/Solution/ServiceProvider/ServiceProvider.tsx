@@ -20,12 +20,7 @@ export default function ServiceProviderComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Solutions/ServiceProvider">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Solutions/ServiceProvider">
-        Switch to English
-      </Link>
+
 
       <div className="billing-automation-swiper">
         <div className="container">

@@ -20,12 +20,7 @@ export default function BusinessNetworkingComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Solutions/BusinessNetworking">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Solutions/BusinessNetworking">
-        Switch to English
-      </Link>
+ 
 
       <div className="billing-automation-swiper">
         <div className="container">

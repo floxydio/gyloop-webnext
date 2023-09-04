@@ -20,12 +20,7 @@ export default function SystemDemoComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Resources/LiveDemo">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Resources/LiveDemo">
-        Switch to English
-      </Link>
+      
 
       <div className="blogs">
         <div className="search-form">

@@ -20,12 +20,7 @@ export default function CultureComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/About/Culture">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/About/Culture">
-        Switch to English
-      </Link>
+      <
 
       <div className="about">
         <div className="container">

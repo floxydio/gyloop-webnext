@@ -20,13 +20,6 @@ export default function VendorPortalComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Solutions/VendorPortal">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Solutions/VendorPortal">
-        Switch to English
-      </Link>
-
       <div className="billing-automation-swiper">
         <div className="container">
           <h2 className="title">Automate your sales processing</h2>

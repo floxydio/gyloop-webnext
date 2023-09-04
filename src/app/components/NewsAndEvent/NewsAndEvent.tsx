@@ -22,12 +22,7 @@ export default function NewsAndEvent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/About/NewsEvent">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/About/NewsEvent">
-        Switch to English
-      </Link>
+    
 
       <div className="blogs">
         <div className="search-form">

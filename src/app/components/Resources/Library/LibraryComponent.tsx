@@ -20,13 +20,7 @@ export default function LibraryComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Resources/Library">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Resources/Library">
-        Switch to English
-      </Link>
-
+    
       <div className="blogs">
         <div className="search-form">
           <div className="container">

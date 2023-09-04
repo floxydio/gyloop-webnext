@@ -28,12 +28,7 @@ export default function SourcingComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Solutions/SourcingManagement">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Solutions/SourcingManagement">
-        Switch to English
-      </Link>
+  
 
       <div className="billing-automation-swiper">
         <div className="container">

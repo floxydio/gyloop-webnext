@@ -20,12 +20,6 @@ export default function BillingAutomationComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Solutions/BillingAutomation">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Solutions/BillingAutomation">
-        Switch to English
-      </Link>
 
       <div className="billing-automation-swiper">
         <div className="container">

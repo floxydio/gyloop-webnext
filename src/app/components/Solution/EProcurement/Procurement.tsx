@@ -29,12 +29,7 @@ export default function EProcurementComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Solutions/EProcurement">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Solutions/EProcurement">
-        Switch to English
-      </Link>
+
 
       <div className="billing-automation-swiper">
         <div className="container">

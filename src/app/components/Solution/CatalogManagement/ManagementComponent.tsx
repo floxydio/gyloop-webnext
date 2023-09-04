@@ -28,13 +28,6 @@ export default function ManagementComponent() {
         </div>
       </header>
 
-      <Link locale="id" href="/id/Solutions/CatalogManagement">
-        Switch to Indonesia
-      </Link>
-      <Link locale="en" href="/en/Solutions/CatalogManagement">
-        Switch to English
-      </Link>
-
       <div className="billing-automation-swiper">
         <div className="container">
           <h2 className="title">Automate your sales processing</h2>
