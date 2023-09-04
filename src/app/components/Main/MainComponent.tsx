@@ -62,6 +62,24 @@ export default function MainComponent() {
             <Link locale="en" href="/en/Main">
               Switch to English
             </Link>
+            <Link locale="fr" href="">
+              Switch to Francais
+            </Link>
+            <Link locale="esp" href="">
+              Switch to Espanyol
+            </Link>
+            <Link locale="deu" href="">
+              Switch to Deutsch
+            </Link>
+            <Link locale="ita" href="">
+              Switch to Italiao
+            </Link>
+            <Link locale="ned" href="">
+              Switch to Nederlands
+            </Link>
+            <Link locale="por" href="">
+              Switch to Portugues
+            </Link>
 
             <div className="col-12 d-md-none">
               <hr className="hr-small bg-blue" />
