@@ -3,7 +3,7 @@ import "@/style/style.min.css"
 import "@/style/icon.css"
 import { useForm, Resolver } from 'react-hook-form';
 import Link from "next/link";
-
+import Image from "next/image"
 
 type FormValues = {
   firstName: string;
@@ -52,12 +52,17 @@ export default function ProfessionalComponent() {
                 <div className="card border-0">
                   <div className="card-body">
 
-                    <img src="/img/icon_bagde_professional.png"
-                      className="subscribe-functional-badge img-fluid float-right" />
+                    <Image src="/img/icon_bagde_professional.png"
+                      className="subscribe-functional-badge img-fluid float-right" alt="icon_badge"  width={0}
+                      height={0}
+                      sizes="100" style={{ width: '100%', height: 'auto' }}
+                      />
 
                     <Link href="/">
-                      <img className="logo-gyloop card-title ml-0 mb-xl-3" src="/img/logo-gyloop-dark.png"
-                        alt="Logo Gyloop" />
+                      <Image className="logo-gyloop card-title ml-0 mb-xl-3" src="/img/logo-gyloop-dark.png"
+                        alt="Logo Gyloop"  width={0}
+                        height={0}
+                        sizes="100" style={{ width: '100%', height: 'auto' }} />
                     </Link>
 
 
@@ -210,8 +215,10 @@ export default function ProfessionalComponent() {
               <div className="subscribe-demo-user-subheader px-5 py-3 text-white">
                 <div className="row">
                   <div className="col-xl-9">
-                    <img src="/img/icon_bagde_professional_white.png"
-                      className="subscribe-functional-head-badge img-fluid text-white" />
+                    <Image src="/img/icon_bagde_professional_white.png"
+                      className="subscribe-functional-head-badge img-fluid text-white" alt="icon_badge"  width={0}
+                      height={0}
+                      sizes="100" style={{ width: '100%', height: 'auto' }} />
                     <p className="subscribe-demo-user-title">PROFESSIONAL</p>
                     <div className="subscribe-demo-user-subtitle">
                       <p>

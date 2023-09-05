@@ -13,8 +13,6 @@ export default function MainComponent() {
   const [index, setIndex] = useState(0);
   const t = useTranslations('MainComponent');
 
-  console.log(t);
-
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
   }, []);
