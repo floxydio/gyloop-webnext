@@ -80,6 +80,7 @@ export default function HeaderNoMenuTransparent(
                   <Link
                     className="nav-link"
                     href="/Product"
+                    aria-label='Product Overview'
                     aria-expanded={currentDropdown === 1 ? 'true' : 'false'}
                   >
                     Products
@@ -145,6 +146,7 @@ export default function HeaderNoMenuTransparent(
                   <Link
                     className="nav-link"
                     href="/Solutions"
+                    aria-label='Solutions Overview'
                     aria-expanded={currentDropdown === 2 ? 'true' : 'false'}
                   >
                     Solutions
@@ -492,6 +494,7 @@ export default function HeaderNoMenuTransparent(
                   <Link
                     className="nav-link"
                     href="/Product"
+                    aria-label='Product Overview'
                     aria-expanded={currentDropdown === 1 ? 'true' : 'false'}
                   >
                     Products
@@ -557,6 +560,7 @@ export default function HeaderNoMenuTransparent(
                   <Link
                     className="nav-link"
                     href="/Solutions"
+                    aria-label='Solutions Overview'
                     aria-expanded={currentDropdown === 2 ? 'true' : 'false'}
                   >
                     Solutions

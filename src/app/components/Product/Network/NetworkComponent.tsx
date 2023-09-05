@@ -379,7 +379,7 @@ export default function NetworkComponent() {
               business application to robust your business processes.
             </p>
 
-            <Link href="/Solutions" className="gyloop-link d-block">
+            <Link href="/Solutions" aria-label='Solutions Overview' className="gyloop-link d-block">
               Learn More
               <i className="fas fa-angle-right"></i>
             </Link>

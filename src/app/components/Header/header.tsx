@@ -49,6 +49,7 @@ export default function Header() {
               >
                 <Link
                   className="nav-link"
+                  aria-label='Product Overview'
                   href="/Product"
                   aria-expanded={currentDropdown === 1 ? 'true' : 'false'}
                 >

@@ -113,10 +113,10 @@ export default function Footer() {
                     >
                       <ul className="list-unstyled footer-links">
                         <li>
-                          <Link href="/Product">Gyloop Overview</Link>
+                          <Link aria-label='Product Overview' href="/Product">Gyloop Overview</Link>
                         </li>
                         <li>
-                          <Link href="/Solutions">Explore Solutions</Link>
+                          <Link aria-label='Solutions Overview' href="/Solutions">Explore Solutions</Link>
                         </li>
                         <li>
                           <a href="library.html">Business Use Cases</a>
@@ -199,10 +199,10 @@ export default function Footer() {
 
                     <ul className="list-unstyled footer-links">
                       <li>
-                        <Link href="/Product">Gyloop Overview</Link>
+                        <Link aria-label='Product Overview' href="/Product">Gyloop Overview</Link>
                       </li>
                       <li>
-                        <Link href="/Solutions">Explore Solutions</Link>
+                        <Link aria-label='Solutions Overview' href="/Solutions">Explore Solutions</Link>
                       </li>
                       <li>
                         <a href="library.html">Business Use Cases</a>

@@ -27,7 +27,7 @@ export default function MainComponent() {
         <div className="container">
           <p className="title">{t('headerTitleFeature')}</p>
           <p className="subtitle">{t('headerSubtitleFeature')}</p>
-          <Link href="/Product" className="gyloop-link">
+          <Link href="/Product" aria-label='Product Overview' className="gyloop-link">
             {t('button')} <i className="fas fa-angle-right"></i>
           </Link>
           <div className="row position-relative">
@@ -48,7 +48,7 @@ export default function MainComponent() {
                   />
                   <div className="card-title">{t('firstTitleFeature')}</div>
                   <div className="card-text">{t('firstSubtitleFeature')}</div>
-                  <Link href="/Product/Business?t=crm" className="gyloop-link">
+                  <Link aria-label='Go To Product Business CRM' href="/Product/Business?t=crm" className="gyloop-link">
                     {t('button')} <i className="fas fa-angle-right"></i>
                   </Link>
                 </div>
@@ -121,7 +121,7 @@ export default function MainComponent() {
               pricing, catalog released, and automate the business transaction
               documents.
             </p>
-            <Link href="/Solutions" className="gyloop-link d-block">
+            <Link href="/Solutions" aria-label='Solutions Overview' className="gyloop-link d-block">
               {t('button')}
               <i className="fas fa-angle-right"></i>
             </Link>
@@ -149,7 +149,7 @@ export default function MainComponent() {
               Agreement (SLA) of both parties for better services.
             </p>
 
-            <Link href="/Solutions" className="gyloop-link d-block">
+            <Link href="/Solutions" aria-label='Solutions Overview' className="gyloop-link d-block">
               {t('button')}
               <i className="fas fa-angle-right"></i>
             </Link>
@@ -176,7 +176,7 @@ export default function MainComponent() {
               business application to robust your business processes.
             </p>
 
-            <Link href="/Solutions" className="gyloop-link d-block">
+            <Link href="/Solutions"  aria-label='Solutions Overview' className="gyloop-link d-block">
               {t('button')}
               <i className="fas fa-angle-right"></i>
             </Link>
@@ -312,7 +312,7 @@ export default function MainComponent() {
       <div className="business-cta">
         <div className="container">
           <h3 className="title">Start your planning, and feel the change</h3>
-          <Link href="/Product" className="gyloop-link">
+          <Link href="/Product" aria-label='Product Overview' className="gyloop-link">
             <i className="far fa-chevron-circle-right"></i>
             Get Started
           </Link>
@@ -351,7 +351,7 @@ export default function MainComponent() {
             </div>
           </div>
 
-          <Link href="/Product" className="gyloop-link d-block">
+          <Link href="/Product" aria-label='Product Overview' className="gyloop-link d-block">
             {t('button')}
             <i className="fas fa-angle-right"></i>
           </Link>
