@@ -319,25 +319,25 @@ export default function Footer() {
                           <i className="far fa-check mr-1"></i>
                           OK
                         </button>
-                        <a
-                          href="cookie-preferences.html"
+                        <Link
+                          href="/CookiePreferences"
                           className="gyloop-link text-light"
                           target="_blank"
                         >
-                          More information
-                        </a>
+                          Cookie Preferences Information
+                        </Link>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="d-none d-xl-block">
-                  <a
-                    href="cookie-preferences.html"
+                  <Link
+                    href="/CookiePreferences"
                     className="gyloop-link text-light"
                     target="_blank"
                   >
-                    More information
-                  </a>
+                   Cookie Preferences Information
+                  </Link>
                   <button
                     className="btn btn-primary gyloop-btn ml-3"
                     type="button"

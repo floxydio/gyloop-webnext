@@ -285,15 +285,14 @@ export default function HeaderNoMenuTransparent(
               </ul>
               <ul className="nav-search-off navbar-nav">
                 <li className="nav-item nav-item-lang position-relative">
-                  <a
+                  <span
                     className="nav-link mr-0"
-                    href="javascript:void(0)"
                     data-toggle="dropdown"
                     aria-expanded="false"
                   >
                     <i className="fas fa-globe-americas"></i>
                     <span className="d-xl-none ml-2">Language</span>
-                  </a>
+                  </span>
                   <div className="dropdown-menu dropdown-lang dropdown-menu-right">
                   <Link
                       className="dropdown-item active"
