@@ -4,45 +4,28 @@ import Link from 'next/link';
 import 'popper.js';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useTranslation } from 'react-i18next';
-// import session from '@/app/modules/Sessions/session';
-// import { SESSION_STORAGE_KEY as LanguageKey } from '@/app/modules/Language/languageConfig';
-// import i18n from '@/app/modules/i18n';
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
 
 export default function HeaderNoMenuTransparent(
   { type }: { type: number } = { type: 0 }
 ) {
   const [currentDropdown, setCurrentDropdown] = useState(0);
   const [selectedCountry, setSelectedCountry] = useState(0);
+  const router = useRouter()
 
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
   }, []);
 
-  // function changeLanguage() {
-  //   if (selectedCountry === 2) {
-  //     i18n.changeLanguage('id');
-  //     session.set(LanguageKey, { Language: 'id' });
-  //     closeLanguage();
-  //   }
-  // }
 
-  // function closeLanguage() {
-  //   setAnchorE1(null);
-  // }
-
-  // async function changeLanguageToIndonesia() {
-  //   i18n.changeLanguage('id');
-  //   session.set(LanguageKey, { Language: 'id' });
-  //   closeLanguage();
-  // }
 
   return (
     <>
       {type === 0 ? (
         <nav className="navbar navbar-expand-xl navbar-dark bg-transparent">
           <div className="container align-items-center">
-            <Link className="navbar-brand d-flex mr-5" href="/">
+            <Link className="navbar-brand d-flex mr-5" href={`/${router.locale ?? router.defaultLocale}`}>
               <Image
                 className="logo-web-lg"
                 src="/img/logo-gyloop-white.png"
@@ -60,7 +43,6 @@ export default function HeaderNoMenuTransparent(
               aria-controls="navbarColor02"
               aria-expanded="false"
               aria-label="Toggle navigation"
-              onClick={() => console.log('clicked')}
             >
               <span className="fa-stack" style={{ verticalAlign: 'top' }}>
                 <i className="far fa-circle fa-stack-2x"></i>
@@ -79,7 +61,7 @@ export default function HeaderNoMenuTransparent(
                 >
                   <Link
                     className="nav-link"
-                    href="/Product"
+                    href={`${router.locale}/Product`}
                     aria-label='Product Overview'
                     aria-expanded={currentDropdown === 1 ? 'true' : 'false'}
                   >
@@ -91,7 +73,7 @@ export default function HeaderNoMenuTransparent(
                       }`}
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link className="dropdown-item" href="/Product/Business">
+                    <Link className="dropdown-item" href={`${router.locale}/Product/Business`} >
                       <Image
                         src="/img/logo-business-transparent-black.png"
                         alt="gyloop-business-transparent-"
@@ -102,7 +84,7 @@ export default function HeaderNoMenuTransparent(
                       />
                       <span>Business</span>
                     </Link>
-                    <Link className="dropdown-item" href="/Product/Network">
+                    <Link className="dropdown-item" href={`${router.locale}/Product/Network`}>
                       <Image
                         src="/img/logo-networks-transparent-black.png"
                         alt="gyloop-logo-network-transparent-black"
@@ -113,7 +95,7 @@ export default function HeaderNoMenuTransparent(
                       />
                       <span>Networks</span>
                     </Link>
-                    <Link className="dropdown-item" href="/Product/Connector">
+                    <Link className="dropdown-item" href={`${router.locale}/Product/Connector`}>
                       <Image
                         src="/img/logo-connector-transparent-black.png"
                         alt="gyloop-logo-connector-transparent-black"
@@ -124,7 +106,7 @@ export default function HeaderNoMenuTransparent(
                       />
                       <span>Connector</span>
                     </Link>
-                    <Link className="dropdown-item" href="/Product/Provider">
+                    <Link className="dropdown-item" href={`${router.locale}/Product/Provider`}>
                       <Image
                         src="/img/logo-provider-transparent-black.png"
                         alt="gyloop-logo-provider-transparent-black"
@@ -297,7 +279,9 @@ export default function HeaderNoMenuTransparent(
                   <Link
                       className="dropdown-item active"
                       type="button"
-                      href={`/en/Main`}
+                      locale="en"
+                      replace={true}
+                      href={`/en${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -312,7 +296,9 @@ export default function HeaderNoMenuTransparent(
                     <Link
                       className="dropdown-item"
                       type="button"
-                      href={`/id/Main`}
+                      locale="id"
+                      replace={true}
+                      href={`/id${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -327,7 +313,8 @@ export default function HeaderNoMenuTransparent(
                     <Link
                       className="dropdown-item"
                       type="button"
-                      href={`/de/Main`}
+                      locale="de"
+                      href={`/deu${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -342,7 +329,8 @@ export default function HeaderNoMenuTransparent(
                     <Link
                       className="dropdown-item"
                       type="button"
-                      href={`/fr/Main`}
+                      locale="fr"
+                      href={`/fr${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -371,8 +359,9 @@ export default function HeaderNoMenuTransparent(
                     </button>
                     <Link
                       className="dropdown-item"
+                      locale="es"
                       type="button"
-                      href={`/es/Main`}
+                      href={`/esp${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -383,7 +372,7 @@ export default function HeaderNoMenuTransparent(
                       />
                       Español
                     </Link>
-                    <Link className="dropdown-item" type="button" href={`/ned/Main`}>
+                    <Link className="dropdown-item" type="button" locale="ned" href={`/ned${router.pathname}`}>
                       <Image
                         className="icon-lang"
                         src="/img/icon-lang-ned.png"
