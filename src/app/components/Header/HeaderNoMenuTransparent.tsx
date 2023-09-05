@@ -127,7 +127,7 @@ export default function HeaderNoMenuTransparent(
                 >
                   <Link
                     className="nav-link"
-                    href="/Solutions"
+                    href={`${router.locale}/Solutions`}
                     aria-label='Solutions Overview'
                     aria-expanded={currentDropdown === 2 ? 'true' : 'false'}
                   >
@@ -141,61 +141,61 @@ export default function HeaderNoMenuTransparent(
                   >
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/SalesAutomation"
+                      href={`${router.locale}/Solutions/SalesAutomation`}
                     >
                       <span>Sales Automation</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/CatalogManagement"
+                      href={`${router.locale}/Solutions/CatalogManagement`}
                     >
                       <span>Catalog Management</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/SourcingManagement"
+                      href={`${router.locale}/Solutions/SourcingManagement`}
                     >
                       <span>Sourcing Management</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/EProcurement"
+                      href={`${router.locale}/Solutions/EProcurement`}
                     >
                       <span>E-Procurement</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/CustomerPortal"
+                      href={`${router.locale}/Solutions/CustomerPortal`}
                     >
                       <span>Customer Portal</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/VendorPortal"
+                      href={`${router.locale}/Solutions/VendorPortal`}
                     >
                       <span>Vendor Portal</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/BillingAutomation"
+                      href={`${router.locale}/Solutions/BillingAutomation`}
                     >
                       <span>Billing Automation</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/InvoiceAutomation"
+                      href={`${router.locale}/Solutions/InvoiceAutomation`}
                     >
                       <span>Invoice Automation</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/BusinessNetworking"
+                      href={`${router.locale}/Solutions/BusinessNetworking`}
                     >
                       <span>Business Networking</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/ServiceProvider"
+                      href={`${router.locale}/Solutions/ServiceProvider`}
                     >
                       <span>Service Provider</span>
                     </Link>
@@ -220,13 +220,13 @@ export default function HeaderNoMenuTransparent(
                       }`}
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link className="dropdown-item" href="/Resources/Library">
+                     <Link className="dropdown-item" href={`${router.locale}/Resources/Library`}>
                       <span>Library</span>
                     </Link>
-                    <Link className="dropdown-item" href="/Resources/LiveDemo">
+                    <Link className="dropdown-item" href={`${router.locale}/Resources/LiveDemo`}>
                       <span>System Demo</span>
                     </Link>
-                    <Link className="dropdown-item" href="/Resources/Blogs">
+                    <Link className="dropdown-item" href={`${router.locale}/Resources/Blogs`}>
                       <span>Blogs</span>
                     </Link>
                   </div>
@@ -559,63 +559,63 @@ export default function HeaderNoMenuTransparent(
                       }`}
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link
+                     <Link
                       className="dropdown-item"
-                      href="/Solutions/SalesAutomation"
+                      href={`${router.locale}/Solutions/SalesAutomation`}
                     >
                       <span>Sales Automation</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/CatalogManagement"
+                      href={`${router.locale}/Solutions/CatalogManagement`}
                     >
                       <span>Catalog Management</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/SourcingManagement"
+                      href={`${router.locale}/Solutions/SourcingManagement`}
                     >
                       <span>Sourcing Management</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/EProcurement"
+                      href={`${router.locale}/Solutions/EProcurement`}
                     >
                       <span>E-Procurement</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/CustomerPortal"
+                      href={`${router.locale}/Solutions/CustomerPortal`}
                     >
                       <span>Customer Portal</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/VendorPortal"
+                      href={`${router.locale}/Solutions/VendorPortal`}
                     >
                       <span>Vendor Portal</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/BillingAutomation"
+                      href={`${router.locale}/Solutions/BillingAutomation`}
                     >
                       <span>Billing Automation</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/InvoiceAutomation"
+                      href={`${router.locale}/Solutions/InvoiceAutomation`}
                     >
                       <span>Invoice Automation</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/BusinessNetworking"
+                      href={`${router.locale}/Solutions/BusinessNetworking`}
                     >
                       <span>Business Networking</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href="/Solutions/ServiceProvider"
+                      href={`${router.locale}/Solutions/ServiceProvider`}
                     >
                       <span>Service Provider</span>
                     </Link>
@@ -640,13 +640,13 @@ export default function HeaderNoMenuTransparent(
                       }`}
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link className="dropdown-item" href="/Resources/Library">
+                    <Link className="dropdown-item" href={`${router.locale}/Resources/Library`}>
                       <span>Library</span>
                     </Link>
-                    <Link className="dropdown-item" href="/Resources/LiveDemo">
+                    <Link className="dropdown-item" href={`${router.locale}/Resources/LiveDemo`}>
                       <span>System Demo</span>
                     </Link>
-                    <Link className="dropdown-item" href="/Resources/Blogs">
+                    <Link className="dropdown-item" href={`${router.locale}/Resources/Blogs`}>
                       <span>Blogs</span>
                     </Link>
                   </div>
