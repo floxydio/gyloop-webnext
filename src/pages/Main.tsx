@@ -1,12 +1,23 @@
 import Head from 'next/head';
 import Footer from '../app/components/Footer/Footer';
 import { useEffect } from 'react';
-import MainComponent from '@/app/components/Main/MainComponent';
 import Header from '@/app/components/Header/header';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import MainHeader from '@/app/components/Main/MainHeader';
+import dynamic from 'next/dynamic';
+
+const MainHeaderComponent = dynamic(() => import("@/app/components/Main/MainHeader"), {
+  ssr:false
+})
+
+const MainComponent = dynamic(() => import("@/app/components/Main/MainComponent"), {
+  ssr: false
+})
+
 
 export default function Main() {
+
+  
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle.min.js');
   });
@@ -67,7 +78,7 @@ export default function Main() {
       </Head>
 
       <HeaderNoMenuTransparent type={0} />
-      <MainHeader />
+      <MainHeaderComponent />
       <MainComponent />
       <Footer />
     </>
