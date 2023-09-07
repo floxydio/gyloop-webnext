@@ -73,7 +73,7 @@ export default function HeaderNoMenuTransparent(
                       }`}
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link className="dropdown-item" href={`${router.locale}/Product/Business`} >
+                    <Link className="dropdown-item" href={`${router.locale}/product-business`} >
                       <Image
                         src="/img/logo-business-transparent-black.png"
                         alt="gyloop-business-transparent-"
@@ -84,7 +84,7 @@ export default function HeaderNoMenuTransparent(
                       />
                       <span>Business</span>
                     </Link>
-                    <Link className="dropdown-item" href={`${router.locale}/Product/Network`}>
+                    <Link className="dropdown-item" href={`${router.locale}/product-network`}>
                       <Image
                         src="/img/logo-networks-transparent-black.png"
                         alt="gyloop-logo-network-transparent-black"
@@ -95,7 +95,7 @@ export default function HeaderNoMenuTransparent(
                       />
                       <span>Networks</span>
                     </Link>
-                    <Link className="dropdown-item" href={`${router.locale}/Product/Connector`}>
+                    <Link className="dropdown-item" href={`${router.locale}/product-connector`}>
                       <Image
                         src="/img/logo-connector-transparent-black.png"
                         alt="gyloop-logo-connector-transparent-black"
@@ -106,7 +106,7 @@ export default function HeaderNoMenuTransparent(
                       />
                       <span>Connector</span>
                     </Link>
-                    <Link className="dropdown-item" href={`${router.locale}/Product/Provider`}>
+                    <Link className="dropdown-item" href={`${router.locale}/product-provider`}>
                       <Image
                         src="/img/logo-provider-transparent-black.png"
                         alt="gyloop-logo-provider-transparent-black"
@@ -127,7 +127,7 @@ export default function HeaderNoMenuTransparent(
                 >
                   <Link
                     className="nav-link"
-                    href={`${router.locale}/Solutions`}
+                    href={`${router.locale}/solution`}
                     aria-label='Solutions Overview'
                     aria-expanded={currentDropdown === 2 ? 'true' : 'false'}
                   >
@@ -141,61 +141,61 @@ export default function HeaderNoMenuTransparent(
                   >
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/SalesAutomation`}
+                      href={`${router.locale}/solution-salesautomation`}
                     >
                       <span>Sales Automation</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/CatalogManagement`}
+                      href={`${router.locale}/solution-catalogmanagement`}
                     >
                       <span>Catalog Management</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/SourcingManagement`}
+                      href={`${router.locale}/solution-sourcingmanagement`}
                     >
                       <span>Sourcing Management</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/EProcurement`}
+                      href={`${router.locale}/solution-eprocurement`}
                     >
                       <span>E-Procurement</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/CustomerPortal`}
+                      href={`${router.locale}/solution-customerportal`}
                     >
                       <span>Customer Portal</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/VendorPortal`}
+                      href={`${router.locale}/solution-vendorportal`}
                     >
                       <span>Vendor Portal</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/BillingAutomation`}
+                      href={`${router.locale}/solution-billingautomation`}
                     >
                       <span>Billing Automation</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/InvoiceAutomation`}
+                      href={`${router.locale}/solution-invoiceautomation`}
                     >
                       <span>Invoice Automation</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/BusinessNetworking`}
+                      href={`${router.locale}/solution-businessnetworking`}
                     >
                       <span>Business Networking</span>
                     </Link>
                     <Link
                       className="dropdown-item"
-                      href={`${router.locale}/Solutions/ServiceProvider`}
+                      href={`${router.locale}/solution-serviceprovider`}
                     >
                       <span>Service Provider</span>
                     </Link>
@@ -220,13 +220,13 @@ export default function HeaderNoMenuTransparent(
                       }`}
                     aria-labelledby="navbarDropdown"
                   >
-                     <Link className="dropdown-item" href={`${router.locale}/Resources/Library`}>
+                     <Link className="dropdown-item" href={`${router.locale}/resource-library`}>
                       <span>Library</span>
                     </Link>
-                    <Link className="dropdown-item" href={`${router.locale}/Resources/LiveDemo`}>
+                    <Link className="dropdown-item" href={`${router.locale}/resource-livedemo`}>
                       <span>System Demo</span>
                     </Link>
-                    <Link className="dropdown-item" href={`${router.locale}/Resources/Blogs`}>
+                    <Link className="dropdown-item" href={`${router.locale}/resource-blogs`}>
                       <span>Blogs</span>
                     </Link>
                   </div>
@@ -239,7 +239,7 @@ export default function HeaderNoMenuTransparent(
                 >
                   <Link
                     className="nav-link"
-                    href="/About"
+                    href="/about"
                     aria-expanded={currentDropdown === 4 ? 'true' : 'false'}
                   >
                     About Us
@@ -250,16 +250,16 @@ export default function HeaderNoMenuTransparent(
                       }`}
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link className="dropdown-item" href="/About/Leadership">
+                    <Link className="dropdown-item" href={`${router.locale}/about-leadership`}>
                       <span>Gyloop Leadership</span>
                     </Link>
-                    <Link className="dropdown-item" href="/About/NewsEvent">
+                    <Link className="dropdown-item" href={`${router.locale}/about-newsevent`}>
                       <span>News and Events</span>
                     </Link>
-                    <Link className="dropdown-item" href="/About/Campaign">
+                    <Link className="dropdown-item" href={`${router.locale}/about-campaign`}>
                       <span>Gyloop Campaign</span>
                     </Link>
-                    <Link className="dropdown-item" href="/About/Culture">
+                    <Link className="dropdown-item" href={`${router.locale}/about-culture`}>
                       <span>Gyloop Culture</span>
                     </Link>
                   </div>
@@ -314,7 +314,7 @@ export default function HeaderNoMenuTransparent(
                       className="dropdown-item"
                       type="button"
                       locale="de"
-                      href={`/deu${router.pathname}`}
+                      href={`/de${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -342,10 +342,11 @@ export default function HeaderNoMenuTransparent(
                       />
                       Français
                     </Link>
-                    <button
+                    <Link
                       className="dropdown-item"
                       type="button"
-                      onClick={() => setSelectedCountry(5)}
+                      locale="por"
+                      href={`/por${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -356,12 +357,12 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       Portugués
-                    </button>
+                    </Link>
                     <Link
                       className="dropdown-item"
                       locale="es"
                       type="button"
-                      href={`/esp${router.pathname}`}
+                      href={`/es${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
