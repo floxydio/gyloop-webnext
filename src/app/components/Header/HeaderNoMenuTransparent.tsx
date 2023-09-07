@@ -659,7 +659,7 @@ export default function HeaderNoMenuTransparent(
                 >
                   <Link
                     className="nav-link"
-                    href="/About"
+                    href={`${router.locale}/About`}
                     aria-expanded={currentDropdown === 4 ? 'true' : 'false'}
                   >
                     About Us
@@ -670,13 +670,13 @@ export default function HeaderNoMenuTransparent(
                       }`}
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link className="dropdown-item" href="/About/Leadership">
+                    <Link className="dropdown-item" href={`${router.locale}/About/Leadership`}>
                       <span>Gyloop Leadership</span>
                     </Link>
-                    <Link className="dropdown-item" href="/About/NewsEvent">
+                    <Link className="dropdown-item" href={`${router.locale}/About/NewsEvent`}>
                       <span>News and Events</span>
                     </Link>
-                    <Link className="dropdown-item" href="/About/Campaign">
+                    <Link className="dropdown-item" href={`${router.locale}/About/Campaign`}>
                       <span>Gyloop Campaign</span>
                     </Link>
                     <Link className="dropdown-item" href="/About/Culture">
