@@ -1,0 +1,30 @@
+{
+    "status": 200,
+    "error": false,
+    "data": [
+        {
+            "image": "https://api-ninjas.com/images/cats/abyssinian.jpg",
+            "title_en": "Customer Relationship",
+            "title_id": "Hubungan Pelanggan",
+            "title_fr": "Relation Client",
+            "desc_en" : "Manage Your Product",
+            "desc_id" : "Mengelola Produk Anda",
+            "desc_fr" : "Gérer Votre Produit",
+            "btn_name_en": "Read More",
+            "btn_name_id": "Baca Selengkapnya",
+            "btn_name_fr": "Lire la suite"
+        },
+        {
+            "image": "https://api-ninjas.com/images/cats/abyssinian.jpg",
+            "title_en": "Supplier Relationship",
+            "title_id": "Hubungan Pemasok",
+            "title_fr": "Relation Fournisseur",
+            "desc_en" : "Manage your end-to-end sourcing activities",
+            "desc_id" : "Mengelola aktivitas sourcing end-to-end Anda",
+            "desc_fr" : "Gérer vos activités d'approvisionnement de bout en bout",
+            "btn_name_en": "Read More",
+            "btn_name_id": "Baca Selengkapnya",
+            "btn_name_fr": "Lire la suite"
+        }
+    ]
+}

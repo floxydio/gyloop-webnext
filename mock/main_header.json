@@ -1,0 +1,28 @@
+{
+    "status": 200,
+    "error": false,
+    "data" : [
+        {
+            "title_en": "A New Era an Business App",
+            "title_id": "Era Baru Aplikasi Bisnis",
+            "title_fr": "Une Nouvelle Ère d'Application d'Entreprise",
+            "subtitle_en": "With Gyloop business platform, you will find the best way how to connect your main business yo the wide range business networks, automate your sales and procurement transaction, easier to monitor your supply chain, and improve new business opportunity.",
+            "subtitle_id": "Dengan platform bisnis Gyloop, Anda akan menemukan cara terbaik untuk menghubungkan bisnis utama Anda ke jaringan bisnis yang luas, mengotomatisasi transaksi penjualan dan pengadaan, lebih mudah memantau rantai pasokan Anda, dan meningkatkan peluang bisnis baru.",
+            "subtitle_fr": "Avec la plate-forme d'entreprise Gyloop, vous trouverez le meilleur moyen de connecter votre activité principale au large réseau d'entreprises, d'automatiser vos transactions de vente et d'approvisionnement, de surveiller plus facilement votre chaîne d'approvisionnement et d'améliorer les nouvelles opportunités commerciales."
+        },
+        {
+            "title_en": "A Good App Start Here",
+            "title_id": "Aplikasi yang Baik Dimulai di Sini",
+            "title_fr": "Une bonne application commence ici",
+            "subtitle_en": "With Gyloop You Can Learn Everything About Business",
+            "subtitle_id": "Dengan Gyloop Anda Dapat Belajar Segalanya Tentang Bisnis",
+            "subtitle_fr": "Avec Gyloop, vous pouvez tout apprendre sur les affaires" 
+        }
+    ],
+    "button_title" : {
+        "title_en": "Get Started",
+        "title_id": "Memulai",
+        "title_fr": "Commencer"
+    },
+    "message": "Success Get Header"
+}
