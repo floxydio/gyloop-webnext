@@ -1,20 +1,20 @@
 import CampaignComponent from "@/app/components/Campaign/CampaignComponent";
 import Footer from "@/app/components/Footer/Footer";
 import HeaderNoMenuTransparent from "@/app/components/Header/HeaderNoMenuTransparent";
+import NextSEO from "@/app/components/NextHead/NextSEO";
 import Head from "next/head";
 
 export default function Campaign() {
     return (
         <>
-            <Head>
-                <meta charSet="utf-8" />
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-                <meta name="description" content="Description" />
-                <meta name="keywords" content="Keywords" />
+            <NextSEO seoHead={{
+                title: "Gyloop - Campaign Program",
+                metaDescription: "Gyloop - Campaign Program",
+                metaKeywords: "Gyloop - Campaign Program",
+                metaTitle: "Gyloop - Campaign Program",
+                metaLocale: "en-US"
+            }} />
 
-                <title>Gyloop - Campaign Program</title>
-            </Head>
             <HeaderNoMenuTransparent type = {0} />
             <CampaignComponent />
             <Footer />

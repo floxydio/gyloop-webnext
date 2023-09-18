@@ -1,21 +1,22 @@
 import Footer from "@/app/components/Footer/Footer";
 import HeaderNoMenuTransparent from "@/app/components/Header/HeaderNoMenuTransparent";
 import LeadershipTitle from "@/app/components/Leadership/LeadershipTitle";
+import NextSEO from "@/app/components/NextHead/NextSEO";
 import VideoComponent from "@/app/components/Video/VideoComponent";
 import Head from "next/head";
 
 export default function Video() {
   return (
     <>
-    <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-        <meta name="description" content="Description" />
-        <meta name="keywords" content="Keywords" />
 
-        <title>Gyloop - Video</title>
-    </Head>
+    <NextSEO seoHead={{
+        title: "Gyloop - Video",
+        metaDescription: "Gyloop - Video",
+        metaKeywords: "Gyloop - Video",
+        metaTitle: "Gyloop - Video",
+        metaLocale: "en-US"
+    }} />
+
 
 
     <HeaderNoMenuTransparent type = {1} />

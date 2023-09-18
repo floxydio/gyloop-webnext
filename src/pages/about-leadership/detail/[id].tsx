@@ -5,21 +5,22 @@ import HeaderNoMenu from '@/app/components/Header/HeaderNoMenu'
 import Footer from '@/app/components/Footer/Footer'
 import LeadershipTitle from '@/app/components/Leadership/LeadershipTitle'
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent'
+import NextSEO from '@/app/components/NextHead/NextSEO'
 
 export default function DetailLeadership() {
   const router = useRouter()
 
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-        <meta name="description" content="Description" />
-        <meta name="keywords" content="Keywords" />
+      <NextSEO seoHead={{
+        title: "Gyloop - Leadership",
+        metaDescription: "Gyloop - Leadership",
+        metaKeywords: "Gyloop - Leadership",
+        metaTitle: "Gyloop - Leadership",
+        metaLocale: "en-US"
+        
+      }} />
 
-        <title>Gyloop - Leadership</title>
-      </Head>
 
 
       <HeaderNoMenuTransparent type = {1} />

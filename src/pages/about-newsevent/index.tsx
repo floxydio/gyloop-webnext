@@ -2,24 +2,22 @@ import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenu from '@/app/components/Header/HeaderNoMenu';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NewsAndEvent from '@/app/components/NewsAndEvent/NewsAndEvent';
+import NextSEO from '@/app/components/NextHead/NextSEO';
 import Head from 'next/head';
 import React from 'react';
 
 export default function index() {
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-        />
-        <meta name="description" content="Description" />
-        <meta name="keywords" content="Keywords" />
+   
+      <NextSEO seoHead={{
+        title: "Gyloop - News And Event",
+        metaDescription: "Gyloop - News And Event",
+        metaKeywords: "Gyloop - News And Event",
+        metaTitle: "Gyloop - News And Event",
+        metaLocale: "en-US"
+      }} />
 
-        <title>Gyloop - News And Event</title>
-      </Head>
       <HeaderNoMenuTransparent type={0} />
       <NewsAndEvent />
       <Footer />

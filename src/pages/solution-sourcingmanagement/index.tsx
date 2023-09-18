@@ -1,23 +1,21 @@
 import Footer from "@/app/components/Footer/Footer";
 import HeaderNoMenuTransparent from "@/app/components/Header/HeaderNoMenuTransparent";
+import NextSEO from "@/app/components/NextHead/NextSEO";
 import SourcingComponent from "@/app/components/Solution/SourcingManagement/SourcingComponent";
 import Head from "next/head";
 
 export default function SourcingManagement() {
   return (
     <>
-        <Head>
-                <meta charSet="utf-8" />
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                <meta
-                    name="viewport"
-                    content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-                />
-                <meta name="description" content="Description" />
-                <meta name="keywords" content="Keywords" />
+  
+            <NextSEO seoHead={{
+                title: "Gyloop - Sourcing Management",
+                metaDescription: "Gyloop - Sourcing Management",
+                metaKeywords: "Gyloop - Sourcing Management",
+                metaTitle: "Gyloop - Sourcing Management",
+                metaLocale: "en-US"
+            }}/>
 
-                <title>Gyloop - Sourcing Management</title>
-            </Head>
 
             <HeaderNoMenuTransparent type = {0} />
             <SourcingComponent />

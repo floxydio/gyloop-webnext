@@ -5,7 +5,8 @@ interface SignIn {
 }
 export class AuthRepo {
     public async signIn(form: SignIn) {
-        try {} catch (e) {
+        try {
+        } catch (e) {
         }
     }
 }
