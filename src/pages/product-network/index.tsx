@@ -36,14 +36,14 @@ export default function NetworkIndex({getSeo}: {getSeo:SeoJson}) {
 }
 
 export async function getStaticProps(context) {
-  const fetchData = await fetch("https://mocki.io/v1/633f0e76-9812-4033-ab33-8ec115b98473")
+  const fetchData = await fetch("https://mocki.io/v1/e55b3ada-b352-4572-96aa-7dc70aaf01d9")
   const data = await fetchData.json()
   const seoJsonData = data.seo as [SeoJson]
-  const getSeo = seoJsonData.find((item) => item.locale === "id")
+  const getSeo = seoJsonData.find((item) => item.locale === context.locale)
   return {
     props: {
       getSeo,
-      messages: (await import(`@/translate/${context.locale}.json`)).default,
+      // messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };
 }
