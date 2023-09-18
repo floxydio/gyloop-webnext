@@ -11,7 +11,7 @@ interface HeadPropsSEO {
 
 
 export default function NextSEO({ seoHead }: { seoHead: HeadPropsSEO }) {
-  return (
+return (
     <Head>
       <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
