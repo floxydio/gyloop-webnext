@@ -6,6 +6,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
+
+
 export default function MainHeader() {
   const [index, setIndex] = useState(0);
   const t = useTranslations('MainHeader');
@@ -132,3 +134,5 @@ export default function MainHeader() {
     </>
   );
 }
+
+
