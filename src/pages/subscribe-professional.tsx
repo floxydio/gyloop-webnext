@@ -2,8 +2,11 @@ import Head from 'next/head';
 // import FunctionalComponent from "../app/components/Subscribe/FunctionalComponent";
 import ProfessionalComponent from '../app/components/Subscribe/ProfessionalComponent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
+import axios from 'axios';
 
-export default function SubscribeFunctional() {
+
+
+export default function SubscribeFunctional(dataJobPosition) {
   return (
     <>
       <NextSEO seoHead={{
@@ -14,7 +17,18 @@ export default function SubscribeFunctional() {
         metaLocale: "en-US"
       }} />
 
-      <ProfessionalComponent />
+      <ProfessionalComponent jobPosition={dataJobPosition.dataJobPosition}   />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const fetchData = await fetch("http://localhost:4000/v1/job/job-position")
+  const data = await fetchData.json()
+  const dataJobPosition = data.data  
+  return {
+    props: {
+      dataJobPosition,
+    },
+  };
 }

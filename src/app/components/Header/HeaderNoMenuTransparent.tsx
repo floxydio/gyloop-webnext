@@ -698,10 +698,12 @@ export default function HeaderNoMenuTransparent(
                     <span className="d-xl-none ml-2">Language</span>
                   </a>
                   <div className="dropdown-menu dropdown-lang dropdown-menu-right">
-                    <Link
+                  <Link
                       className="dropdown-item active"
                       type="button"
-                      href={`/en/`}
+                      locale="en"
+                      replace={true}
+                      href={`/en${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -713,10 +715,12 @@ export default function HeaderNoMenuTransparent(
                       />
                       English
                     </Link>
-                    <button
+                    <Link
                       className="dropdown-item"
                       type="button"
-                      onClick={() => setSelectedCountry(2)}
+                      locale="id"
+                      replace={true}
+                      href={`/id${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -727,11 +731,12 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       Bahasa Indonesia
-                    </button>
-                    <button
+                    </Link>
+                    <Link
                       className="dropdown-item"
                       type="button"
-                      onClick={() => setSelectedCountry(3)}
+                      locale="de"
+                      href={`/de${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -742,11 +747,12 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       Deutsch
-                    </button>
-                    <button
+                    </Link>
+                    <Link
                       className="dropdown-item"
                       type="button"
-                      onClick={() => setSelectedCountry(4)}
+                      locale="fr"
+                      href={`/fr${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -757,11 +763,12 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       Français
-                    </button>
-                    <button
+                    </Link>
+                    <Link
                       className="dropdown-item"
                       type="button"
-                      onClick={() => setSelectedCountry(5)}
+                      locale="por"
+                      href={`/por${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -772,11 +779,12 @@ export default function HeaderNoMenuTransparent(
                         sizes="100"
                       />
                       Portugués
-                    </button>
-                    <button
+                    </Link>
+                    <Link
                       className="dropdown-item"
+                      locale="es"
                       type="button"
-                      onClick={() => setSelectedCountry(6)}
+                      href={`/es${router.pathname}`}
                     >
                       <Image
                         className="icon-lang"
@@ -786,8 +794,8 @@ export default function HeaderNoMenuTransparent(
                         height="100"
                       />
                       Español
-                    </button>
-                    <button className="dropdown-item" type="button">
+                    </Link>
+                    <Link className="dropdown-item" type="button" locale="ned" href={`/ned${router.pathname}`}>
                       <Image
                         className="icon-lang"
                         src="/img/icon-lang-ned.png"
@@ -796,7 +804,7 @@ export default function HeaderNoMenuTransparent(
                         height="100"
                       />
                       Nederlands
-                    </button>
+                    </Link>
                   </div>
                 </li>
                 <li className="nav-item nav-search-off">

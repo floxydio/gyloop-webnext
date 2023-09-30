@@ -4,6 +4,7 @@ import '@/style/icon.css';
 import Carousel from 'react-bootstrap/Carousel';
 
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function MainHeader() {
   const [index, setIndex] = useState(0);
@@ -119,12 +120,12 @@ export default function MainHeader() {
           </ol>
 
           <div className="solution-header-button d-flex justify-content-center">
-            <a
-              href="subscribe-professional.html?trial=1"
+            <Link
+              href="/subscribe-professional"
               className="btn gyloop-btn btn-warning text-white"
             >
               {t('button')}
-            </a>
+            </Link>
           </div>
         </div>
       </header>

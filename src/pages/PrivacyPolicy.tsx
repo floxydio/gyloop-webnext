@@ -3,9 +3,10 @@ import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTranspa
 import LeadershipTitle from '@/app/components/Leadership/LeadershipTitle';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import PrivacyComponent from '@/app/components/PrivacyPolicy/PrivacyComponent';
+import axios from 'axios';
 import Head from 'next/head';
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicy(dataPrivacy) {
   return (
     <>
       <NextSEO seoHead={{
@@ -18,8 +19,18 @@ export default function PrivacyPolicy() {
       <HeaderNoMenuTransparent type={1} />
       <LeadershipTitle title="Privacy Statement for Gyloop
 " />
-      <PrivacyComponent />
+      <PrivacyComponent privacyPolicy={dataPrivacy.dataPrivacy} />
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  const fetchData = await axios.get(`http://localhost:4000/v1/privacy-policy?lang_code=${context.locale}`) 
+  const dataPrivacy = await fetchData.data.data[0]
+  return {
+    props: {
+      dataPrivacy,
+    },
+  };
 }

@@ -4,6 +4,10 @@ import '@/style/icon.css';
 import { useForm, Resolver } from 'react-hook-form';
 import Link from 'next/link';
 import Image from 'next/image';
+import axios from "axios"
+import {useState} from "react"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 type FormValues = {
   firstName: string;
@@ -17,6 +21,11 @@ type FormValues = {
   subscriptionAgreement: boolean;
   trial: boolean;
 };
+
+export interface JobPosition {
+  id: number
+  name: string
+}
 
 const resolver: Resolver<FormValues> = async (values) => {
   return {
@@ -32,16 +41,73 @@ const resolver: Resolver<FormValues> = async (values) => {
   };
 };
 
-export default function ProfessionalComponent() {
+
+
+export default function ProfessionalComponent({jobPosition}: {jobPosition:JobPosition[]}) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>({ resolver });
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const [typeSubscriber, setTypeSubscriber] = useState(0)
+  const [employeeSize, setEmployeeSize] = useState([
+    {
+      id: 1,
+      name: "<20 Employees"
+    },
+    {
+      id: 2,
+      name: "20-50 Employees"
+    },
+    {
+      id: 3,
+      name: "50-100 Employees"
+    },
+    {
+      id: 4,
+      name: "100-1000 Employees"
+    },
+    {
+      id: 5,
+      name: ">1000 Employees"
+    }
+  ])
+  const onSubmit = handleSubmit((data) => createSubscriberProfessional(data));
+  async function createSubscriberProfessional(formData: FormValues) {
+    try {
+      await axios.post("http://localhost:4000/v1/subscriber/create", {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        company_name: formData.companyName,
+        job_position: 1,
+        employee_size: 1,
+        country: formData.country,
+        email: formData.email,
+        mobile_num: formData.mobileNumber,
+        mobile_postal_code: 62,
+        trial: formData.trial,
+        type_subscriber: typeSubscriber,
+        details: ""
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+        }
+      }).then((response) => {
+         if(response.status === 200 || response.status === 201) {
+          toast.success("Success Create Subscriber")
+         }
+
+      }).catch((err) => {
+        toast.error("Failed Create Subscriber, " +err.message)
+      })
+    } catch (err) {}
+  }
+ 
+
 
   return (
     <>
+      <ToastContainer />
       <div className="login login-demo-user d-flex justify-content-center">
         <div className="row  w-100">
           <div className="col-12 col-xl-6 px-0">
@@ -134,10 +200,9 @@ export default function ProfessionalComponent() {
                             className="form-control input-label"
                             {...register('jobPosition')}
                           >
-                            <option>Board of Management</option>
-                            <option>Chief</option>
-                            <option>Executive</option>
-                            <option>Employer</option>
+                            {jobPosition.map((item) => (
+                              <option key={item.id}>{item.name}</option>
+                            ))}
                           </select>
                           <i className="select-angle far fa-angle-down"></i>
                         </div>
@@ -155,11 +220,10 @@ export default function ProfessionalComponent() {
                             className="form-control input-label"
                             {...register('employeeSize')}
                           >
-                            <option>&lt;20 Employees</option>
-                            <option>20-50 Employees</option>
-                            <option>50-100 Employees</option>
-                            <option>100-1000 Employees</option>
-                            <option>&gt;1000 Employees</option>
+                            {employeeSize.map((item) => (
+                              <option key={item.id}>{item.name}</option>
+                      
+                            ))}
                           </select>
                           <i className="select-angle far fa-angle-down"></i>
                         </div>
@@ -333,4 +397,15 @@ export default function ProfessionalComponent() {
       </div>
     </>
   );
+}
+
+
+export async function getStaticProps() {
+  const res = await axios.get("http://localhost:4000/v1/job/job-position")
+  const jobPosition = await res.data.data
+  return {
+    props: {
+      jobPosition
+    }
+  }
 }
