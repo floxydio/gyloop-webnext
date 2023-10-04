@@ -7,6 +7,7 @@ import MainHeader from '@/app/components/Main/MainHeader';
 import dynamic from 'next/dynamic';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
+import { HomepageContent } from '@/app/components/Main/MainComponent';
 
 const MainHeaderComponent = dynamic(
   () => import('@/app/components/Main/MainHeader'),
@@ -18,23 +19,13 @@ const MainHeaderComponent = dynamic(
 const MainComponent = dynamic(
   () => import('@/app/components/Main/MainComponent'),
   {
-    ssr: false,
+    ssr: true,
   }
 );
 
-interface SeoJson {
-  title_en: string;
-  title_id: string;
-  title_fr: string;
-  subtitle_en: string;
-  subtitle_id: string;
-  subtitle_fr: string;
-}
+export default function Main({ dataHomepageFeature, dataFetchContent }) {
 
-export default function Main(dataHomepageFeature) {
-  useEffect(() => {
-    require('bootstrap/dist/js/bootstrap.bundle.min.js');
-  });
+
 
   return (
     <>
@@ -47,22 +38,27 @@ export default function Main(dataHomepageFeature) {
           metaLocale: 'en-US',
         }}
       />
-
       <HeaderNoMenuTransparent type={0} />
       <MainHeaderComponent />
-      <MainComponent feature={dataHomepageFeature.dataHomepageFeature} />
+      <MainComponent feature={dataHomepageFeature.data} content={dataFetchContent.data}   />
       <Footer />
     </>
   );
 }
 
 export async function getStaticProps(context) {
-  const fetchData = await axios.get(`http://localhost:4000/v1/main/homepage-overview-item?lang_code=${context.locale}`);
-  const dataHomepageFeature = await fetchData.data.data;
+  const [dataHomepageFeature, dataFetchContent] = await Promise.all([
+    axios.get(`http://localhost:4000/v1/main/homepage-overview-item?lang_code=${context.locale}`),
+    axios.get(`http://localhost:4000/v1/main/homepage-content/get?lang_code=${context.locale}`),
+  ])
+  console.log("Data Homepage Feature " + dataHomepageFeature.data.data)
+  console.log("Data Fetch Content " + dataFetchContent.data.data)
+
   return {
     props: {
-      dataHomepageFeature,
+      dataHomepageFeature : dataHomepageFeature.data,
+      dataFetchContent:  dataFetchContent.data,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
-    },
+    }
   };
 }

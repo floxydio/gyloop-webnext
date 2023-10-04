@@ -26,6 +26,26 @@ interface HomepageFeatureEntities {
   updatedAt:  Date;
 }
 
+export interface HomepageContent {
+  id:                 number;
+  lang_code:          string;
+  title_text:         string;
+  title_color:        string;
+  second_title_text:  string | null;
+  second_title_color: string | null;
+  subtitle_text:      string;
+  subtitle_color:     string;
+  image_background:   string;
+  btn_link:           string;
+  btn_caption:        string;
+  btn_color:          string;
+  btn_type:           string;
+  layout_type:        number;
+  createdAt:          Date;
+  updatedAt:          Date | null;
+}
+
+
 
 interface FeatureJson {
   image: string;
@@ -37,9 +57,11 @@ interface FeatureJson {
   desc_fr: string;
 }
 
-export default function MainComponent({feature}: {feature: HomepageFeatureEntities[]}) {
+export default function MainComponent({feature,content}: {feature: HomepageFeatureEntities[], content: HomepageContent[]},) {
   const [index, setIndex] = useState(0);
   const t = useTranslations('MainComponent');
+  console.log("Array Feature" + feature)
+  // console.log("Array Content" + content[0].title_text)
 
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
@@ -68,6 +90,7 @@ export default function MainComponent({feature}: {feature: HomepageFeatureEntiti
             </div>
             {feature.map((item, index) => {
               return (
+                <>
                 <div
                   key={index}
                   className="col-12 col-md-4 d-flex align-items-center"
@@ -94,6 +117,10 @@ export default function MainComponent({feature}: {feature: HomepageFeatureEntiti
                     </div>
                   </div>
                 </div>
+                <div className="col-12 d-md-none">
+              <hr className="hr-small bg-blue" />
+            </div>
+                </>
               );
             })}
             {/* <div className="col-12 col-md-4">
@@ -171,7 +198,10 @@ export default function MainComponent({feature}: {feature: HomepageFeatureEntiti
         </div>
       </div>
 
-      <div className="business-feature home-feature-1">
+      {/* Content */}
+
+
+      {/* <div className="business-feature home-feature-1">
         <div className="container">
           <div className="content">
             <h5 className="title">
@@ -196,8 +226,46 @@ export default function MainComponent({feature}: {feature: HomepageFeatureEntiti
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
+      {content.map((item,index) => {
+        return (
+          <> 
+          <div className={`business-feature home-feature-${index+1}`} style={{
+            position: "relative",
+            height: "500px",
+            backgroundSize: "cover",
+            backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}>
+        <div className="container">
+          <div className="content">
+            <h5 className="title">
+              {item.title_text}
+            </h5>
+
+            <p className="text">
+              {item.subtitle_text}
+            </p>
+            <Link
+              href="/Solutions"
+              aria-label="Solutions Overview"
+              className="gyloop-link d-block"
+            >
+              {item.btn_caption}
+              <i className="fas fa-angle-right"></i>
+            </Link>
+          </div>
+        </div>
+      </div>
+          
+          </>
+        )
+      })}
+
+
+{/* 
       <div className="business-feature home-feature-2">
         <div className="container">
           <div className="content">
@@ -259,7 +327,7 @@ export default function MainComponent({feature}: {feature: HomepageFeatureEntiti
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="billing-automation-swiper swiper-home">
         <div className="container">
@@ -444,21 +512,4 @@ export default function MainComponent({feature}: {feature: HomepageFeatureEntiti
       </div>
     </>
   );
-}
-
-export async function getStaticProps(context) {
-  const fetchData = await fetch(
-    'https://mocki.io/v1/000c49a0-64a9-4f13-bc8a-0540d05bde75'
-  );
-  const dataFeature = await fetchData.json();
-  const seoJsonData = dataFeature.data as [FeatureJson];
-  const getFeatureSeo = seoJsonData.find(
-    (item) => item.title_en === context.title_en
-  );
-
-  return {
-    props: {
-      getFeatureSeo,
-    },
-  };
 }
