@@ -13710,12 +13710,6 @@ footer .logo-web-lg {
   color: #ffffff;
   margin-bottom: 8px;
 }
-.business-feature .gyloop-link {
-  position: absolute;
-  font-size: 13px;
-  line-height: 15px;
-  bottom: 48px;
-}
 
 .business-pricing {
   background-color: #F7F9FC;
@@ -16105,11 +16099,6 @@ footer .logo-web-lg {
     line-height: 16px;
     margin-bottom: 10px;
   }
-  .business-feature .gyloop-link {
-    font-size: 14px;
-    line-height: 16px;
-    bottom: 47px;
-  }
 
   .business-pricing .container {
     max-width: 760px;
@@ -18146,12 +18135,6 @@ footer .logo-web-lg {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 10px;
-  }
-  .business-feature .gyloop-link {
-    position: absolute;
-    font-size: 16px;
-    line-height: 20px;
-    bottom: 76px;
   }
 
   .business-pricing .container {

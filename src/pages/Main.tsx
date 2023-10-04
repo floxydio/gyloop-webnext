@@ -19,7 +19,7 @@ const MainHeaderComponent = dynamic(
 const MainComponent = dynamic(
   () => import('@/app/components/Main/MainComponent'),
   {
-    ssr: true,
+    ssr: false,
   }
 );
 
@@ -51,8 +51,6 @@ export async function getStaticProps(context) {
     axios.get(`http://localhost:4000/v1/main/homepage-overview-item?lang_code=${context.locale}`),
     axios.get(`http://localhost:4000/v1/main/homepage-content/get?lang_code=${context.locale}`),
   ])
-  console.log("Data Homepage Feature " + dataHomepageFeature.data.data)
-  console.log("Data Fetch Content " + dataFetchContent.data.data)
 
   return {
     props: {

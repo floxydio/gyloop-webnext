@@ -10,39 +10,39 @@ import { useTranslations } from 'next-intl';
 
 
 interface HomepageFeatureEntities {
-  id:         number;
+  id: number;
   item_place: number;
-  lang_code:  string;
-  ttle_text:  string;
-  ttle_clor:  string;
-  shrt_desc:  string;
-  shrt_clor:  string;
-  ax_link:    string;
-  ax_capt:    string;
-  ax_type:    string;
-  img_ft:     string;
-  is_publ:    boolean;
-  createdAt:  Date;
-  updatedAt:  Date;
+  lang_code: string;
+  ttle_text: string;
+  ttle_clor: string;
+  shrt_desc: string;
+  shrt_clor: string;
+  ax_link: string;
+  ax_capt: string;
+  ax_type: string;
+  img_ft: string;
+  is_publ: boolean;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface HomepageContent {
-  id:                 number;
-  lang_code:          string;
-  title_text:         string;
-  title_color:        string;
-  second_title_text:  string | null;
+  id: number;
+  lang_code: string;
+  title_text: string;
+  title_color: string;
+  second_title_text: string | null;
   second_title_color: string | null;
-  subtitle_text:      string;
-  subtitle_color:     string;
-  image_background:   string;
-  btn_link:           string;
-  btn_caption:        string;
-  btn_color:          string;
-  btn_type:           string;
-  layout_type:        number;
-  createdAt:          Date;
-  updatedAt:          Date | null;
+  subtitle_text: string;
+  subtitle_color: string;
+  image_background: string;
+  btn_link: string;
+  btn_caption: string;
+  btn_color: string;
+  btn_type: string;
+  layout_type: number;
+  createdAt: Date;
+  updatedAt: Date | null;
 }
 
 
@@ -57,7 +57,7 @@ interface FeatureJson {
   desc_fr: string;
 }
 
-export default function MainComponent({feature,content}: {feature: HomepageFeatureEntities[], content: HomepageContent[]},) {
+export default function MainComponent({ feature, content }: { feature: HomepageFeatureEntities[], content: HomepageContent[] },) {
   const [index, setIndex] = useState(0);
   const t = useTranslations('MainComponent');
   console.log("Array Feature" + feature)
@@ -91,35 +91,35 @@ export default function MainComponent({feature,content}: {feature: HomepageFeatu
             {feature.map((item, index) => {
               return (
                 <>
-                <div
-                  key={index}
-                  className="col-12 col-md-4 d-flex align-items-center"
-                >
-                  <div className="card bg-transparent rounded-0 border-0">
-                    <div className="card-body">
-                      <Image
-                        src={process.env.IMAGE_HOME + item.img_ft}
-                        className="features-image"
-                        alt="gyloop-icon-home-customer-relationship"
-                        width={0}
-                        height={0}
-                        sizes="100"
-                      />
-                      <div className="card-title">{item.ttle_text}</div>
-                      <div className="card-text">{item.shrt_desc}</div>
-                      <Link
-                        aria-label="Go To Product Business CRM"
-                        href={item.ax_link}
-                        className="gyloop-link"
-                      >
-                        {item.ax_capt} <i className="fas fa-angle-right"></i>
-                      </Link>
+                  <div
+                    key={index}
+                    className="col-12 col-md-4 d-flex align-items-center"
+                  >
+                    <div className="card bg-transparent rounded-0 border-0">
+                      <div className="card-body">
+                        <Image
+                          src={process.env.IMAGE_HOME + item.img_ft}
+                          className="features-image"
+                          alt="gyloop-icon-home-customer-relationship"
+                          width={0}
+                          height={0}
+                          sizes="100"
+                        />
+                        <div className="card-title">{item.ttle_text}</div>
+                        <div className="card-text">{item.shrt_desc}</div>
+                        <Link
+                          aria-label="Go To Product Business CRM"
+                          href={item.ax_link}
+                          className="gyloop-link"
+                        >
+                          {item.ax_capt} <i className="fas fa-angle-right"></i>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-12 d-md-none">
-              <hr className="hr-small bg-blue" />
-            </div>
+                  <div className="col-12 d-md-none">
+                    <hr className="hr-small bg-blue" />
+                  </div>
                 </>
               );
             })}
@@ -198,74 +198,97 @@ export default function MainComponent({feature,content}: {feature: HomepageFeatu
         </div>
       </div>
 
-      {/* Content */}
-
-
-      {/* <div className="business-feature home-feature-1">
-        <div className="container">
-          <div className="content">
-            <h5 className="title">
-              Generate leads and manage source of supply at the same platform,
-              and connect to them all.
-            </h5>
-
-            <p className="text">
-              We are not only providing you the innovative cloud application to
-              manage your sales and procurement activities, but also connecting
-              you to your business partners: get their product updates, new
-              pricing, catalog released, and automate the business transaction
-              documents.
-            </p>
-            <Link
-              href="/Solutions"
-              aria-label="Solutions Overview"
-              className="gyloop-link d-block"
-            >
-              {t('button')}
-              <i className="fas fa-angle-right"></i>
-            </Link>
-          </div>
-        </div>
-      </div> */}
-
-      {content.map((item,index) => {
+      {content.map((item, index) => {
         return (
-          <> 
-          <div className={`business-feature home-feature-${index+1}`} style={{
-            position: "relative",
-            height: "500px",
-            backgroundSize: "cover",
-            backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}>
-        <div className="container">
-          <div className="content">
-            <h5 className="title">
-              {item.title_text}
-            </h5>
+          <>
+            {item.layout_type === 1 ? <> 
+            
+              <div className={`business-feature home-feature-${index + 1}`} style={{
+              position: "relative",
+              height: "500px",
+              backgroundSize: "cover",
+              backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}>
+              <div className="container">
+                <div className="content">
+                  <h5 className="title">
+                    {item.title_text}
+                  </h5>
 
-            <p className="text">
-              {item.subtitle_text}
-            </p>
-            <Link
-              href="/Solutions"
-              aria-label="Solutions Overview"
-              className="gyloop-link d-block"
-            >
-              {item.btn_caption}
-              <i className="fas fa-angle-right"></i>
-            </Link>
-          </div>
-        </div>
-      </div>
-          
+                  <p className="text">
+                    {item.subtitle_text}
+                  </p>
+                  <Link
+                    href="/Solutions"
+                    aria-label="Solutions Overview"
+                    className="gyloop-link d-block"
+                    style={{
+                      position: "absolute",
+                      fontSize: "18px",
+                      lineHeight: "15px",
+                      bottom: "48px",
+                      color: item.btn_type === "transparent" ? "white" : item.btn_color,
+                    }}
+                  >
+                    {item.btn_caption}
+                    <i className="fas fa-angle-right" style={{
+                      marginLeft: 10
+                    }}></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            </> : <> 
+            
+            
+            <div className={`business-feature home-feature-${index + 1}`} style={{
+              position: "relative",
+              height: "500px",
+              backgroundSize: "cover",
+              backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}>
+              <div className="container d-flex justify-content-md-end">
+                <div className="content">
+                  <h5 className="title">
+                    {item.title_text}
+                  </h5>
+
+                  <p className="text">
+                    {item.subtitle_text}
+                  </p>
+                  <Link
+                    href="/Solutions"
+                    aria-label="Solutions Overview"
+                    className="gyloop-link d-block"
+                    style={{
+                      position: "absolute",
+                      fontSize: "18px",
+                      lineHeight: "15px",
+                      bottom: "48px",
+                      color: item.btn_type === "transparent" ? "white" : item.btn_color,
+                    }}
+                  >
+                    {item.btn_caption}
+                    <i className="fas fa-angle-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+
+            </>}
+
           </>
         )
       })}
 
 
-{/* 
+      {/* 
       <div className="business-feature home-feature-2">
         <div className="container">
           <div className="content">
