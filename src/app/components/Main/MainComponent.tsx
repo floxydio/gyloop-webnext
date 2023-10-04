@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { useTranslations } from 'next-intl';
 
-
 interface HomepageFeatureEntities {
   id: number;
   item_place: number;
@@ -89,6 +88,7 @@ export default function MainComponent({ feature, content }: { feature: HomepageF
               <hr />
             </div>
             {feature.map((item, index) => {
+              console.log(process.env.IMAGE_HOME + item.img_ft);
               return (
                 <>
                   <div
