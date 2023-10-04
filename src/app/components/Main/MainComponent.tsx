@@ -8,24 +8,22 @@ import { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { useTranslations } from 'next-intl';
 
-
 interface HomepageFeatureEntities {
-  id:         number;
+  id: number;
   item_place: number;
-  lang_code:  string;
-  ttle_text:  string;
-  ttle_clor:  string;
-  shrt_desc:  string;
-  shrt_clor:  string;
-  ax_link:    string;
-  ax_capt:    string;
-  ax_type:    string;
-  img_ft:     string;
-  is_publ:    boolean;
-  createdAt:  Date;
-  updatedAt:  Date;
+  lang_code: string;
+  ttle_text: string;
+  ttle_clor: string;
+  shrt_desc: string;
+  shrt_clor: string;
+  ax_link: string;
+  ax_capt: string;
+  ax_type: string;
+  img_ft: string;
+  is_publ: boolean;
+  createdAt: Date;
+  updatedAt: Date;
 }
-
 
 interface FeatureJson {
   image: string;
@@ -37,7 +35,11 @@ interface FeatureJson {
   desc_fr: string;
 }
 
-export default function MainComponent({feature}: {feature: HomepageFeatureEntities[]}) {
+export default function MainComponent({
+  feature,
+}: {
+  feature: HomepageFeatureEntities[];
+}) {
   const [index, setIndex] = useState(0);
   const t = useTranslations('MainComponent');
 
@@ -67,6 +69,7 @@ export default function MainComponent({feature}: {feature: HomepageFeatureEntiti
               <hr />
             </div>
             {feature.map((item, index) => {
+              console.log(process.env.IMAGE_HOME + item.img_ft);
               return (
                 <div
                   key={index}

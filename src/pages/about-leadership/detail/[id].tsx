@@ -1,33 +1,62 @@
-import { useRouter } from 'next/router'
-import LeadershipDetailComponent from '@/app/components/Leadership/LeadershipDetail'
-import Head from 'next/head'
-import HeaderNoMenu from '@/app/components/Header/HeaderNoMenu'
-import Footer from '@/app/components/Footer/Footer'
-import LeadershipTitle from '@/app/components/Leadership/LeadershipTitle'
-import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent'
-import NextSEO from '@/app/components/NextHead/NextSEO'
+import { useRouter } from 'next/router';
+import LeadershipDetailComponent from '@/app/components/Leadership/LeadershipDetail';
+import Head from 'next/head';
+import HeaderNoMenu from '@/app/components/Header/HeaderNoMenu';
+import Footer from '@/app/components/Footer/Footer';
+import LeadershipTitle from '@/app/components/Leadership/LeadershipTitle';
+import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
+import NextSEO from '@/app/components/NextHead/NextSEO';
+import axios from 'axios';
 
-export default function DetailLeadership() {
-  const router = useRouter()
+export default function DetailLeadership(data) {
+  const router = useRouter();
+  console.log(router.query.id);
 
   return (
     <>
-      <NextSEO seoHead={{
-        title: "Gyloop - Leadership",
-        metaDescription: "Gyloop - Leadership",
-        metaKeywords: "Gyloop - Leadership",
-        metaTitle: "Gyloop - Leadership",
-        metaLocale: "en-US"
-        
-      }} />
+      <NextSEO
+        seoHead={{
+          title: 'Gyloop - Leadership',
+          metaDescription: 'Gyloop - Leadership',
+          metaKeywords: 'Gyloop - Leadership',
+          metaTitle: 'Gyloop - Leadership',
+          metaLocale: 'en-US',
+        }}
+      />
 
-
-
-      <HeaderNoMenuTransparent type = {1} />
+      <HeaderNoMenuTransparent type={1} />
       <LeadershipTitle title="Leadership" />
 
-      <LeadershipDetailComponent />
+      <LeadershipDetailComponent feature={data.data.data} />
       <Footer />
     </>
-  )
+  );
+}
+
+export async function getStaticPaths() {
+  const fetchData = await axios.get(
+    `http://localhost:4000/v1/about/leadership`
+  );
+  const dataLeadership = await fetchData.data.data;
+  const paramLeaderId = dataLeadership.map((e) => ({
+    params: { id: e.id.toString() },
+  }));
+
+  return { paths: paramLeaderId, fallback: false };
+}
+
+export async function getStaticProps(context) {
+  const { params } = context;
+  console.log(params.id);
+  const fetchDetail = await axios.get(
+    `http://localhost:4000/v1/about/leadership/detail/${params.id}`
+  );
+
+  const data = fetchDetail.data;
+
+  return {
+    props: {
+      data,
+    },
+  };
 }
