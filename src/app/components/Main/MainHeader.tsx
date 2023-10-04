@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import '@/style/style.min.css';
 import '@/style/icon.css';
 import Carousel from 'react-bootstrap/Carousel';
-
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
@@ -23,8 +23,14 @@ export default function MainHeader() {
 
   return (
     <>
-      <header className="header-bg-cover billing-automation-header d-flex align-items-end about-header home-header">
+    
+      <header className="header-bg-cover billing-automation-header d-flex align-items-end about-header home-header" >
         <div className="container">
+        
+      {/* <img src="img/background_homepage_header_1.png" alt="Gyloop Logo" style={{
+        height: "444px!important",
+        textAlign: "center"
+      }} /> */}
           {/* <div
             id="carouselExampleIndicators"
             className="carousel slide"

@@ -7,7 +7,25 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { useTranslations } from 'next-intl';
-// import t from "@/translate"
+
+
+interface HomepageFeatureEntities {
+  id:         number;
+  item_place: number;
+  lang_code:  string;
+  ttle_text:  string;
+  ttle_clor:  string;
+  shrt_desc:  string;
+  shrt_clor:  string;
+  ax_link:    string;
+  ax_capt:    string;
+  ax_type:    string;
+  img_ft:     string;
+  is_publ:    boolean;
+  createdAt:  Date;
+  updatedAt:  Date;
+}
+
 
 interface FeatureJson {
   image: string;
@@ -19,7 +37,7 @@ interface FeatureJson {
   desc_fr: string;
 }
 
-export default function MainComponent() {
+export default function MainComponent({feature}: {feature: HomepageFeatureEntities[]}) {
   const [index, setIndex] = useState(0);
   const t = useTranslations('MainComponent');
 
@@ -48,8 +66,37 @@ export default function MainComponent() {
             <div className="col-8 offset-2 d-none d-md-block position-absolute hr-bc-container">
               <hr />
             </div>
-
-            <div className="col-12 col-md-4">
+            {feature.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="col-12 col-md-4 d-flex align-items-center"
+                >
+                  <div className="card bg-transparent rounded-0 border-0">
+                    <div className="card-body">
+                      <Image
+                        src={process.env.IMAGE_HOME + item.img_ft}
+                        className="features-image"
+                        alt="gyloop-icon-home-customer-relationship"
+                        width={0}
+                        height={0}
+                        sizes="100"
+                      />
+                      <div className="card-title">{item.ttle_text}</div>
+                      <div className="card-text">{item.shrt_desc}</div>
+                      <Link
+                        aria-label="Go To Product Business CRM"
+                        href={item.ax_link}
+                        className="gyloop-link"
+                      >
+                        {item.ax_capt} <i className="fas fa-angle-right"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+            {/* <div className="col-12 col-md-4">
               <div className="card bg-transparent rounded-0 border-0">
                 <div className="card-body">
                   <Image
@@ -119,7 +166,7 @@ export default function MainComponent() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

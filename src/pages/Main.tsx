@@ -6,6 +6,7 @@ import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTranspa
 import MainHeader from '@/app/components/Main/MainHeader';
 import dynamic from 'next/dynamic';
 import NextSEO from '@/app/components/NextHead/NextSEO';
+import axios from 'axios';
 
 const MainHeaderComponent = dynamic(
   () => import('@/app/components/Main/MainHeader'),
@@ -30,7 +31,7 @@ interface SeoJson {
   subtitle_fr: string;
 }
 
-export default function Main({ getSeo }: { getSeo: SeoJson }) {
+export default function Main(dataHomepageFeature) {
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle.min.js');
   });
@@ -49,21 +50,18 @@ export default function Main({ getSeo }: { getSeo: SeoJson }) {
 
       <HeaderNoMenuTransparent type={0} />
       <MainHeaderComponent />
-      <MainComponent />
+      <MainComponent feature={dataHomepageFeature.dataHomepageFeature} />
       <Footer />
     </>
   );
 }
 
 export async function getStaticProps(context) {
-  // const fetchData = await fetch(
-  //   'https://mocki.io/v1/0b85e732-3869-4fec-80a4-e7a8ecbb0569'
-  // );
-  // const data = await fetchData.json();
-  // const seoJsonData = data.data as [SeoJson];
-  // const getSeo = seoJsonData.find((item) => item.title_en == context.locale);
+  const fetchData = await axios.get(`http://localhost:4000/v1/main/homepage-overview-item?lang_code=${context.locale}`);
+  const dataHomepageFeature = await fetchData.data.data;
   return {
     props: {
+      dataHomepageFeature,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };
