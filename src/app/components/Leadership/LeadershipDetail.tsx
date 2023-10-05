@@ -18,7 +18,6 @@ interface AboutusLeadershipEntities {
 }
 
 export default function LeadershipDetailComponent({ feature }) {
-  console.log(feature);
   return (
     <>
       <div className="leadership-detail">
