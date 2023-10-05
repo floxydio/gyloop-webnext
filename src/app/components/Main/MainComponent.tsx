@@ -1,12 +1,11 @@
-import Footer from '../Footer/Footer';
-import '@/style/style.min.css';
 import '@/style/icon.css';
+import '@/style/style.min.css';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import Link from 'next/link';
 import 'popper.js';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { useTranslations } from 'next-intl';
 
 interface HomepageFeatureEntities {
   id: number;
@@ -59,8 +58,6 @@ interface FeatureJson {
 export default function MainComponent({ feature, content }: { feature: HomepageFeatureEntities[], content: HomepageContent[] },) {
   const [index, setIndex] = useState(0);
   const t = useTranslations('MainComponent');
-  console.log("Array Feature" + feature)
-  // console.log("Array Content" + content[0].title_text)
 
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
@@ -201,84 +198,84 @@ export default function MainComponent({ feature, content }: { feature: HomepageF
       {content.map((item, index) => {
         return (
           <>
-            {item.layout_type === 1 ? <> 
-            
+            {item.layout_type === 1 ? <>
+
               <div className={`business-feature home-feature-${index + 1}`} style={{
-              position: "relative",
-              height: "500px",
-              backgroundSize: "cover",
-              backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}>
-              <div className="container">
-                <div className="content">
-                  <h5 className="title">
-                    {item.title_text}
-                  </h5>
+                position: "relative",
+                height: "500px",
+                backgroundSize: "cover",
+                backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}>
+                <div className="container">
+                  <div className="content">
+                    <h5 className="title">
+                      {item.title_text}
+                    </h5>
 
-                  <p className="text">
-                    {item.subtitle_text}
-                  </p>
-                  <Link
-                    href="/Solutions"
-                    aria-label="Solutions Overview"
-                    className="gyloop-link d-block"
-                    style={{
-                      position: "absolute",
-                      fontSize: "18px",
-                      lineHeight: "15px",
-                      bottom: "48px",
-                      color: item.btn_type === "transparent" ? "white" : item.btn_color,
-                    }}
-                  >
-                    {item.btn_caption}
-                    <i className="fas fa-angle-right" style={{
-                      marginLeft: 10
-                    }}></i>
-                  </Link>
+                    <p className="text">
+                      {item.subtitle_text}
+                    </p>
+                    <Link
+                      href="/Solutions"
+                      aria-label="Solutions Overview"
+                      className="gyloop-link d-block"
+                      style={{
+                        position: "absolute",
+                        fontSize: "18px",
+                        lineHeight: "15px",
+                        bottom: "48px",
+                        color: item.btn_type === "transparent" ? "white" : item.btn_color,
+                      }}
+                    >
+                      {item.btn_caption}
+                      <i className="fas fa-angle-right" style={{
+                        marginLeft: 10
+                      }}></i>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            </> : <> 
-            
-            
-            <div className={`business-feature home-feature-${index + 1}`} style={{
-              position: "relative",
-              height: "500px",
-              backgroundSize: "cover",
-              backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}>
-              <div className="container d-flex justify-content-md-end">
-                <div className="content">
-                  <h5 className="title">
-                    {item.title_text}
-                  </h5>
 
-                  <p className="text">
-                    {item.subtitle_text}
-                  </p>
-                  <Link
-                    href="/Solutions"
-                    aria-label="Solutions Overview"
-                    className="gyloop-link d-block"
-                    style={{
-                      position: "absolute",
-                      fontSize: "18px",
-                      lineHeight: "15px",
-                      bottom: "48px",
-                      color: item.btn_type === "transparent" ? "white" : item.btn_color,
-                    }}
-                  >
-                    {item.btn_caption}
-                    <i className="fas fa-angle-right"></i>
-                  </Link>
+            </> : <>
+
+
+              <div className={`business-feature home-feature-${index + 1}`} style={{
+                position: "relative",
+                height: "500px",
+                backgroundSize: "cover",
+                backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}>
+                <div className="container d-flex justify-content-md-end">
+                  <div className="content">
+                    <h5 className="title">
+                      {item.title_text}
+                    </h5>
+
+                    <p className="text">
+                      {item.subtitle_text}
+                    </p>
+                    <Link
+                      href="/Solutions"
+                      aria-label="Solutions Overview"
+                      className="gyloop-link d-block"
+                      style={{
+                        position: "absolute",
+                        fontSize: "18px",
+                        lineHeight: "15px",
+                        bottom: "48px",
+                        color: item.btn_type === "transparent" ? "white" : item.btn_color,
+                      }}
+                    >
+                      {item.btn_caption}
+                      <i className="fas fa-angle-right"></i>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
 
 
             </>}

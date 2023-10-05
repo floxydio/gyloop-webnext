@@ -22,7 +22,6 @@ export default function LeadershipCard({
       <div className="card">
         <div className="card-body p-3 p-xl-4">
           {feature.map((item, index) => {
-            console.log(process.env.IMAGE_ABOUT + item.imge_prof);
             return (
               <div key={index}>
                 <Image

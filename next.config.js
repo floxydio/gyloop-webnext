@@ -6,6 +6,7 @@ const nextConfig = {
     REACT_PROD_URL: 'https://nextjs-portfolio-website-ten.vercel.app',
     IMAGE_HOME: 'http://localhost:4000/v1/image-home/',
     IMAGE_ABOUT: 'http://localhost:4000/v1/image-about/',
+    IMAGE_PRODUCT: 'http://localhost:4000/v1/image-product/',
   },
   compiler: {
     reactRemoveProperties: true,

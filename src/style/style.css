@@ -13525,7 +13525,7 @@ footer .logo-web-lg {
 }
 
 .business-header {
-  background-image: url(../../public/img/background_business_header_mobile.png);
+  /* background-image: url(../../public/img/background_business_header_mobile.png); */
 }
 .business-header .logo {
   width: 35px;
@@ -15967,7 +15967,7 @@ footer .logo-web-lg {
   }
 
   .business-header {
-    background-image: url(../../public/img/background_business_header_tablet.png);
+    /* background-image: url(../../public/img/background_business_header_tablet.png); */
   }
   .business-header .content {
     width: 356px;
@@ -17921,7 +17921,7 @@ footer .logo-web-lg {
   }
 
   .business-header {
-    background-image: url(../../public/img/background_business_header_website.png);
+    /* background-image: url(../../public/img/background_business_header_website.png); */
   }
   .business-header .content {
     width: 600px;

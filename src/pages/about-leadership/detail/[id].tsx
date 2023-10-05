@@ -10,7 +10,6 @@ import axios from 'axios';
 
 export default function DetailLeadership(data) {
   const router = useRouter();
-  console.log(router.query.id);
 
   return (
     <>
