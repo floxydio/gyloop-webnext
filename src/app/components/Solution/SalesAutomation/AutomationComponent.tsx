@@ -5,7 +5,47 @@ import { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { useTranslations } from 'next-intl';
 
-export default function AutomationComponent() {
+interface SolutionFunctionEntities {
+  id: number;
+  lang_code: string;
+  page_code: string;
+  func_name: string;
+  func_tagx: string;
+  desc_lin1: string;
+  desc_lin2: string;
+  link_list: string;
+  imge_func: string;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface SolutionProductEntities {
+  id: number;
+  lang_code: string;
+  head_text: string;
+  head_textclr: string;
+  tagx_text: string;
+  tagx_clor: string;
+  long_desc: string;
+  long_clor: string;
+  ax_link: string;
+  ax_capt: string;
+  ax_type: string;
+  imge_feat: string;
+  is_publ: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export default function AutomationComponent({
+  feature,
+  product,
+}: {
+  feature: SolutionFunctionEntities[];
+  product: SolutionProductEntities[];
+}) {
   const [index, setIndex] = useState(0);
 
   const t = useTranslations('SolutionsSalesAutomationHeader');
@@ -16,20 +56,6 @@ export default function AutomationComponent() {
 
   return (
     <>
-      <header className="header-bg-cover billing-automation-header d-flex align-items-end sales-automation-header">
-        <div className="container">
-          <h1 className="title">{t('title')}</h1>
-          <p className="subtitle">
-            <span className="d-md-none d-xl-inline">{t('subtitle')}</span>
-            <span className="d-none d-md-inline d-xl-none">
-              Bring the power of business integration to your business community
-            </span>
-          </p>
-          <h5 className="info">{t('secondSubtitle')}</h5>
-        </div>
-      </header>
-
-
       <div className="billing-automation-swiper">
         <div className="container">
           <h2 className="title">Automate your sales processing</h2>

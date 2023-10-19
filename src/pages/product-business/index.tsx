@@ -9,18 +9,17 @@ import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
 
 export default function Businnes({ dataHeader }) {
-
-
   return (
     <>
-
-      <NextSEO seoHead={{
-        title: "Gyloop - Business",
-        metaDescription: "Gyloop - Business",
-        metaKeywords: "Gyloop - Business",
-        metaTitle: "Gyloop - Business",
-        metaLocale: "en-US"
-      }} />
+      <NextSEO
+        seoHead={{
+          title: 'Gyloop - Business',
+          metaDescription: 'Gyloop - Business',
+          metaKeywords: 'Gyloop - Business',
+          metaTitle: 'Gyloop - Business',
+          metaLocale: 'en-US',
+        }}
+      />
 
       <HeaderNoMenuTransparent type={0} />
       <HeaderBusiness dataHeader={dataHeader[0]} />
@@ -31,12 +30,14 @@ export default function Businnes({ dataHeader }) {
 }
 
 export async function getStaticProps(context) {
-  const fetchHeader = await axios.get(`http://localhost:4000/v1/product-header/get?lang_code=${context.locale}&page_code=business`)
-  const dataHeader = fetchHeader.data.data
+  const fetchHeader = await axios.get(
+    `http://localhost:4000/v1/product-header/get?lang_code=${context.locale}&page_code=business`
+  );
+  const dataHeader = fetchHeader.data.data;
   return {
     props: {
       dataHeader: dataHeader,
-      messages: (await import(`@/translate/${context.locale}.json`)).default
-    }
+      messages: (await import(`@/translate/${context.locale}.json`)).default,
+    },
   };
 }

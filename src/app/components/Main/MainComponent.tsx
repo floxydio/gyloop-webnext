@@ -43,8 +43,6 @@ export interface HomepageContent {
   updatedAt: Date | null;
 }
 
-
-
 interface FeatureJson {
   image: string;
   title_en: string;
@@ -55,7 +53,13 @@ interface FeatureJson {
   desc_fr: string;
 }
 
-export default function MainComponent({ feature, content }: { feature: HomepageFeatureEntities[], content: HomepageContent[] },) {
+export default function MainComponent({
+  feature,
+  content,
+}: {
+  feature: HomepageFeatureEntities[];
+  content: HomepageContent[];
+}) {
   const [index, setIndex] = useState(0);
   const t = useTranslations('MainComponent');
 
@@ -85,7 +89,6 @@ export default function MainComponent({ feature, content }: { feature: HomepageF
               <hr />
             </div>
             {feature.map((item, index) => {
-              console.log(process.env.IMAGE_HOME + item.img_ft);
               return (
                 <>
                   <div
@@ -198,92 +201,99 @@ export default function MainComponent({ feature, content }: { feature: HomepageF
       {content.map((item, index) => {
         return (
           <>
-            {item.layout_type === 1 ? <>
+            {item.layout_type === 1 ? (
+              <>
+                <div
+                  className={`business-feature home-feature-${index + 1}`}
+                  style={{
+                    position: 'relative',
+                    height: '500px',
+                    backgroundSize: 'cover',
+                    backgroundImage: `url(${
+                      process.env.IMAGE_HOME + item.image_background
+                    })`,
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }}
+                >
+                  <div className="container">
+                    <div className="content">
+                      <h5 className="title">{item.title_text}</h5>
 
-              <div className={`business-feature home-feature-${index + 1}`} style={{
-                position: "relative",
-                height: "500px",
-                backgroundSize: "cover",
-                backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}>
-                <div className="container">
-                  <div className="content">
-                    <h5 className="title">
-                      {item.title_text}
-                    </h5>
-
-                    <p className="text">
-                      {item.subtitle_text}
-                    </p>
-                    <Link
-                      href="/Solutions"
-                      aria-label="Solutions Overview"
-                      className="gyloop-link d-block"
-                      style={{
-                        position: "absolute",
-                        fontSize: "18px",
-                        lineHeight: "15px",
-                        bottom: "48px",
-                        color: item.btn_type === "transparent" ? "white" : item.btn_color,
-                      }}
-                    >
-                      {item.btn_caption}
-                      <i className="fas fa-angle-right" style={{
-                        marginLeft: 10
-                      }}></i>
-                    </Link>
+                      <p className="text">{item.subtitle_text}</p>
+                      <Link
+                        href="/Solutions"
+                        aria-label="Solutions Overview"
+                        className="gyloop-link d-block"
+                        style={{
+                          position: 'absolute',
+                          fontSize: '18px',
+                          lineHeight: '15px',
+                          bottom: '48px',
+                          color:
+                            item.btn_type === 'transparent'
+                              ? 'white'
+                              : item.btn_color,
+                        }}
+                      >
+                        {item.btn_caption}
+                        <i
+                          className="fas fa-angle-right"
+                          style={{
+                            marginLeft: 10,
+                          }}
+                        ></i>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </>
+            ) : (
+              <>
+                <div
+                  className={`business-feature home-feature-${index + 1}`}
+                  style={{
+                    position: 'relative',
+                    height: '500px',
+                    backgroundSize: 'cover',
+                    backgroundImage: `url(${
+                      process.env.IMAGE_HOME + item.image_background
+                    })`,
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }}
+                >
+                  <div className="container d-flex justify-content-md-end">
+                    <div className="content">
+                      <h5 className="title">{item.title_text}</h5>
 
-            </> : <>
-
-
-              <div className={`business-feature home-feature-${index + 1}`} style={{
-                position: "relative",
-                height: "500px",
-                backgroundSize: "cover",
-                backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background})`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}>
-                <div className="container d-flex justify-content-md-end">
-                  <div className="content">
-                    <h5 className="title">
-                      {item.title_text}
-                    </h5>
-
-                    <p className="text">
-                      {item.subtitle_text}
-                    </p>
-                    <Link
-                      href="/Solutions"
-                      aria-label="Solutions Overview"
-                      className="gyloop-link d-block"
-                      style={{
-                        position: "absolute",
-                        fontSize: "18px",
-                        lineHeight: "15px",
-                        bottom: "48px",
-                        color: item.btn_type === "transparent" ? "white" : item.btn_color,
-                      }}
-                    >
-                      {item.btn_caption}
-                      <i className="fas fa-angle-right"></i>
-                    </Link>
+                      <p className="text">{item.subtitle_text}</p>
+                      <Link
+                        href="/Solutions"
+                        aria-label="Solutions Overview"
+                        className="gyloop-link d-block"
+                        style={{
+                          position: 'absolute',
+                          fontSize: '18px',
+                          lineHeight: '15px',
+                          bottom: '48px',
+                          color:
+                            item.btn_type === 'transparent'
+                              ? 'white'
+                              : item.btn_color,
+                        }}
+                      >
+                        {item.btn_caption}
+                        <i className="fas fa-angle-right"></i>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-
-            </>}
-
+              </>
+            )}
           </>
-        )
+        );
       })}
-
 
       {/* 
       <div className="business-feature home-feature-2">

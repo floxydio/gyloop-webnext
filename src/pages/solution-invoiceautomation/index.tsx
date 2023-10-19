@@ -14,8 +14,6 @@ export default function InvoiceAutomation() {
       metaLocale: "en-US"
   
     }}/>
-
-
     <HeaderNoMenuTransparent type = {0} />
     <InvoiceAutomationComponent />
     <Footer />
