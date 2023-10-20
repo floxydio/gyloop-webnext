@@ -7,21 +7,6 @@ export default function ServiceProviderComponent() {
 
   return (
     <>
-      <header className="header-bg-cover billing-automation-header d-flex align-items-end service-provider-header">
-        <div className="container">
-          <h1 className="title">{t('title')}</h1>
-          <p className="subtitle">
-            <span className="d-md-none d-xl-inline">{t('subtitle')}</span>
-            <span className="d-none d-md-inline d-xl-none">
-              Bring the power of business integration to your business community
-            </span>
-          </p>
-          <h5 className="info">{t('secondSubtitle')}</h5>
-        </div>
-      </header>
-
-
-
       <div className="billing-automation-swiper">
         <div className="container">
           <h2 className="title">Automate your sales processing</h2>

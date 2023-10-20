@@ -7,6 +7,7 @@ const nextConfig = {
     IMAGE_HOME: 'http://localhost:4000/v1/image-home/',
     IMAGE_ABOUT: 'http://localhost:4000/v1/image-about/',
     IMAGE_PRODUCT: 'http://localhost:4000/v1/image-product/',
+    IMAGE_SOLUTION: 'http://localhost:4000/v1/image-solution/',
   },
   compiler: {
     reactRemoveProperties: true,

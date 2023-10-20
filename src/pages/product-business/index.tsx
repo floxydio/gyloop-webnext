@@ -14,14 +14,15 @@ export default function Businnes({ dataHeader, dataFetchPrice, dataTablePlan }) 
 
   return (
     <>
-
-      <NextSEO seoHead={{
-        title: "Gyloop - Business",
-        metaDescription: "Gyloop - Business",
-        metaKeywords: "Gyloop - Business",
-        metaTitle: "Gyloop - Business",
-        metaLocale: "en-US"
-      }} />
+      <NextSEO
+        seoHead={{
+          title: 'Gyloop - Business',
+          metaDescription: 'Gyloop - Business',
+          metaKeywords: 'Gyloop - Business',
+          metaTitle: 'Gyloop - Business',
+          metaLocale: 'en-US',
+        }}
+      />
 
       <HeaderNoMenuTransparent type={0} />
       <HeaderBusiness dataHeader={dataHeader[0]} />

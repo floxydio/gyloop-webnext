@@ -46,7 +46,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { params } = context;
-  console.log(params.id);
   const fetchDetail = await axios.get(
     `http://localhost:4000/v1/about/leadership/detail/${params.id}`
   );
