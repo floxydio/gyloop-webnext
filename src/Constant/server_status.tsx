@@ -10,19 +10,3 @@ enum StatusCodes {
     SERVER_ERROR = 500
 }
 export default StatusCodes;
-
-/*
-Example Usage :
-    async function getData() {
-        let env = UrlConfig.baseUrl(Environment.DEV);
-        await axios.get(`${env}/api/GetAllUsers`, {}).then((res) {
-            if (res.status === StatusCodes.OK) {
-                // Do something
-            }
-        }).catch((err) {
-            if (err.response.status === StatusCodes.BAD_REQUEST) {
-                // Do something
-            }
-        })
-    }
-*/

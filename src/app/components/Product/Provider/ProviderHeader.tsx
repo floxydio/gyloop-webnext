@@ -6,14 +6,14 @@ export default function ProviderHeader({ dataHeader }: { dataHeader: ProductHead
 
   return (
     <>
-      {dataHeader.type_header === 1 ? <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header" style={{
+      {dataHeader === undefined ? <> </> : dataHeader.type_header === 1 ? <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header" style={{
         backgroundImage: `url(${process.env.IMAGE_PRODUCT}${dataHeader.imge_webx})`,
       }}>
         <div className="container d-flex justify-content-md-end">
           <div className="content px-md-0">
             <Image
               className="logo"
-              src="/img/logo-business-transparent.png"
+              src="/img/logo-business-transparent.png" 
               alt="Logo Gyloop Business"
               width={0}
               height={0}

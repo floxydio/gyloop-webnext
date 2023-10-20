@@ -40,7 +40,7 @@ export default function Main({ dataHomepageFeature, dataFetchContent }) {
       />
       <HeaderNoMenuTransparent type={0} />
       <MainHeaderComponent />
-      <MainComponent feature={dataHomepageFeature.data} content={dataFetchContent.data}   />
+      <MainComponent feature={dataHomepageFeature.data} content={dataFetchContent.data} />
       <Footer />
     </>
   );
@@ -54,10 +54,9 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      dataHomepageFeature : dataHomepageFeature.data,
-      dataFetchContent:  dataFetchContent.data,
+      dataHomepageFeature: dataHomepageFeature.data,
+      dataFetchContent: dataFetchContent.data,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     }
   };
 }
-  

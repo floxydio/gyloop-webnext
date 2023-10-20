@@ -13,7 +13,58 @@ import Carousel from 'react-bootstrap/Carousel';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-export default function BusinessComponent() {
+export interface PricingModel {
+  id?: number;
+  lang_code?: string;
+  page_code?: string;
+  pckg_name?: string;
+  pckg_desc?: string;
+  defa_curc?: string;
+  defa_valu?: string;
+  defa_term?: number;
+  altr_curc?: string;
+  altr_valu?: number;
+  altr_term?: string;
+  pckg_icon?: string;
+  bt_link?: string;
+  bt_capt?: string;
+  bt_type?: string;
+  is_popu?: boolean;
+  is_publ?: boolean;
+  submit_type?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export interface TablePlanModel {
+  id?: number;
+  lang_code?: string;
+  title_trigger?: string;
+  title_feature?: string;
+  page_code?: string;
+  title_tooltip?: string;
+  is_showTooltip?: boolean;
+  title_verified?: string;
+  title_verifiedTooltip?: null;
+  title_colorVerified?: string;
+  title_volunteer?: string;
+  title_volunteerTooltip?: null;
+  title_colorVolunteer?: string;
+  title_functional?: string;
+  title_functionalTooltip?: null;
+  title_colorFunctional?: string;
+  title_professional?: string;
+  title_professionalTooltip?: null;
+  title_colorProfessional?: string;
+  is_publ?: boolean;
+  submit_type?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+
+
+export default function BusinessComponent({ dataPriceItem, dataTablePlan }: { dataPriceItem: PricingModel[], dataTablePlan: TablePlanModel[] }) {
   const [index, setIndex] = useState(0);
   const t = useTranslations('ProductBusinessHeader');
 
@@ -36,7 +87,7 @@ export default function BusinessComponent() {
               <div className="card-subtitle">{t('firstSubtitleFeature')}</div>
 
               <i className="fas fa-heart text-white mr-1"></i>
-              <a href="javascript:void()" className="gyloop-link">
+              <a href="#" className="gyloop-link">
                 {t('button')}
                 <i className="far fa-chevron-circle-right"></i>
               </a>
@@ -81,7 +132,7 @@ export default function BusinessComponent() {
         </div>
       </div>
 
-    
+
       <div className="billing-automation-swiper business">
         <div className="container">
           <h2 className="title">How Gyloop Works</h2>
@@ -543,7 +594,7 @@ export default function BusinessComponent() {
 
       {/* END */}
 
-      <BusinessPricingComponent />
+      <BusinessPricingComponent data={dataPriceItem} dataTablePlan={dataTablePlan} />
     </>
   );
 }

@@ -19,6 +19,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['localhost', '127.0.0.1'],
+    minimumCacheTTL: 60,
   },
   redirects: async () => {
     return [

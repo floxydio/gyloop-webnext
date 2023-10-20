@@ -14,11 +14,3 @@ export class urlConfig {
 }
 
 
-
-/*
-Example : 
- async function getData() {
-    let env = UrlConfig.baseUrl(Environment.DEV);
-    await axios.get(`${env}/api/GetAllUsers`, {})
- }
-*/

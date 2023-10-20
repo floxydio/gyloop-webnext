@@ -7,7 +7,7 @@ export default function NetworkHeader({ dataHeader }: { dataHeader: ProductHeade
   const t = useTranslations('ProductNetworkHeader');
   return (
     <>
-      {dataHeader.type_header === 1 ? <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header" style={{
+      {dataHeader == null ? <></> : dataHeader.type_header === 1 ? <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header" style={{
         backgroundImage: `url(${process.env.IMAGE_PRODUCT}${dataHeader.imge_webx})`,
       }}>
         <div className="container d-flex justify-content-md-end">
@@ -30,7 +30,7 @@ export default function NetworkHeader({ dataHeader }: { dataHeader: ProductHeade
             <h5 className="info">{dataHeader.tagx_text}</h5>
           </div>
         </div>
-      </header> : <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header" style={{
+      </header> : dataHeader.type_header !== 1 ? <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header" style={{
         backgroundImage: `url(${process.env.IMAGE_PRODUCT}${dataHeader.imge_webx})`,
       }}>
         <div className="container">
@@ -53,7 +53,7 @@ export default function NetworkHeader({ dataHeader }: { dataHeader: ProductHeade
             <h5 className="info">{dataHeader.tagx_text}</h5>
           </div>
         </div>
-      </header>}
+      </header> : null}
 
       <div className="business-subheader-list networks-subheader-list">
         <div className="container">

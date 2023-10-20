@@ -7,7 +7,7 @@ export default function HeaderConnector({ dataHeader }: { dataHeader: ProductHea
 
   return (
     <>
-      {dataHeader.type_header === 1 ? <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header" style={{
+      {dataHeader === null || dataHeader === undefined ? <> </> : dataHeader.type_header === 1 ? <header className="header-bg-cover billing-automation-header d-flex align-items-end business-header" style={{
         backgroundImage: `url(${process.env.IMAGE_PRODUCT}${dataHeader.imge_webx})`,
       }}>
         <div className="container d-flex justify-content-md-end">
