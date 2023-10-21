@@ -28,7 +28,7 @@ export default function CustomerPortalContent({
     <>
       {dataSolutionProduct.map((data) => {
         return (
-          <>
+          <div key={data.id}>
             {data.submit_type === 1 ? (
               <div className="billing-automation-content">
                 <div className="container">
@@ -400,7 +400,7 @@ export default function CustomerPortalContent({
                 </div>
               </div>
             )}
-          </>
+          </div>
         );
       })}
     </>

@@ -131,7 +131,7 @@ export default function VendorPortalComponent({
 
       {dataSolutionFunction.map((data) => {
         return (
-          <>
+          <div key={data.id}>
             {data.submit_type === 1 ? (
               <div
                 className="subheader-bg-cover billing-automation-subheader vendor-portal-subheader"
@@ -181,7 +181,7 @@ export default function VendorPortalComponent({
                 </div>
               </div>
             )}
-          </>
+          </div>
         );
       })}
 

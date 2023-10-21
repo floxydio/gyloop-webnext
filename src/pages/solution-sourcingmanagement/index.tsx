@@ -1,16 +1,17 @@
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
+import FooterSourcingManagement from '@/app/components/Solution/SourcingManagement/FooterSourcingManagement';
 import HeaderSourcingManagement from '@/app/components/Solution/SourcingManagement/HeaderSourcingManagement';
 import SourcingComponent from '@/app/components/Solution/SourcingManagement/SourcingComponent';
 import axios from 'axios';
-import Head from 'next/head';
 
 export default function SourcingManagement({
   dataSolutionFunction,
   dataSolutionProduct,
   dataHeader,
   dataMediaHighlight,
+  dataFooter,
 }) {
   return (
     <>
@@ -31,7 +32,7 @@ export default function SourcingManagement({
         dataSolutionFunction={dataSolutionFunction}
         dataSolutionProduct={dataSolutionProduct}
       />
-      <Footer />
+      <FooterSourcingManagement dataFooter={dataFooter} />
     </>
   );
 }
@@ -52,17 +53,22 @@ export async function getStaticProps(context) {
   const fetchMediaHighlight = await axios.get(
     `${process.env.REACT_DEV_URL}/v1/main/media?lang_code=${context.locale}&page_code=sourcing_management`
   );
+  const fetchFooter = await axios.get(
+    `${process.env.REACT_DEV_URL}/v1/main/homepage-footer`
+  );
 
   const dataMediaHighlight = fetchMediaHighlight.data.data;
   const dataHeader = fetchHeader.data.data;
   const dataSolutionFunction = fetchSolutionFunction.data.data;
   const dataSolutionProduct = fetchSolutionProduct.data.data;
+  const dataFooter = fetchFooter.data.data;
   return {
     props: {
       dataSolutionFunction: dataSolutionFunction,
       dataSolutionProduct: dataSolutionProduct,
       dataHeader: dataHeader,
       dataMediaHighlight: dataMediaHighlight,
+      dataFooter: dataFooter,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };

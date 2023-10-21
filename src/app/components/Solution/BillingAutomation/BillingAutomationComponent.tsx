@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import BillingAutomationContent from '../SalesAutomation/SalesAutomationComponent';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import BillingAutomationContent from './BillingAutomationContent';
 
 interface SolutionFunctionEntities {
   id: number;
@@ -129,7 +129,7 @@ export default function BillingAutomationComponent({
 
       {dataSolutionFunction.map((data) => {
         return (
-          <>
+          <div key={data.id}>
             {data.submit_type === 1 ? (
               <div
                 className="subheader-bg-cover billing-automation-subheader"
@@ -179,7 +179,7 @@ export default function BillingAutomationComponent({
                 </div>
               </div>
             )}
-          </>
+          </div>
         );
       })}
 

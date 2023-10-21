@@ -150,7 +150,7 @@ export default function AutomationComponent({
 
       {dataSolutionFunction.map((data) => {
         return (
-          <>
+          <div key={data.id}>
             {data.submit_type === 1 ? (
               <div
                 className="subheader-bg-cover billing-automation-subheader sales-automation-subheader"
@@ -200,7 +200,7 @@ export default function AutomationComponent({
                 </div>
               </div>
             )}
-          </>
+          </div>
         );
       })}
 

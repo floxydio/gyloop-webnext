@@ -28,7 +28,7 @@ export default function BillingAutomationContent({
     <>
       {dataSolutionProduct.map((data) => {
         return (
-          <>
+          <div key={data.id}>
             <div className="billing-automation-content">
               <div className="container">
                 <div className="content" key={data.id}>
@@ -213,7 +213,7 @@ export default function BillingAutomationContent({
                 </div>
               </div>
             </div>
-          </>
+          </div>
         );
       })}
     </>
