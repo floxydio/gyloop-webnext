@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import BillingAutomationContent from '../SalesAutomation/BillingAutomationContent';
+import BillingAutomationContent from '../SalesAutomation/SalesAutomationComponent';
 import Link from 'next/link';
 
 export default function InvoiceAutomationComponent() {

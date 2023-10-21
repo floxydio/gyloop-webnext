@@ -6,7 +6,12 @@ import HeaderCustomerPortal from '@/app/components/Solution/CustomerPortal/Heade
 import axios from 'axios';
 import Head from 'next/head';
 
-export default function CustomerPortal({ dataHeader }) {
+export default function CustomerPortal({
+  dataSolutionFunction,
+  dataSolutionProduct,
+  dataHeader,
+  dataMediaHighlight,
+}) {
   return (
     <>
       <NextSEO
@@ -21,7 +26,11 @@ export default function CustomerPortal({ dataHeader }) {
 
       <HeaderNoMenuTransparent type={0} />
       <HeaderCustomerPortal dataHeader={dataHeader[0]} />
-      <CustomerPortalComponent />
+      <CustomerPortalComponent
+        dataSolutionFunction={dataSolutionFunction}
+        dataSolutionProduct={dataSolutionProduct}
+        dataMediaHighlight={dataMediaHighlight}
+      />
       <Footer />
     </>
   );
@@ -29,12 +38,31 @@ export default function CustomerPortal({ dataHeader }) {
 
 export async function getStaticProps(context) {
   const fetchHeader = await axios.get(
-    `http://localhost:4000/v1/product-header/get?lang_code=${context.locale}&page_code=customer_portal`
+    `${process.env.REACT_DEV_URL}/v1/product-header/get?lang_code=${context.locale}&page_code=customer_portal`
   );
+
+  const fetchSolutionFunction = await axios.get(
+    `${process.env.REACT_DEV_URL}/v1/solution/function?lang_code=${context.locale}&page_code=customer_portal`
+  );
+
+  const fetchSolutionProduct = await axios.get(
+    `${process.env.REACT_DEV_URL}/v1/solution/product?lang_code=${context.locale}&page_code=customer_portal`
+  );
+
+  const fetchMediaHighlight = await axios.get(
+    `${process.env.REACT_DEV_URL}/v1/main/media?lang_code=${context.locale}&page_code=customer_portal`
+  );
+
+  const dataMediaHighlight = fetchMediaHighlight.data.data;
   const dataHeader = fetchHeader.data.data;
+  const dataSolutionFunction = fetchSolutionFunction.data.data;
+  const dataSolutionProduct = fetchSolutionProduct.data.data;
   return {
     props: {
+      dataSolutionFunction: dataSolutionFunction,
+      dataSolutionProduct: dataSolutionProduct,
       dataHeader: dataHeader,
+      dataMediaHighlight: dataMediaHighlight,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };

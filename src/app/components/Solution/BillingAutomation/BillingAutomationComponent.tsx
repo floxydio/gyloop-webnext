@@ -1,9 +1,66 @@
 import Image from 'next/image';
-import BillingAutomationContent from '../SalesAutomation/BillingAutomationContent';
+import BillingAutomationContent from '../SalesAutomation/SalesAutomationComponent';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-export default function BillingAutomationComponent() {
+interface SolutionFunctionEntities {
+  id: number;
+  lang_code: string;
+  page_code: string;
+  func_name: string;
+  func_tagx: string;
+  desc_lin1: string;
+  desc_lin2: string;
+  link_list: string;
+  imge_func: string;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface SolutionProductEntities {
+  id: number;
+  lang_code: string;
+  head_text: string;
+  head_textclr: string;
+  tagx_text: string;
+  tagx_clor: string;
+  long_desc: string;
+  long_clor: string;
+  ax_link: string;
+  ax_capt: string;
+  ax_type: string;
+  imge_feat: string;
+  is_publ: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface MediaHighlightEntities {
+  id: number;
+  langCode: string;
+  pageCode: string;
+  ttleText: string;
+  mdiaType: string;
+  vdeoLink: string;
+  vdeoPlay: string;
+  imgeLink: string;
+  isPubl: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updateAt: Date;
+}
+
+export default function BillingAutomationComponent({
+  dataSolutionFunction,
+  dataSolutionProduct,
+  dataMediaHighlight,
+}: {
+  dataSolutionFunction: SolutionFunctionEntities[];
+  dataSolutionProduct: SolutionProductEntities[];
+  dataMediaHighlight: MediaHighlightEntities[];
+}) {
   const t = useTranslations('SolutionsBillingAutomationHeader');
   return (
     <>
@@ -70,36 +127,63 @@ export default function BillingAutomationComponent() {
         </div>
       </div>
 
-      <div className="subheader-bg-cover billing-automation-subheader">
-        <div className="container">
-          <div className="content">
-            <div className="d-md-none">
-              <h2 className="title">
-                Your networks is your assets <br />
-                These assets will help you perform better
-              </h2>
-              <p className="subtitle">Qualified Business Partners</p>
-            </div>
+      {dataSolutionFunction.map((data) => {
+        return (
+          <>
+            {data.submit_type === 1 ? (
+              <div
+                className="subheader-bg-cover billing-automation-subheader"
+                key={data.id}
+              >
+                <div className="container">
+                  <div className="content">
+                    <div className="d-md-none">
+                      <h2 className="title">{data.func_name}</h2>
+                      <p className="subtitle">{data.func_tagx}</p>
+                    </div>
 
-            <div className="d-none d-md-block">
-              <h2 className="title">
-                Your sales is your customer purchase <br />
-                Your purchase is your supplier sales
-              </h2>
-              <p className="subtitle">Automated and real time</p>
-            </div>
+                    <div className="d-none d-md-block">
+                      <h2 className="title">{data.desc_lin1}</h2>
+                      <p className="subtitle">{data.desc_lin2}</p>
+                    </div>
 
-            <hr className="hr-small" />
+                    <hr className="hr-small" />
 
-            <h5 className="title-small">Business has been changed</h5>
-            <p className="subtitle-small">
-              You, Customer, and Supplier are working together now
-            </p>
-          </div>
-        </div>
-      </div>
+                    <h5 className="title-small">{data.link_list}</h5>
+                    <p className="subtitle-small">{data.imge_func}</p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div
+                className="subheader-bg-cover billing-automation-subheader"
+                key={data.id}
+              >
+                <div className="container">
+                  <div className="content">
+                    <div className="d-md-none">
+                      <h2 className="title">{data.func_name}</h2>
+                      <p className="subtitle">{data.func_tagx}</p>
+                    </div>
 
-      <BillingAutomationContent />
+                    <div className="d-none d-md-block">
+                      <h2 className="title">{data.desc_lin1}</h2>
+                      <p className="subtitle">{data.desc_lin2}</p>
+                    </div>
+
+                    <hr className="hr-small" />
+
+                    <h5 className="title-small">{data.link_list}</h5>
+                    <p className="subtitle-small">{data.imge_func}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
+        );
+      })}
+
+      <BillingAutomationContent dataSolutionProduct={dataSolutionProduct} />
 
       <div className="footer-bg-cover billing-automation-footer">
         <div className="container">
