@@ -6,9 +6,38 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
+interface HomepageHeaderEntities {
+  id: number;
+  lang_code: string;
+  item_code: string;
+  head_text: string;
+  head_clor: string;
+  shrt_desc: string;
+  shrt_clor: string;
+  head_text002: string;
+  head_clor002: string;
+  shrt_desc002: string;
+  shrt_clor002: string;
+  head_text003: string;
+  head_clor003: string;
+  shrt_desc003: string;
+  shrt_clor003: string;
+  length_circle: number;
+  img_background: string;
+  btn_title: string;
+  btn_link: string;
+  btn_color: string;
+  type_header: number;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt: Date | null;
+}
 
-
-export default function MainHeader() {
+export default function MainHeader({
+  dataHomepageHeader,
+}: {
+  dataHomepageHeader: HomepageHeaderEntities[];
+}) {
   const [index, setIndex] = useState(0);
   const t = useTranslations('MainHeader');
 
@@ -18,16 +47,13 @@ export default function MainHeader() {
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
-    //  console.log(selectedIndex)
   };
 
   return (
     <>
-    
-      <header className="header-bg-cover billing-automation-header d-flex align-items-end about-header home-header" >
+      <header className="header-bg-cover billing-automation-header d-flex align-items-end about-header home-header">
         <div className="container">
-        
-      {/* <img src="img/background_homepage_header_1.png" alt="Gyloop Logo" style={{
+          {/* <img src="img/background_homepage_header_1.png" alt="Gyloop Logo" style={{
         height: "444px!important",
         textAlign: "center"
       }} /> */}
@@ -86,25 +112,33 @@ export default function MainHeader() {
           </div> */}
 
           {/* Move to carousel react-bootstrap */}
-          <Carousel
-            controls={false}
-            indicators={false}
-            activeIndex={index}
-            onSelect={handleSelect}
-          >
-            <Carousel.Item>
-              <h1 className="title">{t('title')}</h1>
-              <p className="subtitle">{t('subtitle')}</p>
-            </Carousel.Item>
-            <Carousel.Item>
-              <h1 className="title">{t('title')}</h1>
-              <p className="subtitle">{t('subtitle')}</p>
-            </Carousel.Item>
-            <Carousel.Item>
-              <h1 className="title">{t('title')}</h1>
-              <p className="subtitle">{t('subtitle')}</p>
-            </Carousel.Item>
-          </Carousel>
+          {dataHomepageHeader.map((data) => {
+            return (
+              <>
+                <div key={data.id}>
+                  <Carousel
+                    controls={false}
+                    indicators={false}
+                    activeIndex={index}
+                    onSelect={handleSelect}
+                  >
+                    <Carousel.Item>
+                      <h1 className="title">{data.head_text}</h1>
+                      <p className="subtitle">{data.shrt_desc}</p>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <h1 className="title">{data.head_text002}</h1>
+                      <p className="subtitle">{data.shrt_desc002}</p>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <h1 className="title">{data.head_text003}</h1>
+                      <p className="subtitle">{data.shrt_desc003}</p>
+                    </Carousel.Item>
+                  </Carousel>
+                </div>
+              </>
+            );
+          })}
 
           <ol className="carousel-indicators bullets">
             <li
@@ -140,5 +174,3 @@ export default function MainHeader() {
     </>
   );
 }
-
-

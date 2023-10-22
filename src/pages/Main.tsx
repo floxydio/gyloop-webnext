@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
 import { HomepageContent } from '@/app/components/Main/MainComponent';
+import FooterMain from '@/app/components/Main/MainFooter';
 
 const MainHeaderComponent = dynamic(
   () => import('@/app/components/Main/MainHeader'),
@@ -23,10 +24,12 @@ const MainComponent = dynamic(
   }
 );
 
-export default function Main({ dataHomepageFeature, dataFetchContent }) {
-
-
-
+export default function Main({
+  dataHomepageFeature,
+  dataFetchContent,
+  dataHomepageHeader,
+  dataFooter,
+}) {
   return (
     <>
       <NextSEO
@@ -39,24 +42,43 @@ export default function Main({ dataHomepageFeature, dataFetchContent }) {
         }}
       />
       <HeaderNoMenuTransparent type={0} />
-      <MainHeaderComponent />
-      <MainComponent feature={dataHomepageFeature.data} content={dataFetchContent.data} />
-      <Footer />
+      <MainHeaderComponent dataHomepageHeader={dataHomepageHeader} />
+      <MainComponent
+        feature={dataHomepageFeature.data}
+        content={dataFetchContent.data}
+      />
+      {/* <Footer  */}
+      <FooterMain dataFooter={dataFooter} />
     </>
   );
 }
 
 export async function getStaticProps(context) {
-  const [dataHomepageFeature, dataFetchContent] = await Promise.all([
-    axios.get(`http://localhost:4000/v1/main/homepage-overview-item?lang_code=${context.locale}`),
-    axios.get(`http://localhost:4000/v1/main/homepage-content/get?lang_code=${context.locale}`),
-  ])
+  const [
+    dataHomepageFeature,
+    dataFetchContent,
+    dataHomepageHeader,
+    dataFooter,
+  ] = await Promise.all([
+    axios.get(
+      `${process.env.REACT_DEV_URL}/v1/main/homepage-overview-item?lang_code=${context.locale}`
+    ),
+    axios.get(
+      `${process.env.REACT_DEV_URL}/v1/main/homepage-content/get?lang_code=${context.locale}`
+    ),
+    axios.get(
+      `${process.env.REACT_DEV_URL}/v1/main/homepage-header?lang_code=${context.locale}`
+    ),
+    axios.get(`${process.env.REACT_DEV_URL}/v1/main/homepage-footer`),
+  ]);
 
   return {
     props: {
       dataHomepageFeature: dataHomepageFeature.data,
       dataFetchContent: dataFetchContent.data,
+      dataHomepageHeader: dataHomepageHeader.data.data,
+      dataFooter: dataFooter.data.data,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
-    }
+    },
   };
 }
