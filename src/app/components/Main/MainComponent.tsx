@@ -43,16 +43,6 @@ export interface HomepageContent {
   updatedAt: Date | null;
 }
 
-interface FeatureJson {
-  image: string;
-  title_en: string;
-  title_id: string;
-  title_fr: string;
-  desc_en: string;
-  desc_id: string;
-  desc_fr: string;
-}
-
 export default function MainComponent({
   feature,
   content,
@@ -98,7 +88,7 @@ export default function MainComponent({
                     <div className="card bg-transparent rounded-0 border-0">
                       <div className="card-body">
                         <Image
-                          src={process.env.IMAGE_HOME + item.img_ft}
+                          src={`${process.env.IMAGE_HOME}${item.img_ft}`}
                           className="features-image"
                           alt="gyloop-icon-home-customer-relationship"
                           width={0}
@@ -123,77 +113,6 @@ export default function MainComponent({
                 </>
               );
             })}
-            {/* <div className="col-12 col-md-4">
-              <div className="card bg-transparent rounded-0 border-0">
-                <div className="card-body">
-                  <Image
-                    src="/img/icon_home_customer_relationship.png"
-                    className="features-image"
-                    alt="gyloop-icon-home-customer-relationship"
-                    width={0}
-                    height={0}
-                    sizes="100"
-                  />
-                  <div className="card-title">{t('firstTitleFeature')}</div>
-                  <div className="card-text">{t('firstSubtitleFeature')}</div>
-                  <Link
-                    aria-label="Go To Product Business CRM"
-                    href="/Product/Business?t=crm"
-                    className="gyloop-link"
-                  >
-                    {t('button')} <i className="fas fa-angle-right"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 d-md-none">
-              <hr className="hr-small bg-blue" />
-            </div>
-
-            <div className="col-12 col-md-4">
-              <div className="card bg-transparent rounded-0 border-0">
-                <div className="card-body">
-                  <Image
-                    src="/img/icon_home_business_network.png"
-                    className="features-image"
-                    alt="gyloop-icon-home-business-network"
-                    width={0}
-                    height={0}
-                    sizes="100"
-                  />
-                  <div className="card-title">{t('secondTitleFeature')}</div>
-                  <div className="card-text">{t('secondSubtitleFeature')}</div>
-                  <Link href="/Product/Network" className="gyloop-link">
-                    {t('button')} <i className="fas fa-angle-right"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 d-md-none">
-              <hr className="hr-small bg-blue" />
-            </div>
-
-            <div className="col-12 col-md-4">
-              <div className="card bg-transparent rounded-0 border-0">
-                <div className="card-body">
-                  <Image
-                    src="/img/icon_home_supplier_relationship.png"
-                    className="features-image"
-                    alt="gyloop-icon-home-supplier"
-                    width={0}
-                    height={0}
-                    sizes="100"
-                  />
-                  <div className="card-title">{t('thirdTitleFeature')}</div>
-                  <div className="card-text">{t('thirdSubtitleFeature')}</div>
-                  <Link href="/Product/Business?t=srm" className="gyloop-link">
-                    {t('button')} <i className="fas fa-angle-right"></i>
-                  </Link>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
@@ -294,70 +213,6 @@ export default function MainComponent({
           </>
         );
       })}
-
-      {/* 
-      <div className="business-feature home-feature-2">
-        <div className="container">
-          <div className="content">
-            <h5 className="title">Lean, Automated, and Integrated</h5>
-            <p className="subtitle">Improve your productivity</p>
-
-            <p className="text">
-              When a rich feature of CRM meet with a powerful SRM application in
-              online business networks, it could be auto generate the sales
-              document from one company based on purchase document in another
-              company whatever their back end systems are used.
-            </p>
-            <p className="text">
-              When all customer and supplier in business transaction are use the
-              same business platform for their data flows, it could be
-              standardize the process and make the monitoring & tracing the
-              document are easier to be managed, and raise the Standard Level
-              Agreement (SLA) of both parties for better services.
-            </p>
-
-            <Link
-              href="/Solutions"
-              aria-label="Solutions Overview"
-              className="gyloop-link d-block"
-            >
-              {t('button')}
-              <i className="fas fa-angle-right"></i>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="business-feature home-feature-3">
-        <div className="container d-flex justify-content-md-end">
-          <div className="content">
-            <h5 className="title">Rich Features with Max Impacts</h5>
-            <p className="subtitle">It’s not a tools, it’s a robust process</p>
-
-            <p className="text">
-              Gyloop has been developed by customer experiences, and bring
-              customer value on top of application features. Major business use
-              case transactions are ready to used in this platform, and built
-              with providing maximum change impacts.
-            </p>
-            <p className="text">
-              Gyloop has been designed to give you best experience to run your
-              business, to connect with your partners, and leverage business
-              opportunity at the same time. You will adopt the revolutionary
-              business application to robust your business processes.
-            </p>
-
-            <Link
-              href="/Solutions"
-              aria-label="Solutions Overview"
-              className="gyloop-link d-block"
-            >
-              {t('button')}
-              <i className="fas fa-angle-right"></i>
-            </Link>
-          </div>
-        </div>
-      </div> */}
 
       <div className="billing-automation-swiper swiper-home">
         <div className="container">

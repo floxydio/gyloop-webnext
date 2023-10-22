@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import BillingAutomationContent from './BillingAutomationContent';
+import BillingAutomationContent from './SalesAutomationComponent';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { useTranslations } from 'next-intl';
+import SalesAutomationComponent from './SalesAutomationComponent';
 
 interface SolutionFunctionEntities {
   id: number;
@@ -39,12 +40,29 @@ interface SolutionProductEntities {
   updatedAt: Date;
 }
 
+interface MediaHighlightEntities {
+  id: number;
+  langCode: string;
+  pageCode: string;
+  ttleText: string;
+  mdiaType: string;
+  vdeoLink: string;
+  vdeoPlay: string;
+  imgeLink: string;
+  isPubl: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updateAt: Date;
+}
+
 export default function AutomationComponent({
-  feature,
-  product,
+  dataSolutionFunction,
+  dataSolutionProduct,
+  dataMediaHighlight,
 }: {
-  feature: SolutionFunctionEntities[];
-  product: SolutionProductEntities[];
+  dataSolutionFunction: SolutionFunctionEntities[];
+  dataSolutionProduct: SolutionProductEntities[];
+  dataMediaHighlight: MediaHighlightEntities[];
 }) {
   const [index, setIndex] = useState(0);
 
@@ -130,36 +148,63 @@ export default function AutomationComponent({
         </div>
       </div>
 
-      <div className="subheader-bg-cover billing-automation-subheader sales-automation-subheader">
-        <div className="container">
-          <div className="content">
-            <div className="d-md-none">
-              <h2 className="title">
-                Your networks is your assets <br />
-                These assets will help you perform better
-              </h2>
-              <p className="subtitle">Qualified Business Partners</p>
-            </div>
+      {dataSolutionFunction.map((data) => {
+        return (
+          <div key={data.id}>
+            {data.submit_type === 1 ? (
+              <div
+                className="subheader-bg-cover billing-automation-subheader sales-automation-subheader"
+                key={data.id}
+              >
+                <div className="container">
+                  <div className="content">
+                    <div className="d-md-none">
+                      <h2 className="title">{data.func_name}</h2>
+                      <p className="subtitle">{data.func_tagx}</p>
+                    </div>
 
-            <div className="d-none d-md-block">
-              <h2 className="title">
-                Your sales is your customer purchase <br />
-                Your purchase is your supplier sales
-              </h2>
-              <p className="subtitle">Automated and real time</p>
-            </div>
+                    <div className="d-none d-md-block">
+                      <h2 className="title">{data.desc_lin1}</h2>
+                      <p className="subtitle">{data.desc_lin2}</p>
+                    </div>
 
-            <hr className="hr-small" />
+                    <hr className="hr-small" />
 
-            <h5 className="title-small">Business has been changed</h5>
-            <p className="subtitle-small">
-              You, Customer, and Supplier are working together now
-            </p>
+                    <h5 className="title-small">{data.link_list}</h5>
+                    <p className="subtitle-small">{data.imge_func}</p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div
+                className="subheader-bg-cover billing-automation-subheader sales-automation-subheader"
+                key={data.id}
+              >
+                <div className="container">
+                  <div className="content">
+                    <div className="d-md-none">
+                      <h2 className="title">{data.func_name}</h2>
+                      <p className="subtitle">{data.func_tagx}</p>
+                    </div>
+
+                    <div className="d-none d-md-block">
+                      <h2 className="title">{data.desc_lin1}</h2>
+                      <p className="subtitle">{data.desc_lin2}</p>
+                    </div>
+
+                    <hr className="hr-small" />
+
+                    <h5 className="title-small">{data.link_list}</h5>
+                    <p className="subtitle-small">{data.imge_func}</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-        </div>
-      </div>
+        );
+      })}
 
-      <BillingAutomationContent />
+      <SalesAutomationComponent dataSolutionProduct={dataSolutionProduct} />
 
       <div className="footer-bg-cover billing-automation-footer">
         <div className="container">
