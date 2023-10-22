@@ -9,19 +9,31 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Carousel } from 'react-bootstrap';
-export default function ProviderComponent() {
+
+export interface FAQItemModel {
+  id?: number;
+  lang_code?: string;
+  page_code?: string;
+  ques_text?: string;
+  answ_text?: string;
+  link_list?: string;
+  submit_type?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+
+
+export default function ProviderComponent({ dataFaq }: { dataFaq: FAQItemModel[] }) {
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    require('bootstrap/dist/js/bootstrap.bundle');
-  }, []);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
   return (
     <>
-     
+
       <div className="billing-automation-swiper business">
         <div className="container">
           <h2 className="title mb-0">How Gyloop Works</h2>
@@ -716,345 +728,52 @@ export default function ProviderComponent() {
             Get answers to the most-asked questions about Gyloop Networks.
           </p>
 
-          <div className="card rounded-0">
-            <div className="card-header">
-              <h4
-                className="card-title d-flex align-items-start mb-0"
-                data-toggle="collapse"
-                data-target="#faq-1"
-                aria-expanded="true"
+          {dataFaq.map((item, index) => (
+            <div className="card rounded-0">
+              <div className="card-header">
+                <h4
+                  className="card-title d-flex align-items-start mb-0"
+                  data-toggle="collapse"
+                  data-target="#faq-1"
+                  aria-expanded="true"
+                >
+                  <i className="far fa-plus-circle"></i>
+                  <i className="far fa-minus-circle"></i>
+                  <span>
+                    {item.ques_text}
+                  </span>
+                </h4>
+              </div>
+
+              <div
+                className="collapse show"
+                id="faq-1"
+                data-parent="#faq-accordion"
               >
-                <i className="far fa-plus-circle"></i>
-                <i className="far fa-minus-circle"></i>
-                <span>
-                  I’m a Verified User, may I use the Gyloop Networks Apps?
-                </span>
-              </h4>
-            </div>
+                <div className="card-body">
+                  <div className="card-text">
+                    <p>{item.answ_text}</p>
+                  </div>
 
-            <div
-              className="collapse show"
-              id="faq-1"
-              data-parent="#faq-accordion"
-            >
-              <div className="card-body">
-                <div className="card-text">
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
+                  <a
+                    href="business.html?s=business-pricing"
+                    className="gyloop-link d-block"
+                  >
+                    Learn More User Comparison
+                    <i className="fas fa-angle-right"></i>
+                  </a>
+                  <Link
+                    href="/SubscribeProfessional"
+                    className="gyloop-link d-block"
+                  >
+                    Upgrade User
+                    <i className="fas fa-angle-right"></i>
+                  </Link>
                 </div>
-
-                <a
-                  href="business.html?s=business-pricing"
-                  className="gyloop-link d-block"
-                >
-                  Learn More User Comparison
-                  <i className="fas fa-angle-right"></i>
-                </a>
-                <Link
-                  href="/SubscribeProfessional"
-                  className="gyloop-link d-block"
-                >
-                  Upgrade User
-                  <i className="fas fa-angle-right"></i>
-                </Link>
               </div>
             </div>
-          </div>
 
-          <div className="card rounded-0">
-            <div className="card-header">
-              <h4
-                className="card-title d-flex align-items-start mb-0"
-                data-toggle="collapse"
-                data-target="#faq-2"
-                aria-expanded="false"
-              >
-                <i className="far fa-plus-circle"></i>
-                <i className="far fa-minus-circle"></i>
-                <span>
-                  I’m a Verified User, may I use the Gyloop Networks Apps?
-                </span>
-              </h4>
-            </div>
-
-            <div className="collapse" id="faq-2" data-parent="#faq-accordion">
-              <div className="card-body">
-                <div className="card-text">
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-                </div>
-
-                <a
-                  href="business.html?s=business-pricing"
-                  className="gyloop-link d-block"
-                >
-                  Learn More User Comparison
-                  <i className="fas fa-angle-right"></i>
-                </a>
-                <Link
-                  href="/SubscribeProfessional"
-                  className="gyloop-link d-block"
-                >
-                  Upgrade User
-                  <i className="fas fa-angle-right"></i>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="card rounded-0">
-            <div className="card-header">
-              <h4
-                className="card-title d-flex align-items-start mb-0"
-                data-toggle="collapse"
-                data-target="#faq-3"
-                aria-expanded="false"
-              >
-                <i className="far fa-plus-circle"></i>
-                <i className="far fa-minus-circle"></i>
-                <span>
-                  I’m a Verified User, may I use the Gyloop Networks Apps?
-                </span>
-              </h4>
-            </div>
-
-            <div className="collapse" id="faq-3" data-parent="#faq-accordion">
-              <div className="card-body">
-                <div className="card-text">
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-                </div>
-
-                <a
-                  href="business.html?s=business-pricing"
-                  className="gyloop-link d-block"
-                >
-                  Learn More User Comparison
-                  <i className="fas fa-angle-right"></i>
-                </a>
-                <Link
-                  href="/SubscribeProfessional"
-                  className="gyloop-link d-block"
-                >
-                  Upgrade User
-                  <i className="fas fa-angle-right"></i>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="card rounded-0">
-            <div className="card-header">
-              <h4
-                className="card-title d-flex align-items-start mb-0"
-                data-toggle="collapse"
-                data-target="#faq-4"
-                aria-expanded="false"
-              >
-                <i className="far fa-plus-circle"></i>
-                <i className="far fa-minus-circle"></i>
-                <span>
-                  I’m a Verified User, may I use the Gyloop Networks Apps?
-                </span>
-              </h4>
-            </div>
-
-            <div className="collapse" id="faq-4" data-parent="#faq-accordion">
-              <div className="card-body">
-                <div className="card-text">
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-                </div>
-
-                <a
-                  href="business.html?s=business-pricing"
-                  className="gyloop-link d-block"
-                >
-                  Learn More User Comparison
-                  <i className="fas fa-angle-right"></i>
-                </a>
-                <Link
-                  href="/SubscribeProfessional"
-                  className="gyloop-link d-block"
-                >
-                  Upgrade User
-                  <i className="fas fa-angle-right"></i>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="card rounded-0">
-            <div className="card-header">
-              <h4
-                className="card-title d-flex align-items-start mb-0"
-                data-toggle="collapse"
-                data-target="#faq-5"
-                aria-expanded="false"
-              >
-                <i className="far fa-plus-circle"></i>
-                <i className="far fa-minus-circle"></i>
-                <span>
-                  I’m a Verified User, may I use the Gyloop Networks Apps?
-                </span>
-              </h4>
-            </div>
-
-            <div className="collapse" id="faq-5" data-parent="#faq-accordion">
-              <div className="card-body">
-                <div className="card-text">
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-                </div>
-
-                <a
-                  href="business.html?s=business-pricing"
-                  className="gyloop-link d-block"
-                >
-                  Learn More User Comparison
-                  <i className="fas fa-angle-right"></i>
-                </a>
-                <Link
-                  href="/SubscribeProfessional"
-                  className="gyloop-link d-block"
-                >
-                  Upgrade User
-                  <i className="fas fa-angle-right"></i>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="card rounded-0">
-            <div className="card-header">
-              <h4
-                className="card-title d-flex align-items-start mb-0"
-                data-toggle="collapse"
-                data-target="#faq-6"
-                aria-expanded="false"
-              >
-                <i className="far fa-plus-circle"></i>
-                <i className="far fa-minus-circle"></i>
-                <span>
-                  I’m a Verified User, may I use the Gyloop Networks Apps?
-                </span>
-              </h4>
-            </div>
-
-            <div className="collapse" id="faq-6" data-parent="#faq-accordion">
-              <div className="card-body">
-                <div className="card-text">
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-
-                  <p>
-                    No, you can’t access the Gyloop Networks Apps with Verified
-                    User, you need to upgrade your User to enjoy more feature of
-                    Gyloop Business and get the access to Gyloop Networks.
-                  </p>
-                </div>
-
-                <a
-                  href="business.html?s=business-pricing"
-                  className="gyloop-link d-block"
-                >
-                  Learn More User Comparison
-                  <i className="fas fa-angle-right"></i>
-                </a>
-                <Link
-                  href="/SubscribeProfessional"
-                  className="gyloop-link d-block"
-                >
-                  Upgrade User
-                  <i className="fas fa-angle-right"></i>
-                </Link>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 

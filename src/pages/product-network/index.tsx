@@ -14,7 +14,7 @@ interface SeoJson {
   locale: string,
 }
 
-export default function NetworkIndex({ dataHeader }) {
+export default function NetworkIndex({ dataHeader, dataFaq }) {
 
   return (
     <>
@@ -29,7 +29,7 @@ export default function NetworkIndex({ dataHeader }) {
 
       <HeaderNoMenuTransparent type={0} />
       <NetworkHeader dataHeader={dataHeader[0]} />
-      <NetworkComponent />
+      <NetworkComponent dataFaqItem={dataFaq} />
 
       <Footer />
     </>
@@ -38,10 +38,15 @@ export default function NetworkIndex({ dataHeader }) {
 
 export async function getStaticProps(context) {
   const fetchHeader = await axios.get(`http://localhost:4000/v1/product-header/get?lang_code=${context.locale}&page_code=network`)
+  const fetchFaq = await axios.get(`http://localhost:4000/v1/product-faq-item/get?lang_code=${context.locale}&page_code=network`)
+
+
   const dataHeader = fetchHeader.data.data
+  const dataFaq = fetchFaq.data.data
   return {
     props: {
       dataHeader: dataHeader,
+      dataFaq: dataFaq,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };
