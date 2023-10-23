@@ -2,24 +2,41 @@ import '@/style/style.min.css';
 import '@/style/icon.css';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-export default function BusinessTab() {
+interface ProductDetail {
+  id?: number;
+  lang_code?: string;
+  page_code?: string;
+  prod_code?: string;
+  tabx_text?: string;
+  tabx_icon?: string;
+  prod_name?: string;
+  prod_clor?: string;
+  head_text?: string;
+  head_textclor?: string;
+  shr1_desc?: string;
+  shr1_clor?: string;
+  vpro_desc?: string;
+  vpro_clor?: string;
+  shr2_desc?: string;
+  shr2_clor?: string;
+  is_publ?: boolean;
+  submit_type?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+
+export default function BusinessTab({ productDetail }: { productDetail: ProductDetail }) {
   const t = useTranslations('ProductBusinessTabComponent');
   return (
     <>
       <h5 className="link-title">BUSINESS</h5>
 
-      <h3 className="title">{t('firstTitle')}</h3>
+      <h3 className="title">{productDetail.prod_name}</h3>
 
-      <p>{t('descriptionFeature')}</p>
+      <p>{productDetail.head_text}</p>
       <p>
-        The Gyloop CRM provides an unique platform to organize all business
-        interaction to your customer with very closer relationship. This
-        platform allow you to manage your business transaction and invite your
-        customer to track and monitor the latest update status of their order or
-        deliveries. They can also subscribe your product catalog for elaborate
-        their sourcing or self-service procurement. These platform bring better
-        business integration and simplicity between you and your customers
-        regardless of whatever backend system behind.
+        {productDetail.shr1_desc}
       </p>
 
       <div className="value-box">
@@ -34,15 +51,11 @@ export default function BusinessTab() {
           <span>Value Proposition</span>
         </h4>
 
-        <p>{t('valueProposition')}</p>
+        <p>{productDetail.vpro_desc}</p>
       </div>
 
       <p>
-        Gyloop provide Networks Apps to allow you extend your business
-        connection, cause we understand that business are better built by strong
-        relationships. Business entities are now easy to connect to the
-        unlimited networks across industry and locations, united in the same
-        platform with same understanding.
+       {productDetail.shr1_desc}
       </p>
     </>
   );
