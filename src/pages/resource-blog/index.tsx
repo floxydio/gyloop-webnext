@@ -5,7 +5,7 @@ import BlogComponent from '@/app/components/Resources/Blog/BlogComponent';
 import Head from 'next/head';
 import React from 'react';
 
-export default function Blogs() {
+export default function Blogs({ context }) {
   return (
     <>
 
@@ -15,7 +15,7 @@ export default function Blogs() {
         metaKeywords: "Gyloop - Blogs",
         metaTitle: "Gyloop - Blogs",
         metaLocale: "en-US"
-      }}/>
+      }} />
 
       <HeaderNoMenuTransparent type={0} />
       <BlogComponent />
@@ -25,6 +25,7 @@ export default function Blogs() {
 }
 
 export async function getStaticProps(context) {
+
   return {
     props: {
       messages: (await import(`@/translate/${context.locale}.json`)).default,

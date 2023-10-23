@@ -2,8 +2,39 @@ import { useTranslations } from 'next-intl';
 import CardNewEvent from '../../NewsAndEvent/CardNewEvent';
 import CardNewEventB from '../../NewsAndEvent/CardNewEventB';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Image from 'next/image';
+import style from './BlogComponent.module.css'
+
+export interface BlogContent {
+  id?: number;
+  page_code?: string;
+  lang_code?: string;
+  thumbnail_img?: string;
+  tag?: string;
+  title?: string;
+  content?: string;
+  createdAt?: Date;
+}
 
 export default function BlogComponent() {
+  const [page, setPage] = useState(1)
+  const [data, setData] = useState<BlogContent[]>([])
+  async function getBlog() {
+    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5`).then((res) => {
+      if (res.status === 200) {
+        setData(res.data.data)
+        console.log(data)
+      }
+    })
+  }
+
+  useEffect(() => {
+    getBlog()
+  }, [page])
+
+
   const t = useTranslations('ResourcesBlogsHeader');
   return (
     <>
@@ -20,7 +51,7 @@ export default function BlogComponent() {
         </div>
       </header>
 
-      
+
 
       <div className="blogs">
         <div className="search-form">
@@ -66,36 +97,66 @@ export default function BlogComponent() {
 
         <div className="container">
           <div className="category-1">
-            <h2 className="category-title">Category 1</h2>
+            {/* <h2 className="category-title">Category 1</h2> */}
 
-            <div className="pages" id="pages-1">
+            {/* <div className="pages" id="pages-1">
               <div className="pages-1">
                 <CardNewEventB />
               </div>
-            </div>
-
+            </div> */}
+            {/* 
             <nav aria-label="Category 1 Pagination">
               <ul className="pagination" id="category-1-pagination"></ul>
-            </nav>
+            </nav> */}
           </div>
 
-          <hr />
+          {/* <hr /> */}
 
           <div className="category-2">
             <h2 className="category-title">Category 2</h2>
 
             <div className="pages">
-              <div className="pages-2">
-                <CardNewEvent />
+              <div className={`pages-2`}>
+                {data.map((item, index) => {
+                  return <div className="card" key={index}>
+                    <Image
+                      className="card-img-top"
+                      src={"http://159.89.44.46:4500/v1/image-blog/" + item.thumbnail_img}
+                      alt="Image Placeholder"
+                      width={0}
+                      height={0}
+                      sizes="100"
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+
+                    <div className="card-body">
+                      <a href="news-and-event-detail.html" className="gyloop-link">
+                        <h3 className="card-title">
+                          {item.title}
+                        </h3>
+                      </a>
+                      <span className="card-category text-warning">Category</span>
+                      <div className="card-text" dangerouslySetInnerHTML={{ __html: item.content as string }}>
+
+                      </div>
+                      <div className="card-link">
+                        <Link href="/About/NewsEvent/detail/1" className="gyloop-link">
+                          Read More
+                          <i className="far fa-angle-right"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                })}
+
               </div>
             </div>
-
             <nav aria-label="Category 2 Pagination">
               <ul className="pagination" id="category-2-pagination"></ul>
             </nav>
           </div>
 
-          <hr />
+          {/* <hr />
 
           <div className="category-3">
             <h2 className="category-title">Popular</h2>
@@ -109,7 +170,7 @@ export default function BlogComponent() {
             <nav aria-label="Popular Pagination">
               <ul className="pagination" id="category-3-pagination"></ul>
             </nav>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

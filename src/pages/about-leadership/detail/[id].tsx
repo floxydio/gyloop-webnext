@@ -34,7 +34,7 @@ export default function DetailLeadership(data) {
 
 export async function getStaticPaths() {
   const fetchData = await axios.get(
-    `http://localhost:4000/v1/about/leadership`
+    `http://159.89.44.46:4000/v1/about/leadership`
   );
   const dataLeadership = await fetchData.data.data;
   const paramLeaderId = dataLeadership.map((e) => ({
@@ -47,7 +47,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { params } = context;
   const fetchDetail = await axios.get(
-    `http://localhost:4000/v1/about/leadership/detail/${params.id}`
+    `http://159.89.44.46:4000/v1/about/leadership/detail/${params.id}`
   );
 
   const data = fetchDetail.data;

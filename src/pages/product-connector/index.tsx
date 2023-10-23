@@ -28,7 +28,7 @@ export default function Connector({ dataHeader }) {
 }
 
 export async function getStaticProps(context) {
-  const fetchHeader = await axios.get(`http://localhost:4000/v1/product-header/get?lang_code=${context.locale}&page_code=connector`)
+  const fetchHeader = await axios.get(`http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=connector`)
   const dataHeader = fetchHeader.data.data
   return {
     props: {

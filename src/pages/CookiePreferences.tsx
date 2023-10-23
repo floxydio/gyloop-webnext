@@ -9,7 +9,7 @@ interface CookiePreferencesInterface {
   createdAt: string,
 }
 
-export default function CookiePreferences( {dataCookiePreferences}: {dataCookiePreferences: CookiePreferencesInterface}) {
+export default function CookiePreferences({ dataCookiePreferences }: { dataCookiePreferences: CookiePreferencesInterface }) {
   return (
     <>
       <NextSEO seoHead={{
@@ -46,7 +46,7 @@ export default function CookiePreferences( {dataCookiePreferences}: {dataCookieP
 }
 
 export async function getStaticProps(context) {
-  const fetchData = await axios.get(`http://localhost:4000/v1/cookie-preferences?lang_code=${context.locale}`)
+  const fetchData = await axios.get(`http://159.89.44.46:4000/v1/cookie-preferences?lang_code=${context.locale}`)
 
   const dataCookiePreferences = await fetchData.data.data[0] as CookiePreferencesInterface
 

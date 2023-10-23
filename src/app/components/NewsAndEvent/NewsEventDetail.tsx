@@ -1,6 +1,48 @@
+"use client"
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-export default function NewsEventDetailComponent() {
+interface BlogContent {
+  id?: number;
+  page_code?: string;
+  lang_code?: string;
+  thumbnail_img?: string;
+  tag?: string;
+  title?: string;
+  content?: string;
+  createdAt?: Date;
+}
+
+
+export default function NewsEventDetailComponent({ id }: { id: number }) {
+  const [data, setData] = useState<BlogContent>({})
+  const [sideData, setSideData] = useState<BlogContent[]>([])
+
+
+  async function getBlogByDetail() {
+    await axios.get(`http://159.89.44.46:4500/v1/blog-detail/${id}`).then((res) => {
+      console.log(res.data.data)
+      if (res.status === 200) {
+        setData(res.data.data[0])
+      }
+    })
+  }
+
+  async function getBlog() {
+    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=1&limit=5`).then((res) => {
+      console.log(res.data.data)
+      if (res.status === 200) {
+        setSideData(res.data.data)
+      }
+    })
+  }
+
+  useEffect(() => {
+    getBlogByDetail()
+    getBlog()
+  }, [])
+
   return (
     <>
       <div className="blogs-content">
@@ -8,10 +50,10 @@ export default function NewsEventDetailComponent() {
           <div className="row">
             <div className="col-12 col-md-8 pr-md-0 pr-xl-4">
               <h5 className="title">
-                Gyloop Business New Features Released Q4 2020
+                {data.title}
               </h5>
               <p className="subtitle">Highlight News</p>
-              <p className="meta-date">12 July 2020</p>
+              <p className="meta-date">{data.createdAt?.toString().split("T")[0]}</p>
 
               <div className="social-links">
                 <a
@@ -80,7 +122,7 @@ export default function NewsEventDetailComponent() {
 
               <div className="card border-0 rounded-0 mt-3">
                 <Image
-                  src="/img/image_placeholder.png"
+                  src={"http://159.89.44.46:4500/v1/image-blog/" + data.thumbnail_img}
                   className="card-img-top rounded-0"
                   alt="image-placeholder-1"
                   width={0}
@@ -90,46 +132,7 @@ export default function NewsEventDetailComponent() {
                 />
 
                 <div className="card-body">
-                  <div className="card-text">
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                    {/* <sergey-import src="lorem/5" />
-                                <sergey-import src="lorem/5" />
-                                <sergey-import src="lorem/2" /> */}
+                  <div className="card-text" dangerouslySetInnerHTML={{ __html: data.content as string }}>
                   </div>
                 </div>
               </div>
@@ -140,127 +143,41 @@ export default function NewsEventDetailComponent() {
             </div>
 
             <div className="col-12 col-md-4">
-              <div className="card card-featured border-0 rounded-0">
-                <Image
-                  src="/img/image_placeholder.png"
-                  className="card-img-top img-fluid rounded-0"
-                  alt="image-placeholder-2"
-                  width={0}
-                  height={0}
-                  sizes="100"
-                  style={{ width: '100%', height: 'auto' }}
-                />
 
-                <div className="card-body">
-                  <h5 className="card-title">
-                    Gyloop Business New Features Released Q4 2020
-                  </h5>
+              {sideData.map((item, index) => (
+                <>
+                  <div className="card card-featured border-0 rounded-0" key={index}>
+                    <Image
+                      src={"http://159.89.44.46:4500/v1/image-blog/" + item.thumbnail_img}
+                      className="card-img-top img-fluid rounded-0"
+                      alt="image-placeholder-2"
+                      width={0}
+                      height={0}
+                      sizes="50"
+                      style={{ width: '100%', height: 'auto' }}
+                    />
 
-                  <div className="card-text d-none d-xl-block">
-                    {/* <sergey-import src="lorem/1" /> */}
+                    <div className="card-body">
+                      <h5 className="card-title">
+                        {item.title}
+                      </h5>
+
+                      <div className="card-text d-none d-xl-block">
+                        {/* <sergey-import src="lorem/1" /> */}
+                      </div>
+
+                      <a
+                        href="news-and-event-detail.html"
+                        className="text-blue d-none d-md-block"
+                      >
+                        Learn More
+                        <i className="fas fa-angle-right"></i>
+                      </a>
+                    </div>
                   </div>
 
-                  <a
-                    href="news-and-event-detail.html"
-                    className="text-blue d-none d-md-block"
-                  >
-                    Learn More
-                    <i className="fas fa-angle-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div className="card card-featured border-0 rounded-0">
-                <Image
-                  src="/img/image_placeholder.png"
-                  className="card-img-top img-fluid"
-                  alt="image-placeholder-3"
-                  width={0}
-                  height={0}
-                  sizes="100"
-                  style={{ width: '100%', height: 'auto' }}
-                />
-
-                <div className="card-body">
-                  <h5 className="card-title">
-                    Gyloop Business New Features Released Q4 2020
-                  </h5>
-
-                  <div className="card-text d-none d-xl-block">
-                    {/* <sergey-import src="lorem/1" /> */}
-                  </div>
-
-                  <a
-                    href="news-and-event-detail.html"
-                    className="text-blue d-none d-md-block"
-                  >
-                    Learn More
-                    <i className="fas fa-angle-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div className="card card-featured border-0 rounded-0">
-                <Image
-                  src="/img/image_placeholder.png"
-                  className="card-img-top img-fluid rounded-0"
-                  alt="image-placeholder-4"
-                  width={0}
-                  height={0}
-                  sizes="100"
-                  style={{ width: '100%', height: 'auto' }}
-                />
-
-                <div className="card-body">
-                  <h5 className="card-title">
-                    Gyloop Business New Features Released Q4 2020
-                  </h5>
-
-                  <div className="card-text d-none d-xl-block">
-                    <p>
-                      Gyloop provide Networks Apps to allow you extend your business connection, cause we understand that business are better built by strong relationships. Business entities are now easy to connect to the unlimited networks across industry and locations.
-                    </p>
-                  </div>
-
-                  <a
-                    href="news-and-event-detail.html"
-                    className="text-blue d-none d-md-block"
-                  >
-                    Learn More
-                    <i className="fas fa-angle-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div className="card card-featured border-0 rounded-0">
-                <Image
-                  src="/img/image_placeholder.png"
-                  className="card-img-top img-fluid rounded-0"
-                  alt="image-placeholder-5"
-                  width={0}
-                  height={0}
-                  sizes="100"
-                  style={{ width: '100%', height: 'auto' }}
-                />
-
-                <div className="card-body">
-                  <h5 className="card-title">
-                    Gyloop Business New Features Released Q4 2020
-                  </h5>
-
-                  <div className="card-text d-none d-xl-block">
-                    {/* <sergey-import src="lorem/1" /> */}
-                  </div>
-
-                  <a
-                    href="news-and-event-detail.html"
-                    className="text-blue d-none d-md-block"
-                  >
-                    Learn More
-                    <i className="fas fa-angle-right"></i>
-                  </a>
-                </div>
-              </div>
+                </>
+              ))}
             </div>
           </div>
         </div>

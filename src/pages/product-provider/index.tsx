@@ -27,8 +27,8 @@ export default function ProviderIndex({ dataHeader, dataFaq }) {
 }
 
 export async function getStaticProps(context) {
-  const fetchHeader = await axios.get(`http://localhost:4000/v1/product-header/get?lang_code=${context.locale}&page_code=provider`)
-  const fetchFaq = await axios.get(`http://localhost:4000/v1/product-faq-item/get?lang_code=${context.locale}&page_code=provider`)
+  const fetchHeader = await axios.get(`http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=provider`)
+  const fetchFaq = await axios.get(`http://159.89.44.46:4000/v1/product-faq-item/get?lang_code=${context.locale}&page_code=provider`)
 
   const dataHeader = fetchHeader.data.data
   const dataFaq = fetchFaq.data.data

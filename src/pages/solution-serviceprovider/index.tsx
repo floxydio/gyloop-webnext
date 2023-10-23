@@ -28,7 +28,7 @@ export default function ServiceProvider({ dataHeader }) {
 }
 export async function getStaticProps(context) {
   const fetchHeader = await axios.get(
-    `http://localhost:4000/v1/product-header/get?lang_code=${context.locale}&page_code=service_provider`
+    `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=service_provider`
   );
   const dataHeader = fetchHeader.data.data;
   return {

@@ -5,7 +5,7 @@ import { useForm, Resolver } from 'react-hook-form';
 import Link from 'next/link';
 import Image from 'next/image';
 import axios from "axios"
-import {useState} from "react"
+import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -32,18 +32,18 @@ const resolver: Resolver<FormValues> = async (values) => {
     values: values,
     errors: !values.subscriptionAgreement
       ? {
-          subscriptionAgreement: {
-            type: 'required',
-            message: 'This field is required.',
-          },
-        }
+        subscriptionAgreement: {
+          type: 'required',
+          message: 'This field is required.',
+        },
+      }
       : {},
   };
 };
 
 
 
-export default function ProfessionalComponent({jobPosition}: {jobPosition:JobPosition[]}) {
+export default function ProfessionalComponent({ jobPosition }: { jobPosition: JobPosition[] }) {
   const {
     register,
     handleSubmit,
@@ -75,7 +75,7 @@ export default function ProfessionalComponent({jobPosition}: {jobPosition:JobPos
   const onSubmit = handleSubmit((data) => createSubscriberProfessional(data));
   async function createSubscriberProfessional(formData: FormValues) {
     try {
-      await axios.post("http://localhost:4000/v1/subscriber/create", {
+      await axios.post("http://159.89.44.46:4000/v1/subscriber/create", {
         first_name: formData.firstName,
         last_name: formData.lastName,
         company_name: formData.companyName,
@@ -93,16 +93,16 @@ export default function ProfessionalComponent({jobPosition}: {jobPosition:JobPos
           "Content-Type": "application/json",
         }
       }).then((response) => {
-         if(response.status === 200 || response.status === 201) {
+        if (response.status === 200 || response.status === 201) {
           toast.success("Success Create Subscriber")
-         }
+        }
 
       }).catch((err) => {
-        toast.error("Failed Create Subscriber, " +err.message)
+        toast.error("Failed Create Subscriber, " + err.message)
       })
-    } catch (err) {}
+    } catch (err) { }
   }
- 
+
 
 
   return (
@@ -132,7 +132,7 @@ export default function ProfessionalComponent({jobPosition}: {jobPosition:JobPos
                         width={0}
                         height={0}
                         sizes="100"
-                        // style={{ width: '100%', height: 'auto' }}
+                      // style={{ width: '100%', height: 'auto' }}
                       />
                     </Link>
 
@@ -222,7 +222,7 @@ export default function ProfessionalComponent({jobPosition}: {jobPosition:JobPos
                           >
                             {employeeSize.map((item) => (
                               <option key={item.id}>{item.name}</option>
-                      
+
                             ))}
                           </select>
                           <i className="select-angle far fa-angle-down"></i>
@@ -401,7 +401,7 @@ export default function ProfessionalComponent({jobPosition}: {jobPosition:JobPos
 
 
 export async function getStaticProps() {
-  const res = await axios.get("http://localhost:4000/v1/job/job-position")
+  const res = await axios.get("http://159.89.44.46:4000/v1/job/job-position")
   const jobPosition = await res.data.data
   return {
     props: {

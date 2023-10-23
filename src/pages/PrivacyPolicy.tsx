@@ -15,19 +15,19 @@ export default function PrivacyPolicy(dataPrivacy) {
         metaKeywords: "Gyloop - Privacy Statement for Gyloop",
         metaTitle: "Gyloop - Privacy Statement for Gyloop",
         metaLocale: "en-US"
-      }}/>
+      }} />
       <HeaderNoMenuTransparent type={1} />
       <LeadershipTitle title="Privacy Statement for Gyloop
 " />
-      {dataPrivacy.dataPrivacy === undefined ? <p>Data Kosong</p> : 
-      <PrivacyComponent privacyPolicy={dataPrivacy.dataPrivacy} />}
+      {dataPrivacy.dataPrivacy === undefined ? <p>Data Kosong</p> :
+        <PrivacyComponent privacyPolicy={dataPrivacy.dataPrivacy} />}
       <Footer />
     </>
   );
 }
 
 export async function getStaticProps(context) {
-  const fetchData = await axios.get(`http://localhost:4000/v1/privacy-policy?lang_code=${context.locale}`) 
+  const fetchData = await axios.get(`http://159.89.44.46:4000/v1/privacy-policy?lang_code=${context.locale}`)
   const dataPrivacy = await fetchData.data.data[0]
   return {
     props: {

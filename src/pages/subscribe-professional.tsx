@@ -17,15 +17,15 @@ export default function SubscribeFunctional(dataJobPosition) {
         metaLocale: "en-US"
       }} />
 
-      <ProfessionalComponent jobPosition={dataJobPosition.dataJobPosition}   />
+      <ProfessionalComponent jobPosition={dataJobPosition.dataJobPosition} />
     </>
   );
 }
 
 export async function getStaticProps() {
-  const fetchData = await fetch("http://localhost:4000/v1/job/job-position")
+  const fetchData = await fetch("http://159.89.44.46:4000/v1/job/job-position")
   const data = await fetchData.json()
-  const dataJobPosition = data.data  
+  const dataJobPosition = data.data
   return {
     props: {
       dataJobPosition,
