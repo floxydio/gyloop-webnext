@@ -6,22 +6,144 @@ import ProductManagement from '../Business/ProductManagement';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import NetworkPricingComponent from './NetworkPricingComponent';
 
-export interface FAQItemModel {
+interface SolutionFunctionEntities {
+  id: number;
+  lang_code: string;
+  page_code: string;
+  func_name: string;
+  func_tagx: string;
+  desc_lin1: string;
+  desc_lin2: string;
+  link_list: string;
+  imge_func: string;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface ProductFaqHeader {
+  id?: number;
+  lang_code: string;
+  page_code: string;
+  head_text: string;
+  head_textclr: string;
+  shrt_desc: string;
+  shrt_clor: string;
+  bg_clor: string;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt?: Date;
+}
+export interface ProductFaqItem {
+  id?: number;
+  lang_code: string;
+  page_code: string;
+  ques_text: string;
+  answ_text: string;
+  link_list: string;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt?: Date;
+}
+
+export interface ProductDetail {
   id?: number;
   lang_code?: string;
   page_code?: string;
-  ques_text?: string;
-  answ_text?: string;
-  link_list?: string;
+  prod_code?: string;
+  tabx_text?: string;
+  tabx_icon?: string;
+  prod_name?: string;
+  prod_clor?: string;
+  head_text?: string;
+  head_textclor?: string;
+  shr1_desc?: string;
+  shr1_clor?: string;
+  vpro_desc?: string;
+  vpro_clor?: string;
+  shr2_desc?: string;
+  shr2_clor?: string;
+  is_publ?: boolean;
   submit_type?: number;
   createdAt?: Date;
-  updatedAt?: null;
+  updatedAt?: Date;
 }
 
+export interface ProductFunctionality {
+  id?: number;
+  lang_code: String;
+  page_code: String;
+  prod_code: String;
+  func_name: String;
+  long_desc: String;
+  bnft_list: String;
+  link_list: String;
+  is_publ: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt?: Date;
+}
 
+export interface PricingModel {
+  id?: number;
+  lang_code?: string;
+  page_code?: string;
+  pckg_name?: string;
+  pckg_desc?: string;
+  defa_curc?: string;
+  defa_valu?: string;
+  defa_term?: number;
+  altr_curc?: string;
+  altr_valu?: number;
+  altr_term?: string;
+  pckg_icon?: string;
+  bt_link?: string;
+  bt_capt?: string;
+  bt_type?: string;
+  is_popu?: boolean;
+  is_publ?: boolean;
+  submit_type?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
 
-export default function NetworkComponent({ dataFaqItem }: { dataFaqItem: FAQItemModel[] }) {
+export interface ProductFeature {
+  id?: number;
+  lang_code: string;
+  page_code: string;
+  txt_title: string;
+  txt_clor: string;
+  txt_subtitle: string;
+  txt_subClor: string;
+  txt_btnLink: string;
+  txt_btnCapt: string;
+  txt_btnIcon: string;
+  txt_btnClor: string;
+  is_active: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt?: Date | undefined;
+}
+
+export default function NetworkComponent({
+  dataFaqItem,
+  dataProductFunction,
+  dataFaqHeader,
+  dataPricingItem,
+  dataProductDetail,
+  dataProductFeature,
+  dataSolutionFunction,
+}: {
+  dataFaqItem: ProductFaqItem[];
+  dataProductFunction: ProductFunctionality[];
+  dataFaqHeader: ProductFaqHeader[];
+  dataPricingItem: PricingModel[];
+  dataProductDetail: ProductDetail[];
+  dataProductFeature: ProductFeature[];
+  dataSolutionFunction: SolutionFunctionEntities[];
+}) {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -103,417 +225,335 @@ export default function NetworkComponent({ dataFaqItem }: { dataFaqItem: FAQItem
         </div>
       </div>
 
-      <div className="subheader-bg-cover billing-automation-subheader networks-subheader">
-        <div className="container justify-content-md-start">
-          <div className="content">
-            <h2 className="title">
-              Your networks is your assets <br />
-              These assets will help you perform better
-            </h2>
-            <p className="subtitle">Qualified Business Partners</p>
+      {dataSolutionFunction.map((data) => {
+        return (
+          <div key={data.id}>
+            {data.submit_type === 1 ? (
+              <div className="subheader-bg-cover billing-automation-subheader networks-subheader">
+                <div className="container justify-content-md-start">
+                  <div className="content">
+                    <h2 className="title">{data.func_name}</h2>
+                    <p className="subtitle">{data.func_tagx}</p>
 
-            <hr className="hr-small" />
+                    <hr className="hr-small" />
 
-            <h5 className="title-small">Business has been changed</h5>
-            <p className="subtitle-small">
-              You, Customer, and Supplier are working together now
-            </p>
+                    <h5 className="title-small">{data.link_list}</h5>
+                    <p className="subtitle-small">{data.imge_func}</p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="subheader-bg-cover billing-automation-subheader networks-subheader">
+                <div className="container justify-content-md-start">
+                  <div className="content">
+                    <h2 className="title">{data.func_name}</h2>
+                    <p className="subtitle">{data.func_tagx}</p>
+
+                    <hr className="hr-small" />
+
+                    <h5 className="title-small">{data.link_list}</h5>
+                    <p className="subtitle-small">{data.imge_func}</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-        </div>
-      </div>
+        );
+      })}
 
       <div className="business-tabs-control d-none d-xl-block">
         <div className="container">
           <ul className="nav nav-tabs">
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#business-collapse-1"
-                data-toggle="collapse"
-                aria-expanded="true"
-              >
-                <i className="fas fa-users mr-2"></i>
-                Networks
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#business-collapse-2"
-                data-toggle="collapse"
-              >
-                <i className="fas fa-id-card mr-2"></i>
-                Profile
-              </a>
-            </li>
+            {dataProductDetail.map((data, i) => {
+              return (
+                <li className="nav-item">
+                  <a
+                    className="nav-link"
+                    href={`#${data.prod_code}`}
+                    data-toggle="collapse"
+                    aria-expanded="true"
+                    key={i}
+                  >
+                    <i className={`${data.tabx_icon} mr-2`}></i>
+                    {data.tabx_text}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
-      <div className="business-tabs" id="business-accordion">
-        <div className="container">
-          <div>
-            <h4
-              className="footer-links-toggle d-flex align-items-center d-xl-none"
-              data-toggle="collapse"
-              data-target="#business-collapse-1"
-              aria-expanded="true"
-            >
-              <i className="fas fa-users"></i>
-              <span className="ml-2 mr-auto">Networks</span>
+      {dataProductDetail.map((data) => {
+        return (
+          <div key={data.id}>
+            <div className="business-tabs" id={`business-accordion-${data.id}`}>
+              <div className="container">
+                <div>
+                  <h4
+                    className="footer-links-toggle d-flex align-items-center d-xl-none"
+                    data-toggle="collapse"
+                    data-target={`#${data.prod_code}`}
+                    aria-expanded="true"
+                  >
+                    <i className="fas fa-users"></i>
+                    <span className="ml-2 mr-auto">{data.tabx_text}</span>
 
-              <i className="fas fa-angle-down icon-rotates"></i>
-            </h4>
-            <div
-              id="business-collapse-1"
-              className="collapse show"
-              data-parent="#business-accordion"
-            >
-              <div className="tab">
-                <BusinessTab />
+                    <i className="fas fa-angle-down icon-rotates"></i>
+                  </h4>
+                  <div
+                    id={`${data.prod_code}`}
+                    className="collapse show"
+                    data-parent="#business-accordion"
+                  >
+                    <div className="tab">
+                      <h5 className="link-title">BUSINESS</h5>
 
-                <div className="billing-automation-swiper">
-                  <div className="container">
-                    <h2 className="title">Highlight Menu</h2>
+                      <h3 className="title">{data.prod_name}</h3>
 
-                    <div
-                      id="carouselExampleIndicators"
-                      className="carousel slide"
-                      data-ride="carousel"
-                    >
-                      <ol className="carousel-indicators bullets">
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="0"
-                          onClick={() => setIndex(0)}
-                          className={index === 0 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="1"
-                          onClick={() => setIndex(1)}
-                          className={index === 1 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="2"
-                          onClick={() => setIndex(2)}
-                          className={index === 2 ? 'active' : ''}
-                        ></li>
-                      </ol>
-                      <Carousel
-                        className="slide"
-                        controls={false}
-                        indicators={false}
-                        activeIndex={index}
-                        onSelect={handleSelect}
-                      >
-                        <Carousel.Item>
+                      <p>{data.head_text}</p>
+                      <p>{data.shr1_desc}</p>
+
+                      <div className="value-box">
+                        <h4 className="title d-flex align-items-center">
                           <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                      </Carousel>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="row d-none d-xl-flex product-management-title">
-                  <div className="col-8">
-                    <p className="text-warning">Key Features</p>
-                  </div>
-                  <div className="col-4 pl-0">
-                    <p className="text-warning ml-n2">Business Benefits</p>
-                  </div>
-                </div>
-
-                {[...Array(6)].map((x, i) => {
-                  return <ProductManagement key={x} />;
-                })}
-                <BusinessFooter />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4
-              className="footer-links-toggle d-flex align-items-center d-xl-none"
-              data-toggle="collapse"
-              data-target="#business-collapse-2"
-            >
-              <i className="fas fa-id-card"></i>
-              <span className="ml-2 mr-auto">Profile</span>
-
-              <i className="fas fa-angle-down icon-rotates"></i>
-            </h4>
-            <div
-              id="business-collapse-2"
-              className="collapse"
-              data-parent="#business-accordion"
-            >
-              <div className="tab">
-                <BusinessTabTwo />
-
-                <div className="billing-automation-swiper">
-                  <div className="container">
-                    <h2 className="title">Highlight Menu</h2>
-
-                    <div
-                      id="carouselExampleIndicators"
-                      className="carousel slide"
-                      data-ride="carousel"
-                    >
-                      <ol className="carousel-indicators bullets">
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="0"
-                          onClick={() => setIndex(0)}
-                          className={index === 0 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="1"
-                          onClick={() => setIndex(1)}
-                          className={index === 1 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="2"
-                          onClick={() => setIndex(2)}
-                          className={index === 2 ? 'active' : ''}
-                        ></li>
-                      </ol>
-                      <Carousel
-                        className="slide"
-                        controls={false}
-                        indicators={false}
-                        activeIndex={index}
-                        onSelect={handleSelect}
-                      >
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                      </Carousel>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="row d-none d-xl-flex product-management-title">
-                  <div className="col-8">
-                    <p className="text-warning">Key Features</p>
-                  </div>
-                  <div className="col-4 pl-0">
-                    <p className="text-warning">Business Benefits</p>
-                  </div>
-                </div>
-
-                {[...Array(6)].map((x, i) => {
-                  return <ProductManagement key={x} />;
-                })}
-                <BusinessFooter />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="business-feature networks-feature">
-        <div className="container">
-          <div className="content">
-            <h5 className="title">Rich Features with Max Impacts</h5>
-            <p className="subtitle">It’s not a tools, it’s a robust process</p>
-
-            <p className="text">
-              Gyloop has been developed by customer experiences, and bring
-              customer value on top of application features. Major business use
-              case transactions are ready to used in this platform, and built
-              with providing maximum change impacts.
-            </p>
-            <p className="text">
-              Gyloop has been designed to give you best experience to run your
-              business, to connect with your partners, and leverage business
-              opportunity at the same time. You will adopt the revolutionary
-              business application to robust your business processes.
-            </p>
-
-            <Link href="/Solutions" aria-label='Solutions Overview' className="gyloop-link d-block">
-              Learn More
-              <i className="fas fa-angle-right"></i>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="business-pricing networks-pricing">
-        <div className="container">
-          <h3 className="title">Gyloop Networks Pricing</h3>
-          <p className="subtitle">
-            Perform your business better with affordable subscription costs
-          </p>
-
-          <div className="row">
-            <div className="col-12 col-md-3 px-md-1 px-xl-2">
-              <div className="card border-0 rounded-0">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-8 col-md-12">
-                      <h5 className="card-title">
-                        <div>
-                          <Image
-                            className="logo-price mr-0"
-                            src="/img/icon_bagde_volunteer.png"
-                            alt="gyloop-icon-badge-volunterr"
+                            src="/img/icon_idea.png"
+                            alt="gyloop-icon-idea"
                             width={0}
                             height={0}
                             sizes="100"
                           />
-                          <Image
-                            className="logo-price mr-0"
-                            src="/img/icon_bagde_functional.png"
-                            alt="gyloop-icon-badge-functional"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                          />
-                          <Image
-                            className="logo-price"
-                            src="/img/icon_bagde_professional.png"
-                            alt="gyloop-icon-badge-professional"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                          />
+                          <span>Value Proposition</span>
+                        </h4>
+
+                        <p>{data.vpro_desc}</p>
+                      </div>
+
+                      <p>{data.shr1_desc}</p>
+
+                      <div className="billing-automation-swiper">
+                        <div className="container">
+                          <h2 className="title">Highlight Menu</h2>
+
+                          <div
+                            id="carouselExampleIndicators"
+                            className="carousel slide"
+                            data-ride="carousel"
+                          >
+                            <ol className="carousel-indicators bullets">
+                              <li
+                                data-target="#carouselExampleIndicators"
+                                data-slide-to="0"
+                                onClick={() => setIndex(0)}
+                                className={index === 0 ? 'active' : ''}
+                              ></li>
+                              <li
+                                data-target="#carouselExampleIndicators"
+                                data-slide-to="1"
+                                onClick={() => setIndex(1)}
+                                className={index === 1 ? 'active' : ''}
+                              ></li>
+                              <li
+                                data-target="#carouselExampleIndicators"
+                                data-slide-to="2"
+                                onClick={() => setIndex(2)}
+                                className={index === 2 ? 'active' : ''}
+                              ></li>
+                            </ol>
+                            <Carousel
+                              className="slide"
+                              controls={false}
+                              indicators={false}
+                              activeIndex={index}
+                              onSelect={handleSelect}
+                            >
+                              <Carousel.Item>
+                                <Image
+                                  className="img-fluid"
+                                  src="/img/video_player_placeholder.gif"
+                                  alt="Video Placeholder"
+                                  width={0}
+                                  height={0}
+                                  sizes="100"
+                                  style={{ width: '100%', height: 'auto' }}
+                                />
+                              </Carousel.Item>
+                              <Carousel.Item>
+                                <Image
+                                  className="img-fluid"
+                                  src="/img/video_player_placeholder.gif"
+                                  alt="Video Placeholder"
+                                  width={0}
+                                  height={0}
+                                  sizes="100"
+                                  style={{ width: '100%', height: 'auto' }}
+                                />
+                              </Carousel.Item>
+                              <Carousel.Item>
+                                <Image
+                                  className="img-fluid"
+                                  src="/img/video_player_placeholder.gif"
+                                  alt="Video Placeholder"
+                                  width={0}
+                                  height={0}
+                                  sizes="100"
+                                  style={{ width: '100%', height: 'auto' }}
+                                />
+                              </Carousel.Item>
+                            </Carousel>
+                          </div>
                         </div>
-                        <span>Business</span>
-                      </h5>
+                      </div>
 
-                      <p className="card-text">
-                        Existing Gyloop Business User has full network access
-                      </p>
-                    </div>
-                    <div className="col-4 col-md-12">
-                      <h3 className="price">
-                        <span>FREE</span>
-                      </h3>
+                      <div className="row d-none d-xl-flex product-management-title">
+                        <div className="col-8">
+                          <p className="text-warning">Key Features</p>
+                        </div>
+                        <div className="col-4 pl-0">
+                          <p className="text-warning ml-n2">
+                            Business Benefits
+                          </p>
+                        </div>
+                      </div>
+                      {dataProductFunction.map((data) => {
+                        return (
+                          <div key={data.id}>
+                            {data.submit_type === 1 ? (
+                              <div className="product-management">
+                                <div className="row">
+                                  <div className="col-12 col-xl-8">
+                                    <h4 className="title">{data.func_name}</h4>
 
-                      <p className="price-info">
-                        /user/month <br />
-                        (billed annually)
-                      </p>
+                                    <p>{data.long_desc}</p>
+
+                                    <a
+                                      href="live-demo.html"
+                                      className="gyloop-link d-block"
+                                    >
+                                      Watch Video
+                                      <i className="fas fa-angle-right"></i>
+                                    </a>
+                                    <a
+                                      href="library.html"
+                                      className="gyloop-link d-block"
+                                    >
+                                      Find Documentation
+                                      <i className="fas fa-angle-right"></i>
+                                    </a>
+                                  </div>
+
+                                  <div className="col-12 d-xl-none">
+                                    <hr className="hr-small bg-blue" />
+                                  </div>
+
+                                  <div className="col-12 col-xl-4 col-lists">
+                                    <ul className="list-unstyled">
+                                      <li>
+                                        <i className="list-icon fas fa-check-circle text-blue"></i>
+                                        {data.bnft_list}
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="product-management">
+                                <div className="row">
+                                  <div className="col-12 col-xl-8">
+                                    <h4 className="title">{data.func_name}</h4>
+
+                                    <p>{data.long_desc}</p>
+
+                                    <a
+                                      href="live-demo.html"
+                                      className="gyloop-link d-block"
+                                    >
+                                      Watch Video
+                                      <i className="fas fa-angle-right"></i>
+                                    </a>
+                                    <a
+                                      href="library.html"
+                                      className="gyloop-link d-block"
+                                    >
+                                      Find Documentation
+                                      <i className="fas fa-angle-right"></i>
+                                    </a>
+                                  </div>
+
+                                  <div className="col-12 d-xl-none">
+                                    <hr className="hr-small bg-blue" />
+                                  </div>
+
+                                  <div className="col-12 col-xl-4 col-lists">
+                                    <ul className="list-unstyled">
+                                      <li>
+                                        <i className="list-icon fas fa-check-circle text-blue"></i>
+                                        {data.bnft_list}
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })}
+                      <BusinessFooter />
                     </div>
                   </div>
-                </div>
-                <div className="card-footer">
-                  <Link
-                    href="/SubscribeVerified"
-                    className="btn btn-primary btn-block gyloop-btn"
-                  >
-                    Register Now
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-9 px-md-1 px-xl-2">
-              <div className="card card-side border-0 rounded-0 h-100">
-                <div className="card-body text-md-left">
-                  <div className="row">
-                    <div className="col-12 col-md-12">
-                      <h5 className="card-title justify-content-md-start text-md-left align-items-md-start">
-                        <span>Gyloop Networks</span>
-                      </h5>
-
-                      <p className="card-text card-text-lg mb-2">
-                        Connect with trusted and qualified supplier and buyers
-                        across industry and locations.
-                      </p>
-                      <p className="card-text card-text-lg mb-2">
-                        Discover the full features of Gyloop Networks for free
-                        of subscription cost using your existing Gyloop Business
-                        User*.
-                      </p>
-
-                      <hr className="d-none d-md-block" />
-
-                      <p className="card-text mb-2">
-                        Module Includes : Miniweb, Networks
-                      </p>
-                      <p className="card-text">
-                        *User : Volunteer, Functional, Professional
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-footer">
-                  <Link
-                    href="/SubscribeProfessional"
-                    className="btn btn-primary btn-block gyloop-btn"
-                  >
-                    Register Now
-                  </Link>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
+
+      {dataProductFeature.map((data, i) => {
+        return (
+          <div key={i}>
+            {data.submit_type === 1 ? (
+              <div className="business-feature networks-feature">
+                <div className="container">
+                  <div className="content">
+                    <h5 className="title">{data.txt_title}</h5>
+
+                    <p className="text">{data.txt_subtitle}</p>
+
+                    <Link
+                      href="/Solutions"
+                      aria-label="Solutions Overview"
+                      className="gyloop-link d-block"
+                    >
+                      {data.txt_btnCapt}
+                      <i className="fas fa-angle-right"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="business-feature networks-feature">
+                <div className="container">
+                  <div className="content">
+                    <h5 className="title">{data.txt_title}</h5>
+
+                    <p className="text">{data.txt_subtitle}</p>
+
+                    <Link
+                      href="/Solutions"
+                      aria-label="Solutions Overview"
+                      className="gyloop-link d-block"
+                    >
+                      {data.txt_btnCapt}
+                      <i className="fas fa-angle-right"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
+
+      <NetworkPricingComponent dataPricingModel={dataPricingItem} />
 
       <div className="business-pricing business-faq" id="faq-accordion">
         <div className="container">
@@ -522,7 +562,7 @@ export default function NetworkComponent({ dataFaqItem }: { dataFaqItem: FAQItem
             Get answers to the most-asked questions about Gyloop Networks.
           </p>
           {dataFaqItem.map((item, index) => (
-            <div className="card rounded-0">
+            <div className="card rounded-0" key={index}>
               <div className="card-header">
                 <h4
                   className="card-title d-flex align-items-start mb-0"
@@ -532,9 +572,7 @@ export default function NetworkComponent({ dataFaqItem }: { dataFaqItem: FAQItem
                 >
                   <i className="far fa-plus-circle"></i>
                   <i className="far fa-minus-circle"></i>
-                  <span>
-                    {item.ques_text}
-                  </span>
+                  <span>{item.ques_text}</span>
                 </h4>
               </div>
 
@@ -565,9 +603,7 @@ export default function NetworkComponent({ dataFaqItem }: { dataFaqItem: FAQItem
                 </div>
               </div>
             </div>
-
           ))}
-
         </div>
       </div>
 

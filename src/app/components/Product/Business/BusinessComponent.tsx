@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import '@/style/style.min.css';
 import '@/style/icon.css';
 import { useEffect, useState } from 'react';
@@ -86,9 +86,15 @@ export interface ProductDetail {
   updatedAt?: Date;
 }
 
-
-
-export default function BusinessComponent({ dataPriceItem, dataTablePlan, dataProductDetail }: { dataPriceItem: PricingModel[], dataTablePlan: TablePlanModel[], dataProductDetail: ProductDetail[] }) {
+export default function BusinessComponent({
+  dataPriceItem,
+  dataTablePlan,
+  dataProductDetail,
+}: {
+  dataPriceItem: PricingModel[];
+  dataTablePlan: TablePlanModel[];
+  dataProductDetail: ProductDetail[];
+}) {
   const [index, setIndex] = useState(0);
   const [indexTab, setIndexTab] = useState("")
   console.log(dataProductDetail)
@@ -117,13 +123,9 @@ export default function BusinessComponent({ dataPriceItem, dataTablePlan, dataPr
 
           <div className="card rounded-0 bg-transparent">
             <div className="card-body">
-              <div className="card-title">
-                {t('secondTitleFeature')}
-              </div>
+              <div className="card-title">{t('secondTitleFeature')}</div>
 
-              <div className="card-subtitle">
-                {t('secondSubtitleFeature')}
-              </div>
+              <div className="card-subtitle">{t('secondSubtitleFeature')}</div>
 
               <i className="fas fa-shopping-cart text-white mr-1"></i>
               <a href="javascript:void()" className="gyloop-link">
@@ -135,13 +137,9 @@ export default function BusinessComponent({ dataPriceItem, dataTablePlan, dataPr
 
           <div className="card rounded-0 bg-transparent">
             <div className="card-body">
-              <div className="card-title">
-                {t('thirdTitleFeature')}
-              </div>
+              <div className="card-title">{t('thirdTitleFeature')}</div>
 
-              <div className="card-subtitle">
-                {t('thirdSubtitleFeature')}
-              </div>
+              <div className="card-subtitle">{t('thirdSubtitleFeature')}</div>
 
               <i className="fas fa-warehouse text-white mr-1"></i>
               <a href="javascript:void()" className="gyloop-link">
@@ -152,7 +150,6 @@ export default function BusinessComponent({ dataPriceItem, dataTablePlan, dataPr
           </div>
         </div>
       </div>
-
 
       <div className="billing-automation-swiper business">
         <div className="container">
@@ -387,11 +384,12 @@ export default function BusinessComponent({ dataPriceItem, dataTablePlan, dataPr
         )
       })}
 
-
-
       {/* END */}
 
-      <BusinessPricingComponent data={dataPriceItem} dataTablePlan={dataTablePlan} />
+      <BusinessPricingComponent
+        data={dataPriceItem}
+        dataTablePlan={dataTablePlan}
+      />
     </>
   );
 }

@@ -9,6 +9,25 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Carousel } from 'react-bootstrap';
+import ProviderPricingComponent from './ProviderPricingComponent';
+
+export interface ProductFeature {
+  id?: number;
+  lang_code: string;
+  page_code: string;
+  txt_title: string;
+  txt_clor: string;
+  txt_subtitle: string;
+  txt_subClor: string;
+  txt_btnLink: string;
+  txt_btnCapt: string;
+  txt_btnIcon: string;
+  txt_btnClor: string;
+  is_active: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt?: Date | undefined;
+}
 
 export interface FAQItemModel {
   id?: number;
@@ -22,18 +41,87 @@ export interface FAQItemModel {
   updatedAt?: Date;
 }
 
+export interface ProductDetail {
+  id?: number;
+  lang_code?: string;
+  page_code?: string;
+  prod_code?: string;
+  tabx_text?: string;
+  tabx_icon?: string;
+  prod_name?: string;
+  prod_clor?: string;
+  head_text?: string;
+  head_textclor?: string;
+  shr1_desc?: string;
+  shr1_clor?: string;
+  vpro_desc?: string;
+  vpro_clor?: string;
+  shr2_desc?: string;
+  shr2_clor?: string;
+  is_publ?: boolean;
+  submit_type?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
 
+export interface ProductFunctionality {
+  id?: number;
+  lang_code: String;
+  page_code: String;
+  prod_code: String;
+  func_name: String;
+  long_desc: String;
+  bnft_list: String;
+  link_list: String;
+  is_publ: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt?: Date;
+}
 
-export default function ProviderComponent({ dataFaq }: { dataFaq: FAQItemModel[] }) {
+export interface PricingModel {
+  id?: number;
+  lang_code?: string;
+  page_code?: string;
+  pckg_name?: string;
+  pckg_desc?: string;
+  defa_curc?: string;
+  defa_valu?: string;
+  defa_term?: number;
+  altr_curc?: string;
+  altr_valu?: number;
+  altr_term?: string;
+  pckg_icon?: string;
+  bt_link?: string;
+  bt_capt?: string;
+  bt_type?: string;
+  is_popu?: boolean;
+  is_publ?: boolean;
+  submit_type?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export default function ProviderComponent({
+  dataFaq,
+  dataProductDetail,
+  dataProductFunction,
+  dataProductPricing,
+  dataProductFeature,
+}: {
+  dataFaq: FAQItemModel[];
+  dataProductDetail: ProductDetail[];
+  dataProductFunction: ProductFunctionality[];
+  dataProductPricing: PricingModel[];
+  dataProductFeature: ProductFeature[];
+}) {
   const [index, setIndex] = useState(0);
-
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
   return (
     <>
-
       <div className="billing-automation-swiper business">
         <div className="container">
           <h2 className="title mb-0">How Gyloop Works</h2>
@@ -130,596 +218,424 @@ export default function ProviderComponent({ dataFaq }: { dataFaq: FAQItemModel[]
       <div className="business-tabs-control d-none d-xl-block">
         <div className="container">
           <ul className="nav nav-tabs">
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#business-collapse-1"
-                data-toggle="collapse"
-                aria-expanded="true"
-              >
-                <i className="fas fa-heart mr-2"></i>
-                CRM Module
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#business-collapse-2"
-                data-toggle="collapse"
-              >
-                <i className="fas fa-shopping-cart mr-2"></i>
-                SRM Module
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="#business-collapse-3"
-                data-toggle="collapse"
-              >
-                <i className="fas fa-warehouse mr-2"></i>
-                IWM Module
-              </a>
-            </li>
+            {dataProductDetail.map((data, i) => (
+              <>
+                {data.submit_type === 1 ? (
+                  <li className="nav-item">
+                    <a
+                      className="nav-link"
+                      href={`#${data.prod_code}`}
+                      data-toggle="collapse"
+                      aria-expanded="true"
+                    >
+                      <i className={`${data.tabx_icon} mr-2`}></i>
+                      {data.tabx_text}
+                    </a>
+                  </li>
+                ) : (
+                  <li className="nav-item">
+                    <a
+                      className="nav-link"
+                      href={`#${data.prod_code}`}
+                      data-toggle="collapse"
+                      aria-expanded="true"
+                    >
+                      <i className={`${data.tabx_icon} mr-2`}></i>
+                      {data.tabx_text}
+                    </a>
+                  </li>
+                )}
+              </>
+            ))}
           </ul>
         </div>
       </div>
       <div className="business-tabs" id="business-accordion">
         <div className="container">
-          <div>
-            <h4
-              className="footer-links-toggle d-flex align-items-center d-xl-none"
-              data-toggle="collapse"
-              data-target="#business-collapse-1"
-              aria-expanded="true"
-            >
-              <i className="fas fa-heart"></i>
-              <span className="ml-2 mr-auto">CRM Module</span>
-
-              <i className="fas fa-angle-down icon-rotates"></i>
-            </h4>
-            <div
-              id="business-collapse-1"
-              className="collapse show"
-              data-parent="#business-accordion"
-            >
-              <div className="tab">
-                {/* <BusinessTab /> */}
-
-                <div className="billing-automation-swiper">
-                  <div className="container">
-                    <h2 className="title">Highlight Menu</h2>
-
-                    <div
-                      id="carouselExampleIndicators"
-                      className="carousel slide"
-                      data-ride="carousel"
+          {dataProductDetail.map((data) => {
+            return (
+              <>
+                {data.submit_type === 1 ? (
+                  <div>
+                    <h4
+                      className="footer-links-toggle d-flex align-items-center d-xl-none"
+                      data-toggle="collapse"
+                      data-target="#business-collapse-1"
+                      aria-expanded="true"
                     >
-                      <ol className="carousel-indicators bullets">
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="0"
-                          onClick={() => setIndex(0)}
-                          className={index === 0 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="1"
-                          onClick={() => setIndex(1)}
-                          className={index === 1 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="2"
-                          onClick={() => setIndex(2)}
-                          className={index === 2 ? 'active' : ''}
-                        ></li>
-                      </ol>
-                      <Carousel
-                        className="slide"
-                        controls={false}
-                        indicators={false}
-                        activeIndex={index}
-                        onSelect={handleSelect}
-                      >
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                      </Carousel>
+                      <i className="fas fa-heart"></i>
+                      <span className="ml-2 mr-auto">{data.tabx_text}</span>
+
+                      <i className="fas fa-angle-down icon-rotates"></i>
+                    </h4>
+                    <div
+                      id="business-collapse-1"
+                      className="collapse show"
+                      data-parent="#business-accordion"
+                    >
+                      <div className="tab">
+                        <h5 className="link-title">BUSINESS</h5>
+
+                        <h3 className="title">{data.prod_name}</h3>
+
+                        <p>{data.head_text}</p>
+                        <p>{data.shr1_desc}</p>
+
+                        <div className="value-box">
+                          <h4 className="title d-flex align-items-center">
+                            <Image
+                              src="/img/icon_idea.png"
+                              alt="gyloop-icon-idea"
+                              width={0}
+                              height={0}
+                              sizes="100"
+                            />
+                            <span>Value Proposition</span>
+                          </h4>
+
+                          <p>{data.vpro_desc}</p>
+                        </div>
+
+                        <p>{data.shr1_desc}</p>
+
+                        <div className="billing-automation-swiper">
+                          <div className="container">
+                            <h2 className="title">Highlight Menu</h2>
+
+                            <div
+                              id="carouselExampleIndicators"
+                              className="carousel slide"
+                              data-ride="carousel"
+                            >
+                              <ol className="carousel-indicators bullets">
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="0"
+                                  onClick={() => setIndex(0)}
+                                  className={index === 0 ? 'active' : ''}
+                                ></li>
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="1"
+                                  onClick={() => setIndex(1)}
+                                  className={index === 1 ? 'active' : ''}
+                                ></li>
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="2"
+                                  onClick={() => setIndex(2)}
+                                  className={index === 2 ? 'active' : ''}
+                                ></li>
+                              </ol>
+                              <Carousel
+                                className="slide"
+                                controls={false}
+                                indicators={false}
+                                activeIndex={index}
+                                onSelect={handleSelect}
+                              >
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                              </Carousel>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="row d-none d-xl-flex product-management-title">
+                          <div className="col-8">
+                            <p className="text-warning">Key Features</p>
+                          </div>
+                          <div className="col-4 pl-0">
+                            <p className="text-warning ml-n2">
+                              Business Benefits
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* {[...Array(6)].map((x, i) => {
+                          return <ProductManagement key={x} />;
+                        })} */}
+                        {dataProductFunction.map((data) => {
+                          return (
+                            <>
+                              {data.submit_type === 1 ? (
+                                <div className="product-management">
+                                  <div className="row">
+                                    <div className="col-12 col-xl-8">
+                                      <h4 className="title">
+                                        {data.func_name}
+                                      </h4>
+
+                                      <p>{data.long_desc}</p>
+
+                                      <a
+                                        href="live-demo.html"
+                                        className="gyloop-link d-block"
+                                      >
+                                        Watch Video
+                                        <i className="fas fa-angle-right"></i>
+                                      </a>
+                                      <a
+                                        href="library.html"
+                                        className="gyloop-link d-block"
+                                      >
+                                        Find Documentation
+                                        <i className="fas fa-angle-right"></i>
+                                      </a>
+                                    </div>
+
+                                    <div className="col-12 d-xl-none">
+                                      <hr className="hr-small bg-blue" />
+                                    </div>
+
+                                    <div className="col-12 col-xl-4 col-lists">
+                                      <ul className="list-unstyled">
+                                        <li>
+                                          <i className="list-icon fas fa-check-circle text-blue"></i>
+                                          {data.bnft_list}
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              ) : (
+                                <div className="product-management">
+                                  <div className="row">
+                                    <div className="col-12 col-xl-8">
+                                      <h4 className="title">
+                                        {data.func_name}
+                                      </h4>
+
+                                      <p>{data.long_desc}</p>
+
+                                      <a
+                                        href="live-demo.html"
+                                        className="gyloop-link d-block"
+                                      >
+                                        Watch Video
+                                        <i className="fas fa-angle-right"></i>
+                                      </a>
+                                      <a
+                                        href="library.html"
+                                        className="gyloop-link d-block"
+                                      >
+                                        Find Documentation
+                                        <i className="fas fa-angle-right"></i>
+                                      </a>
+                                    </div>
+
+                                    <div className="col-12 d-xl-none">
+                                      <hr className="hr-small bg-blue" />
+                                    </div>
+
+                                    <div className="col-12 col-xl-4 col-lists">
+                                      <ul className="list-unstyled">
+                                        <li>
+                                          <i className="list-icon fas fa-check-circle text-blue"></i>
+                                          {data.bnft_list}
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </>
+                          );
+                        })}
+                        <BusinessFooter />
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                <div className="row d-none d-xl-flex product-management-title">
-                  <div className="col-8">
-                    <p className="text-warning">Key Features</p>
-                  </div>
-                  <div className="col-4 pl-0">
-                    <p className="text-warning ml-n2">Business Benefits</p>
-                  </div>
-                </div>
-
-                {[...Array(6)].map((x, i) => {
-                  return <ProductManagement key={x} />;
-                })}
-                <BusinessFooter />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4
-              className="footer-links-toggle d-flex align-items-center d-xl-none"
-              data-toggle="collapse"
-              data-target="#business-collapse-2"
-            >
-              <i className="fas fa-shopping-cart"></i>
-              <span className="ml-2 mr-auto">SRM Module</span>
-
-              <i className="fas fa-angle-down icon-rotates"></i>
-            </h4>
-            <div
-              id="business-collapse-2"
-              className="collapse"
-              data-parent="#business-accordion"
-            >
-              <div className="tab">
-                <BusinessTabTwo />
-
-                <div className="billing-automation-swiper">
-                  <div className="container">
-                    <h2 className="title">Highlight Menu</h2>
-
-                    <div
-                      id="carouselExampleIndicators"
-                      className="carousel slide"
-                      data-ride="carousel"
+                ) : (
+                  <div>
+                    <h4
+                      className="footer-links-toggle d-flex align-items-center d-xl-none"
+                      data-toggle="collapse"
+                      data-target="#business-collapse-1"
+                      aria-expanded="true"
                     >
-                      <ol className="carousel-indicators bullets">
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="0"
-                          onClick={() => setIndex(0)}
-                          className={index === 0 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="1"
-                          onClick={() => setIndex(1)}
-                          className={index === 1 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="2"
-                          onClick={() => setIndex(2)}
-                          className={index === 2 ? 'active' : ''}
-                        ></li>
-                      </ol>
-                      <Carousel
-                        className="slide"
-                        controls={false}
-                        indicators={false}
-                        activeIndex={index}
-                        onSelect={handleSelect}
-                      >
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                      </Carousel>
+                      <i className="fas fa-heart"></i>
+                      <span className="ml-2 mr-auto">CRM Module</span>
+
+                      <i className="fas fa-angle-down icon-rotates"></i>
+                    </h4>
+                    <div
+                      id="business-collapse-1"
+                      className="collapse show"
+                      data-parent="#business-accordion"
+                    >
+                      <div className="tab">
+                        {/* <BusinessTab /> */}
+
+                        <div className="billing-automation-swiper">
+                          <div className="container">
+                            <h2 className="title">Highlight Menu</h2>
+
+                            <div
+                              id="carouselExampleIndicators"
+                              className="carousel slide"
+                              data-ride="carousel"
+                            >
+                              <ol className="carousel-indicators bullets">
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="0"
+                                  onClick={() => setIndex(0)}
+                                  className={index === 0 ? 'active' : ''}
+                                ></li>
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="1"
+                                  onClick={() => setIndex(1)}
+                                  className={index === 1 ? 'active' : ''}
+                                ></li>
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="2"
+                                  onClick={() => setIndex(2)}
+                                  className={index === 2 ? 'active' : ''}
+                                ></li>
+                              </ol>
+                              <Carousel
+                                className="slide"
+                                controls={false}
+                                indicators={false}
+                                activeIndex={index}
+                                onSelect={handleSelect}
+                              >
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                              </Carousel>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="row d-none d-xl-flex product-management-title">
+                          <div className="col-8">
+                            <p className="text-warning">Key Features</p>
+                          </div>
+                          <div className="col-4 pl-0">
+                            <p className="text-warning ml-n2">
+                              Business Benefits
+                            </p>
+                          </div>
+                        </div>
+
+                        {[...Array(6)].map((x, i) => {
+                          return <ProductManagement key={x} />;
+                        })}
+                        <BusinessFooter />
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                <div className="row d-none d-xl-flex product-management-title">
-                  <div className="col-8">
-                    <p className="text-warning">Key Features</p>
-                  </div>
-                  <div className="col-4 pl-0">
-                    <p className="text-warning">Business Benefits</p>
-                  </div>
-                </div>
-
-                {[...Array(6)].map((x, i) => {
-                  return <ProductManagement key={x} />;
-                })}
-                <BusinessFooter />
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4
-              className="footer-links-toggle d-flex align-items-center d-xl-none"
-              data-toggle="collapse"
-              data-target="#business-collapse-3"
-            >
-              <i className="fas fa-warehouse"></i>
-              <span className="ml-2 mr-auto">IWM Module</span>
-
-              <i className="fas fa-angle-down icon-rotates"></i>
-            </h4>
-            <div
-              id="business-collapse-3"
-              className="collapse"
-              data-parent="#business-accordion"
-            >
-              <div className="tab">
-                <BusinessTabThree />
-
-                <div className="billing-automation-swiper">
-                  <div className="container">
-                    <h2 className="title">Highlight Menu</h2>
-
-                    <div
-                      id="carouselExampleIndicators"
-                      className="carousel slide"
-                      data-ride="carousel"
-                    >
-                      <ol className="carousel-indicators bullets">
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="0"
-                          onClick={() => setIndex(0)}
-                          className={index === 0 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="1"
-                          onClick={() => setIndex(1)}
-                          className={index === 1 ? 'active' : ''}
-                        ></li>
-                        <li
-                          data-target="#carouselExampleIndicators"
-                          data-slide-to="2"
-                          onClick={() => setIndex(2)}
-                          className={index === 2 ? 'active' : ''}
-                        ></li>
-                      </ol>
-                      <Carousel
-                        className="slide"
-                        controls={false}
-                        indicators={false}
-                        activeIndex={index}
-                        onSelect={handleSelect}
-                      >
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                          <Image
-                            className="img-fluid"
-                            src="/img/video_player_placeholder.gif"
-                            alt="Video Placeholder"
-                            width={0}
-                            height={0}
-                            sizes="100"
-                            style={{ width: '100%', height: 'auto' }}
-                          />
-                        </Carousel.Item>
-                      </Carousel>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="row d-none d-xl-flex product-management-title">
-                  <div className="col-8">
-                    <p className="text-warning">Key Features</p>
-                  </div>
-                  <div className="col-4 pl-0">
-                    <p className="text-warning">Business Benefits</p>
-                  </div>
-                </div>
-
-                {[...Array(6)].map((x, i) => {
-                  return <ProductManagement key={x} />;
-                })}
-                <BusinessFooter />
-              </div>
-            </div>
-          </div>
+                )}
+              </>
+            );
+          })}
         </div>
       </div>
 
-      <div className="business-feature provider-feature">
-        <div className="container">
-          <div className="content">
-            <h5 className="title">Rich Features with Max Impacts</h5>
-            <p className="subtitle">It’s not a tools, it’s a robust process</p>
+      {dataProductFeature.map((data) => {
+        return (
+          <>
+            {data.submit_type === 1 ? (
+              <div className="business-feature provider-feature">
+                <div className="container">
+                  <div className="content">
+                    <h5 className="title">{data.txt_title}</h5>
 
-            <p className="text">
-              Gyloop has been developed by customer experiences, and br/ing
-              customer value on top of application features. Major business use
-              case transactions are ready to used in this platform, and built
-              with providing maximum change impacts.
-            </p>
-            <p className="text">
-              Gyloop has been designed to give you best experience to run your
-              business, to connect with your partners, and leverage business
-              opportunity at the same time. You will adopt the revolutionary
-              business application to robust your business processes.
-            </p>
+                    <p className="text">{data.txt_subtitle}</p>
 
-            <a href="solution.html" className="gyloop-link d-block">
-              Learn More
-              <i className="fas fa-angle-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="business-pricing">
-        <div className="container">
-          <h3 className="title">Gyloop Provider Pricing</h3>
-          <p className="subtitle">
-            Perform your business better with affordable subscription costs
-          </p>
-
-          <div className="row">
-            <div className="col-12 col-md-3 px-md-1 px-xl-2">
-              <div className="card border-0 rounded-0">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-8 col-md-12">
-                      <h5 className="card-title">
-                        <Image
-                          className="logo-price"
-                          src="/img/icon_bagde_verified.png"
-                          alt="gyloop-icon-badge-verified"
-                          width={0}
-                          height={0}
-                          sizes="100"
-                        />
-                        <span>Micro</span>
-                      </h5>
-
-                      <p className="card-text">
-                        &lt; 100 <br />
-                        API transactions/months
-                      </p>
-                    </div>
-                    <div className="col-4 col-md-12">
-                      <h3 className="price">
-                        <sup>&dollar;</sup>
-                        <span>25</span>
-                      </h3>
-
-                      <p className="price-info">
-                        /organization/month <br />
-                        (billed annually)
-                      </p>
-                    </div>
+                    <a href="solution.html" className="gyloop-link d-block">
+                      {data.txt_btnCapt}
+                      <i className="fas fa-angle-right"></i>
+                    </a>
                   </div>
                 </div>
-                <div className="card-footer">
-                  <Link
-                    href="/SubscribeVerified"
-                    className="btn btn-primary btn-block gyloop-btn"
-                  >
-                    Register Now
-                  </Link>
-                </div>
               </div>
-            </div>
+            ) : (
+              <div className="business-feature provider-feature">
+                <div className="container">
+                  <div className="content">
+                    <h5 className="title">{data.txt_title}</h5>
 
-            <div className="col-12 col-md-3 px-md-1 px-xl-2">
-              <div className="card border-0 rounded-0">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-8 col-md-12">
-                      <h5 className="card-title">
-                        <Image
-                          className="logo-price"
-                          src="/img/icon_bagde_volunteer.png"
-                          alt="gyloop-icon-badge-volunteer"
-                          width={0}
-                          height={0}
-                          sizes="100"
-                        />
-                        <span>Starter</span>
-                      </h5>
+                    <p className="text">{data.txt_subtitle}</p>
 
-                      <p className="card-text">
-                        101 to 1.000 <br />
-                        API’s transactions/months
-                      </p>
-                    </div>
-                    <div className="col-4 col-md-12">
-                      <h3 className="price">
-                        <sup>&dollar;</sup>
-                        <span>250</span>
-                      </h3>
-
-                      <p className="price-info">
-                        /organization/month <br />
-                        (billed annually)
-                      </p>
-                    </div>
+                    <a href="solution.html" className="gyloop-link d-block">
+                      {data.txt_btnCapt}
+                      <i className="fas fa-angle-right"></i>
+                    </a>
                   </div>
                 </div>
-                <div className="card-footer">
-                  <a
-                    href="subscribe-volunteer.html"
-                    className="btn btn-primary btn-block gyloop-btn"
-                  >
-                    Register Now
-                  </a>
-                </div>
               </div>
-            </div>
+            )}
+          </>
+        );
+      })}
 
-            <div className="col-12 col-md-3 px-md-1 px-xl-2">
-              <div className="card border-0 rounded-0">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-8 col-md-12">
-                      <h5 className="card-title">
-                        <Image
-                          className="logo-price"
-                          src="/img/icon_bagde_functional.png"
-                          alt=""
-                          width={0}
-                          height={0}
-                          sizes="100"
-                        />
-                        <span>Business</span>
-                      </h5>
-
-                      <p className="card-text">
-                        1.001 to 5.000 <br />
-                        API’s transactions/months
-                      </p>
-                    </div>
-                    <div className="col-4 col-md-12">
-                      <h3 className="price">
-                        <sup>&dollar;</sup>
-                        <span>500</span>
-                      </h3>
-
-                      <p className="price-info">
-                        /organization/month <br />
-                        (billed annually)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-footer">
-                  <a
-                    href="subscribe-functional.html"
-                    className="btn btn-primary btn-block gyloop-btn"
-                  >
-                    Register Now
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-md-3 px-md-1 px-xl-2">
-              <div className="card border-0 rounded-0">
-                <div className="card-body">
-                  <div className="row">
-                    <div className="col-8 col-md-12">
-                      <h5 className="card-title">
-                        <Image
-                          className="logo-price"
-                          src="/img/icon_bagde_professional.png"
-                          alt="gyloop-icon-badge-professional"
-                          width={0}
-                          height={0}
-                          sizes="100"
-                        />
-                        <span>Enterprise</span>
-                      </h5>
-
-                      <p className="card-text">
-                        &gt; 5.000 <br />
-                        API’s transactions/months
-                      </p>
-                    </div>
-                    <div className="col-4 col-md-12">
-                      <h3 className="price">
-                        <sup>&dollar;</sup>
-                        <span>_</span>
-                      </h3>
-
-                      <p className="price-info">
-                        /organization/month <br />
-                        (billed annually)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-footer">
-                  <Link
-                    href="/SubscribeProfessional"
-                    className="btn btn-primary btn-block gyloop-btn"
-                  >
-                    Register Now
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ProviderPricingComponent dataPricing={dataProductPricing} />
 
       <div className="business-pricing business-faq" id="faq-accordion">
         <div className="container">
@@ -739,9 +655,7 @@ export default function ProviderComponent({ dataFaq }: { dataFaq: FAQItemModel[]
                 >
                   <i className="far fa-plus-circle"></i>
                   <i className="far fa-minus-circle"></i>
-                  <span>
-                    {item.ques_text}
-                  </span>
+                  <span>{item.ques_text}</span>
                 </h4>
               </div>
 
@@ -772,7 +686,6 @@ export default function ProviderComponent({ dataFaq }: { dataFaq: FAQItemModel[]
                 </div>
               </div>
             </div>
-
           ))}
         </div>
       </div>
