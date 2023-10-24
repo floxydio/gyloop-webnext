@@ -22,7 +22,7 @@ export default function BlogComponent() {
   const [page, setPage] = useState(1)
   const [data, setData] = useState<BlogContent[]>([])
   async function getBlog() {
-    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5`).then((res) => {
+    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=2`).then((res) => {
       if (res.status === 200) {
         setData(res.data.data)
         console.log(data)

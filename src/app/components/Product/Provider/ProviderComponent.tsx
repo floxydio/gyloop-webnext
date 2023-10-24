@@ -184,7 +184,7 @@ export default function ProviderComponent({ dataFaq }: { dataFaq: FAQItemModel[]
               data-parent="#business-accordion"
             >
               <div className="tab">
-                <BusinessTab />
+                {/* <BusinessTab /> */}
 
                 <div className="billing-automation-swiper">
                   <div className="container">
