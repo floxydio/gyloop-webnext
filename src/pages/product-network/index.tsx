@@ -2,51 +2,105 @@ import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import NetworkComponent from '@/app/components/Product/Network/NetworkComponent';
+import NetworkFooter from '@/app/components/Product/Network/NetworkFooter';
 import NetworkHeader from '@/app/components/Product/Network/NetworkHeader';
 import axios from 'axios';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 
-interface SeoJson {
-  title: string,
-  og_title: string,
-  og_description: string,
-  locale: string,
-}
-
-export default function NetworkIndex({ dataHeader, dataFaq }) {
-
+export default function NetworkIndex({
+  dataHeader,
+  dataFaqHeader,
+  dataFaqItem,
+  dataProductPrice,
+  dataProductFunction,
+  dataProductDetail,
+  dataProductFeature,
+  dataSolutionFunction,
+  dataFooter,
+}) {
   return (
     <>
-      <NextSEO seoHead={{
-        title: "Gyloop - Network",
-        metaDescription: "Gyloop - Network",
-        metaKeywords: "Gyloop - Network",
-        metaTitle: "Gyloop - Network",
-        metaLocale: "en-US"
-      }} />
-
+      <NextSEO
+        seoHead={{
+          title: 'Gyloop - Network',
+          metaDescription: 'Gyloop - Network',
+          metaKeywords: 'Gyloop - Network',
+          metaTitle: 'Gyloop - Network',
+          metaLocale: 'en-US',
+        }}
+      />
 
       <HeaderNoMenuTransparent type={0} />
       <NetworkHeader dataHeader={dataHeader[0]} />
-      <NetworkComponent dataFaqItem={dataFaq} />
+      <NetworkComponent
+        dataFaqItem={dataFaqItem}
+        dataFaqHeader={dataFaqHeader}
+        dataProductFunction={dataProductFunction}
+        dataPricingItem={dataProductPrice}
+        dataProductDetail={dataProductDetail}
+        dataProductFeature={dataProductFeature}
+        dataSolutionFunction={dataSolutionFunction}
+      />
 
-      <Footer />
+      <NetworkFooter dataFooter={dataFooter} />
     </>
   );
 }
 
 export async function getStaticProps(context) {
-  const fetchHeader = await axios.get(`http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=network`)
-  const fetchFaq = await axios.get(`http://159.89.44.46:4000/v1/product-faq-item/get?lang_code=${context.locale}&page_code=network`)
+  const fetchHeader = await axios.get(
+    `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=network`
+  );
+  const fetchMediaH = await axios.get(
+    `http://159.89.44.46:4000/v1/main/media?page_code=network`
+  );
+  const fetchFeature = await axios.get(
+    `http://159.89.44.46:4000/v1/product-feature/get?lang_code=${context.locale}&page_code=network`
+  );
+  const fetchFaqHeader = await axios.get(
+    `http://159.89.44.46:4000/v1/product-faq-header/get?lang_code=${context.locale}&page_code=network`
+  );
+  const fetchFaqItem = await axios.get(
+    `http://159.89.44.46:4000/v1/product-faq-item/get?lang_code=${context.locale}&page_code=network`
+  );
+  const fetchFooter = await axios.get(
+    `http://159.89.44.46:4000/v1/main/homepage-footer`
+  );
+  const fetchProductDetail = await axios.get(
+    `http://159.89.44.46:4000/v1/product-detail/get?lang_code=${context.locale}&page_code=network`
+  );
+  const fetchPricingItem = await axios.get(
+    `http://159.89.44.46:4000/v1/product-pricing-item/get?lang_code=${context.locale}&page_code=network`
+  );
+  const fetchProductFunction = await axios.get(
+    `http://159.89.44.46:4000/v1/product-functionality/get?lang_code=${context.locale}&page_code=network`
+  );
+  const fetchSolutionFunction = await axios.get(
+    `http://159.89.44.46:4000/v1/solution/function?lang_code=${context.locale}&page_code=network`
+  );
 
+  const dataHeader = fetchHeader.data.data;
+  const dataFaqHeader = fetchFaqHeader.data.data;
+  const dataFaqItem = fetchFaqItem.data.data;
+  const dataProductFunction = fetchProductFunction.data.data;
+  const dataFooter = fetchFooter.data.data;
+  const dataProductPrice = fetchPricingItem.data.data;
+  const dataProductDetail = fetchProductDetail.data.data;
+  const dataFeature = fetchFeature.data.data;
+  const dataSolutionFunction = fetchSolutionFunction.data.data;
 
-  const dataHeader = fetchHeader.data.data
-  const dataFaq = fetchFaq.data.data
   return {
     props: {
       dataHeader: dataHeader,
-      dataFaq: dataFaq,
+      dataFaq: dataFaqHeader,
+      dataFaqItem: dataFaqItem,
+      dataProductFunction: dataProductFunction,
+      dataFooter: dataFooter,
+      dataProductPrice: dataProductPrice,
+      dataProductDetail: dataProductDetail,
+      dataProductFeature: dataFeature,
+      dataSolutionFunction: dataSolutionFunction,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };

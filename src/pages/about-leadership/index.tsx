@@ -30,7 +30,7 @@ export default function Leadership(dataLeadership) {
 
 export async function getStaticProps(context) {
   const fetchData = await axios.get(
-    `http://159.89.44.46:4000/v1/about/leadership?lang_code=${context.locale}`
+    `${process.env.REACT_DEV_URL}/v1/about/leadership?lang_code=${context.locale}`
   );
   const dataLeadership = await fetchData.data.data;
 
