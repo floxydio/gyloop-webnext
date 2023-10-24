@@ -167,7 +167,7 @@ export default function NewsEventDetailComponent({ id }: { id: number }) {
                       </div>
 
                       <a
-                        href="news-and-event-detail.html"
+                        href={`/about-newsevent/detail/${item.id}`}
                         className="text-blue d-none d-md-block"
                       >
                         Learn More

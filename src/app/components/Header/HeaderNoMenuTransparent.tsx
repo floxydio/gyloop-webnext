@@ -207,14 +207,14 @@ export default function HeaderNoMenuTransparent(
                   onMouseEnter={() => setCurrentDropdown(3)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
-                  <a
+                  <Link
                     className="nav-link"
-                    href="resource.html"
+                    href={`${router.locale}/resource`}
                     aria-expanded={currentDropdown === 3 ? 'true' : 'false'}
                   >
                     Resources
                     <i className="fas fa-angle-down icon-rotates"></i>
-                  </a>
+                  </Link>
                   <div
                     className={`dropdown-menu ${currentDropdown === 3 ? 'show' : ''
                       }`}
@@ -226,7 +226,7 @@ export default function HeaderNoMenuTransparent(
                     <Link className="dropdown-item" href={`${router.locale}/resource-livedemo`}>
                       <span>System Demo</span>
                     </Link>
-                    <Link className="dropdown-item" href={`${router.locale}/resource-blogs`}>
+                    <Link className="dropdown-item" href={`${router.locale}/resource-blog`}>
                       <span>Blogs</span>
                     </Link>
                   </div>

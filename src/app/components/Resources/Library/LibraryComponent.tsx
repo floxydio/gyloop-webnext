@@ -2,9 +2,36 @@ import { useTranslations } from 'next-intl';
 import CardNewEvent from '../../NewsAndEvent/CardNewEvent';
 import CardNewEventB from '../../NewsAndEvent/CardNewEventB';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Image from 'next/image';
+export interface BlogContent {
+  id?: number;
+  page_code?: string;
+  lang_code?: string;
+  thumbnail_img?: string;
+  tag?: string;
+  title?: string;
+  content?: string;
+  createdAt?: Date;
+}
 
 export default function LibraryComponent() {
   const t = useTranslations('ResourcesLibraryHeader');
+  const [page, setPage] = useState(1)
+  const [data, setData] = useState<BlogContent[]>([])
+  async function getBlog() {
+    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=library`).then((res) => {
+      if (res.status === 200) {
+        setData(res.data.data)
+      }
+    })
+  }
+
+  useEffect(() => {
+    getBlog()
+  }, [page])
+
   return (
     <>
       <header className="header-bg-cover billing-automation-header d-flex align-items-end library-header">
@@ -20,7 +47,7 @@ export default function LibraryComponent() {
         </div>
       </header>
 
-    
+
       <div className="blogs">
         <div className="search-form">
           <div className="container">
@@ -65,31 +92,43 @@ export default function LibraryComponent() {
 
         <div className="container">
           <div className="category-2">
-            <h2 className="category-title">Featured</h2>
-
-            <div className="pages" id="pages-2">
-              <div className="pages-2">
-                <CardNewEvent />
-              </div>
-            </div>
-
-            <nav aria-label="Category 2 Pagination">
-              <ul className="pagination" id="category-2-pagination"></ul>
-            </nav>
-          </div>
-
-          <hr />
-
-          <div className="category-2">
             <h2 className="category-title">Whitepaper</h2>
 
             <div className="pages" id="pages-3">
               <div className="pages-2">
-                <CardNewEvent />
+                {data.map((item, index) => {
+                  return <div className="card" key={index}>
+                    <Image
+                      className="card-img-top"
+                      src={"http://159.89.44.46:4500/v1/image-blog/" + item.thumbnail_img}
+                      alt="Image Placeholder"
+                      width={0}
+                      height={0}
+                      sizes="100"
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+
+                    <div className="card-body">
+                      <a href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
+                        <h3 className="card-title">
+                          {item.title}
+                        </h3>
+                      </a>
+                      <span className="card-category text-warning">Category</span>
+                      <div className="card-text" dangerouslySetInnerHTML={{ __html: item.content as string }}>
+
+                      </div>
+                      <div className="card-link">
+                        <Link href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
+                          Read More
+                          <i className="far fa-angle-right"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                })}
               </div>
-              <div className="pages-2">
-                <CardNewEventB />
-              </div>
+
             </div>
 
             <nav aria-label="Category 3 Pagination">
@@ -97,21 +136,7 @@ export default function LibraryComponent() {
             </nav>
           </div>
 
-          <hr />
 
-          <div className="category-2">
-            <h2 className="category-title">Business Use Cases</h2>
-
-            <div className="pages" id="pages-4">
-              <div className="pages-2">
-                <CardNewEvent />
-              </div>
-            </div>
-
-            <nav aria-label="Category 4 Pagination">
-              <ul className="pagination" id="category-4-pagination"></ul>
-            </nav>
-          </div>
         </div>
       </div>
     </>

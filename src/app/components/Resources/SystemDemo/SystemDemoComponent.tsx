@@ -3,8 +3,40 @@ import CardVideo from './CardVideo';
 import CardVideoB from './CardVideoB';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+export interface BlogContent {
+  id?: number;
+  page_code?: string;
+  lang_code?: string;
+  thumbnail_img?: string;
+  tag?: string;
+  title?: string;
+  content?: string;
+  createdAt?: Date;
+}
+
+
+
 export default function SystemDemoComponent() {
   const t = useTranslations('ResourcesSystemDemoHeader');
+  const [page, setPage] = useState(1)
+  const [data, setData] = useState<BlogContent[]>([])
+  async function getBlog() {
+    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo`).then((res) => {
+      if (res.status === 200) {
+        setData(res.data.data)
+      }
+    })
+  }
+
+  useEffect(() => {
+    getBlog()
+  }, [page])
+
+
+
   return (
     <>
       <header className="header-bg-cover billing-automation-header d-flex align-items-end live-demo-header">
@@ -20,7 +52,7 @@ export default function SystemDemoComponent() {
         </div>
       </header>
 
-      
+
 
       <div className="blogs">
         <div className="search-form">
@@ -70,7 +102,37 @@ export default function SystemDemoComponent() {
 
             <div className="pages" id="pages-2b">
               <div className="pages-2">
-                <CardVideo />
+                {data.map((item, index) => {
+                  return <div className="card" key={index}>
+                    <Image
+                      className="card-img-top"
+                      src={"http://159.89.44.46:4500/v1/image-blog/" + item.thumbnail_img}
+                      alt="Image Placeholder"
+                      width={0}
+                      height={0}
+                      sizes="100"
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+
+                    <div className="card-body">
+                      <a href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
+                        <h3 className="card-title">
+                          {item.title}
+                        </h3>
+                      </a>
+                      <span className="card-category text-warning">Category</span>
+                      <div className="card-text" dangerouslySetInnerHTML={{ __html: item.content as string }}>
+
+                      </div>
+                      <div className="card-link">
+                        <Link href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
+                          Read More
+                          <i className="far fa-angle-right"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                })}
               </div>
             </div>
             <nav aria-label="Category 2b Pagination">
@@ -85,7 +147,7 @@ export default function SystemDemoComponent() {
 
             <div className="pages" id="pages-3b">
               <div className="pages-2">
-                <CardVideo />
+                {/* <CardVideo /> */}
               </div>
             </div>
             <nav aria-label="Category 3b Pagination">
@@ -100,10 +162,10 @@ export default function SystemDemoComponent() {
 
             <div className="pages" id="pages-4b">
               <div className="pages-2">
-                <CardVideo />
+                {/* <CardVideo /> */}
               </div>
               <div className="pages-2">
-                <CardVideoB />
+                {/* <CardVideoB /> */}
               </div>
             </div>
             <nav aria-label="Category 4b Pagination">

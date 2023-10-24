@@ -266,7 +266,7 @@ export default function NetworkComponent({
           <ul className="nav nav-tabs">
             {dataProductDetail.map((data, i) => {
               return (
-                <li className="nav-item">
+                <li className="nav-item" key={i}>
                   <a
                     className="nav-link"
                     href={`#${data.prod_code}`}

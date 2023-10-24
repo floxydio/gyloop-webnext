@@ -22,10 +22,9 @@ export default function BlogComponent() {
   const [page, setPage] = useState(1)
   const [data, setData] = useState<BlogContent[]>([])
   async function getBlog() {
-    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=2`).then((res) => {
+    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=blog`).then((res) => {
       if (res.status === 200) {
         setData(res.data.data)
-        console.log(data)
       }
     })
   }
@@ -79,6 +78,9 @@ export default function BlogComponent() {
                     className="form-control"
                     type="text"
                     placeholder="Blogs topic"
+                    onChange={() => {
+
+                    }}
                   />
                 </div>
 
@@ -130,7 +132,7 @@ export default function BlogComponent() {
                     />
 
                     <div className="card-body">
-                      <a href="news-and-event-detail.html" className="gyloop-link">
+                      <a href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
                         <h3 className="card-title">
                           {item.title}
                         </h3>
@@ -140,7 +142,7 @@ export default function BlogComponent() {
 
                       </div>
                       <div className="card-link">
-                        <Link href="/About/NewsEvent/detail/1" className="gyloop-link">
+                        <Link href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
                           Read More
                           <i className="far fa-angle-right"></i>
                         </Link>

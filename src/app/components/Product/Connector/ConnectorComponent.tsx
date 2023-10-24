@@ -246,7 +246,7 @@ export default function ConnectorComponent({
         <div className="container">
           <ul className="nav">
             {dataProductDetail.map((e, i) => (
-              <li className="nav-item" onClick={() => setIndexTab(e.prod_code as string)}>
+              <li className="nav-item" onClick={() => setIndexTab(e.prod_code as string)} key={i}>
                 <a
                   className="nav-link"
                   data-toggle="collapse"
@@ -265,7 +265,7 @@ export default function ConnectorComponent({
         return (
           <>
             {indexTab === item.prod_code ? <div className="business-tabs" id={`business-accordion-${item.id}`}>
-              <div className="container">
+              <div className="container" key={i}>
                 <div>
                   <h4
                     className="footer-links-toggle d-flex align-items-center d-xl-none"
