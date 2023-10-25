@@ -96,8 +96,7 @@ export default function BusinessComponent({
   dataProductDetail: ProductDetail[];
 }) {
   const [index, setIndex] = useState(0);
-  const [indexTab, setIndexTab] = useState("")
-  console.log(dataProductDetail)
+  const [indexTab, setIndexTab] = useState('');
   const t = useTranslations('ProductBusinessHeader');
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -187,9 +186,7 @@ export default function BusinessComponent({
               activeIndex={index}
               onSelect={handleSelect}
             >
-              <Carousel.Item>
-
-              </Carousel.Item>
+              <Carousel.Item></Carousel.Item>
               <Carousel.Item>
                 <Image
                   className="img-fluid"
@@ -239,7 +236,10 @@ export default function BusinessComponent({
         <div className="container">
           <ul className="nav">
             {dataProductDetail.map((e, i) => (
-              <li className="nav-item" onClick={() => setIndexTab(e.prod_code as string)} key={i}>
+              <li
+                className="nav-item"
+                onClick={() => setIndexTab(e.prod_code as string)} key={i}
+              >
                 <a
                   className="nav-link"
                   data-toggle="collapse"
@@ -257,124 +257,130 @@ export default function BusinessComponent({
       {dataProductDetail.map((item, i) => {
         return (
           <>
-            {indexTab === item.prod_code ? <div className="business-tabs" id={`business-accordion-${item.id}`}>
-              <div className="container" key={i}>
-                <div>
-                  <h4
-                    className="footer-links-toggle d-flex align-items-center d-xl-none"
-                    data-toggle="collapse"
-                    data-target={`#${item.prod_code}`}
-                    aria-expanded="true"
-                  >
-                    <i className="fas fa-heart"></i>
-                    <span className="ml-2 mr-auto">{item.tabx_text}</span>
+            {indexTab === item.prod_code ? (
+              <div
+                className="business-tabs"
+                id={`business-accordion-${item.id}`}
+              >
+                <div className="container">
+                  <div>
+                    <h4
+                      className="footer-links-toggle d-flex align-items-center d-xl-none"
+                      data-toggle="collapse"
+                      data-target={`#${item.prod_code}`}
+                      aria-expanded="true"
+                    >
+                      <i className="fas fa-heart"></i>
+                      <span className="ml-2 mr-auto">{item.tabx_text}</span>
 
-                    <i className="fas fa-angle-down icon-rotates"></i>
-                  </h4>
-                  <div
-                    id={`${item.prod_code}`}
-                    className="collapse show"
-                    data-parent={`#business-accordion`}
-                  >
-                    <div className="tab">
-                      <BusinessTab productDetail={item} />
+                      <i className="fas fa-angle-down icon-rotates"></i>
+                    </h4>
+                    <div
+                      id={`${item.prod_code}`}
+                      className="collapse show"
+                      data-parent={`#business-accordion`}
+                    >
+                      <div className="tab">
+                        <BusinessTab productDetail={item} />
 
-                      <div className="billing-automation-swiper">
-                        <div className="container">
-                          <h2 className="title">Highlight Menu</h2>
+                        <div className="billing-automation-swiper">
+                          <div className="container">
+                            <h2 className="title">Highlight Menu</h2>
 
-                          <div
-                            id="carouselExampleIndicators"
-                            className="carousel slide"
-                            data-ride="carousel"
-                          >
-                            <ol className="carousel-indicators bullets">
-                              <li
-                                data-target="#carouselExampleIndicators"
-                                data-slide-to="0"
-                                onClick={() => setIndex(0)}
-                                className={index === 0 ? 'active' : ''}
-                              ></li>
-                              <li
-                                data-target="#carouselExampleIndicators"
-                                data-slide-to="1"
-                                onClick={() => setIndex(1)}
-                                className={index === 1 ? 'active' : ''}
-                              ></li>
-                              <li
-                                data-target="#carouselExampleIndicators"
-                                data-slide-to="2"
-                                onClick={() => setIndex(2)}
-                                className={index === 2 ? 'active' : ''}
-                              ></li>
-                            </ol>
-                            <Carousel
-                              className="slide"
-                              controls={false}
-                              indicators={false}
-                              activeIndex={index}
-                              onSelect={handleSelect}
+                            <div
+                              id="carouselExampleIndicators"
+                              className="carousel slide"
+                              data-ride="carousel"
                             >
-                              <Carousel.Item>
-                                <Image
-                                  className="img-fluid"
-                                  src="/img/video_player_placeholder.gif"
-                                  alt="Video Placeholder"
-                                  width={0}
-                                  height={0}
-                                  sizes="100"
-                                  style={{ width: '100%', height: 'auto' }}
-                                />
-
-                              </Carousel.Item>
-                              <Carousel.Item>
-                                <Image
-                                  className="img-fluid"
-                                  src="/img/video_player_placeholder.gif"
-                                  alt="Video Placeholder"
-                                  width={0}
-                                  height={0}
-                                  sizes="100"
-                                  style={{ width: '100%', height: 'auto' }}
-                                />
-                              </Carousel.Item>
-                              <Carousel.Item>
-                                <Image
-                                  className="img-fluid"
-                                  src="/img/video_player_placeholder.gif"
-                                  alt="Video Placeholder"
-                                  width={0}
-                                  height={0}
-                                  sizes="100"
-                                  style={{ width: '100%', height: 'auto' }}
-                                />
-                              </Carousel.Item>
-                            </Carousel>
+                              <ol className="carousel-indicators bullets">
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="0"
+                                  onClick={() => setIndex(0)}
+                                  className={index === 0 ? 'active' : ''}
+                                ></li>
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="1"
+                                  onClick={() => setIndex(1)}
+                                  className={index === 1 ? 'active' : ''}
+                                ></li>
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="2"
+                                  onClick={() => setIndex(2)}
+                                  className={index === 2 ? 'active' : ''}
+                                ></li>
+                              </ol>
+                              <Carousel
+                                className="slide"
+                                controls={false}
+                                indicators={false}
+                                activeIndex={index}
+                                onSelect={handleSelect}
+                              >
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                              </Carousel>
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="row d-none d-xl-flex product-management-title">
-                        <div className="col-8">
-                          <p className="text-warning">Key Features</p>
+                        <div className="row d-none d-xl-flex product-management-title">
+                          <div className="col-8">
+                            <p className="text-warning">Key Features</p>
+                          </div>
+                          <div className="col-4 pl-0">
+                            <p className="text-warning ml-n2">
+                              Business Benefits
+                            </p>
+                          </div>
                         </div>
-                        <div className="col-4 pl-0">
-                          <p className="text-warning ml-n2">Business Benefits</p>
-                        </div>
+
+                        {[...Array(6)].map((x, i) => {
+                          return <ProductManagement key={x} />;
+                        })}
+
+                        <BusinessFooter />
                       </div>
-
-                      {[...Array(6)].map((x, i) => {
-                        return <ProductManagement key={x} />;
-                      })}
-
-                      <BusinessFooter />
                     </div>
                   </div>
                 </div>
               </div>
-            </div> : null}
+            ) : null}
           </>
-        )
+        );
       })}
 
       {/* END */}

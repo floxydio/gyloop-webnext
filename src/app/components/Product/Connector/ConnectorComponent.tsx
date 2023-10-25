@@ -137,7 +137,7 @@ export default function ConnectorComponent({
   dataProductFunction: ProductFunctionality[];
 }) {
   const [index, setIndex] = useState(0);
-  const [indexTab, setIndexTab] = useState("")
+  const [indexTab, setIndexTab] = useState('');
 
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
@@ -264,125 +264,218 @@ export default function ConnectorComponent({
       {dataProductDetail.map((item, i) => {
         return (
           <>
-            {indexTab === item.prod_code ? <div className="business-tabs" id={`business-accordion-${item.id}`}>
-              <div className="container" key={i}>
-                <div>
-                  <h4
-                    className="footer-links-toggle d-flex align-items-center d-xl-none"
-                    data-toggle="collapse"
-                    data-target={`#${item.prod_code}`}
-                    aria-expanded="true"
-                  >
-                    <i className="fas fa-heart"></i>
-                    <span className="ml-2 mr-auto">{item.tabx_text}</span>
+            {indexTab === item.prod_code ? (
+              <div
+                className="business-tabs"
+                id={`business-accordion-${item.id}`}
+              >
+                <div className="container">
+                  <div>
+                    <h4
+                      className="footer-links-toggle d-flex align-items-center d-xl-none"
+                      data-toggle="collapse"
+                      data-target={`#${item.prod_code}`}
+                      aria-expanded="true"
+                    >
+                      <i className="fas fa-heart"></i>
+                      <span className="ml-2 mr-auto">{item.tabx_text}</span>
 
-                    <i className="fas fa-angle-down icon-rotates"></i>
-                  </h4>
-                  <div
-                    id={`${item.prod_code}`}
-                    className="collapse show"
-                    data-parent={`#business-accordion`}
-                  >
-                    <div className="tab">
-                      <BusinessTab productDetail={item} />
+                      <i className="fas fa-angle-down icon-rotates"></i>
+                    </h4>
+                    <div
+                      id={`${item.prod_code}`}
+                      className="collapse show"
+                      data-parent={`#business-accordion`}
+                    >
+                      <div className="tab">
+                        <BusinessTab productDetail={item} />
 
-                      <div className="billing-automation-swiper">
-                        <div className="container">
-                          <h2 className="title">Highlight Menu</h2>
+                        <div className="billing-automation-swiper">
+                          <div className="container">
+                            <h2 className="title">Highlight Menu</h2>
 
-                          <div
-                            id="carouselExampleIndicators"
-                            className="carousel slide"
-                            data-ride="carousel"
-                          >
-                            <ol className="carousel-indicators bullets">
-                              <li
-                                data-target="#carouselExampleIndicators"
-                                data-slide-to="0"
-                                onClick={() => setIndex(0)}
-                                className={index === 0 ? 'active' : ''}
-                              ></li>
-                              <li
-                                data-target="#carouselExampleIndicators"
-                                data-slide-to="1"
-                                onClick={() => setIndex(1)}
-                                className={index === 1 ? 'active' : ''}
-                              ></li>
-                              <li
-                                data-target="#carouselExampleIndicators"
-                                data-slide-to="2"
-                                onClick={() => setIndex(2)}
-                                className={index === 2 ? 'active' : ''}
-                              ></li>
-                            </ol>
-                            <Carousel
-                              className="slide"
-                              controls={false}
-                              indicators={false}
-                              activeIndex={index}
-                              onSelect={handleSelect}
+                            <div
+                              id="carouselExampleIndicators"
+                              className="carousel slide"
+                              data-ride="carousel"
                             >
-                              <Carousel.Item>
-                                <Image
-                                  className="img-fluid"
-                                  src="/img/video_player_placeholder.gif"
-                                  alt="Video Placeholder"
-                                  width={0}
-                                  height={0}
-                                  sizes="100"
-                                  style={{ width: '100%', height: 'auto' }}
-                                />
-                              </Carousel.Item>
-                              <Carousel.Item>
-                                <Image
-                                  className="img-fluid"
-                                  src="/img/video_player_placeholder.gif"
-                                  alt="Video Placeholder"
-                                  width={0}
-                                  height={0}
-                                  sizes="100"
-                                  style={{ width: '100%', height: 'auto' }}
-                                />
-                              </Carousel.Item>
-                              <Carousel.Item>
-                                <Image
-                                  className="img-fluid"
-                                  src="/img/video_player_placeholder.gif"
-                                  alt="Video Placeholder"
-                                  width={0}
-                                  height={0}
-                                  sizes="100"
-                                  style={{ width: '100%', height: 'auto' }}
-                                />
-                              </Carousel.Item>
-                            </Carousel>
+                              <ol className="carousel-indicators bullets">
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="0"
+                                  onClick={() => setIndex(0)}
+                                  className={index === 0 ? 'active' : ''}
+                                ></li>
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="1"
+                                  onClick={() => setIndex(1)}
+                                  className={index === 1 ? 'active' : ''}
+                                ></li>
+                                <li
+                                  data-target="#carouselExampleIndicators"
+                                  data-slide-to="2"
+                                  onClick={() => setIndex(2)}
+                                  className={index === 2 ? 'active' : ''}
+                                ></li>
+                              </ol>
+                              <Carousel
+                                className="slide"
+                                controls={false}
+                                indicators={false}
+                                activeIndex={index}
+                                onSelect={handleSelect}
+                              >
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <Image
+                                    className="img-fluid"
+                                    src="/img/video_player_placeholder.gif"
+                                    alt="Video Placeholder"
+                                    width={0}
+                                    height={0}
+                                    sizes="100"
+                                    style={{ width: '100%', height: 'auto' }}
+                                  />
+                                </Carousel.Item>
+                              </Carousel>
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      <div className="row d-none d-xl-flex product-management-title">
-                        <div className="col-8">
-                          <p className="text-warning">Key Features</p>
+                        <div className="row d-none d-xl-flex product-management-title">
+                          <div className="col-8">
+                            <p className="text-warning">Key Features</p>
+                          </div>
+                          <div className="col-4 pl-0">
+                            <p className="text-warning ml-n2">
+                              Business Benefits
+                            </p>
+                          </div>
                         </div>
-                        <div className="col-4 pl-0">
-                          <p className="text-warning ml-n2">Business Benefits</p>
-                        </div>
-                      </div>
 
-                      {[...Array(6)].map((x, i) => {
+                        {/* {[...Array(6)].map((x, i) => {
                         return <ProductManagement key={x} />;
-                      })}
+                      })} */}
+                        {dataProductFunction.map((data) => {
+                          return (
+                            <div key={data.id}>
+                              {data.submit_type === 1 ? (
+                                <div className="product-management">
+                                  <div className="row">
+                                    <div className="col-12 col-xl-8">
+                                      <h4 className="title">
+                                        {data.func_name}
+                                      </h4>
 
-                      <BusinessFooter />
+                                      <p>{data.long_desc}</p>
+
+                                      <a
+                                        href="live-demo.html"
+                                        className="gyloop-link d-block"
+                                      >
+                                        Watch Video
+                                        <i className="fas fa-angle-right"></i>
+                                      </a>
+                                      <a
+                                        href="library.html"
+                                        className="gyloop-link d-block"
+                                      >
+                                        Find Documentation
+                                        <i className="fas fa-angle-right"></i>
+                                      </a>
+                                    </div>
+
+                                    <div className="col-12 d-xl-none">
+                                      <hr className="hr-small bg-blue" />
+                                    </div>
+
+                                    <div className="col-12 col-xl-4 col-lists">
+                                      <ul className="list-unstyled">
+                                        <li>
+                                          <i className="list-icon fas fa-check-circle text-blue"></i>
+                                          {data.bnft_list}
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              ) : (
+                                <div className="product-management">
+                                  <div className="row">
+                                    <div className="col-12 col-xl-8">
+                                      <h4 className="title">
+                                        {data.func_name}
+                                      </h4>
+
+                                      <p>{data.long_desc}</p>
+
+                                      <a
+                                        href="live-demo.html"
+                                        className="gyloop-link d-block"
+                                      >
+                                        Watch Video
+                                        <i className="fas fa-angle-right"></i>
+                                      </a>
+                                      <a
+                                        href="library.html"
+                                        className="gyloop-link d-block"
+                                      >
+                                        Find Documentation
+                                        <i className="fas fa-angle-right"></i>
+                                      </a>
+                                    </div>
+
+                                    <div className="col-12 d-xl-none">
+                                      <hr className="hr-small bg-blue" />
+                                    </div>
+
+                                    <div className="col-12 col-xl-4 col-lists">
+                                      <ul className="list-unstyled">
+                                        <li>
+                                          <i className="list-icon fas fa-check-circle text-blue"></i>
+                                          {data.bnft_list}
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+
+                        <BusinessFooter />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div> : null}
+            ) : null}
           </>
-        )
+        );
       })}
-
 
       <BusinessFooter />
 
