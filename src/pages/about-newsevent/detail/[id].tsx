@@ -10,7 +10,8 @@ import { useRouter } from "next/router";
 export default function NewsAndEventDetail() {
     const router = useRouter();
 
-    console.log(Number(router.query.id))
+
+
     return (
         <>
             <NextSEO seoHead={{
@@ -23,7 +24,7 @@ export default function NewsAndEventDetail() {
 
             <HeaderNoMenuTransparent type={1} />
             <LeadershipTitle title="News" />
-            <NewsEventDetailComponent id={1} />
+            <NewsEventDetailComponent id={Number(router.query.id)} />
             <Footer />
 
 

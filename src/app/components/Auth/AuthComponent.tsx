@@ -1,10 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "@/style/style.min.css"
 import "@/style/icon.css"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useForm, Resolver } from 'react-hook-form';
 import Link from "next/link";
 import Image from "next/image"
+import axios from "axios";
+import { useRouter } from "next/router";
 interface PropsSend {
     TypeHeader: number
 }
@@ -33,12 +35,37 @@ const resolver: Resolver<FormValues> = async (values) => {
 };
 export default function AuthComponent({ props }: { props: PropsSend }) {
     const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({ resolver });
-    const onSubmit = handleSubmit((data) => console.log(data));
+    const onSubmit = handleSubmit((data) => loginRequest(data.email, data.password));
+    const router = useRouter()
 
     const [showPassword, setShowPassword] = useState(false)
+    const [email, setEmail] = useState("")
 
     function triggerPassword() {
         setShowPassword(!showPassword)
+    }
+
+    useEffect(() => { 
+        if (localStorage.getItem("remember") !== undefined || localStorage.getItem("remember") !== null) {
+            
+
+        }
+    }, [email])
+
+
+    async function loginRequest(email: string, password: string) {
+        console.log("Triggered Here")
+        await axios.post(`http://159.89.44.46:4000/v1/auth/sign-in`, {
+            email: email,
+            password: password
+        }).then((res) => {
+            console.log("Res -->", res.data)
+            if (res.status === 200 || res.status === 201) {
+                router.push("/Main")
+                localStorage.setItem("token", res.data.token)
+            }
+
+        }).catch((err) => alert(err))
     }
 
 
@@ -165,10 +192,10 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                     <div className="col-12 col-xl-6">
                         <div className="wrapper">
                             <Link href="/">
-                                <Image className="logo-gyloop" src="/img/logo-gyloop-dark.png" alt="Logo Gyloop"   width={0}
+                                <Image className="logo-gyloop" src="/img/logo-gyloop-dark.png" alt="Logo Gyloop" width={0}
                                     height={0}
                                     sizes="100vw"
-                                     />
+                                />
                             </Link>
 
                             <div className="container">
@@ -227,7 +254,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                 <div className="row">
 
                                     <div className="col-xl-6 text-center">
-                                        <Image className="img-badge" src="/img/icon_bagde_professional_white.png" alt="Icon Demo"  width={0} height={0} sizes="100" />
+                                        <Image className="img-badge" src="/img/icon_bagde_professional_white.png" alt="Icon Demo" width={0} height={0} sizes="100" />
 
                                         <h2 className="title">Register for free trial</h2>
                                         <div className="text">
@@ -244,7 +271,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                     </div>
 
                                     <div className="col-xl-6 text-center">
-                                        <Image  width={0} height={0} sizes="100" className="img-badge" src="/img/icon_bagde_volunteer_white.png" alt="Icon Volunteer" />
+                                        <Image width={0} height={0} sizes="100" className="img-badge" src="/img/icon_bagde_volunteer_white.png" alt="Icon Volunteer" />
 
                                         <h2 className="title">Volunteer Program</h2>
                                         <div className="text">
@@ -279,7 +306,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
                     <div className="col-xl-6 d-none d-xl-block text-center">
                         <Link href="/">
-                            <Image  width={0} height={0} sizes="100" className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo Gyloop" />
+                            <Image width={0} height={0} sizes="100" className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo Gyloop" />
                         </Link>
 
                         <h5 className="title">MAKE BUSINESS CONNECTED</h5>
