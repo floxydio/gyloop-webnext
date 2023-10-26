@@ -19,7 +19,7 @@ interface SolutionProductEntities {
   updatedAt: Date;
 }
 
-export default function BillingCatalogManagement({
+export default function ServiceProviderCatalog({
   dataSolutionProduct,
 }: {
   dataSolutionProduct: SolutionProductEntities[];

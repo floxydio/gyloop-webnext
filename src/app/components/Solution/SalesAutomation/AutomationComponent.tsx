@@ -164,42 +164,21 @@ export default function AutomationComponent({
                     </div>
 
                     <div className="d-none d-md-block">
-                      <h2 className="title">{data.desc_lin1}</h2>
-                      <p className="subtitle">{data.desc_lin2}</p>
+                      <h2 className="title">
+                        {data.func_name} <br />
+                        {data.func_tagx}
+                      </h2>
+                      <p className="subtitle">{data.desc_lin1}</p>
                     </div>
 
                     <hr className="hr-small" />
 
-                    <h5 className="title-small">{data.link_list}</h5>
-                    <p className="subtitle-small">{data.imge_func}</p>
+                    <h5 className="title-small">{data.desc_lin2}</h5>
+                    <p className="subtitle-small">{data.link_list}</p>
                   </div>
                 </div>
               </div>
-            ) : (
-              <div
-                className="subheader-bg-cover billing-automation-subheader sales-automation-subheader"
-                key={data.id}
-              >
-                <div className="container">
-                  <div className="content">
-                    <div className="d-md-none">
-                      <h2 className="title">{data.func_name}</h2>
-                      <p className="subtitle">{data.func_tagx}</p>
-                    </div>
-
-                    <div className="d-none d-md-block">
-                      <h2 className="title">{data.desc_lin1}</h2>
-                      <p className="subtitle">{data.desc_lin2}</p>
-                    </div>
-
-                    <hr className="hr-small" />
-
-                    <h5 className="title-small">{data.link_list}</h5>
-                    <p className="subtitle-small">{data.imge_func}</p>
-                  </div>
-                </div>
-              </div>
-            )}
+            ) : null}
           </div>
         );
       })}
