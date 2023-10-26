@@ -23,13 +23,26 @@ export default function SystemDemoComponent() {
   const t = useTranslations('ResourcesSystemDemoHeader');
   const [page, setPage] = useState(1)
   const [data, setData] = useState<BlogContent[]>([])
+  const [dataNetworks, setDataNetworks] = useState<BlogContent[]>([])
+  const [dataProvider, setDataProvider] = useState<BlogContent[]>([])
   async function getBlog() {
     await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo`).then((res) => {
       if (res.status === 200) {
         setData(res.data.data)
       }
     })
+    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo&tag=networks`).then((res) => {
+      if (res.status === 200) {
+        setDataNetworks(res.data.data)
+      }
+    })
+    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo&tag=provider`).then((res) => {
+      if (res.status === 200) {
+        setDataProvider(res.data.data)
+      }
+    })
   }
+
 
   useEffect(() => {
     getBlog()
@@ -147,7 +160,37 @@ export default function SystemDemoComponent() {
 
             <div className="pages" id="pages-3b">
               <div className="pages-2">
-                {/* <CardVideo /> */}
+                {dataNetworks.map((item, index) => {
+                  return <div className="card" key={index}>
+                    <Image
+                      className="card-img-top"
+                      src={"http://159.89.44.46:4500/v1/image-blog/" + item.thumbnail_img}
+                      alt="Image Placeholder"
+                      width={0}
+                      height={0}
+                      sizes="100"
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+
+                    <div className="card-body">
+                      <a href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
+                        <h3 className="card-title">
+                          {item.title}
+                        </h3>
+                      </a>
+                      <span className="card-category text-warning">Category</span>
+                      <div className="card-text" dangerouslySetInnerHTML={{ __html: item.content as string }}>
+
+                      </div>
+                      <div className="card-link">
+                        <Link href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
+                          Read More
+                          <i className="far fa-angle-right"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                })}
               </div>
             </div>
             <nav aria-label="Category 3b Pagination">
@@ -162,11 +205,39 @@ export default function SystemDemoComponent() {
 
             <div className="pages" id="pages-4b">
               <div className="pages-2">
-                {/* <CardVideo /> */}
+                {dataProvider.map((item, index) => {
+                  return <div className="card" key={index}>
+                    <Image
+                      className="card-img-top"
+                      src={"http://159.89.44.46:4500/v1/image-blog/" + item.thumbnail_img}
+                      alt="Image Placeholder"
+                      width={0}
+                      height={0}
+                      sizes="100"
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+
+                    <div className="card-body">
+                      <a href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
+                        <h3 className="card-title">
+                          {item.title}
+                        </h3>
+                      </a>
+                      <span className="card-category text-warning">Category</span>
+                      <div className="card-text" dangerouslySetInnerHTML={{ __html: item.content as string }}>
+
+                      </div>
+                      <div className="card-link">
+                        <Link href={`/about-newsevent/detail/${item.id}`} className="gyloop-link">
+                          Read More
+                          <i className="far fa-angle-right"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                })}
               </div>
-              <div className="pages-2">
-                {/* <CardVideoB /> */}
-              </div>
+
             </div>
             <nav aria-label="Category 4b Pagination">
               <ul className="pagination" id="category-4b-pagination"></ul>

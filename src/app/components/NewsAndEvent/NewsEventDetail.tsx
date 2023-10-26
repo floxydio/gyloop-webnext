@@ -2,7 +2,10 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import parse from "html-react-parser"
+import 'react-quill/dist/quill.snow.css';
+import ReactQuill from 'react-quill';
+import "./quillstyle.css"
 interface BlogContent {
   id?: number;
   page_code?: string;
@@ -127,12 +130,20 @@ export default function NewsEventDetailComponent({ id }: { id: number }) {
                   alt="image-placeholder-1"
                   width={0}
                   height={0}
-                  sizes="100"
-                  style={{ width: '100%', height: 'auto' }}
+                  // sizes="100"
+                  style={{ backgroundSize: 'cover', backgroundPosition: 'center', height: "496", width: "100%" }}
                 />
 
                 <div className="card-body">
-                  <div className="card-text" dangerouslySetInnerHTML={{ __html: data.content as string }}>
+                  <div className="card-text">
+                    <ReactQuill
+                      modules={{
+                        toolbar: false
+
+                      }}
+                      value={data.content as string}
+                      readOnly={true} // Read-only mode
+                    />
                   </div>
                 </div>
               </div>

@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import style from './BlogComponent.module.css'
+import parse from "html-react-parser"
 
 export interface BlogContent {
   id?: number;
@@ -18,9 +19,15 @@ export interface BlogContent {
   createdAt?: Date;
 }
 
+interface Category {
+  id?: number;
+  name?: string;
+}
+
 export default function BlogComponent() {
   const [page, setPage] = useState(1)
   const [data, setData] = useState<BlogContent[]>([])
+  const [category, setCategory] = useState<Category[]>([])
   async function getBlog() {
     await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=blog`).then((res) => {
       if (res.status === 200) {
@@ -29,8 +36,17 @@ export default function BlogComponent() {
     })
   }
 
+  async function getCategoryBlog() {
+    await axios.get(`http://159.89.44.46:4500/v1/category`).then((res) => {
+      if (res.status === 200) {
+        setCategory(res.data.data)
+      }
+    })
+  }
+
   useEffect(() => {
     getBlog()
+    getCategoryBlog()
   }, [page])
 
 
@@ -63,11 +79,9 @@ export default function BlogComponent() {
                       <option hidden selected>
                         Browse by category
                       </option>
-                      <option>Category 1</option>
-                      <option>Category 2</option>
-                      <option>Category 3</option>
-                      <option>Category 4</option>
-                      <option>Category 5</option>
+                      {category.map((item, index) => {
+                        return <option key={index} value={item.id}>{item.name}</option>
+                      })}
                     </select>
                     <i className="select-angle far fa-plus-circle"></i>
                   </div>
@@ -138,7 +152,8 @@ export default function BlogComponent() {
                         </h3>
                       </a>
                       <span className="card-category text-warning">Category</span>
-                      <div className="card-text" dangerouslySetInnerHTML={{ __html: item.content as string }}>
+                      <div className="card-text">
+                        {parse(item.content as string)}
 
                       </div>
                       <div className="card-link">

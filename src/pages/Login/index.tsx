@@ -6,15 +6,15 @@ export default function Login() {
   return (
     <>
 
-        <NextSEO seoHead={{
-          title: "Gyloop - Login",
-          metaDescription: "Gyloop - Login",
-          metaKeywords: "Gyloop - Login",
-          metaTitle: "Gyloop - Login",
-          metaLocale: "en-US"
+      <NextSEO seoHead={{
+        title: "Gyloop - Login",
+        metaDescription: "Gyloop - Login",
+        metaKeywords: "Gyloop - Login",
+        metaTitle: "Gyloop - Login",
+        metaLocale: "en-US"
 
-        }}/>
-      <AuthComponent props={{ TypeHeader: 0 }} />
+      }} />
+      <AuthComponent props={{ TypeHeader: 1 }} />
 
     </>
   );
