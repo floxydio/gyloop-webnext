@@ -289,9 +289,9 @@ export default function NetworkComponent({
       </div><
       {dataProductDetail.map((data) => {
         return (
-          <>
+          <div key={data.id}>
             {indexTab === data.prod_code ? (
-              <div key={data.id}>
+              <div >
                 <div
                   className="business-tabs"
                   id={`business-accordion-${data.id}`}
@@ -518,7 +518,7 @@ export default function NetworkComponent({
                 </div>
               </div>
             ) : null}
-          </>
+          </div>
         );
       })}
 
