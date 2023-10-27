@@ -9,6 +9,8 @@ interface CookiePreferencesInterface {
   createdAt: string,
 }
 
+// Trigger
+
 export default function CookiePreferences({ dataCookiePreferences }: { dataCookiePreferences: CookiePreferencesInterface }) {
   return (
     <>
