@@ -2,10 +2,16 @@ import Footer from "@/app/components/Footer/Footer";
 import HeaderNoMenu from "@/app/components/Header/HeaderNoMenu";
 import HeaderNoMenuTransparent from "@/app/components/Header/HeaderNoMenuTransparent";
 import LeadershipTitle from "@/app/components/Leadership/LeadershipTitle";
-import NewsEventDetailComponent from "@/app/components/NewsAndEvent/NewsEventDetail";
+// import NewsEventDetailComponent from "@/app/components/NewsAndEvent/NewsEventDetail";
 import NextSEO from "@/app/components/NextHead/NextSEO";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
+
+const NewsEventDetailComponent = dynamic(
+    () => import('@/app/components/NewsAndEvent/NewsEventDetail'),
+    { ssr: false }
+)
 
 export default function NewsAndEventDetail() {
     const router = useRouter();
