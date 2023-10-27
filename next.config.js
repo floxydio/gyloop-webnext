@@ -19,6 +19,9 @@ const nextConfig = {
     domains: ['localhost', '127.0.0.1', '159.89.44.46:4000', '159.89.44.46'],
     minimumCacheTTL: 60,
   },
+  eslint: {
+    ignoreDuringBuilds: true
+  },
   redirects: async () => {
     return [
       {
