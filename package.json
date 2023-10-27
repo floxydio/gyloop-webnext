@@ -1,6 +1,6 @@
 {
   "name": "gyloop-web",
-  "version": "0.1.3",
+  "version": "0.1.8",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,12 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "maintainers": [
+    "Dio Okta Rovelino",
+    "Marcellino Putra"
+  ],
+  "author": "Gyloop",
+  "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
