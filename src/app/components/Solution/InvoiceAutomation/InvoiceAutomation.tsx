@@ -114,7 +114,7 @@ export default function InvoiceAutomationComponent() {
         </div>
       </div>
 
-      <BillingAutomationContent />
+      {/* <BillingAutomationContent /> */}
 
       <div className="footer-bg-cover billing-automation-footer">
         <div className="container">
