@@ -1,3 +1,4 @@
+'use client'
 import '@/style/icon.css';
 import '@/style/style.min.css';
 import { useTranslations } from 'next-intl';
@@ -128,9 +129,8 @@ export default function MainComponent({
                     position: 'relative',
                     height: '500px',
                     backgroundSize: 'cover',
-                    backgroundImage: `url(${
-                      process.env.IMAGE_HOME + item.image_background
-                    })`,
+                    backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background
+                      })`,
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                   }}
@@ -175,9 +175,8 @@ export default function MainComponent({
                     position: 'relative',
                     height: '500px',
                     backgroundSize: 'cover',
-                    backgroundImage: `url(${
-                      process.env.IMAGE_HOME + item.image_background
-                    })`,
+                    backgroundImage: `url(${process.env.IMAGE_HOME + item.image_background
+                      })`,
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                   }}

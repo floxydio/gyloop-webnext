@@ -1,3 +1,5 @@
+
+
 import Head from 'next/head';
 import Footer from '../app/components/Footer/Footer';
 import { useEffect } from 'react';
