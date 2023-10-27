@@ -9,9 +9,6 @@ const nextConfig = {
     IMAGE_PRODUCT: 'http://159.89.44.46:4000/v1/image-product/',
     IMAGE_SOLUTION: 'http://159.89.44.46:4000/v1/image-solution/',
   },
-  compiler: {
-    reactRemoveProperties: true,
-  },
   i18n: {
     locales: ['en', 'id', 'deu', 'esp', 'fr', 'ita', 'ned', 'por'],
     defaultLocale: 'en',

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "turbo": "turbo dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -31,7 +32,7 @@
     "html-react-parser": "^4.2.9",
     "i18next": "^23.4.5",
     "moment": "^2.29.4",
-    "next": "13.5.6",
+    "next": "14.0.0",
     "next-images": "^1.8.5",
     "next-intl": "^2.20.0",
     "path": "^0.12.7",
