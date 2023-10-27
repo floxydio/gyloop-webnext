@@ -538,7 +538,7 @@ export default function ProviderComponent({
           </p>
 
           {dataFaq.map((item, index) => (
-            <div className="card rounded-0">
+            <div className="card rounded-0" key={index}>
               <div className="card-header">
                 <h4
                   className="card-title d-flex align-items-start mb-0"

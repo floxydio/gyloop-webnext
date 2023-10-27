@@ -46,7 +46,7 @@ export default function SystemDemoComponent() {
 
   useEffect(() => {
     getBlog()
-  }, [page])
+  }, [])
 
 
 

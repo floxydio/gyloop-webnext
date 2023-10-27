@@ -47,7 +47,7 @@ export default function BlogComponent() {
   useEffect(() => {
     getBlog()
     getCategoryBlog()
-  }, [page])
+  }, [])
 
 
   const t = useTranslations('ResourcesBlogsHeader');

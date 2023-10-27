@@ -286,7 +286,7 @@ export default function NetworkComponent({
             })}
           </ul>
         </div>
-      </div><
+      </div>
       {dataProductDetail.map((data) => {
         return (
           <div key={data.id}>
