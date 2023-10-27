@@ -66,7 +66,7 @@ export default function NewsAndEvent() {
           </div>
         </div>
 
-        <div className="container">
+        {/* <div className="container">
           <div className="category-2">
             <h2 className="category-title">News</h2>
 
@@ -78,7 +78,7 @@ export default function NewsAndEvent() {
                 <CardNewEventB />
               </div>
               <div className="pages-2">
-                <CardNewEvent />
+                <CardNewEvent data={[]} />
               </div>
               <div className="pages-2">
                 <CardNewEventB />
@@ -144,7 +144,7 @@ export default function NewsAndEvent() {
               <ul className="pagination" id="category-1-pagination"></ul>
             </nav>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
