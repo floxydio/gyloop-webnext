@@ -269,6 +269,7 @@ export default function NetworkComponent({
                 <li
                   className="nav-item"
                   onClick={() => setIndexTab(data.prod_code as string)}
+                  key={i}
                 >
                   <a
                     className="nav-link"
@@ -285,7 +286,7 @@ export default function NetworkComponent({
             })}
           </ul>
         </div>
-      </div>
+      </div><
       {dataProductDetail.map((data) => {
         return (
           <>
@@ -521,51 +522,51 @@ export default function NetworkComponent({
         );
       })}
 
-      {dataProductFeature.map((data, i) => {
-        return (
-          <div key={i}>
-            {data.submit_type === 1 ? (
-              <div className="business-feature networks-feature">
-                <div className="container">
-                  <div className="content">
-                    <h5 className="title">{data.txt_title}</h5>
+        {dataProductFeature.map((data, i) => {
+          return (
+            <div key={i}>
+              {data.submit_type === 1 ? (
+                <div className="business-feature networks-feature">
+                  <div className="container">
+                    <div className="content">
+                      <h5 className="title">{data.txt_title}</h5>
 
-                    <p className="text">{data.txt_subtitle}</p>
+                      <p className="text">{data.txt_subtitle}</p>
 
-                    <Link
-                      href="/Solutions"
-                      aria-label="Solutions Overview"
-                      className="gyloop-link d-block"
-                    >
-                      {data.txt_btnCapt}
-                      <i className="fas fa-angle-right"></i>
-                    </Link>
+                      <Link
+                        href="/Solutions"
+                        aria-label="Solutions Overview"
+                        className="gyloop-link d-block"
+                      >
+                        {data.txt_btnCapt}
+                        <i className="fas fa-angle-right"></i>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              <div className="business-feature networks-feature">
-                <div className="container">
-                  <div className="content">
-                    <h5 className="title">{data.txt_title}</h5>
+              ) : (
+                <div className="business-feature networks-feature">
+                  <div className="container">
+                    <div className="content">
+                      <h5 className="title">{data.txt_title}</h5>
 
-                    <p className="text">{data.txt_subtitle}</p>
+                      <p className="text">{data.txt_subtitle}</p>
 
-                    <Link
-                      href="/Solutions"
-                      aria-label="Solutions Overview"
-                      className="gyloop-link d-block"
-                    >
-                      {data.txt_btnCapt}
-                      <i className="fas fa-angle-right"></i>
-                    </Link>
+                      <Link
+                        href="/Solutions"
+                        aria-label="Solutions Overview"
+                        className="gyloop-link d-block"
+                      >
+                        {data.txt_btnCapt}
+                        <i className="fas fa-angle-right"></i>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
-        );
-      })}
+              )}
+            </div>
+          );
+        })}
 
       <NetworkPricingComponent dataPricingModel={dataPricingItem} />
 
