@@ -50,11 +50,11 @@ export default function CookiePreferences({ dataCookiePreferences }: { dataCooki
 export async function getStaticProps(context) {
   const fetchData = await axios.get(`http://159.89.44.46:4000/v1/cookie-preferences?lang_code=${context.locale}`)
 
-  const dataCookiePreferences = await fetchData.data.data[0] as CookiePreferencesInterface || null;
+  const dataCookiePreferences = await fetchData.data.data[0] as CookiePreferencesInterface
 
   return {
     props: {
-      dataCookiePreferences
+      dataCookiePreferences: dataCookiePreferences || null,
     },
   };
 }
