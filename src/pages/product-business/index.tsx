@@ -58,6 +58,26 @@ export async function getStaticProps(context) {
     `http://159.89.44.46:4000/v1/product-detail/get?lang_code=${context.locale}&page_code=business`
   );
 
+  if (
+    fetchHeader.data.data === undefined ||
+    fetchFeature.data.data === undefined ||
+    fetchMediaH.data.data === undefined ||
+    fetchPricingItem.data.data === undefined ||
+    fetchTablePlan.data.data === undefined ||
+    fetchProductDetail.data.data === undefined
+  ) {
+    return {
+      props: {
+        dataHeader: [],
+        dataFeature: [],
+        dataMedia: [],
+        dataFetchPrice: [],
+        dataTablePlan: [],
+        dataProductDetail: [],
+      },
+    };
+  }
+
   const dataHeader = fetchHeader.data.data;
   const dataFeature = fetchFeature.data.data;
   const dataMedia = fetchMediaH.data.data;

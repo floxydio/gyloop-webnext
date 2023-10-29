@@ -74,12 +74,23 @@ export async function getStaticProps(context) {
     axios.get(`${process.env.REACT_DEV_URL}/v1/main/homepage-footer`),
   ]);
 
+  if (dataHomepageFeature.data === undefined || dataFetchContent.data === undefined || dataHomepageHeader.data === undefined || dataFooter.data === undefined) {
+    return {
+      props: {
+        dataHomepageFeature: [],
+        dataFetchContent: [],
+        dataHomepageHeader: [],
+        dataFooter: [],
+      }
+    }
+  }
+
   return {
     props: {
-      dataHomepageFeature: dataHomepageFeature.data || null,
+      dataHomepageFeature: dataHomepageFeature.data,
       dataFetchContent: dataFetchContent.data,
-      dataHomepageHeader: dataHomepageHeader.data.data || null,
-      dataFooter: dataFooter.data.data || null,
+      dataHomepageHeader: dataHomepageHeader.data.data,
+      dataFooter: dataFooter.data.data,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };

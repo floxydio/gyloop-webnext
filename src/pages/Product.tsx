@@ -38,6 +38,15 @@ export async function getStaticProps(context) {
     `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=product`
   );
 
+  if (fetchHeader.data.data === undefined || fetchOverview.data.data === undefined) {
+    return {
+      props: {
+        dataHeader: [],
+        dataOverview: [],
+      },
+    };
+  }
+
   const dataHeader = fetchHeader.data.data;
   const dataOverview = fetchOverview.data.data;
 

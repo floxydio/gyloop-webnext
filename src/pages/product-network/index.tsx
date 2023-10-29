@@ -80,6 +80,34 @@ export async function getStaticProps(context) {
     `http://159.89.44.46:4000/v1/solution/function?lang_code=${context.locale}&page_code=network`
   );
 
+  if (
+    fetchHeader.data.data === undefined ||
+    fetchMediaH.data.data === undefined ||
+    fetchFeature.data.data === undefined ||
+    fetchFaqHeader.data.data === undefined ||
+    fetchFaqItem.data.data === undefined ||
+    fetchFooter.data.data === undefined ||
+    fetchProductDetail.data.data === undefined ||
+    fetchPricingItem.data.data === undefined ||
+    fetchProductFunction.data.data === undefined ||
+    fetchSolutionFunction.data.data === undefined
+  ) {
+    return {
+      props: {
+        dataHeader: [],
+        dataMediaHighlight: [],
+        dataFeature: [],
+        dataFaqHeader: [],
+        dataFaqItem: [],
+        dataFooter: [],
+        dataProductDetail: [],
+        dataProductPrice: [],
+        dataProductFunction: [],
+        dataSolutionFunction: [],
+      },
+    };
+  }
+
   const dataHeader = fetchHeader.data.data;
   const dataFaqHeader = fetchFaqHeader.data.data;
   const dataFaqItem = fetchFaqItem.data.data;

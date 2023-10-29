@@ -57,6 +57,19 @@ export async function getStaticProps(context) {
     `${process.env.REACT_DEV_URL}/v1/main/homepage-footer`
   );
 
+  if (fetchHeader.data.data === undefined || fetchSolutionFunction.data.data === undefined || fetchSolutionProduct.data.data === undefined || fetchMediaHighlight.data.data === undefined || fetchFooter.data.data === undefined) {
+    return {
+      props: {
+        dataHeader: [],
+        dataSolutionFunction: [],
+        dataSolutionProduct: [],
+        dataMediaHighlight: [],
+        dataFooter: [],
+      }
+    }
+  }
+
+
   const dataMediaHighlight = fetchMediaHighlight.data.data;
   const dataHeader = fetchHeader.data.data;
   const dataSolutionFunction = fetchSolutionFunction.data.data;

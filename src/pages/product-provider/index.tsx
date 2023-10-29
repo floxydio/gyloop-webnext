@@ -64,6 +64,21 @@ export async function getStaticProps(context) {
   const fetchFooter = await axios.get(
     `http://159.89.44.46:4000/v1/main/homepage-footer`
   );
+
+  if (
+    fetchHeader.data.data === undefined ||
+    fetchFaq.data.data === undefined ||
+    fetchProductDetail.data.data === undefined ||
+    fetchProductFunction.data.data === undefined ||
+    fetchPricingItem.data.data === undefined ||
+    fetchFeature.data.data === undefined ||
+    fetchFooter.data.data === undefined
+  ) {
+    return {
+      notFound: true,
+    };
+  }
+
   const dataHeader = fetchHeader.data.data;
   const dataFaq = fetchFaq.data.data;
   const dataProductDetail = fetchProductDetail.data.data;

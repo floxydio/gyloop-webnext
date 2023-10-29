@@ -74,6 +74,31 @@ export async function getStaticProps(context) {
     `http://159.89.44.46:4000/v1/main/homepage-footer`
   );
 
+  if (
+    fetchHeader.data.data === undefined ||
+    fetchFeature.data.data === undefined ||
+    fetchMediaHighlight.data.data === undefined ||
+    fetchPricingItem.data.data === undefined ||
+    fetchTablePlan.data.data === undefined ||
+    fetchProductDetail.data.data === undefined ||
+    fetchFaqHeader.data.data === undefined ||
+    fetchFaqItem.data.data === undefined ||
+    fetchProductFunction.data.data === undefined ||
+    fetchFooter.data.data === undefined
+  ) {
+    return {
+      props: {
+        dataHeader: [],
+        dataFetchPrice: [],
+        dataProductFunction: [],
+        dataProductDetail: [],
+        dataFaqHeader: [],
+        dataFaqItem: [],
+        dataFooter: [],
+      },
+    };
+  }
+
   const dataHeader = fetchHeader.data.data;
   const dataFeature = fetchFeature.data.data;
   const dataMedia = fetchMediaHighlight.data.data;
