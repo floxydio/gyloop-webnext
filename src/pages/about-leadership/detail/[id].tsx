@@ -50,7 +50,7 @@ export async function getStaticProps(context) {
     `http://159.89.44.46:4000/v1/about/leadership/detail/${params.id}`
   );
 
-  const data = fetchDetail.data;
+  const data = fetchDetail.data || null;
 
   return {
     props: {

@@ -64,11 +64,11 @@ export async function getStaticProps(context) {
   const dataFooter = fetchFooter.data.data;
   return {
     props: {
-      dataSolutionFunction: dataSolutionFunction,
-      dataSolutionProduct: dataSolutionProduct,
-      dataHeader: dataHeader,
-      dataMediaHighlight: dataMediaHighlight,
-      dataFooter: dataFooter,
+      dataSolutionFunction: dataSolutionFunction || null,
+      dataSolutionProduct: dataSolutionProduct || null,
+      dataHeader: dataHeader || null,
+      dataMediaHighlight: dataMediaHighlight || null,
+      dataFooter: dataFooter || null,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };

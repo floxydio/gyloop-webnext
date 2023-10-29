@@ -25,7 +25,7 @@ export default function SubscribeFunctional(dataJobPosition) {
 export async function getStaticProps() {
   const fetchData = await fetch("http://159.89.44.46:4000/v1/job/job-position")
   const data = await fetchData.json()
-  const dataJobPosition = data.data
+  const dataJobPosition = data.data || null
   return {
     props: {
       dataJobPosition,

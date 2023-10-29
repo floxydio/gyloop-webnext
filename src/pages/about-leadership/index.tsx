@@ -32,7 +32,7 @@ export async function getStaticProps(context) {
   const fetchData = await axios.get(
     `${process.env.REACT_DEV_URL}/v1/about/leadership?lang_code=${context.locale}`
   );
-  const dataLeadership = await fetchData.data.data;
+  const dataLeadership = await fetchData.data.data || null;
 
   return {
     props: {

@@ -402,7 +402,7 @@ export default function ProfessionalComponent({ jobPosition }: { jobPosition: Jo
 
 export async function getStaticProps() {
   const res = await axios.get("http://159.89.44.46:4000/v1/job/job-position")
-  const jobPosition = await res.data.data
+  const jobPosition = await res.data.data || []
   return {
     props: {
       jobPosition

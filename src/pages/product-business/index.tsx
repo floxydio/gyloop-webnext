@@ -67,12 +67,12 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      dataHeader: dataHeader,
-      dataFeature: dataFeature,
-      dataMedia: dataMedia,
-      dataFetchPrice: dataFetchPrice,
-      dataTablePlan: dataTablePlan,
-      dataProductDetail: dataProductDetail,
+      dataHeader: dataHeader || null,
+      dataFeature: dataFeature || null,
+      dataMedia: dataMedia || null,
+      dataFetchPrice: dataFetchPrice || null,
+      dataTablePlan: dataTablePlan || null,
+      dataProductDetail: dataProductDetail || null,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };

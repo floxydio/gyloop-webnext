@@ -28,7 +28,7 @@ export default function PrivacyPolicy(dataPrivacy) {
 
 export async function getStaticProps(context) {
   const fetchData = await axios.get(`http://159.89.44.46:4000/v1/privacy-policy?lang_code=${context.locale}`)
-  const dataPrivacy = await fetchData.data.data[0]
+  const dataPrivacy = await fetchData.data.data[0] || null;
   return {
     props: {
       dataPrivacy,

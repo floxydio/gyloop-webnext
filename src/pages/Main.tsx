@@ -76,10 +76,10 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      dataHomepageFeature: dataHomepageFeature.data,
+      dataHomepageFeature: dataHomepageFeature.data || null,
       dataFetchContent: dataFetchContent.data,
-      dataHomepageHeader: dataHomepageHeader.data.data,
-      dataFooter: dataFooter.data.data,
+      dataHomepageHeader: dataHomepageHeader.data.data || null,
+      dataFooter: dataFooter.data.data || null,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };

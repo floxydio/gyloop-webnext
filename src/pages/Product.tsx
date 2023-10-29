@@ -43,8 +43,8 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      dataHeader: dataHeader,
-      dataOverview: dataOverview,
+      dataHeader: dataHeader || null,
+      dataOverview: dataOverview || null,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };

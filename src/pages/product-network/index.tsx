@@ -92,15 +92,15 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      dataHeader: dataHeader,
-      dataFaq: dataFaqHeader,
-      dataFaqItem: dataFaqItem,
-      dataProductFunction: dataProductFunction,
-      dataFooter: dataFooter,
-      dataProductPrice: dataProductPrice,
-      dataProductDetail: dataProductDetail,
-      dataProductFeature: dataFeature,
-      dataSolutionFunction: dataSolutionFunction,
+      dataHeader: dataHeader || null,
+      dataFaq: dataFaqHeader || null,
+      dataFaqItem: dataFaqItem || null,
+      dataProductFunction: dataProductFunction || null,
+      dataFooter: dataFooter || null,
+      dataProductPrice: dataProductPrice || null,
+      dataProductDetail: dataProductDetail || null,
+      dataProductFeature: dataFeature || null,
+      dataSolutionFunction: dataSolutionFunction || null,
       messages: (await import(`@/translate/${context.locale}.json`)).default,
     },
   };

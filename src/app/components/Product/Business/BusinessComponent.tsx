@@ -127,7 +127,7 @@ export default function BusinessComponent({
               <div className="card-subtitle">{t('secondSubtitleFeature')}</div>
 
               <i className="fas fa-shopping-cart text-white mr-1"></i>
-              <a href="javascript:void()" className="gyloop-link">
+              <a href="#" className="gyloop-link">
                 {t('button')}
                 <i className="far fa-chevron-circle-right"></i>
               </a>
@@ -141,7 +141,7 @@ export default function BusinessComponent({
               <div className="card-subtitle">{t('thirdSubtitleFeature')}</div>
 
               <i className="fas fa-warehouse text-white mr-1"></i>
-              <a href="javascript:void()" className="gyloop-link">
+              <a href="#" className="gyloop-link">
                 {t('button')}
                 <i className="far fa-chevron-circle-right"></i>
               </a>
