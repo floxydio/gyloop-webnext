@@ -19,7 +19,7 @@ export default function PrivacyPolicy(dataPrivacy) {
       <HeaderNoMenuTransparent type={1} />
       <LeadershipTitle title="Privacy Statement for Gyloop
 " />
-      {dataPrivacy === undefined ? <p>Data Kosong</p> :
+      {dataPrivacy.dataPrivacy === undefined || dataPrivacy.dataPrivacy === null ? <p>Data Kosong</p> :
         <PrivacyComponent privacyPolicy={dataPrivacy.dataPrivacy} />}
       <Footer />
     </>
