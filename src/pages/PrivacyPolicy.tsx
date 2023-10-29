@@ -38,7 +38,7 @@ export async function getStaticProps(context) {
   const dataPrivacy = await fetchData.data.data[0]
   return {
     props: {
-      dataPrivacy,
+      dataPrivacy: dataPrivacy || null,
     },
   };
 }
