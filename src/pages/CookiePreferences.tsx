@@ -33,12 +33,12 @@ export default function CookiePreferences({ dataCookiePreferences }: { dataCooki
             <p className="privacy-update-info">
               This statement wast updated on 31 October 2023
             </p>
-
-            <div className="privacy-content" dangerouslySetInnerHTML={{
+            {dataCookiePreferences === undefined ? <p>Data Kosong</p> : <div className="privacy-content" dangerouslySetInnerHTML={{
               __html: dataCookiePreferences.content
             }}>
 
-            </div>
+            </div>}
+
           </div>
         </div>
         <Footer />
