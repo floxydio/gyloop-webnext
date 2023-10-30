@@ -44,7 +44,7 @@ export async function getStaticPaths() {
   return { paths: paramLeaderId, fallback: false };
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const { params } = context;
   const fetchDetail = await axios.get(
     `http://159.89.44.46:4000/v1/about/leadership/detail/${params.id}`

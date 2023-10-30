@@ -38,7 +38,7 @@ export default function Businnes({
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const fetchHeader = await axios.get(
     `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=business`
   );

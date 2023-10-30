@@ -8,23 +8,23 @@ import React from 'react'
 export default function Library() {
   return (
     <>
-   
+
       <NextSEO seoHead={{
         title: "Gyloop - Library",
         metaDescription: "Gyloop - Library",
         metaKeywords: "Gyloop - Library",
         metaTitle: "Gyloop - Library",
         metaLocale: "en-US"
-      }}/>
+      }} />
 
-      <HeaderNoMenuTransparent type = {0} />
+      <HeaderNoMenuTransparent type={0} />
       <LibraryComponent />
       <Footer />
     </>
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   return {
     props: {
       messages: (await import(`@/translate/${context.locale}.json`)).default

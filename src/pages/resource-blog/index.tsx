@@ -24,7 +24,7 @@ export default function Blogs({ context }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 
   return {
     props: {

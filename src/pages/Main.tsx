@@ -55,7 +55,7 @@ export default function Main({
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const [
     dataHomepageFeature,
     dataFetchContent,

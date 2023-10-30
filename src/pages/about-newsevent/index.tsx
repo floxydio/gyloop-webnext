@@ -9,7 +9,7 @@ import React from 'react';
 export default function index() {
   return (
     <>
-   
+
       <NextSEO seoHead={{
         title: "Gyloop - News And Event",
         metaDescription: "Gyloop - News And Event",
@@ -25,7 +25,7 @@ export default function index() {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   return {
     props: {
       messages: (await import(`@/translate/${context.locale}.json`)).default,

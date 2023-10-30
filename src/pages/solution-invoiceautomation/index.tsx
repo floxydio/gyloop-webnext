@@ -22,7 +22,7 @@ export default function InvoiceAutomation() {
   </>;
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const fetchHeader = await axios.get(
     `${process.env.REACT_DEV_URL}/v1/product-header/get?lang_code=${context.locale}&page_code=billing_automation`
   );

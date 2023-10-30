@@ -28,7 +28,7 @@ export default function Leadership(dataLeadership) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const fetchData = await axios.get(
     `${process.env.REACT_DEV_URL}/v1/about/leadership?lang_code=${context.locale}`
   );
