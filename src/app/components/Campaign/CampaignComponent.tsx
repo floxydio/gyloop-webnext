@@ -4,357 +4,259 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-export default function CampaignComponent() {
+export interface AboutHighlight {
+  id?: number;
+  lang_code: string;
+  page_code: string;
+  title: string;
+  description: string;
+  img: string;
+  submit_type?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export interface AboutCampaign {
+  id?: number;
+  lang_code: string;
+  head_text: string;
+  slug_text: string;
+  long_desc: string;
+  desc_posx: string;
+  imge_feat: string;
+  bt_link: string;
+  bt_capt: string;
+  bt_type: string;
+  submit_type: number;
+  is_publ: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export interface AboutCulture {
+  id?: number;
+  lang_code: string;
+  page_code: string;
+  head_text: string;
+  long_desc: string;
+  desc_posx: string;
+  imge_feat: string;
+  bt_link: string;
+  bt_capt: string;
+  bt_type: string;
+  is_publ: boolean;
+  submit_type: number;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export default function CampaignComponent({
+  dataHighlight,
+  dataCampaign,
+  dataCulture,
+}: {
+  dataHighlight: AboutHighlight[];
+  dataCampaign: AboutCampaign[];
+  dataCulture: AboutCulture[];
+}) {
   const t = useTranslations('AboutUsCampaignHeader');
   return (
     <>
-      <header className="header-bg-cover billing-automation-header d-flex align-items-end campaign-header">
-        <div className="container">
-          <h1 className="title">{t('title')}</h1>
-          <p className="subtitle">
-            <span className="d-md-none d-xl-inline">{t('subtitle')}</span>
-            <span className="d-none d-md-inline d-xl-none">
-              Bring the power of business integration to your business community
-            </span>
-          </p>
-          <h5 className="info">{t('secondSubtitle')}</h5>
-        </div>
-      </header>
+      {dataHighlight.map((data) => {
+        return (
+          <>
+            {data.submit_type === 1 ? (
+              <div className="about" key={data.id}>
+                <div className="container">
+                  <div className="card border-0 rounded-0 bg-transparent">
+                    <div className="card-body">
+                      <h3 className="card-title about-card-title">
+                        {data.title}
+                      </h3>
 
-    
-
-      <div className="about">
-        <div className="container">
-          <div className="card border-0 rounded-0 bg-transparent">
-            <div className="card-body">
-              <h3 className="card-title about-card-title">Campaign Program</h3>
-
-              <div className="card-text about-card-text">
-                <p>
-                  Gyloop provide Networks Apps to allow you extend your business
-                  connection, cause we understand that business are better built
-                  by strong relationships. Business entities are now easy to
-                  connect to the unlimited networks across industry and
-                  locations.
-                </p>
-                <p>
-                  Gyloop provide Networks Apps to allow you extend your business
-                  connection, cause we understand that business are better built
-                  by strong relationships. Business entities are now easy to
-                  connect to the unlimited networks across industry and
-                  locations.
-                </p>
-                <p>
-                  Gyloop provide Networks Apps to allow you extend your business
-                  connection, cause we understand that business are better built
-                  by strong relationships. Business entities are now easy to
-                  connect to the unlimited networks across industry and
-                  locations.
-                </p>
+                      <div className="card-text about-card-text">
+                        <p>{data.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            ) : (
+              <div className="about" key={data.id}>
+                <div className="container">
+                  <div className="card border-0 rounded-0 bg-transparent">
+                    <div className="card-body">
+                      <h3 className="card-title about-card-title">
+                        {data.title}
+                      </h3>
 
-          <div className="card border-0 rounded-0 bg-transparent">
-            <div className="card-body">
-              <h3 className="card-title about-card-title">Program Volunteer</h3>
-
-              <div className="card-text about-card-text">
-                <p>
-                  Gyloop provide Networks Apps to allow you extend your business
-                  connection, cause we understand that business are better built
-                  by strong relationships. Business entities are now easy to
-                  connect to the unlimited networks across industry and
-                  locations.
-                </p>
-                <p>
-                  Gyloop provide Networks Apps to allow you extend your business
-                  connection, cause we understand that business are better built
-                  by strong relationships. Business entities are now easy to
-                  connect to the unlimited networks across industry and
-                  locations.
-                </p>
-                <p>
-                  Gyloop provide Networks Apps to allow you extend your business
-                  connection, cause we understand that business are better built
-                  by strong relationships. Business entities are now easy to
-                  connect to the unlimited networks across industry and
-                  locations.
-                </p>
+                      <div className="card-text about-card-text">
+                        <p>{data.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            )}
+          </>
+        );
+      })}
 
-          <div className="card border-0 rounded-0 bg-transparent">
-            <div className="card-body">
-              <h3 className="card-title about-card-title">Program Benefit</h3>
-
-              <div className="card-text about-card-text">
-                <p>
-                  Gyloop provide Networks Apps to allow you extend your business
-                  connection, cause we understand that business are better built
-                  by strong relationships. Business entities are now easy to
-                  connect to the unlimited networks across industry and
-                  locations.
-                </p>
-                <p>
-                  Gyloop provide Networks Apps to allow you extend your business
-                  connection, cause we understand that business are better built
-                  by strong relationships. Business entities are now easy to
-                  connect to the unlimited networks across industry and
-                  locations.
-                </p>
-                <p>
-                  Gyloop provide Networks Apps to allow you extend your business
-                  connection, cause we understand that business are better built
-                  by strong relationships. Business entities are now easy to
-                  connect to the unlimited networks across industry and
-                  locations.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="footer-bg-cover billing-automation-footer about-subheader campaign-subheader">
-        <div className="container justify-content-md-start">
-          <div className="content text-white">
-            <h3 className="title">COLLABORATION</h3>
-            <p className="subtitle">
-              <strong>Start together, achieve together</strong>
-            </p>
-
-            <p className="solution-subheader-text">
-              make you and your partners have the same understanding, make you
-              have more business opportunities
-            </p>
-
-            <div className="d-flex justify-content-center justify-content-md-start">
-              <Link
-                href="/SubscribeProfessional?trial=1"
-                className="btn btn-warning gyloop-btn text-white"
+      {dataCampaign.map((data) => {
+        return (
+          <>
+            {data.submit_type === 1 ? (
+              <div
+                className="footer-bg-cover billing-automation-footer about-subheader campaign-subheader"
+                key={data.id}
               >
-                Get Start for Free
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+                <div className="container justify-content-md-start">
+                  <div className="content text-white">
+                    <h3 className="title">{data.head_text}</h3>
+                    <p className="subtitle">
+                      <strong>{data.long_desc}</strong>
+                    </p>
 
-      <div className="about-cards">
-        <div className="container">
-          <div className="card border-0 rounded-0">
-            <div className="row">
-              <div className="col-12 col-md-6 pr-md-0">
-                <Image
-                  src="/img/illustrative_campaign_1.png"
-                  className="features-image img-fluid"
-                  alt="gyloop-illustrative-campaign-1"
-                  width={0}
-                  height={0}
-                  sizes="100"
-                  style={{ width: '100%', height: 'auto' }}
-                />
-              </div>
+                    <p className="solution-subheader-text">{data.slug_text}</p>
 
-              <div className="col-12 col-md-6 pl-md-0">
-                <div className="card-body">
-                  <p className="card-title features-title">
-                    The Giant Campaign Program
-                  </p>
-
-                  <div className="card-text features-text">
-                    <div className="d-md-none">
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                    </div>
-                    <div className="d-none d-md-block">
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
+                    <div className="d-flex justify-content-center justify-content-md-start">
+                      <Link
+                        href="/SubscribeProfessional?trial=1"
+                        className="btn btn-warning gyloop-btn text-white"
+                      >
+                        {data.bt_capt}
+                      </Link>
                     </div>
                   </div>
-
-                  <Link href="/About/Campaign/detail/1" className="gyloop-link">
-                    Learn More<i className="fas fa-angle-right ml-2"></i>
-                  </Link>
                 </div>
               </div>
-            </div>
-          </div>
+            ) : (
+              <div
+                className="footer-bg-cover billing-automation-footer about-subheader campaign-subheader"
+                key={data.id}
+              >
+                <div className="container justify-content-md-start">
+                  <div className="content text-white">
+                    <h3 className="title">{data.head_text}</h3>
+                    <p className="subtitle">
+                      <strong>{data.long_desc}</strong>
+                    </p>
 
-          <div className="card border-0 rounded-0">
-            <div className="row">
-              <div className="col-12 col-md-6 pr-md-0">
-                <div className="card-body">
-                  <p className="card-title features-title">
-                    The Rookie Campaign for Fast
-                  </p>
+                    <p className="solution-subheader-text">{data.slug_text}</p>
 
-                  <div className="card-text features-text">
-                    <div className="d-md-none">
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                    </div>
-                    <div className="d-none d-md-block">
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
+                    <div className="d-flex justify-content-center justify-content-md-start">
+                      <Link
+                        href="/SubscribeProfessional?trial=1"
+                        className="btn btn-warning gyloop-btn text-white"
+                      >
+                        {data.bt_capt}
+                      </Link>
                     </div>
                   </div>
-
-                  <Link href="/About/Campaign/detail/1" className="gyloop-link">
-                    Learn More<i className="fas fa-angle-right ml-2"></i>
-                  </Link>
                 </div>
               </div>
+            )}
+          </>
+        );
+      })}
 
-              <div className="col-12 col-md-6 pl-md-0">
-                <Image
-                  src="/img/illustrative_campaign_2.png"
-                  className="features-image img-fluid"
-                  alt="gyloop-illustrative-campaign-2"
-                  width={0}
-                  height={0}
-                  sizes="100"
-                  style={{ width: '100%', height: 'auto' }}
-                />
-              </div>
-            </div>
-          </div>
+      {dataCulture.map((data) => {
+        return (
+          <>
+            {data.submit_type === 1 ? (
+              <div className="about-cards" key={data.id}>
+                <div className="container">
+                  <div className="card border-0 rounded-0">
+                    <div className="row">
+                      <div className="col-12 col-md-6 pr-md-0">
+                        <Image
+                          src="/img/illustrative_campaign_1.png"
+                          className="features-image img-fluid"
+                          alt="gyloop-illustrative-campaign-1"
+                          width={0}
+                          height={0}
+                          sizes="100"
+                          style={{ width: '100%', height: 'auto' }}
+                        />
+                      </div>
 
-          <div className="card border-0 rounded-0">
-            <div className="row">
-              <div className="col-12 col-md-6 pr-md-0">
-                <Image
-                  src="/img/illustrative_campaign_3.png"
-                  className="features-image img-fluid"
-                  alt="gyloop-illustrative-campaign-3"
-                  width={0}
-                  height={0}
-                  sizes="100"
-                  style={{ width: '100%', height: 'auto' }}
-                />
-              </div>
+                      <div className="col-12 col-md-6 pl-md-0">
+                        <div className="card-body">
+                          <p className="card-title features-title">
+                            {data.head_text}
+                          </p>
 
-              <div className="col-12 col-md-6 pl-md-0">
-                <div className="card-body">
-                  <p className="card-title features-title">
-                    Strategic Improvement Program
-                  </p>
+                          <div className="card-text features-text">
+                            <div className="d-md-none">
+                              <p>{data.long_desc}</p>
+                            </div>
+                            <div className="d-none d-md-block">
+                              <p>{data.long_desc}</p>
+                            </div>
+                          </div>
 
-                  <div className="card-text features-text">
-                    <div className="d-md-none">
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                    </div>
-                    <div className="d-none d-md-block">
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
-                      <p>
-                        Gyloop provide Networks Apps to allow you extend your
-                        business connection, cause we understand that business
-                        are better built by strong relationships. Business
-                        entities are now easy to connect to the unlimited
-                        networks across industry and locations.
-                      </p>
+                          <Link
+                            href="/About/Campaign/detail/1"
+                            className="gyloop-link"
+                          >
+                            {data.bt_capt}
+                            <i className="fas fa-angle-right ml-2"></i>
+                          </Link>
+                        </div>
+                      </div>
                     </div>
                   </div>
-
-                  <Link href="/About/Campaign/detail/1" className="gyloop-link">
-                    Learn More<i className="fas fa-angle-right ml-2"></i>
-                  </Link>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            ) : (
+              <div className="about-cards" key={data.id}>
+                <div className="container">
+                  <div className="card border-0 rounded-0">
+                    <div className="row">
+                      <div className="col-12 col-md-6 pr-md-0">
+                        <Image
+                          src="/img/illustrative_campaign_1.png"
+                          className="features-image img-fluid"
+                          alt="gyloop-illustrative-campaign-1"
+                          width={0}
+                          height={0}
+                          sizes="100"
+                          style={{ width: '100%', height: 'auto' }}
+                        />
+                      </div>
+
+                      <div className="col-12 col-md-6 pl-md-0">
+                        <div className="card-body">
+                          <p className="card-title features-title">
+                            {data.head_text}
+                          </p>
+
+                          <div className="card-text features-text">
+                            <div className="d-md-none">
+                              <p>{data.long_desc}</p>
+                            </div>
+                            <div className="d-none d-md-block">
+                              <p>{data.long_desc}</p>
+                            </div>
+                          </div>
+
+                          <Link
+                            href="/About/Campaign/detail/1"
+                            className="gyloop-link"
+                          >
+                            {data.bt_capt}
+                            <i className="fas fa-angle-right ml-2"></i>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
+        );
+      })}
 
       <div className="footer-bg-cover billing-automation-footer campaign-footer">
         <div className="container justify-content-md-start">

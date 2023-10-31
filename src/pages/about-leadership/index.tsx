@@ -29,6 +29,11 @@ export default function Leadership(dataLeadership) {
 }
 
 export async function getServerSideProps(context) {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  );
+
   const fetchData = await axios.get(
     `${process.env.REACT_DEV_URL}/v1/about/leadership?lang_code=${context.locale}`
   );
@@ -39,7 +44,7 @@ export async function getServerSideProps(context) {
       },
     };
   }
-  const dataLeadership = await fetchData.data.data
+  const dataLeadership = await fetchData.data.data;
 
   return {
     props: {

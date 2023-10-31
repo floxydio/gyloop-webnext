@@ -3,16 +3,18 @@ import dynamic from 'next/dynamic';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
 
-
-const FooterMainComponent = dynamic(() => import('@/app/components/Main/MainFooter'), {
-  ssr: false,
-})
+const FooterMainComponent = dynamic(
+  () => import('@/app/components/Main/MainFooter'),
+  {
+    ssr: false,
+  }
+);
 
 const MainHeaderComponent = dynamic(
   () => import('@/app/components/Main/MainHeader'),
   {
     ssr: false,
-  },
+  }
 );
 
 const MainComponent = dynamic(
@@ -54,7 +56,8 @@ export default function Main({
 export async function getServerSideProps(context) {
   context.res.setHeader(
     'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59')
+    'public, s-maxage=10, stale-while-revalidate=59'
+  );
 
   const [
     dataHomepageFeature,
@@ -74,15 +77,20 @@ export async function getServerSideProps(context) {
     axios.get(`${process.env.REACT_DEV_URL}/v1/main/homepage-footer`),
   ]);
 
-  if (dataHomepageFeature.data === undefined || dataFetchContent.data === undefined || dataHomepageHeader.data === undefined || dataFooter.data === undefined) {
+  if (
+    dataHomepageFeature.data === undefined ||
+    dataFetchContent.data === undefined ||
+    dataHomepageHeader.data === undefined ||
+    dataFooter.data === undefined
+  ) {
     return {
       props: {
         dataHomepageFeature: [],
         dataFetchContent: [],
         dataHomepageHeader: [],
         dataFooter: [],
-      }
-    }
+      },
+    };
   }
 
   return {

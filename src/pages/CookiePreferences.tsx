@@ -4,23 +4,29 @@ import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
 
 interface CookiePreferencesInterface {
-  content: string,
-  locale: string,
-  createdAt: string,
+  content: string;
+  locale: string;
+  createdAt: string;
 }
 
 // Trigger
 
-export default function CookiePreferences({ dataCookiePreferences }: { dataCookiePreferences: CookiePreferencesInterface }) {
+export default function CookiePreferences({
+  dataCookiePreferences,
+}: {
+  dataCookiePreferences: CookiePreferencesInterface;
+}) {
   return (
     <>
-      <NextSEO seoHead={{
-        title: "Gyloop - Cookie Preferences",
-        metaDescription: "Gyloop - Cookie Preferences",
-        metaKeywords: "Gyloop - Cookie Preferences",
-        metaLocale: "en-US",
-        metaTitle: "Gyloop - Cookie Preferences"
-      }} />
+      <NextSEO
+        seoHead={{
+          title: 'Gyloop - Cookie Preferences',
+          metaDescription: 'Gyloop - Cookie Preferences',
+          metaKeywords: 'Gyloop - Cookie Preferences',
+          metaLocale: 'en-US',
+          metaTitle: 'Gyloop - Cookie Preferences',
+        }}
+      />
       <>
         <div className="bg-light">
           <div className="container subheader subheader-container">
@@ -33,12 +39,16 @@ export default function CookiePreferences({ dataCookiePreferences }: { dataCooki
             <p className="privacy-update-info">
               This statement wast updated on 31 October 2023
             </p>
-            {dataCookiePreferences === undefined ? <p>Data Kosong</p> : <div className="privacy-content" dangerouslySetInnerHTML={{
-              __html: dataCookiePreferences.content
-            }}>
-
-            </div>}
-
+            {dataCookiePreferences === undefined ? (
+              <p>Data Kosong</p>
+            ) : (
+              <div
+                className="privacy-content"
+                dangerouslySetInnerHTML={{
+                  __html: dataCookiePreferences.content,
+                }}
+              ></div>
+            )}
           </div>
         </div>
         <Footer />
@@ -48,7 +58,13 @@ export default function CookiePreferences({ dataCookiePreferences }: { dataCooki
 }
 
 export async function getServerSideProps(context) {
-  const fetchData = await axios.get(`http://159.89.44.46:4000/v1/cookie-preferences?lang_code=${context.locale}`)
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  );
+  const fetchData = await axios.get(
+    `http://159.89.44.46:4000/v1/cookie-preferences?lang_code=${context.locale}`
+  );
   if (fetchData.data.data.length === 0) {
     return {
       props: {
@@ -56,7 +72,8 @@ export async function getServerSideProps(context) {
       },
     };
   }
-  const dataCookiePreferences = await fetchData.data.data[0] as CookiePreferencesInterface
+  const dataCookiePreferences = (await fetchData.data
+    .data[0]) as CookiePreferencesInterface;
 
   return {
     props: {
