@@ -1,22 +1,18 @@
-
-
-import Head from 'next/head';
-import Footer from '../app/components/Footer/Footer';
-import { useEffect } from 'react';
-import Header from '@/app/components/Header/header';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
-import MainHeader from '@/app/components/Main/MainHeader';
 import dynamic from 'next/dynamic';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
-import { HomepageContent } from '@/app/components/Main/MainComponent';
-import FooterMain from '@/app/components/Main/MainFooter';
+
+
+const FooterMainComponent = dynamic(() => import('@/app/components/Main/MainFooter'), {
+  ssr: false,
+})
 
 const MainHeaderComponent = dynamic(
   () => import('@/app/components/Main/MainHeader'),
   {
     ssr: false,
-  }
+  },
 );
 
 const MainComponent = dynamic(
@@ -50,7 +46,7 @@ export default function Main({
         content={dataFetchContent.data}
       />
       {/* <Footer  */}
-      <FooterMain dataFooter={dataFooter} />
+      <FooterMainComponent dataFooter={dataFooter} />
     </>
   );
 }
