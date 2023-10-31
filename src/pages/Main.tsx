@@ -55,7 +55,11 @@ export default function Main({
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ context, req, res }) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
   const [
     dataHomepageFeature,
     dataFetchContent,

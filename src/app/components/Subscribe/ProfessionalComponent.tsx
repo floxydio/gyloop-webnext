@@ -400,9 +400,13 @@ export default function ProfessionalComponent({ jobPosition }: { jobPosition: Jo
 }
 
 
-export async function getServerSideProps() {
-  const res = await axios.get("http://159.89.44.46:4000/v1/job/job-position")
-  const jobPosition = await res.data.data
+export async function getServerSideProps({ req, res }) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+  const dat = await axios.get("http://159.89.44.46:4000/v1/job/job-position")
+  const jobPosition = await dat.data.data
   if (res.data.data === undefined) {
     return {
       props: {

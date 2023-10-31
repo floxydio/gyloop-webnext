@@ -250,6 +250,7 @@ export default function Navbar() {
                   className="nav-link mr-0"
                   href="preventDefault()"
                   onClick={handleSearchBarOpen}
+
                 >
                   <i className="fas fa-search"></i>
                   <span className="d-xl-none ml-2">Search</span>

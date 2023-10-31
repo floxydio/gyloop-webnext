@@ -216,6 +216,7 @@ export default function HeaderProduct() {
                 <a
                   className="nav-link mr-0"
                   href="preventDefault()"
+                  aria-expanded="false"
                 // onClick="open_search_bar()"
                 >
                   <i className="fas fa-search"></i>

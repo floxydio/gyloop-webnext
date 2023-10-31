@@ -26,7 +26,11 @@ export default function PrivacyPolicy(dataPrivacy) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ context, req, res }) {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
   const fetchData = await axios.get(`http://159.89.44.46:4000/v1/privacy-policy?lang_code=${context.locale}`)
   if (fetchData.data.data === undefined || fetchData.data === undefined) {
     return {
