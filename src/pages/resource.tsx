@@ -250,7 +250,6 @@ export default function Resource() {
                                 <div className="mb-3">
                                     <a href="index.html">
                                         <img
-                                            priority
                                             className="logo-web-lg"
                                             src="img/logo-gyloop-white.png"
                                             alt="Logo GYLOOP"
