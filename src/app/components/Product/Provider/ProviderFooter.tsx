@@ -80,6 +80,7 @@ export default function FooterProvider({
                         <div className="mb-3">
                           <Link href="/">
                             <Image
+                              priority
                               className="logo-web-lg"
                               src={`${process.env.IMAGE_HOME}${data.img_logo}`}
                               alt="gyloop-logo"
@@ -356,6 +357,7 @@ export default function FooterProvider({
                         <div className="mb-3">
                           <Link href="/">
                             <Image
+                              priority
                               className="logo-web-lg"
                               src={`${process.env.IMAGE_HOME}`}
                               alt="gyloop-logo-white"

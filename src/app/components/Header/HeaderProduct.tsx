@@ -9,6 +9,7 @@ export default function HeaderProduct() {
         <div className="container align-items-center">
           <Link className="navbar-brand d-flex mr-5" href="/">
             <Image
+              priority
               className="logo-web-lg"
               src="/img/logo-gyloop-white.png"
               alt="LOGO gyloop"
@@ -215,7 +216,7 @@ export default function HeaderProduct() {
                 <a
                   className="nav-link mr-0"
                   href="preventDefault()"
-                  // onClick="open_search_bar()"
+                // onClick="open_search_bar()"
                 >
                   <i className="fas fa-search"></i>
                   <span className="d-xl-none ml-2">Search</span>
@@ -249,7 +250,7 @@ export default function HeaderProduct() {
                     <button
                       type="button"
                       className="btn btn-primary border-left-0"
-                      // onClick="close_search_bar()"
+                    // onClick="close_search_bar()"
                     >
                       <i className="far fa-times"></i>
                     </button>

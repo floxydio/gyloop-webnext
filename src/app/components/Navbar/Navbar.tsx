@@ -36,6 +36,7 @@ export default function Navbar() {
         <div className="container align-items-center">
           <a className="navbar-brand d-flex mr-5" href="index.html">
             <Image
+              priority
               className="logo-web-lg"
               src="/img/logo-gyloop-white.png"
               alt="gyloop-logo-white"
@@ -203,9 +204,8 @@ export default function Navbar() {
               </li>
             </ul>
             <ul
-              className={`nav-search-off ${
-                openingSearchBar ? 'd-none' : ''
-              }navbar-nav`}
+              className={`nav-search-off ${openingSearchBar ? 'd-none' : ''
+                }navbar-nav`}
             >
               <li className="nav-item nav-item-lang position-relative">
                 <a
@@ -243,9 +243,8 @@ export default function Navbar() {
                 </div>
               </li>
               <li
-                className={`nav-item nav-search-off ${
-                  openingSearchBar ? 'd-none' : ''
-                }`}
+                className={`nav-item nav-search-off ${openingSearchBar ? 'd-none' : ''
+                  }`}
               >
                 <a
                   className="nav-link mr-0"

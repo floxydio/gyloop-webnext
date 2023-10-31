@@ -45,9 +45,9 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
         setShowPassword(!showPassword)
     }
 
-    useEffect(() => { 
+    useEffect(() => {
         if (localStorage.getItem("remember") !== undefined || localStorage.getItem("remember") !== null) {
-            
+
 
         }
     }, [email])
@@ -306,7 +306,8 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
                     <div className="col-xl-6 d-none d-xl-block text-center">
                         <Link href="/">
-                            <Image width={0} height={0} sizes="100" className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo Gyloop" />
+                            <Image width={0} height={0} sizes="100" priority
+                                className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo Gyloop" />
                         </Link>
 
                         <h5 className="title">MAKE BUSINESS CONNECTED</h5>

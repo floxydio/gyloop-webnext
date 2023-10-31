@@ -17,7 +17,8 @@ export default function ResetPasswordComponent() {
                 <div className="container align-items-center">
 
                     <Link className="navbar-brand d-flex mr-5" href="/">
-                        <Image className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo GYLOOP"  width={0} height={0} sizes="100" />
+                        <Image priority
+                            className="logo-web-lg" src="/img/logo-gyloop-white.png" alt="Logo GYLOOP" width={0} height={0} sizes="100" />
                     </Link>
                 </div>
             </nav>

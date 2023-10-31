@@ -27,6 +27,7 @@ export default function HeaderNoMenuTransparent(
           <div className="container align-items-center">
             <Link className="navbar-brand d-flex mr-5" href={`/${router.locale ?? router.defaultLocale}`}>
               <Image
+                priority
                 className="logo-web-lg"
                 src="/img/logo-gyloop-white.png"
                 alt="LOGO gyloop"
@@ -448,6 +449,7 @@ export default function HeaderNoMenuTransparent(
           <div className="container align-items-center">
             <Link className="navbar-brand d-flex mr-5" href="/">
               <Image
+                priority
                 className="logo-web-lg"
                 src="/img/logo-gyloop-white.png"
                 alt="LOGO gyloop"

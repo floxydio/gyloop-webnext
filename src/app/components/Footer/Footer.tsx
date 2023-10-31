@@ -46,6 +46,7 @@ export default function Footer() {
                 <div className="mb-3">
                   <Link href="/">
                     <Image
+                      priority
                       className="logo-web-lg"
                       src="/img/logo-gyloop-white.png"
                       alt="gyloop-logo-white"
@@ -336,7 +337,7 @@ export default function Footer() {
                     className="gyloop-link text-light"
                     target="_blank"
                   >
-                   Cookie Preferences Information
+                    Cookie Preferences Information
                   </Link>
                   <button
                     className="btn btn-primary gyloop-btn ml-3"

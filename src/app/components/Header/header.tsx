@@ -14,6 +14,7 @@ export default function Header() {
         <div className="container align-items-center">
           <a className="navbar-brand d-flex mr-5" href="index.html">
             <Image
+              priority
               className="logo-web-lg"
               src="/img/logo-gyloop-white.png"
               alt="LOGO gyloop"
@@ -41,9 +42,8 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="nav-search-off navbar-nav mr-auto">
               <li
-                className={`nav-item dropdown ${
-                  currentDropdown === 1 ? 'show' : ''
-                }`}
+                className={`nav-item dropdown ${currentDropdown === 1 ? 'show' : ''
+                  }`}
                 onMouseEnter={() => setCurrentDropdown(1)}
                 onMouseLeave={() => setCurrentDropdown(0)}
               >
@@ -57,9 +57,8 @@ export default function Header() {
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </Link>
                 <div
-                  className={`dropdown-menu ${
-                    currentDropdown === 1 ? 'show' : ''
-                  }`}
+                  className={`dropdown-menu ${currentDropdown === 1 ? 'show' : ''
+                    }`}
                   aria-labelledby="navbarDropdown"
                 >
                   <Link className="dropdown-item" href="/Product/Business">
@@ -109,9 +108,8 @@ export default function Header() {
                 </div>
               </li>
               <li
-                className={`nav-item dropdown ${
-                  currentDropdown === 2 ? 'show' : ''
-                }`}
+                className={`nav-item dropdown ${currentDropdown === 2 ? 'show' : ''
+                  }`}
                 onMouseEnter={() => setCurrentDropdown(2)}
                 onMouseLeave={() => setCurrentDropdown(0)}
               >
@@ -124,9 +122,8 @@ export default function Header() {
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
                 <div
-                  className={`dropdown-menu ${
-                    currentDropdown === 2 ? 'show' : ''
-                  }`}
+                  className={`dropdown-menu ${currentDropdown === 2 ? 'show' : ''
+                    }`}
                   aria-labelledby="navbarDropdown"
                 >
                   <a className="dropdown-item" href="sales-automation.html">
@@ -162,9 +159,8 @@ export default function Header() {
                 </div>
               </li>
               <li
-                className={`nav-item dropdown ${
-                  currentDropdown === 3 ? 'show' : ''
-                }`}
+                className={`nav-item dropdown ${currentDropdown === 3 ? 'show' : ''
+                  }`}
                 onMouseEnter={() => setCurrentDropdown(3)}
                 onMouseLeave={() => setCurrentDropdown(0)}
               >
@@ -177,9 +173,8 @@ export default function Header() {
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
                 <div
-                  className={`dropdown-menu ${
-                    currentDropdown === 3 ? 'show' : ''
-                  }`}
+                  className={`dropdown-menu ${currentDropdown === 3 ? 'show' : ''
+                    }`}
                   aria-labelledby="navbarDropdown"
                 >
                   <a className="dropdown-item" href="library.html">
@@ -194,9 +189,8 @@ export default function Header() {
                 </div>
               </li>
               <li
-                className={`nav-item dropdown ${
-                  currentDropdown === 4 ? 'show' : ''
-                }`}
+                className={`nav-item dropdown ${currentDropdown === 4 ? 'show' : ''
+                  }`}
                 onMouseEnter={() => setCurrentDropdown(4)}
                 onMouseLeave={() => setCurrentDropdown(0)}
               >
@@ -209,9 +203,8 @@ export default function Header() {
                   <i className="fas fa-angle-down icon-rotates"></i>
                 </a>
                 <div
-                  className={`dropdown-menu ${
-                    currentDropdown === 4 ? 'show' : ''
-                  }`}
+                  className={`dropdown-menu ${currentDropdown === 4 ? 'show' : ''
+                    }`}
                   aria-labelledby="navbarDropdown"
                 >
                   <Link className="dropdown-item" href="/About/Leadership">
@@ -269,7 +262,7 @@ export default function Header() {
                 <a
                   className="nav-link mr-0"
                   href="preventDefault()"
-                  // onClick={() => openingSearchBar()}
+                // onClick={() => openingSearchBar()}
                 >
                   <i className="fas fa-search"></i>
                   <span className="d-xl-none ml-2">Search</span>
@@ -303,7 +296,7 @@ export default function Header() {
                     <button
                       type="button"
                       className="btn btn-primary border-left-0"
-                      // onClick={() => closeSearchBar()}
+                    // onClick={() => closeSearchBar()}
                     >
                       <i className="far fa-times"></i>
                     </button>
