@@ -22,11 +22,7 @@ export default function SubscribeFunctional(dataJobPosition) {
   );
 }
 
-export async function getServerSideProps({ req, res }) {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
+export async function getServerSideProps() {
   const fetchData = await fetch("http://159.89.44.46:4000/v1/job/job-position")
   const data = await fetchData.json()
   if (data.data === undefined || data === undefined) {

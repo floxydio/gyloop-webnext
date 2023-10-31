@@ -25,11 +25,7 @@ export default function index() {
   );
 }
 
-export async function getServerSideProps({ req, res, context }) {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
+export async function getServerSideProps(context) {
   return {
     props: {
       messages: (await import(`@/translate/${context.locale}.json`)).default,

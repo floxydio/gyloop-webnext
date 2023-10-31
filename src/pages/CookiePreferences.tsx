@@ -47,11 +47,7 @@ export default function CookiePreferences({ dataCookiePreferences }: { dataCooki
   );
 }
 
-export async function getServerSideProps({ context, req, res }) {
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
+export async function getServerSideProps(context) {
   const fetchData = await axios.get(`http://159.89.44.46:4000/v1/cookie-preferences?lang_code=${context.locale}`)
   if (fetchData.data.data.length === 0) {
     return {
