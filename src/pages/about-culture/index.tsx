@@ -1,11 +1,19 @@
 import CultureComponent from '@/app/components/Culture/CultureComponent';
+import FooterCulture from '@/app/components/Culture/FooterCulture';
+import HeaderCulture from '@/app/components/Culture/HeaderCulture';
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
 import Head from 'next/head';
 
-export default function index() {
+export default function index({
+  dataHeader,
+  dataSolutionFunction,
+  dataHighlight,
+  dataCulture,
+  dataFooter,
+}) {
   return (
     <>
       <NextSEO
@@ -18,8 +26,13 @@ export default function index() {
         }}
       />
       <HeaderNoMenuTransparent type={0} />
-      <CultureComponent />
-      <Footer />
+      <HeaderCulture dataHeader={dataHeader[0]} />
+      <CultureComponent
+        dataCulture={dataCulture}
+        dataHighlight={dataHighlight}
+        dataSolutionFunction={dataSolutionFunction}
+      />
+      <FooterCulture dataFooter={dataFooter} />
     </>
   );
 }
