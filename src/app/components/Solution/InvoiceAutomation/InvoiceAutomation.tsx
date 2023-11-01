@@ -1,28 +1,68 @@
 import Image from 'next/image';
 import BillingAutomationContent from '../SalesAutomation/SalesAutomationComponent';
 import Link from 'next/link';
+import BillingInvoiceAutomation from './BillingInvoiceAutomation';
 
-export default function InvoiceAutomationComponent() {
+interface SolutionFunctionEntities {
+  id: number;
+  lang_code: string;
+  page_code: string;
+  func_name: string;
+  func_tagx: string;
+  desc_lin1: string;
+  desc_lin2: string;
+  link_list: string;
+  imge_func: string;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface SolutionProductEntities {
+  id: number;
+  lang_code: string;
+  head_text: string;
+  head_textclr: string;
+  tagx_text: string;
+  tagx_clor: string;
+  long_desc: string;
+  long_clor: string;
+  ax_link: string;
+  ax_capt: string;
+  ax_type: string;
+  imge_feat: string;
+  is_publ: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface MediaHighlightEntities {
+  id: number;
+  langCode: string;
+  pageCode: string;
+  ttleText: string;
+  mdiaType: string;
+  vdeoLink: string;
+  vdeoPlay: string;
+  imgeLink: string;
+  isPubl: boolean;
+  submit_type: number;
+  createdAt: Date;
+  updateAt: Date;
+}
+
+export default function InvoiceAutomationComponent({
+  dataSolutionFunction,
+  dataSolutionProduct,
+  dataMediaHighlight,
+}: {
+  dataSolutionFunction: SolutionFunctionEntities[];
+  dataSolutionProduct: SolutionProductEntities[];
+  dataMediaHighlight: MediaHighlightEntities[];
+}) {
   return (
     <>
-      <header className="header-bg-cover billing-automation-header d-flex align-items-end invoice-automation-header">
-        <div className="container">
-          <h1 className="title">Invoice Automation</h1>
-          <p className="subtitle">
-            <span className="d-md-none d-xl-inline">
-              From the outside, many tech start-ups look like they only focus on
-              ping pong tables, full-time office chefs and a lot of perks. It’s
-              not the case in reality.
-            </span>
-            <span className="d-none d-md-inline d-xl-none">
-              Bring the power of business integration to your business community
-            </span>
-          </p>
-          <h5 className="info">
-            Working together at the same platform is better.
-          </h5>
-        </div>
-      </header>
       <div className="billing-automation-swiper">
         <div className="container">
           <h2 className="title">Automate your sales processing</h2>
@@ -85,36 +125,42 @@ export default function InvoiceAutomationComponent() {
           </div>
         </div>
       </div>
-      <div className="subheader-bg-cover billing-automation-subheader invoice-automation-subheader">
-        <div className="container">
-          <div className="content">
-            <div className="d-md-none">
-              <h2 className="title">
-                Your networks is your assets <br />
-                These assets will help you perform better
-              </h2>
-              <p className="subtitle">Qualified Business Partners</p>
-            </div>
+      {dataSolutionFunction.map((data) => {
+        return (
+          <div key={data.id}>
+            {data.submit_type === 1 ? (
+              <div
+                className="subheader-bg-cover billing-automation-subheader"
+                key={data.id}
+              >
+                <div className="container">
+                  <div className="content">
+                    <div className="d-md-none">
+                      <h2 className="title">{data.func_name}</h2>
+                      <p className="subtitle">{data.func_tagx}</p>
+                    </div>
 
-            <div className="d-none d-md-block">
-              <h2 className="title">
-                Your sales is your customer purchase <br />
-                Your purchase is your supplier sales
-              </h2>
-              <p className="subtitle">Automated and real time</p>
-            </div>
+                    <div className="d-none d-md-block">
+                      <h2 className="title">
+                        {data.func_name} <br />
+                        {data.func_tagx}
+                      </h2>
+                      <p className="subtitle">{data.desc_lin1}</p>
+                    </div>
 
-            <hr className="hr-small" />
+                    <hr className="hr-small" />
 
-            <h5 className="title-small">Business has been changed</h5>
-            <p className="subtitle-small">
-              You, Customer, and Supplier are working together now
-            </p>
+                    <h5 className="title-small">{data.desc_lin2}</h5>
+                    <p className="subtitle-small">{data.link_list}</p>
+                  </div>
+                </div>
+              </div>
+            ) : null}
           </div>
-        </div>
-      </div>
+        );
+      })}
 
-      {/* <BillingAutomationContent /> */}
+      <BillingInvoiceAutomation dataSolutionProduct={dataSolutionProduct} />
 
       <div className="footer-bg-cover billing-automation-footer">
         <div className="container">

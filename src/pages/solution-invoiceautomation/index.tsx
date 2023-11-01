@@ -1,11 +1,19 @@
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
+import FooterInvoiceAutomation from '@/app/components/Solution/InvoiceAutomation/FooterInvoiceAutomation';
+import HeaderInvoiceAutomation from '@/app/components/Solution/InvoiceAutomation/HeaderInvoiceAutomation';
 import InvoiceAutomationComponent from '@/app/components/Solution/InvoiceAutomation/InvoiceAutomation';
 import axios from 'axios';
 import Head from 'next/head';
 
-export default function InvoiceAutomation() {
+export default function InvoiceAutomation({
+  dataSolutionFunction,
+  dataSolutionProduct,
+  dataMediaHighlight,
+  dataHeader,
+  dataFooter,
+}) {
   <>
     <NextSEO
       seoHead={{
@@ -17,8 +25,13 @@ export default function InvoiceAutomation() {
       }}
     />
     <HeaderNoMenuTransparent type={0} />
-    <InvoiceAutomationComponent />
-    <Footer />
+    <HeaderInvoiceAutomation dataHeader={dataHeader[0]} />
+    <InvoiceAutomationComponent
+      dataSolutionFunction={dataSolutionFunction}
+      dataSolutionProduct={dataSolutionProduct}
+      dataMediaHighlight={dataMediaHighlight}
+    />
+    <FooterInvoiceAutomation dataFooter={dataFooter} />
   </>;
 }
 
@@ -28,19 +41,19 @@ export async function getServerSideProps(context) {
     'public, s-maxage=10, stale-while-revalidate=59'
   );
   const fetchHeader = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/product-header/get?lang_code=${context.locale}&page_code=billing_automation`
+    `${process.env.REACT_DEV_URL}/v1/product-header/get?lang_code=${context.locale}&page_code=invoice_automation`
   );
 
   const fetchSolutionFunction = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/solution/function?lang_code=${context.locale}&page_code=billing_automation`
+    `${process.env.REACT_DEV_URL}/v1/solution/function?lang_code=${context.locale}&page_code=invoice_automation`
   );
 
   const fetchSolutionProduct = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/solution/product?lang_code=${context.locale}&page_code=billing_automation`
+    `${process.env.REACT_DEV_URL}/v1/solution/product?lang_code=${context.locale}&page_code=invoice_automation`
   );
 
   const fetchMediaHighlight = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/main/media?lang_code=${context.locale}&page_code=billing_automation`
+    `${process.env.REACT_DEV_URL}/v1/main/media?lang_code=${context.locale}&page_code=invoice_automation`
   );
   const fetchFooter = await axios.get(
     `${process.env.REACT_DEV_URL}/v1/main/homepage-footer`

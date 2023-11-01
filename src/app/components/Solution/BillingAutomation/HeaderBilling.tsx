@@ -7,9 +7,11 @@ export default function HeaderBillingAutomation({
 }) {
   return (
     <>
-      {dataHeader === undefined ? <p>Data Kosong</p> : <>
-        {
-          dataHeader.type_header === 1 ? (
+      {dataHeader === null || dataHeader === undefined ? (
+        <p>Data Kosong</p>
+      ) : (
+        <>
+          {dataHeader.type_header === 1 ? (
             <header
               className="header-bg-cover billing-automation-header d-flex align-items-end"
               style={{
@@ -49,9 +51,9 @@ export default function HeaderBillingAutomation({
                 <h5 className="info">{dataHeader.tagx_text}</h5>
               </div>
             </header>
-          )
-        }
-      </>}
+          )}
+        </>
+      )}
     </>
   );
 }
