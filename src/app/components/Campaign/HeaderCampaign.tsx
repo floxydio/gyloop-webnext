@@ -7,8 +7,27 @@ export default function HeaderCampaign({
 }) {
   return (
     <>
-      {dataHeader === null ? (
-        <></>
+      {dataHeader === null || dataHeader === undefined? (
+        <header className="header-bg-cover billing-automation-header d-flex align-items-end campaign-header">
+          <div className="container">
+            <h1 className="title">Campaign Program</h1>
+            <p className="subtitle">
+              <span className="d-md-none d-xl-inline">
+                From the outside, many tech start-ups look like they only focus
+                on ping pong tables, full-time office chefs and a lot of perks.
+                It’s not the case in reality.
+              </span>
+              <span className="d-none d-md-inline d-xl-none">
+                From the outside, many tech start-ups look like they only focus
+                on ping pong tables, full-time office chefs and a lot of perks.
+                It’s not the case in reality.
+              </span>
+            </p>
+            <h5 className="info">
+              Working together at the same platform is better
+            </h5>
+          </div>
+        </header>
       ) : dataHeader.type_header === 1 ? (
         <header
           className="header-bg-cover billing-automation-header d-flex align-items-end campaign-header"
@@ -30,23 +49,24 @@ export default function HeaderCampaign({
           </div>
         </header>
       ) : (
-        <header
-          className="header-bg-cover billing-automation-header d-flex align-items-end campaign-header"
-          style={{
-            backgroundImage: `url(${process.env.IMAGE_PRODUCT}${dataHeader.imge_webx})`,
-          }}
-        >
+        <header className="header-bg-cover billing-automation-header d-flex align-items-end campaign-header">
           <div className="container">
-            <h1 className="title">{dataHeader.head_text}</h1>
+            <h1 className="title">Campaign Program</h1>
             <p className="subtitle">
               <span className="d-md-none d-xl-inline">
-                {dataHeader.shrt_desc}
+                From the outside, many tech start-ups look like they only focus
+                on ping pong tables, full-time office chefs and a lot of perks.
+                It’s not the case in reality.
               </span>
               <span className="d-none d-md-inline d-xl-none">
-                {dataHeader.shrt_desc}
+                From the outside, many tech start-ups look like they only focus
+                on ping pong tables, full-time office chefs and a lot of perks.
+                It’s not the case in reality.
               </span>
             </p>
-            <h5 className="info">{dataHeader.tagx_text}</h5>
+            <h5 className="info">
+              Working together at the same platform is better
+            </h5>
           </div>
         </header>
       )}

@@ -27,7 +27,7 @@ export default function Campaign({
       />
 
       <HeaderNoMenuTransparent type={0} />
-      <HeaderCampaign dataHeader={dataHeader} />
+      <HeaderCampaign dataHeader={dataHeader[0]} />
       <CampaignComponent
         dataCampaign={dataCampaign}
         dataCulture={dataCulture}
@@ -48,13 +48,13 @@ export async function getServerSideProps(context) {
     `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=campaign`
   );
   const fetchHighlight = await axios.get(
-    `http://localhost:4000/v1/about/highlight?lang_code=${context.locale}&page_code=campaign`
+    `http://159.89.44.46:4000/v1/about/highlight?lang_code=${context.locale}&page_code=campaign`
   );
   const fetchCampaign = await axios.get(
     `http://159.89.44.46:4000/v1/about/campaign`
   );
   const fetchCulture = await axios.get(
-    `http://localhost:4000/v1/about/culture?lang_code=${context.locale}&page_code=campaign`
+    `http://159.89.44.46:4000/v1/about/culture?lang_code=${context.locale}&page_code=campaign`
   );
   const fetchFooter = await axios.get(
     `http://159.89.44.46:4000/v1/main/homepage-footer`

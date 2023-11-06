@@ -170,13 +170,12 @@ export default function CampaignComponent({
                     <div className="row">
                       <div className="col-12 col-md-6 pr-md-0">
                         <Image
-                          src="/img/illustrative_campaign_1.png"
+                          src="/img/illustrative_culture_1.png"
                           className="features-image img-fluid"
-                          alt="gyloop-illustrative-campaign-1"
+                          alt="gyloop-illustrative-culture-1"
                           width={0}
                           height={0}
                           sizes="100"
-                          style={{ width: '100%', height: 'auto' }}
                         />
                       </div>
 
@@ -194,14 +193,6 @@ export default function CampaignComponent({
                               <p>{data.long_desc}</p>
                             </div>
                           </div>
-
-                          <Link
-                            href="/About/Campaign/detail/1"
-                            className="gyloop-link"
-                          >
-                            {data.bt_capt}
-                            <i className="fas fa-angle-right ml-2"></i>
-                          </Link>
                         </div>
                       </div>
                     </div>
@@ -209,19 +200,18 @@ export default function CampaignComponent({
                 </div>
               </div>
             ) : (
-              <div className="about-cards" key={data.id}>
+              <div className="about-cards">
                 <div className="container">
                   <div className="card border-0 rounded-0">
                     <div className="row">
                       <div className="col-12 col-md-6 pr-md-0">
                         <Image
-                          src="/img/illustrative_campaign_1.png"
+                          src="/img/illustrative_culture_1.png"
                           className="features-image img-fluid"
-                          alt="gyloop-illustrative-campaign-1"
+                          alt="gyloop-illustrative-culture-1"
                           width={0}
                           height={0}
                           sizes="100"
-                          style={{ width: '100%', height: 'auto' }}
                         />
                       </div>
 
@@ -239,14 +229,6 @@ export default function CampaignComponent({
                               <p>{data.long_desc}</p>
                             </div>
                           </div>
-
-                          <Link
-                            href="/About/Campaign/detail/1"
-                            className="gyloop-link"
-                          >
-                            {data.bt_capt}
-                            <i className="fas fa-angle-right ml-2"></i>
-                          </Link>
                         </div>
                       </div>
                     </div>
