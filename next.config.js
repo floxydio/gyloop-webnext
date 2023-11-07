@@ -2,8 +2,12 @@
 
 const nextConfig = {
   env: {
-    REACT_DEV_URL: 'http://159.89.44.46:4000',
-    REACT_PROD_URL: 'https://nextjs-portfolio-website-ten.vercel.app',
+    CORE_URL: 'http://159.89.44.46:4000',
+    BLOG_URL: 'http://159.89.44.46:4500',
+    SYSTEM_URL: 'http://159.89.44.46:4200',
+    LIBRARY_URL: 'http://159.89.44.46:4400',
+    AUTH_URL: 'http://159.89.44.46:4800',
+    REACT_PROD_URL: 'https://gyloop-webnext.vercel.app/Main',
     IMAGE_HOME: 'http://159.89.44.46:4000/v1/image-home/',
     IMAGE_ABOUT: 'http://159.89.44.46:4000/v1/image-about/',
     IMAGE_PRODUCT: 'http://159.89.44.46:4000/v1/image-product/',
