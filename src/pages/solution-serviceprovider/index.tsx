@@ -38,6 +38,10 @@ export default function ServiceProvider({
   );
 }
 export async function getServerSideProps(context) {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  );
   const fetchHeader = await axios.get(
     `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=service_provider`
   );
@@ -54,7 +58,13 @@ export async function getServerSideProps(context) {
     `${process.env.REACT_DEV_URL}/v1/main/homepage-footer`
   );
 
-  if (fetchHeader.data.data === undefined || fetchSolutionFunction.data.data === undefined || fetchSolutionProduct.data.data === undefined || fetchMediaHighlight.data.data === undefined || fetchFooter.data.data === undefined) {
+  if (
+    fetchHeader.data.data === undefined ||
+    fetchSolutionFunction.data.data === undefined ||
+    fetchSolutionProduct.data.data === undefined ||
+    fetchMediaHighlight.data.data === undefined ||
+    fetchFooter.data.data === undefined
+  ) {
     return {
       props: {
         dataHeader: [],
@@ -62,10 +72,9 @@ export async function getServerSideProps(context) {
         dataSolutionProduct: [],
         dataMediaHighlight: [],
         dataFooter: [],
-      }
-    }
+      },
+    };
   }
-
 
   const dataMediaHighlight = fetchMediaHighlight.data.data;
   const dataHeader = fetchHeader.data.data;

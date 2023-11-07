@@ -49,6 +49,10 @@ export default function NetworkIndex({
 }
 
 export async function getServerSideProps(context) {
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  );
   const fetchHeader = await axios.get(
     `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=network`
   );

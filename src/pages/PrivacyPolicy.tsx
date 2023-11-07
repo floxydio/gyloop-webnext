@@ -9,33 +9,47 @@ import Head from 'next/head';
 export default function PrivacyPolicy(dataPrivacy) {
   return (
     <>
-      <NextSEO seoHead={{
-        title: "Gyloop - Privacy Statement for Gyloop",
-        metaDescription: "Gyloop - Privacy Statement for Gyloop",
-        metaKeywords: "Gyloop - Privacy Statement for Gyloop",
-        metaTitle: "Gyloop - Privacy Statement for Gyloop",
-        metaLocale: "en-US"
-      }} />
+      <NextSEO
+        seoHead={{
+          title: 'Gyloop - Privacy Statement for Gyloop',
+          metaDescription: 'Gyloop - Privacy Statement for Gyloop',
+          metaKeywords: 'Gyloop - Privacy Statement for Gyloop',
+          metaTitle: 'Gyloop - Privacy Statement for Gyloop',
+          metaLocale: 'en-US',
+        }}
+      />
       <HeaderNoMenuTransparent type={1} />
-      <LeadershipTitle title="Privacy Statement for Gyloop
-" />
-      {dataPrivacy.dataPrivacy === undefined || dataPrivacy.dataPrivacy === null ? <p>Data Kosong</p> :
-        <PrivacyComponent privacyPolicy={dataPrivacy.dataPrivacy} />}
+      <LeadershipTitle
+        title="Privacy Statement for Gyloop
+"
+      />
+      {dataPrivacy.dataPrivacy === undefined ||
+      dataPrivacy.dataPrivacy === null ? (
+        <p>Data Kosong</p>
+      ) : (
+        <PrivacyComponent privacyPolicy={dataPrivacy.dataPrivacy} />
+      )}
       <Footer />
     </>
   );
 }
 
 export async function getServerSideProps(context) {
-  const fetchData = await axios.get(`http://159.89.44.46:4000/v1/privacy-policy?lang_code=${context.locale}`)
+  context.res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  );
+  const fetchData = await axios.get(
+    `http://159.89.44.46:4000/v1/privacy-policy?lang_code=${context.locale}`
+  );
   if (fetchData.data.data === undefined || fetchData.data === undefined) {
     return {
       props: {
         dataPrivacy: [],
-      }
-    }
+      },
+    };
   }
-  const dataPrivacy = await fetchData.data.data[0]
+  const dataPrivacy = await fetchData.data.data[0];
   return {
     props: {
       dataPrivacy: dataPrivacy || null,
