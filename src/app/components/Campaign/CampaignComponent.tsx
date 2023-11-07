@@ -39,7 +39,7 @@ export interface AboutCulture {
   page_code: string;
   head_text: string;
   long_desc: string;
-  desc_posx: string;
+  desc_posx: number;
   imge_feat: string;
   bt_link: string;
   bt_capt: string;
@@ -162,51 +162,15 @@ export default function CampaignComponent({
 
       {dataCulture.map((data) => {
         return (
-          <>
-            {data.submit_type === 1 ? (
-              <div className="about-cards" key={data.id}>
-                <div className="container">
-                  <div className="card border-0 rounded-0">
-                    <div className="row">
-                      <div className="col-12 col-md-6 pr-md-0">
-                        <Image
-                          src="/img/illustrative_culture_1.png"
-                          className="features-image img-fluid"
-                          alt="gyloop-illustrative-culture-1"
-                          width={0}
-                          height={0}
-                          sizes="100"
-                        />
-                      </div>
-
-                      <div className="col-12 col-md-6 pl-md-0">
-                        <div className="card-body">
-                          <p className="card-title features-title">
-                            {data.head_text}
-                          </p>
-
-                          <div className="card-text features-text">
-                            <div className="d-md-none">
-                              <p>{data.long_desc}</p>
-                            </div>
-                            <div className="d-none d-md-block">
-                              <p>{data.long_desc}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
+          <div key={data.id}>
+            {data.submit_type === 1 && data.desc_posx === 1 ? (
               <div className="about-cards">
                 <div className="container">
                   <div className="card border-0 rounded-0">
                     <div className="row">
                       <div className="col-12 col-md-6 pr-md-0">
                         <Image
-                          src="/img/illustrative_culture_1.png"
+                          src={process.env.IMAGE_ABOUT + data.imge_feat}
                           className="features-image img-fluid"
                           alt="gyloop-illustrative-culture-1"
                           width={0}
@@ -229,14 +193,67 @@ export default function CampaignComponent({
                               <p>{data.long_desc}</p>
                             </div>
                           </div>
+                          <Link
+                            href={{
+                              pathname: `/about-campaign/detail/${data.id}`,
+                            }}
+                            className="gyloop-link"
+                          >
+                            {data.bt_capt}
+                            <i className="fas fa-angle-right ml-2"></i>
+                          </Link>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            )}
-          </>
+            ) : data.submit_type === 1 && data.desc_posx === 2 ? (
+              <div className="about-cards">
+                <div className="container">
+                  <div className="card border-0 rounded-0">
+                    <div className="row">
+                      <div className="col-12 col-md-6 pl-md-0">
+                        <div className="card-body">
+                          <p className="card-title features-title">
+                            {data.head_text}
+                          </p>
+
+                          <div className="card-text features-text">
+                            <div className="d-md-none">
+                              <p>{data.long_desc}</p>
+                            </div>
+                            <div className="d-none d-md-block">
+                              <p>{data.long_desc}</p>
+                            </div>
+                          </div>
+                          <Link
+                            href={{
+                              pathname: `/about-campaign/detail/${data.id}`,
+                            }}
+                            className="gyloop-link"
+                          >
+                            {data.bt_capt}
+                            <i className="fas fa-angle-right ml-2"></i>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="col-12 col-md-6 pr-md-0">
+                        <Image
+                          src={process.env.IMAGE_ABOUT + data.imge_feat}
+                          className="features-image img-fluid"
+                          alt="gyloop-illustrative-culture-1"
+                          width={0}
+                          height={0}
+                          sizes="100"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+          </div>
         );
       })}
 
