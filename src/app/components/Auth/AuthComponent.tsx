@@ -54,18 +54,20 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
 
     async function loginRequest(email: string, password: string) {
-        console.log("Triggered Here")
-        await axios.post(`http://159.89.44.46:4000/v1/auth/sign-in`, {
+        await axios.post(`http://159.89.44.46:4800/v1/auth/sign-in`, {
             email: email,
             password: password
         }).then((res) => {
-            console.log("Res -->", res.data)
             if (res.status === 200 || res.status === 201) {
                 router.push("/Main")
                 localStorage.setItem("token", res.data.token)
             }
 
-        }).catch((err) => alert(err))
+        }).catch((err) => {
+            if (err.response.status === 400) {
+                alert(err.response.data.message || "Something Went Wrong")
+            }
+        })
     }
 
 
