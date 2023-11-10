@@ -1,3 +1,4 @@
+import baseUrl from '@/Constant/server_config';
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
@@ -49,39 +50,40 @@ export default function NetworkIndex({
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   );
   const fetchHeader = await axios.get(
-    `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=network`
+    `${url}/v1/product-header/get?lang_code=${context.locale}&page_code=network`
   );
   const fetchMediaH = await axios.get(
-    `http://159.89.44.46:4000/v1/main/media?page_code=network`
+    `${url}/v1/main/media?page_code=network`
   );
   const fetchFeature = await axios.get(
-    `http://159.89.44.46:4000/v1/product-feature/get?lang_code=${context.locale}&page_code=network`
+    `${url}/v1/product-feature/get?lang_code=${context.locale}&page_code=network`
   );
   const fetchFaqHeader = await axios.get(
-    `http://159.89.44.46:4000/v1/product-faq-header/get?lang_code=${context.locale}&page_code=network`
+    `${url}/v1/product-faq-header/get?lang_code=${context.locale}&page_code=network`
   );
   const fetchFaqItem = await axios.get(
-    `http://159.89.44.46:4000/v1/product-faq-item/get?lang_code=${context.locale}&page_code=network`
+    `${url}/v1/product-faq-item/get?lang_code=${context.locale}&page_code=network`
   );
   const fetchFooter = await axios.get(
-    `http://159.89.44.46:4000/v1/main/homepage-footer`
+    `${url}/v1/main/homepage-footer`
   );
   const fetchProductDetail = await axios.get(
-    `http://159.89.44.46:4000/v1/product-detail/get?lang_code=${context.locale}&page_code=network`
+    `${url}/v1/product-detail/get?lang_code=${context.locale}&page_code=network`
   );
   const fetchPricingItem = await axios.get(
-    `http://159.89.44.46:4000/v1/product-pricing-item/get?lang_code=${context.locale}&page_code=network`
+    `${url}/v1/product-pricing-item/get?lang_code=${context.locale}&page_code=network`
   );
   const fetchProductFunction = await axios.get(
-    `http://159.89.44.46:4000/v1/product-functionality/get?lang_code=${context.locale}&page_code=network`
+    `${url}/v1/product-functionality/get?lang_code=${context.locale}&page_code=network`
   );
   const fetchSolutionFunction = await axios.get(
-    `http://159.89.44.46:4000/v1/solution/function?lang_code=${context.locale}&page_code=network`
+    `${url}/v1/solution/function?lang_code=${context.locale}&page_code=network`
   );
 
   if (

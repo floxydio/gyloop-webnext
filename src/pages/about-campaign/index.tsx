@@ -1,3 +1,4 @@
+import baseUrl from '@/Constant/server_config';
 import CampaignComponent from '@/app/components/Campaign/CampaignComponent';
 import FooterCampaign from '@/app/components/Campaign/FooterCampaign';
 import HeaderCampaign from '@/app/components/Campaign/HeaderCampaign';
@@ -39,25 +40,26 @@ export default function Campaign({
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   );
 
   const fetchHeader = await axios.get(
-    `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=campaign`
+    `${url}/v1/product-header/get?lang_code=${context.locale}&page_code=campaign`
   );
   const fetchHighlight = await axios.get(
-    `http://159.89.44.46:4000/v1/about/highlight?lang_code=${context.locale}&page_code=campaign`
+    `${url}/v1/about/highlight?lang_code=${context.locale}&page_code=campaign`
   );
   const fetchCampaign = await axios.get(
-    `http://159.89.44.46:4000/v1/about/campaign`
+    `${url}/v1/about/campaign`
   );
   const fetchCulture = await axios.get(
-    `http://159.89.44.46:4000/v1/about/culture?lang_code=${context.locale}&page_code=campaign`
+    `${url}/v1/about/culture?lang_code=${context.locale}&page_code=campaign`
   );
   const fetchFooter = await axios.get(
-    `http://159.89.44.46:4000/v1/main/homepage-footer`
+    `${url}/v1/main/homepage-footer`
   );
 
   if (

@@ -1,3 +1,4 @@
+import baseUrl from '@/Constant/server_config';
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
@@ -36,27 +37,28 @@ export default function InvoiceAutomation({
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   );
   const fetchHeader = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/product-header/get?lang_code=${context.locale}&page_code=invoice_automation`
+    `${url}/v1/product-header/get?lang_code=${context.locale}&page_code=invoice_automation`
   );
 
   const fetchSolutionFunction = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/solution/function?lang_code=${context.locale}&page_code=invoice_automation`
+    `${url}/v1/solution/function?lang_code=${context.locale}&page_code=invoice_automation`
   );
 
   const fetchSolutionProduct = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/solution/product?lang_code=${context.locale}&page_code=invoice_automation`
+    `${url}/v1/solution/product?lang_code=${context.locale}&page_code=invoice_automation`
   );
 
   const fetchMediaHighlight = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/main/media?lang_code=${context.locale}&page_code=invoice_automation`
+    `${url}/v1/main/media?lang_code=${context.locale}&page_code=invoice_automation`
   );
   const fetchFooter = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/main/homepage-footer`
+    `${url}/v1/main/homepage-footer`
   );
   if (
     fetchHeader.data.data === undefined ||

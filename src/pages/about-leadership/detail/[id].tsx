@@ -7,6 +7,7 @@ import LeadershipTitle from '@/app/components/Leadership/LeadershipTitle';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
+import baseUrl from '@/Constant/server_config';
 
 export default function DetailLeadership(data) {
   const router = useRouter();
@@ -33,8 +34,9 @@ export default function DetailLeadership(data) {
 }
 
 export async function getStaticPaths() {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   const fetchData = await axios.get(
-    `http://159.89.44.46:4000/v1/about/leadership`
+    `${url}/v1/about/leadership`
   );
   const dataLeadership = await fetchData.data.data;
   const paramLeaderId = dataLeadership.map((e) => ({
@@ -45,9 +47,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   const { params } = context;
   const fetchDetail = await axios.get(
-    `http://159.89.44.46:4000/v1/about/leadership/detail/${params.id}`
+    `${url}/v1/about/leadership/detail/${params.id}`
   );
 
   if (fetchDetail.data.data === undefined || fetchDetail.data === undefined) {

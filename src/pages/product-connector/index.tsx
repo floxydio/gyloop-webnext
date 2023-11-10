@@ -7,6 +7,7 @@ import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTranspa
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
 import FooterConnector from '@/app/components/Product/Connector/FooterConnector';
+import baseUrl from '@/Constant/server_config';
 export default function Connector({
   dataHeader,
   dataFetchPrice,
@@ -43,40 +44,41 @@ export default function Connector({
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   )
 
   const fetchHeader = await axios.get(
-    `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=connector`
+    `${url}/v1/product-header/get?lang_code=${context.locale}&page_code=connector`
   );
   const fetchFeature = await axios.get(
-    `http://159.89.44.46:4000/v1/product-feature/get?lang_code=${context.locale}&page_code=connector`
+    `${url}/v1/product-feature/get?lang_code=${context.locale}&page_code=connector`
   );
   const fetchMediaHighlight = await axios.get(
-    `http://159.89.44.46:4000/v1/main/media?page_code=connector`
+    `${url}/v1/main/media?page_code=connector`
   );
   const fetchPricingItem = await axios.get(
-    `http://159.89.44.46:4000/v1/product-pricing-item/get?lang_code=${context.locale}&page_code=connector`
+    `${url}/v1/product-pricing-item/get?lang_code=${context.locale}&page_code=connector`
   );
   const fetchTablePlan = await axios.get(
-    `http://159.89.44.46:4000/v1/product-table-plan/get?lang_code=${context.locale}&page_code=connector`
+    `${url}/v1/product-table-plan/get?lang_code=${context.locale}&page_code=connector`
   );
   const fetchProductDetail = await axios.get(
-    `http://159.89.44.46:4000/v1/product-detail/get?lang_code=${context.locale}&page_code=connector`
+    `${url}/v1/product-detail/get?lang_code=${context.locale}&page_code=connector`
   );
   const fetchFaqHeader = await axios.get(
-    `http://159.89.44.46:4000/v1/product-faq-header/get?lang_code=${context.locale}&page_code=connector`
+    `${url}/v1/product-faq-header/get?lang_code=${context.locale}&page_code=connector`
   );
   const fetchFaqItem = await axios.get(
-    `http://159.89.44.46:4000/v1/product-faq-item/get?lang_code=${context.locale}&page_code=connector`
+    `${url}/v1/product-faq-item/get?lang_code=${context.locale}&page_code=connector`
   );
   const fetchProductFunction = await axios.get(
-    `http://159.89.44.46:4000/v1/product-functionality/get?lang_code=${context.locale}&page_code=connector`
+    `${url}/v1/product-functionality/get?lang_code=${context.locale}&page_code=connector`
   );
   const fetchFooter = await axios.get(
-    `http://159.89.44.46:4000/v1/main/homepage-footer`
+    `${url}/v1/main/homepage-footer`
   );
 
   if (

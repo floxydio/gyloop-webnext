@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image"
 import axios from "axios";
 import { useRouter } from "next/router";
+import baseUrl from "@/Constant/server_config";
 interface PropsSend {
     TypeHeader: number
 }
@@ -54,7 +55,8 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
 
     async function loginRequest(email: string, password: string) {
-        await axios.post(`http://159.89.44.46:4800/v1/auth/sign-in`, {
+        let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_AUTH_PROD as string)
+        await axios.post(`${url}/v1/auth/sign-in`, {
             email: email,
             password: password
         }).then((res) => {

@@ -1,3 +1,4 @@
+import baseUrl from '@/Constant/server_config';
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
@@ -43,31 +44,32 @@ export default function ProviderIndex({
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   );
 
   const fetchHeader = await axios.get(
-    `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=provider`
+    `${url}/v1/product-header/get?lang_code=${context.locale}&page_code=provider`
   );
   const fetchFaq = await axios.get(
-    `http://159.89.44.46:4000/v1/product-faq-item/get?lang_code=${context.locale}&page_code=provider`
+    `${url}/v1/product-faq-item/get?lang_code=${context.locale}&page_code=provider`
   );
   const fetchProductDetail = await axios.get(
-    `http://159.89.44.46:4000/v1/product-detail/get?lang_code=${context.locale}&page_code=provider`
+    `${url}/v1/product-detail/get?lang_code=${context.locale}&page_code=provider`
   );
   const fetchProductFunction = await axios.get(
-    `http://159.89.44.46:4000/v1/product-functionality/get?lang_code=${context.locale}&page_code=provider`
+    `${url}/v1/product-functionality/get?lang_code=${context.locale}&page_code=provider`
   );
   const fetchPricingItem = await axios.get(
-    `http://159.89.44.46:4000/v1/product-pricing-item/get?lang_code=${context.locale}&page_code=provider`
+    `${url}/v1/product-pricing-item/get?lang_code=${context.locale}&page_code=provider`
   );
   const fetchFeature = await axios.get(
-    `http://159.89.44.46:4000/v1/product-feature/get?lang_code=${context.locale}&page_code=provider`
+    `${url}/v1/product-feature/get?lang_code=${context.locale}&page_code=provider`
   );
   const fetchFooter = await axios.get(
-    `http://159.89.44.46:4000/v1/main/homepage-footer`
+    `${url}/v1/main/homepage-footer`
   );
 
   if (

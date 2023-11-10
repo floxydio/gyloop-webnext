@@ -6,6 +6,7 @@ import parse from "html-react-parser"
 import 'react-quill/dist/quill.snow.css';
 import ReactQuill from 'react-quill';
 import "./quillstyle.css"
+import baseUrl from '@/Constant/server_config';
 interface BlogContent {
   id?: number;
   page_code?: string;
@@ -24,8 +25,8 @@ export default function NewsEventDetailComponent({ id }: { id: number }) {
 
 
   async function getBlogByDetail() {
-    await axios.get(`http://159.89.44.46:4500/v1/blog-detail/${id}`).then((res) => {
-      console.log(res.data.data)
+    let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_BLOG_PROD as string)
+    await axios.get(`${url}/v1/blog-detail/${id}`).then((res) => {
       if (res.status === 200) {
         setData(res.data.data[0])
       }
@@ -33,8 +34,8 @@ export default function NewsEventDetailComponent({ id }: { id: number }) {
   }
 
   async function getBlog() {
-    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=1&limit=5`).then((res) => {
-      console.log(res.data.data)
+    let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_BLOG_PROD as string)
+    await axios.get(`${url}/v1/blog?lang_code=en&page=1&limit=5`).then((res) => {
       if (res.status === 200) {
         setSideData(res.data.data)
       }

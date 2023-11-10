@@ -2,6 +2,7 @@ import '@/style/style.min.css';
 import Footer from '../app/components/Footer/Footer';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
+import baseUrl from '@/Constant/server_config';
 
 interface CookiePreferencesInterface {
   content: string;
@@ -58,12 +59,13 @@ export default function CookiePreferences({
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   );
   const fetchData = await axios.get(
-    `http://159.89.44.46:4000/v1/cookie-preferences?lang_code=${context.locale}`
+    `${url}/v1/cookie-preferences?lang_code=${context.locale}`
   );
   if (fetchData.data.data.length === 0) {
     return {

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import baseUrl from '@/Constant/server_config';
 
 export interface BlogContent {
   id?: number;
@@ -26,17 +27,18 @@ export default function SystemDemoComponent() {
   const [dataNetworks, setDataNetworks] = useState<BlogContent[]>([])
   const [dataProvider, setDataProvider] = useState<BlogContent[]>([])
   async function getBlog() {
-    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo`).then((res) => {
+    let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_SYSTEM_PROD as string)
+    await axios.get(`${url}/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo`).then((res) => {
       if (res.status === 200) {
         setData(res.data.data)
       }
     })
-    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo&tag=networks`).then((res) => {
+    await axios.get(`${url}/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo&tag=networks`).then((res) => {
       if (res.status === 200) {
         setDataNetworks(res.data.data)
       }
     })
-    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo&tag=provider`).then((res) => {
+    await axios.get(`${url}/v1/blog?lang_code=en&page=${page}&limit=5&page_code=livedemo&tag=provider`).then((res) => {
       if (res.status === 200) {
         setDataProvider(res.data.data)
       }

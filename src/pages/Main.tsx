@@ -2,6 +2,7 @@ import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTranspa
 import dynamic from 'next/dynamic';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
+import baseUrl, { Environment } from '@/Constant/server_config';
 
 const FooterMainComponent = dynamic(
   () => import('@/app/components/Main/MainFooter'),
@@ -54,6 +55,7 @@ export default function Main({
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
@@ -66,15 +68,15 @@ export async function getServerSideProps(context) {
     dataFooter,
   ] = await Promise.all([
     axios.get(
-      `${process.env.REACT_DEV_URL}/v1/main/homepage-overview-item?lang_code=${context.locale}`
+      `${url}/v1/main/homepage-overview-item?lang_code=${context.locale}`
     ),
     axios.get(
-      `${process.env.REACT_DEV_URL}/v1/main/homepage-content/get?lang_code=${context.locale}`
+      `${url}/v1/main/homepage-content/get?lang_code=${context.locale}`
     ),
     axios.get(
-      `${process.env.REACT_DEV_URL}/v1/main/homepage-header?lang_code=${context.locale}`
+      `${url}/v1/main/homepage-header?lang_code=${context.locale}`
     ),
-    axios.get(`${process.env.REACT_DEV_URL}/v1/main/homepage-footer`),
+    axios.get(`${url}/v1/main/homepage-footer`),
   ]);
 
   if (

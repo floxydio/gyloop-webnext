@@ -7,6 +7,7 @@ import axios from 'axios';
 import Image from 'next/image';
 import style from './BlogComponent.module.css'
 import parse from "html-react-parser"
+import baseUrl from '@/Constant/server_config';
 
 export interface BlogContent {
   id?: number;
@@ -29,7 +30,8 @@ export default function BlogComponent() {
   const [data, setData] = useState<BlogContent[]>([])
   const [category, setCategory] = useState<Category[]>([])
   async function getBlog() {
-    await axios.get(`http://159.89.44.46:4500/v1/blog?lang_code=en&page=${page}&limit=5&page_code=blog`).then((res) => {
+    let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_BLOG_PROD as string)
+    await axios.get(`${url}/v1/blog?lang_code=en&page=${page}&limit=5&page_code=blog`).then((res) => {
       if (res.status === 200) {
         setData(res.data.data)
       }
@@ -37,7 +39,8 @@ export default function BlogComponent() {
   }
 
   async function getCategoryBlog() {
-    await axios.get(`http://159.89.44.46:4500/v1/category`).then((res) => {
+    let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_BLOG_PROD as string)
+    await axios.get(`${url}/v1/category`).then((res) => {
       if (res.status === 200) {
         setCategory(res.data.data)
       }

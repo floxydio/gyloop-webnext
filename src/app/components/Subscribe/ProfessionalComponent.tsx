@@ -8,6 +8,7 @@ import axios from "axios"
 import { useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import baseUrl, { Environment } from '@/Constant/server_config';
 
 type FormValues = {
   firstName: string;
@@ -75,31 +76,34 @@ export default function ProfessionalComponent({ jobPosition }: { jobPosition: Jo
   const onSubmit = handleSubmit((data) => createSubscriberProfessional(data));
   async function createSubscriberProfessional(formData: FormValues) {
     try {
-      await axios.post("http://159.89.44.46:4000/v1/subscriber/create", {
-        first_name: formData.firstName,
-        last_name: formData.lastName,
-        company_name: formData.companyName,
-        job_position: 1,
-        employee_size: 1,
-        country: formData.country,
-        email: formData.email,
-        mobile_num: formData.mobileNumber,
-        mobile_postal_code: 62,
-        trial: formData.trial,
-        type_subscriber: typeSubscriber,
-        details: ""
-      }, {
-        headers: {
-          "Content-Type": "application/json",
-        }
-      }).then((response) => {
-        if (response.status === 200 || response.status === 201) {
-          toast.success("Success Create Subscriber")
-        }
+      baseUrl(process.env.SERVER_TYPE as string, process.env.SERVER_TYPE === Environment.DEV ? process.env.PORT_CORE as string : process.env.PORT_CORE_PROD as string).then(async (url) => {
+        await axios.post(`${url}/v1/subscriber/create`, {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          company_name: formData.companyName,
+          job_position: 1,
+          employee_size: 1,
+          country: formData.country,
+          email: formData.email,
+          mobile_num: formData.mobileNumber,
+          mobile_postal_code: 62,
+          trial: formData.trial,
+          type_subscriber: typeSubscriber,
+          details: ""
+        }, {
+          headers: {
+            "Content-Type": "application/json",
+          }
+        }).then((response) => {
+          if (response.status === 200 || response.status === 201) {
+            toast.success("Success Create Subscriber")
+          }
 
-      }).catch((err) => {
-        toast.error("Failed Create Subscriber, " + err.message)
+        }).catch((err) => {
+          toast.error("Failed Create Subscriber, " + err.message)
+        })
       })
+
     } catch (err) { }
   }
 
@@ -401,7 +405,10 @@ export default function ProfessionalComponent({ jobPosition }: { jobPosition: Jo
 
 
 export async function getServerSideProps() {
-  const res = await axios.get("http://159.89.44.46:4000/v1/job/job-position")
+  baseUrl(process.env.SERVER_TYPE as string, process.env.SERVER_TYPE === Environment.DEV ? process.env.PORT_CORE as string : process.env.PORT_CORE_PRO as string).then((url) => {
+    axios.defaults.baseURL = url
+  })
+  const res = await axios.get(`/v1/job/job-position`)
   const jobPosition = await res.data.data
   if (res.data.data === undefined) {
     return {

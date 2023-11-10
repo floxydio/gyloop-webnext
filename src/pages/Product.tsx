@@ -8,6 +8,7 @@ import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTranspa
 import ProductIndex from '@/app/components/Product/ProductIndex';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
+import baseUrl from '@/Constant/server_config';
 
 export default function Product({ dataHeader, dataOverview }) {
   return (
@@ -31,15 +32,16 @@ export default function Product({ dataHeader, dataOverview }) {
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   );
   const fetchHeader = await axios.get(
-    `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=product`
+    `${url}/v1/product-header/get?lang_code=${context.locale}&page_code=product`
   );
   const fetchOverview = await axios.get(
-    `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=product`
+    `${url}/v1/product-header/get?lang_code=${context.locale}&page_code=product`
   );
 
   if (

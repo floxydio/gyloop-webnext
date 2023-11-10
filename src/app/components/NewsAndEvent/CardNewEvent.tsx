@@ -14,7 +14,6 @@ export interface BlogContent {
 
 
 export default function CardNewEvent({ data }: { data: BlogContent[] }) {
-  console.log("d")
   return (
     <>
  

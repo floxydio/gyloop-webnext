@@ -1,3 +1,4 @@
+import baseUrl from '@/Constant/server_config';
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenu from '@/app/components/Header/HeaderNoMenu';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
@@ -29,13 +30,14 @@ export default function Leadership(dataLeadership) {
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   );
 
   const fetchData = await axios.get(
-    `${process.env.REACT_DEV_URL}/v1/about/leadership?lang_code=${context.locale}`
+    `${url}/v1/about/leadership?lang_code=${context.locale}`
   );
   if (fetchData.data.data === undefined || fetchData.data === undefined) {
     return {

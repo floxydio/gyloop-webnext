@@ -3,6 +3,7 @@ import Head from 'next/head';
 import ProfessionalComponent from '../app/components/Subscribe/ProfessionalComponent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
+import baseUrl from '@/Constant/server_config';
 
 export default function SubscribeFunctional(dataJobPosition) {
   return (
@@ -23,11 +24,12 @@ export default function SubscribeFunctional(dataJobPosition) {
 }
 
 export async function getServerSideProps({ context }) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   );
-  const fetchData = await fetch('http://159.89.44.46:4000/v1/job/job-position');
+  const fetchData = await fetch(`${url}/v1/job/job-position`);
   const data = await fetchData.json();
   if (data.data === undefined || data === undefined) {
     return {

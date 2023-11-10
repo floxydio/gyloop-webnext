@@ -7,6 +7,7 @@ import HeaderNoMenu from '@/app/components/Header/HeaderNoMenu';
 import Head from 'next/head';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
+import baseUrl from '@/Constant/server_config';
 
 export default function Businnes({
   dataHeader,
@@ -39,28 +40,29 @@ export default function Businnes({
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage-10, stale-while-revalidate=59'
   )
 
   const fetchHeader = await axios.get(
-    `http://159.89.44.46:4000/v1/product-header/get?lang_code=${context.locale}&page_code=business`
+    `${url}/v1/product-header/get?lang_code=${context.locale}&page_code=business`
   );
   const fetchFeature = await axios.get(
-    `http://159.89.44.46:4000/v1/product-feature/get?lang_code=${context.locale}&page_code=business`
+    `${url}/v1/product-feature/get?lang_code=${context.locale}&page_code=business`
   );
   const fetchMediaH = await axios.get(
-    `http://159.89.44.46:4000/v1/main/media?page_code=business`
+    `${url}/v1/main/media?page_code=business`
   );
   const fetchPricingItem = await axios.get(
-    `http://159.89.44.46:4000/v1/product-pricing-item/get?lang_code=${context.locale}&page_code=business`
+    `${url}/v1/product-pricing-item/get?lang_code=${context.locale}&page_code=business`
   );
   const fetchTablePlan = await axios.get(
-    `http://159.89.44.46:4000/v1/product-table-plan/get?lang_code=${context.locale}&page_code=business`
+    `${url}/v1/product-table-plan/get?lang_code=${context.locale}&page_code=business`
   );
   const fetchProductDetail = await axios.get(
-    `http://159.89.44.46:4000/v1/product-detail/get?lang_code=${context.locale}&page_code=business`
+    `${url}/v1/product-detail/get?lang_code=${context.locale}&page_code=business`
   );
 
   if (

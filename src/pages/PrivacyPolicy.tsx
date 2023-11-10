@@ -1,3 +1,4 @@
+import baseUrl from '@/Constant/server_config';
 import Footer from '@/app/components/Footer/Footer';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import LeadershipTitle from '@/app/components/Leadership/LeadershipTitle';
@@ -24,7 +25,7 @@ export default function PrivacyPolicy(dataPrivacy) {
 "
       />
       {dataPrivacy.dataPrivacy === undefined ||
-      dataPrivacy.dataPrivacy === null ? (
+        dataPrivacy.dataPrivacy === null ? (
         <p>Data Kosong</p>
       ) : (
         <PrivacyComponent privacyPolicy={dataPrivacy.dataPrivacy} />
@@ -35,12 +36,13 @@ export default function PrivacyPolicy(dataPrivacy) {
 }
 
 export async function getServerSideProps(context) {
+  let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_CORE_PROD as string)
   context.res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   );
   const fetchData = await axios.get(
-    `http://159.89.44.46:4000/v1/privacy-policy?lang_code=${context.locale}`
+    `${url}/v1/privacy-policy?lang_code=${context.locale}`
   );
   if (fetchData.data.data === undefined || fetchData.data === undefined) {
     return {
