@@ -8,6 +8,7 @@ import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTranspa
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
 import baseUrl from '@/Constant/server_config';
+import HeaderDetail from '@/app/components/Header/HeaderDetail';
 
 export default function DetailLeadership(data) {
   const router = useRouter();
@@ -24,7 +25,8 @@ export default function DetailLeadership(data) {
         }}
       />
 
-      <HeaderNoMenuTransparent type={1} />
+      <HeaderDetail />
+
       <LeadershipTitle title="Leadership" />
 
       <LeadershipDetailComponent feature={data.data.data} />

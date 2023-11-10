@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import baseUrl from '@/Constant/server_config';
+import { useRouter } from 'next/router';
 export interface BlogContent {
   id?: number;
   page_code?: string;
@@ -21,9 +22,10 @@ export default function LibraryComponent() {
   const t = useTranslations('ResourcesLibraryHeader');
   const [page, setPage] = useState(1)
   const [data, setData] = useState<BlogContent[]>([])
+  const contextLocale = useRouter().locale;
   async function getBlog() {
     let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_LIB_PROD as string)
-    await axios.get(`${url}/v1/blog?lang_code=en&page=${page}&limit=5&page_code=library`).then((res) => {
+    await axios.get(`${url}/v1/blog?lang_code=${contextLocale}&page=${page}&limit=5&page_code=library`).then((res) => {
       if (res.status === 200) {
         setData(res.data.data)
       }

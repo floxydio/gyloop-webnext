@@ -1,12 +1,13 @@
 import baseUrl from '@/Constant/server_config';
 import CultureDetail from '@/app/components/Culture/CultureDetail';
 import CampaignTitle from '@/app/components/Culture/CultureTitle';
+import HeaderDetail from '@/app/components/Header/HeaderDetail';
 import HeaderNoMenuTransparent from '@/app/components/Header/HeaderNoMenuTransparent';
 import NextSEO from '@/app/components/NextHead/NextSEO';
 import axios from 'axios';
 
 export default function DetailCampaign({ data }) {
-  return (
+return (
     <>
       <NextSEO
         seoHead={{
@@ -17,7 +18,7 @@ export default function DetailCampaign({ data }) {
           metaLocale: 'en-US',
         }}
       />
-      <HeaderNoMenuTransparent type={1} />
+      <HeaderDetail />
       <CampaignTitle title="Campaign Program" />
       <CultureDetail feature={data.data} />
     </>

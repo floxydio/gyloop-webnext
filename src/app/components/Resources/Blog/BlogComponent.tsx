@@ -8,6 +8,7 @@ import Image from 'next/image';
 import style from './BlogComponent.module.css'
 import parse from "html-react-parser"
 import baseUrl from '@/Constant/server_config';
+import { useRouter } from 'next/router';
 
 export interface BlogContent {
   id?: number;
@@ -29,9 +30,10 @@ export default function BlogComponent() {
   const [page, setPage] = useState(1)
   const [data, setData] = useState<BlogContent[]>([])
   const [category, setCategory] = useState<Category[]>([])
+  const contextLocale = useRouter().locale;
   async function getBlog() {
     let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_BLOG_PROD as string)
-    await axios.get(`${url}/v1/blog?lang_code=en&page=${page}&limit=5&page_code=blog`).then((res) => {
+    await axios.get(`${url}/v1/blog?lang_code=${contextLocale}&page=${page}&limit=5&page_code=blog`).then((res) => {
       if (res.status === 200) {
         setData(res.data.data)
       }

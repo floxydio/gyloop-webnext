@@ -7,6 +7,7 @@ import NextSEO from "@/app/components/NextHead/NextSEO";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
+import HeaderDetail from "@/app/components/Header/HeaderDetail";
 
 const NewsEventDetailComponent = dynamic(
     () => import('@/app/components/NewsAndEvent/NewsEventDetail'),
@@ -15,9 +16,9 @@ const NewsEventDetailComponent = dynamic(
 
 export default function NewsAndEventDetail() {
     const router = useRouter();
+    const contextLocale = useRouter().locale;
 
-
-
+    alert(contextLocale)
     return (
         <>
             <NextSEO seoHead={{
@@ -28,12 +29,10 @@ export default function NewsAndEventDetail() {
                 metaLocale: "en-US"
             }} />
 
-            <HeaderNoMenuTransparent type={1} />
+            <HeaderDetail />
             <LeadershipTitle title="News" />
             <NewsEventDetailComponent id={Number(router.query.id)} />
             <Footer />
-
-
         </>
     )
 }

@@ -7,6 +7,9 @@ import 'react-quill/dist/quill.snow.css';
 import ReactQuill from 'react-quill';
 import "./quillstyle.css"
 import baseUrl from '@/Constant/server_config';
+import { useRouter } from 'next/router';
+
+
 interface BlogContent {
   id?: number;
   page_code?: string;
@@ -22,6 +25,7 @@ interface BlogContent {
 export default function NewsEventDetailComponent({ id }: { id: number }) {
   const [data, setData] = useState<BlogContent>({})
   const [sideData, setSideData] = useState<BlogContent[]>([])
+  const contextLocale = useRouter().locale;
 
 
   async function getBlogByDetail() {
@@ -35,7 +39,7 @@ export default function NewsEventDetailComponent({ id }: { id: number }) {
 
   async function getBlog() {
     let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_BLOG_PROD as string)
-    await axios.get(`${url}/v1/blog?lang_code=en&page=1&limit=5`).then((res) => {
+    await axios.get(`${url}/v1/blog?lang_code=${contextLocale || "en"}&page=1&limit=5`).then((res) => {
       if (res.status === 200) {
         setSideData(res.data.data)
       }

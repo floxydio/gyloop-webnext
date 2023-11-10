@@ -447,7 +447,7 @@ export default function HeaderNoMenuTransparent(
       ) : (
         <nav className="navbar navbar-expand-xl navbar-dark bg-primary">
           <div className="container align-items-center">
-            <Link className="navbar-brand d-flex mr-5" href="/">
+            <Link className="navbar-brand d-flex mr-5" href={`/${router.locale ?? router.defaultLocale}`}>
               <Image
                 priority
                 className="logo-web-lg"
@@ -630,14 +630,14 @@ export default function HeaderNoMenuTransparent(
                   onMouseEnter={() => setCurrentDropdown(3)}
                   onMouseLeave={() => setCurrentDropdown(0)}
                 >
-                  <a
+                  <Link
                     className="nav-link"
-                    href="resource.html"
+                    href={`${router.locale}/resource`}
                     aria-expanded={currentDropdown === 3 ? 'true' : 'false'}
                   >
                     Resources
                     <i className="fas fa-angle-down icon-rotates"></i>
-                  </a>
+                  </Link>
                   <div
                     className={`dropdown-menu ${currentDropdown === 3 ? 'show' : ''
                       }`}
@@ -690,15 +690,14 @@ export default function HeaderNoMenuTransparent(
               </ul>
               <ul className="nav-search-off navbar-nav">
                 <li className="nav-item nav-item-lang position-relative">
-                  <a
+                  <span
                     className="nav-link mr-0"
-                    href="preventDefault()"
                     data-toggle="dropdown"
                     aria-expanded="false"
                   >
                     <i className="fas fa-globe-americas"></i>
                     <span className="d-xl-none ml-2">Language</span>
-                  </a>
+                  </span>
                   <div className="dropdown-menu dropdown-lang dropdown-menu-right">
                     <Link
                       className="dropdown-item active"

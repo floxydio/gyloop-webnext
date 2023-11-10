@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 interface AboutusLeadershipEntities {
   id: number;
@@ -17,6 +18,8 @@ export default function LeadershipCard({
 }: {
   feature: AboutusLeadershipEntities[];
 }) {
+  const contextLocale = useRouter().locale
+
   return (
     <>
       <div className="card">
@@ -38,7 +41,7 @@ export default function LeadershipCard({
                 <p className="card-text ">{item.jobx_posi}</p>
                 <Link
                   href={{
-                    pathname: `/about-leadership/detail/1`,
+                    pathname: `${contextLocale}/about-leadership/detail/1`,
                   }}
                   className="card-link text-blue"
                 >

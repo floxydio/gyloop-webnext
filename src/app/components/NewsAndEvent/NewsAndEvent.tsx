@@ -5,6 +5,7 @@ import CardNewEvent from './CardNewEvent';
 import CardNewEventB from './CardNewEventB';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 export default function NewsAndEvent() {
   const t = useTranslations('AboutUsNewsEventHeader');
   return (
@@ -22,7 +23,7 @@ export default function NewsAndEvent() {
         </div>
       </header>
 
-    
+
 
       <div className="blogs">
         <div className="search-form">
