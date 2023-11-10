@@ -16,9 +16,6 @@ const NewsEventDetailComponent = dynamic(
 
 export default function NewsAndEventDetail() {
     const router = useRouter();
-    const contextLocale = useRouter().locale;
-
-    alert(contextLocale)
     return (
         <>
             <NextSEO seoHead={{
