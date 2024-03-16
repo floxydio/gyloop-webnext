@@ -137,9 +137,13 @@ export default function MainComponent({
                 >
                   <div className="container">
                     <div className="content">
-                      <h5 className="title">{item.title_text}</h5>
+                      <h5 className="title" style={{
+                        color: "black"
+                      }}>{item.title_text}</h5>
 
-                      <p className="text">{item.subtitle_text}</p>
+                      <p className="text" style={{
+                        color: "black"
+                      }}>{item.subtitle_text}</p>
                       <Link
                         href="/Solutions"
                         aria-label="Solutions Overview"

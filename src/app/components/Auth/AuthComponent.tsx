@@ -35,8 +35,10 @@ const resolver: Resolver<FormValues> = async (values) => {
     };
 };
 export default function AuthComponent({ props }: { props: PropsSend }) {
+    console.log(props)
     const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({ resolver });
     const onSubmit = handleSubmit((data) => loginRequest(data.email, data.password));
+    const [loading, setLoading] = useState(false)
     const router = useRouter()
 
     const [showPassword, setShowPassword] = useState(false)
@@ -55,19 +57,26 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
 
     async function loginRequest(email: string, password: string) {
+        setLoading(true)
         let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_AUTH_PROD as string)
         await axios.post(`${url}/v1/auth/sign-in`, {
             email: email,
             password: password
         }).then((res) => {
+            console.log(res.data)
             if (res.status === 200 || res.status === 201) {
-                router.push("/Main")
-                localStorage.setItem("token", res.data.token)
+                // router.push("/Main")
+                // localStorage.setItem("token", res.data.token)
+                setLoading(false)
+            } else {
+                setLoading(false)
             }
 
         }).catch((err) => {
             if (err.response.status === 400) {
                 alert(err.response.data.message || "Something Went Wrong")
+                setLoading(false)
+
             }
         })
     }
@@ -120,7 +129,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                                 <small className="label-error">{errors.password?.message}</small>
                                             </div>
 
-                                            <button type="submit" className="btn btn-primary gyloop-btn btn-block">Submit</button>
+                                            <button type="submit" className="btn btn-primary gyloop-btn btn-block">{loading === true ? "Loading" : "Submit"}</button>
 
                                             <div className="custom-control custom-checkbox">
                                                 <input type="checkbox" className="custom-control-input" id="customCheck1" />
@@ -230,7 +239,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                                                 <small className="label-error">{errors.password?.message}</small>
                                             </div>
 
-                                            <button type="submit" className="btn btn-primary gyloop-btn btn-block">Submit</button>
+                                            <button type="submit" className="btn btn-primary gyloop-btn btn-block">{loading === true ? "Loading" : "Submit"}</button>
 
                                             <div className="custom-control custom-checkbox">
                                                 <input type="checkbox" className="custom-control-input" id="customCheck1" />

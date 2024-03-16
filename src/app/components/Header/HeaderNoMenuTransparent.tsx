@@ -18,6 +18,11 @@ export default function HeaderNoMenuTransparent(
     require('bootstrap/dist/js/bootstrap.bundle');
   }, []);
 
+  async function onLogout() {
+    localStorage.removeItem('token')
+    router.push("/Login")
+  }
+
 
 
   return (
@@ -431,16 +436,19 @@ export default function HeaderNoMenuTransparent(
                   </div>
                 </div>
               </form>
-              <Link
-                className="gyloop-link text-nowrap ml-xl-3"
-                href="/ContactUs"
-              >
-                <i className="fas fa-phone fa-flip-horizontal d-xl-none mr-2"></i>
-                Contact Us
-              </Link>
-              <Link className="btn btn-primary btn-login ml-xl-4" href="/Login">
-                Login
-              </Link>
+              {/* In Index */}
+              {localStorage.getItem('token') ? <span onClick={onLogout} className='text-white hover:cursor-pointer font-bold'>Hello, Dio</span> : <>
+                <Link
+                  className="gyloop-link text-nowrap ml-xl-3"
+                  href="/ContactUs"
+                >
+                  <i className="fas fa-phone fa-flip-horizontal d-xl-none mr-2"></i>
+                  Contact Us
+                </Link>
+                <Link className="btn btn-primary btn-login ml-xl-4" href="/Login">
+                  Login
+                </Link>
+              </>}
             </div>
           </div>
         </nav>

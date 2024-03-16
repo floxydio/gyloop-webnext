@@ -25,6 +25,7 @@ export default function LibraryComponent() {
   const contextLocale = useRouter().locale;
   async function getBlog() {
     let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_LIB_PROD as string)
+    console.log("URL BLOG", url)
     await axios.get(`${url}/v1/blog?lang_code=${contextLocale}&page=${page}&limit=5&page_code=library`).then((res) => {
       if (res.status === 200) {
         setData(res.data.data)
