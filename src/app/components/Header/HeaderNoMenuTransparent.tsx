@@ -6,21 +6,37 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
+import baseUrl from '@/Constant/server_config';
+import axios from 'axios';
 
 export default function HeaderNoMenuTransparent(
   { type }: { type: number } = { type: 0 }
 ) {
   const [currentDropdown, setCurrentDropdown] = useState(0);
   const [selectedCountry, setSelectedCountry] = useState(0);
+  const [token, setToken] = useState('');
   const router = useRouter()
 
   useEffect(() => {
     require('bootstrap/dist/js/bootstrap.bundle');
+    if (typeof window !== 'undefined') {
+      setToken(localStorage.getItem('token') ?? "")
+
+    }
   }, []);
 
   async function onLogout() {
-    localStorage.removeItem('token')
-    router.push("/Login")
+    let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_AUTH_PROD as string)
+    let userId = localStorage.getItem('user_id')
+    console.log(userId)
+    await axios.get(`${url}/v1/auth/logout/${userId}`).then((res) => {
+      if (res.status === 200) {
+        localStorage.removeItem('token')
+        localStorage.removeItem('user_id')
+        router.replace("/Login",)
+      }
+    })
+
   }
 
 
@@ -437,7 +453,7 @@ export default function HeaderNoMenuTransparent(
                 </div>
               </form>
               {/* In Index */}
-              {localStorage.getItem('token') ? <span onClick={onLogout} className='text-white hover:cursor-pointer font-bold'>Hello, Dio</span> : <>
+              {token ? <span onClick={onLogout} className='text-white hover:cursor-pointer font-bold'>Hello, Dio</span> : <>
                 <Link
                   className="gyloop-link text-nowrap ml-xl-3"
                   href="/ContactUs"

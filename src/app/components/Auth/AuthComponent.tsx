@@ -59,6 +59,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
     async function loginRequest(email: string, password: string) {
         setLoading(true)
         let url = await baseUrl(process.env.SERVER_TYPE as string, process.env.PORT_AUTH_PROD as string)
+        console.log(url)
         await axios.post(`${url}/v1/auth/sign-in`, {
             email: email,
             password: password
@@ -66,8 +67,17 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
             console.log(res.data)
             if (res.status === 200 || res.status === 201) {
                 // router.push("/Main")
-                // localStorage.setItem("token", res.data.token)
-                setLoading(false)
+                if (res.data.role === "admin") {
+                    router.push("/Admin")
+                    localStorage.setItem("token", res.data.token)
+                    localStorage.setItem("user_id", res.data.user_id)
+                    setLoading(false)
+                } else {
+                    router.push("/Main")
+                    localStorage.setItem("token", res.data.token)
+                    localStorage.setItem("user_id", res.data.user_id)
+                    setLoading(false)
+                }
             } else {
                 setLoading(false)
             }
