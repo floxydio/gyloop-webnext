@@ -1,10 +1,13 @@
+const NextFederationPlugin = require('@module-federation/nextjs-mf');
+
+
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
   env: {
-    REACT_DEV_URL: 'http://159.89.44.46:4000',
+    REACT_DEV_URL: 'http://192.168.198.1:4000',
     SERVER_TYPE: 'prod',
-    BASE_URL_DEV: 'http://159.89.44.46',
+    BASE_URL_DEV: 'http://192.168.198.1:4000',
     BASE_URL_PROD: 'https://apidev.gyloop.com',
     BASE_URL_LOCAL: 'http://localhost',
     PORT_CORE: '4000',
@@ -36,14 +39,19 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
+
   redirects: async () => {
     return [
+      {
+        source: '/Admin',
+        destination: 'http://localhost:3000',
+        permanent: true, // Set to true if this redirect should be cached by browsers as permanent
+      },
       {
         source: '/',
         destination: '/Main',
         permanent: true,
-      },
-
+      }
     ]
   },
 };

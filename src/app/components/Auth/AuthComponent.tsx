@@ -8,6 +8,8 @@ import Image from "next/image"
 import axios from "axios";
 import { useRouter } from "next/router";
 import baseUrl from "@/Constant/server_config";
+import Cookies from 'js-cookie';
+
 interface PropsSend {
     TypeHeader: number
 }
@@ -69,12 +71,13 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
                 // router.push("/Main")
                 if (res.data.role === "admin") {
                     router.push("/Admin")
-                    localStorage.setItem("token", res.data.token)
-                    localStorage.setItem("user_id", res.data.user_id)
+            
+                    Cookies.set('token_gyloop', res.data.token, { secure: true, sameSite: 'None' });
+                    Cookies.set('user_id', res.data.user_id, { secure: true, sameSite: 'None' })
                     setLoading(false)
                 } else {
                     router.push("/Main")
-                    localStorage.setItem("token", res.data.token)
+                    localStorage.setItem("token_gyloop", res.data.token)
                     localStorage.setItem("user_id", res.data.user_id)
                     setLoading(false)
                 }
@@ -94,7 +97,7 @@ export default function AuthComponent({ props }: { props: PropsSend }) {
 
     return (
         <>
-            {/* 0 -> Login Demo, 1 -> Login */}
+            {/* 0 -> Login Demo User, 1 -> Login Admin */}
             {props.TypeHeader === 0 ? <div className="login d-flex align-items-center justify-content-center">
                 <div className="row align-items-center w-100">
                     <div className="col-12 col-xl-6">
